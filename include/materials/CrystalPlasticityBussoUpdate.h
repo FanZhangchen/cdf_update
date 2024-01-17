@@ -33,10 +33,10 @@ protected:
   virtual void initQpStatefulProperties() override;
 
   virtual void calculateSchmidTensor(const unsigned int & number_dislocation_systems,
-                             const std::vector<RealVectorValue> & plane_normal_vector,
-                             const std::vector<RealVectorValue> & direction_vector,
-                             std::vector<RankTwoTensor> & schmid_tensor,
-                             const RankTwoTensor & crysrot);
+                                     const std::vector<RealVectorValue> & plane_normal_vector,
+                                     const std::vector<RealVectorValue> & direction_vector,
+                                     std::vector<RankTwoTensor> & schmid_tensor,
+                                     const RankTwoTensor & crysrot);
 
   /**
    * Sets the value of the current and previous substep iteration slip system
@@ -61,7 +61,8 @@ protected:
 
   virtual bool calculateSlipRate() override;
 
-  virtual void calculateEquivalentSlipIncrement(RankTwoTensor & /*equivalent_slip_increment*/) override;
+  virtual void
+  calculateEquivalentSlipIncrement(RankTwoTensor & /*equivalent_slip_increment*/) override;
 
   virtual void calculateConstitutiveSlipDerivative(std::vector<Real> & dslip_dtau) override;
 
@@ -70,7 +71,7 @@ protected:
 
   /**
    * Following the Constitutive model for slip system resistance as given in
-   * Cheong, Ke-Shen, and Esteban P. Busso. "Discrete dislocation density modelling 
+   * Cheong, Ke-Shen, and Esteban P. Busso. "Discrete dislocation density modelling
    * of single phase FCC polycrystal aggregates." Acta materialia 52 (2004): 5665-5675.
    * The slip system resistant increment is calculated in exponential function
    * and a convergence check is performed on the slip system resistance increment

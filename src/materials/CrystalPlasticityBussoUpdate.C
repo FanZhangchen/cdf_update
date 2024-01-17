@@ -38,8 +38,7 @@ CrystalPlasticityBussoUpdate::validParams()
   return params;
 }
 
-CrystalPlasticityBussoUpdate::CrystalPlasticityBussoUpdate(
-    const InputParameters & parameters)
+CrystalPlasticityBussoUpdate::CrystalPlasticityBussoUpdate(const InputParameters & parameters)
   : CrystalPlasticityDislocationUpdateBase(parameters),
     // Constitutive values
     _r(getParam<Real>("r")),
@@ -80,18 +79,17 @@ CrystalPlasticityBussoUpdate::CrystalPlasticityBussoUpdate(
     _screw_slip_direction(
         declareProperty<std::vector<Real>>("screw_slip_direction")), // Screw slip direction
 
-    _deformation_gradient(
-      getMaterialProperty<RankTwoTensor>(_base_name + "deformation_gradient")),
+    _deformation_gradient(getMaterialProperty<RankTwoTensor>(_base_name + "deformation_gradient")),
     _plastic_deformation_gradient(
-      getMaterialProperty<RankTwoTensor>("plastic_deformation_gradient")),
+        getMaterialProperty<RankTwoTensor>("plastic_deformation_gradient")),
 
     _dislo_velocity(declareProperty<std::vector<Real>>("dislo_velocity")), // Dislocation velocity
 
     _accumulated_equivalent_plastic_strain(
-      declareProperty<Real>(_base_name + "accumulated_equivalent_plastic_strain")),
+        declareProperty<Real>(_base_name + "accumulated_equivalent_plastic_strain")),
     _accumulated_equivalent_plastic_strain_old(
-      getMaterialPropertyOld<Real>(_base_name + "accumulated_equivalent_plastic_strain"))
-    
+        getMaterialPropertyOld<Real>(_base_name + "accumulated_equivalent_plastic_strain"))
+
 {
 }
 
@@ -135,18 +133,19 @@ CrystalPlasticityBussoUpdate::initQpStatefulProperties()
     Real initial_hardening_total_dislocation_density = 0.0;
     for (const auto j : make_range(_number_slip_systems))
     {
-      //mooseWarning("x0-",i,j);
+      // mooseWarning("x0-",i,j);
       if (i == j) // self vs. latent hardening
         initial_hardening_total_dislocation_density +=
-           (_w1 + 1.0 - _w2) * (rho_edge_pos[j] + rho_edge_neg[j]);
-           // (_w1 + 1.0 - _w2) * (_edge_dislocation_density[_qp][j] + _screw_dislocation_density[_qp][j]); // self hardening
+            (_w1 + 1.0 - _w2) * (rho_edge_pos[j] + rho_edge_neg[j]);
+      // (_w1 + 1.0 - _w2) * (_edge_dislocation_density[_qp][j] +
+      // _screw_dislocation_density[_qp][j]); // self hardening
       else
-        initial_hardening_total_dislocation_density +=
-             _w1 * (rho_edge_pos[j] + rho_edge_neg[j]);
-              // _w1   * (_edge_dislocation_density[_qp][j] + _screw_dislocation_density[_qp][j]); // latent hardening
+        initial_hardening_total_dislocation_density += _w1 * (rho_edge_pos[j] + rho_edge_neg[j]);
+      // _w1   * (_edge_dislocation_density[_qp][j] + _screw_dislocation_density[_qp][j]); // latent
+      // hardening
     }
-    _slip_resistance[_qp][i] = _dlamb * _shear_modulus * _burgers * 
-                            std::sqrt(initial_hardening_total_dislocation_density);
+    _slip_resistance[_qp][i] =
+        _dlamb * _shear_modulus * _burgers * std::sqrt(initial_hardening_total_dislocation_density);
   }
 
   _edge_slip_direction[_qp].resize(LIBMESH_DIM * _number_slip_systems);
@@ -216,7 +215,7 @@ CrystalPlasticityBussoUpdate::calculateSchmidTensor(
       _edge_slip_direction[_qp][i * LIBMESH_DIM + j] = local_direction_vector[i](j);
       _screw_slip_direction[_qp][i * LIBMESH_DIM + j] = temp_screw_mo(j);
     }
-  } 
+  }
 }
 
 void
@@ -302,29 +301,26 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
 
     RhoTotSlip = rho_edge_pos[i] + rho_edge_neg[i];
 
-    _backstress(i) =
-        _burgers * _shear_modulus * (rho_edge_pos_grad_x[i] / std::cos(60.0*3.1415926/180) - rho_edge_neg_grad_x[i] / std::cos(60.0*3.1415926/180) 
-          + rho_edge_pos_grad_y[i] / std::sin(60.0*3.1415926/180) - rho_edge_neg_grad_y[i] / std::sin(60.0*3.1415926/180)) / RhoTotSlip;
+    _backstress(i) = _burgers * _shear_modulus *
+                     (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
+                      rho_edge_neg_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) +
+                      rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -
+                      rho_edge_neg_grad_y[i] / std::sin(60.0 * 3.1415926 / 180)) /
+                     RhoTotSlip;
 
-    Real driving_force = std::abs(_tau[_qp][i]-_backstress(i)) - _slip_resistance[_qp][i];
+    Real driving_force = std::abs(_tau[_qp][i] - _backstress(i)) - _slip_resistance[_qp][i];
 
     if (driving_force < _zero_tol)
     {
       _slip_increment[_qp][i] = 0.0;
-      //_slip_increment[_qp][i] =
-        //    _gdot0 * std::exp( - _f0 / _r / theta ) * std::copysign(1.0, _tau[_qp][i]);
     }
     else
     {
       _slip_increment[_qp][i] =
-            _gdot0 * std::exp( - _f0 / _boltzmann / theta * 
-                std::pow((1.0 - std::pow((driving_force / _tau_0 ) , _p)) , _q))
-                                      * std::copysign(1.0, _tau[_qp][i]-_backstress(i));
-
-      // _slip_increment[_qp][i] =
-      //       _gdot0 * std::exp( - _f0 / _r / theta * 
-      //             std::pow(1.0 - std::pow((driving_force / _tau_0 ) , _p) , _q))
-      //                                 * std::copysign(1.0, _tau[_qp][i]);
+          _gdot0 *
+          std::exp(-_f0 / _boltzmann / theta *
+                   std::pow((1.0 - std::pow((driving_force / _tau_0), _p)), _q)) *
+          std::copysign(1.0, _tau[_qp][i] - _backstress(i));
     }
 
     if (std::abs(_slip_increment[_qp][i]) * _substep_dt > _slip_incr_tol)
@@ -343,7 +339,7 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
 void
 CrystalPlasticityBussoUpdate::calculateSlipResistance()
 {
-  
+
   std::vector<Real> rho_edge_pos(_number_slip_systems);
   std::vector<Real> rho_edge_neg(_number_slip_systems);
 
@@ -380,13 +376,13 @@ CrystalPlasticityBussoUpdate::calculateSlipResistance()
     {
       if (i == j) // self vs. latent hardening
         hardening_total_dislocation_density +=
-            (_w1 + 1.0 - _w2)* (rho_edge_pos[j] + rho_edge_neg[j]); // self hardening
+            (_w1 + 1.0 - _w2) * (rho_edge_pos[j] + rho_edge_neg[j]); // self hardening
       else
         hardening_total_dislocation_density +=
-              _w1  * (rho_edge_pos[j] + rho_edge_neg[j]); // latent hardening
+            _w1 * (rho_edge_pos[j] + rho_edge_neg[j]); // latent hardening
     }
-    _slip_resistance[_qp][i] = _dlamb * _shear_modulus *_burgers * 
-                            std::sqrt(hardening_total_dislocation_density); 
+    _slip_resistance[_qp][i] =
+        _dlamb * _shear_modulus * _burgers * std::sqrt(hardening_total_dislocation_density);
   }
 }
 
@@ -429,20 +425,20 @@ CrystalPlasticityBussoUpdate::calculateDislocationVelocity()
   for (const auto i : make_range(_number_slip_systems))
   {
 
-    total_dislocation_density = rho_edge_pos[i] + rho_edge_neg[i]; // + rho_screw_pos[i] + rho_screw_neg[i];
+    total_dislocation_density =
+        rho_edge_pos[i] + rho_edge_neg[i]; // + rho_screw_pos[i] + rho_screw_neg[i];
 
-    Real driving_force = std::abs(_tau[_qp][i]-_backstress(i)) - _slip_resistance[_qp][i];
+    Real driving_force = std::abs(_tau[_qp][i] - _backstress(i)) - _slip_resistance[_qp][i];
     // }
 
     if (driving_force > _zero_tol)
     { // driving force less than 0, the dislocation could not move
-      _dislo_velocity[_qp][i] = _slip_increment[_qp][i] / _burgers / total_dislocation_density;    
+      _dislo_velocity[_qp][i] = _slip_increment[_qp][i] / _burgers / total_dislocation_density;
     }
     else
     { // Case below critical resolved shear stress
       _dislo_velocity[_qp][i] = 0.0;
     }
-
   }
 }
 
@@ -450,7 +446,8 @@ void
 CrystalPlasticityBussoUpdate::calculateEquivalentSlipIncrement(
     RankTwoTensor & equivalent_slip_increment)
 {
-  CrystalPlasticityDislocationUpdateBase::calculateEquivalentSlipIncrement(equivalent_slip_increment);
+  CrystalPlasticityDislocationUpdateBase::calculateEquivalentSlipIncrement(
+      equivalent_slip_increment);
 
   calculateAccumulatedEquivalentPlasticStrain();
 }
@@ -459,53 +456,46 @@ void
 CrystalPlasticityBussoUpdate::calculateAccumulatedEquivalentPlasticStrain()
 {
   RankTwoTensor plastic_strain_rate, term1, term2;
-  RankTwoTensor elastic_deformation_gradient, inverse_elastic_deformation_gradient, inverse_plastic_deformation_gradient;
+  RankTwoTensor elastic_deformation_gradient, inverse_elastic_deformation_gradient,
+      inverse_plastic_deformation_gradient;
 
   inverse_plastic_deformation_gradient = _plastic_deformation_gradient[_qp].inverse();
   elastic_deformation_gradient = _deformation_gradient[_qp] * inverse_plastic_deformation_gradient;
   inverse_elastic_deformation_gradient = elastic_deformation_gradient.inverse();
   for (const auto i : make_range(_number_slip_systems))
   {
-    term1 = _slip_increment[_qp][i] * elastic_deformation_gradient * 
-                               _flow_direction[_qp][i] * inverse_elastic_deformation_gradient * _substep_dt;
+    term1 = _slip_increment[_qp][i] * elastic_deformation_gradient * _flow_direction[_qp][i] *
+            inverse_elastic_deformation_gradient * _substep_dt;
 
-    term2 = _slip_increment[_qp][i] * inverse_elastic_deformation_gradient.transpose() * 
-                               _flow_direction[_qp][i].transpose() * elastic_deformation_gradient.transpose() * _substep_dt;
+    term2 = _slip_increment[_qp][i] * inverse_elastic_deformation_gradient.transpose() *
+            _flow_direction[_qp][i].transpose() * elastic_deformation_gradient.transpose() *
+            _substep_dt;
     plastic_strain_rate += 0.5 * (term1 + term2);
   }
-  _accumulated_equivalent_plastic_strain[_qp] = _accumulated_equivalent_plastic_strain_old[_qp] 
-             + std::sqrt( 2.0/3.0 * plastic_strain_rate.doubleContraction(plastic_strain_rate));
+  _accumulated_equivalent_plastic_strain[_qp] =
+      _accumulated_equivalent_plastic_strain_old[_qp] +
+      std::sqrt(2.0 / 3.0 * plastic_strain_rate.doubleContraction(plastic_strain_rate));
 }
 
 void
-CrystalPlasticityBussoUpdate::calculateConstitutiveSlipDerivative(
-    std::vector<Real> & dslip_dtau)
+CrystalPlasticityBussoUpdate::calculateConstitutiveSlipDerivative(std::vector<Real> & dslip_dtau)
 {
   Real theta = _temperature + 273.15;
   for (const auto i : make_range(_number_slip_systems))
   {
-    Real driving_force = std::abs(_tau[_qp][i]-_backstress(i)) - _slip_resistance[_qp][i];
+    Real driving_force = std::abs(_tau[_qp][i] - _backstress(i)) - _slip_resistance[_qp][i];
     Real u = 0.0, uprime = 0.0, vprime = 0.0;
     if (driving_force < _zero_tol)
       dslip_dtau[i] = 0.0;
     else
-      {
-        u = driving_force / _tau_0;
-        uprime = std::pow(u, _p - 1.0) * std::copysign(1.0, (_tau[_qp][i]-_backstress(i)));
-        vprime = std::pow((1.0 - std::pow(u, _p)),_q - 1.0);
-        dslip_dtau[i] =
-            _gdot0 * _p * _q * _f0 / _boltzmann / theta *
-            std::exp(-_f0 / _boltzmann / theta *
-                     std::pow((1.0 - std::pow(u,_p)),
-                              _q)) * uprime * vprime
-               * _substep_dt;
-      }
-      // {
-      //   u = driving_force / _tau_0; 
-      //   uprime = 1.0 /_tau_0 * std::copysign(1.0, _tau[_qp][i]);
-      //   vprime = _f0 / _r / theta * _q * _p * uprime * std::pow(u, _p - 1.0) * std::pow(1.0- std::pow(u,_p), _q-1.0);
-      //   dslip_dtau[i] = _gdot0 * vprime  * std::exp( - _f0 / _r / theta * std::pow(1.0- std::pow(u,_p),_q) )  *_substep_dt; 
-      // }
+    {
+      u = driving_force / _tau_0;
+      uprime = std::pow(u, _p - 1.0) * std::copysign(1.0, (_tau[_qp][i] - _backstress(i)));
+      vprime = std::pow((1.0 - std::pow(u, _p)), _q - 1.0);
+      dslip_dtau[i] = _gdot0 * _p * _q * _f0 / _boltzmann / theta *
+                      std::exp(-_f0 / _boltzmann / theta * std::pow((1.0 - std::pow(u, _p)), _q)) *
+                      uprime * vprime * _substep_dt;
+    }
     // mooseWarning("tau=",_tau[_qp][i]);
   }
 }

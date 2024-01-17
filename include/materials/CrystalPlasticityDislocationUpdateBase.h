@@ -13,10 +13,10 @@
 
 /**
  * CrystalPlasticityDislocationUpdateBase is modified from CrystalPlasticityStressUpdateBase
- * 
+ *
  * The only difference between the original file and this one is the
  * calculateSchmidTensor. This function is virtual now.
- * 
+ *
  */
 
 class CrystalPlasticityDislocationUpdateBase : public Material
@@ -89,10 +89,10 @@ public:
    * tensor from the Elasticity tensor class.
    */
   virtual void calculateSchmidTensor(const unsigned int & number_dislocation_systems,
-                             const std::vector<RealVectorValue> & plane_normal_vector,
-                             const std::vector<RealVectorValue> & direction_vector,
-                             std::vector<RankTwoTensor> & schmid_tensor,
-                             const RankTwoTensor & crysrot);
+                                     const std::vector<RealVectorValue> & plane_normal_vector,
+                                     const std::vector<RealVectorValue> & direction_vector,
+                                     std::vector<RankTwoTensor> & schmid_tensor,
+                                     const RankTwoTensor & crysrot);
 
   /**
    * A helper method to sort the slip systems of a crystal into cross slip families based

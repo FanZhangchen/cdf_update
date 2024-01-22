@@ -128,19 +128,19 @@ protected:
   ///@}
 
   ///@{Nodal degrees of freedom
-  const VariableValue & _rho_edge_pos_1;
-  const VariableValue & _rho_edge_neg_1;
+  const VariableValue & _edge_dislo_den_pos_1;
+  const VariableValue & _edge_dislo_den_neg_1;
 
-  const VariableGradient & _grad_rhoep1;
+  const VariableGradient & _edge_dislo_den_pos_grad_1;
 
-  const VariableGradient & _grad_rhoen1;
+  const VariableGradient & _edge_dislo_den_neg_grad_1;
 
-  const VariableValue & _rho_edge_pos_2;
-  const VariableValue & _rho_edge_neg_2;
+  const VariableValue & _edge_dislo_den_pos_2;
+  const VariableValue & _edge_dislo_den_neg_2;
 
-  const VariableGradient & _grad_rhoep2;
+  const VariableGradient & _edge_dislo_den_pos_grad_2;
 
-  const VariableGradient & _grad_rhoen2;
+  const VariableGradient & _edge_dislo_den_neg_grad_2;
   // const VariableValue & _rho_edge_pos_3;
   // const VariableValue & _rho_edge_neg_3;
   // const VariableValue & _rho_edge_pos_4;

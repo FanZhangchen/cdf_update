@@ -219,10 +219,10 @@
       q = 1.1
       f0 = 3.e-19
       gdot0 = 1.73e6
-    rho_edge_pos_1 = rho_edge_pos_1
-    rho_edge_neg_1 = rho_edge_neg_1
-    rho_edge_pos_2 = rho_edge_pos_2
-    rho_edge_neg_2 = rho_edge_neg_2
+    edge_dislo_den_pos_1 = rho_edge_pos_1
+    edge_dislo_den_neg_1 = rho_edge_neg_1
+    edge_dislo_den_pos_2 = rho_edge_pos_2
+    edge_dislo_den_neg_2 = rho_edge_neg_2
   [../]
 []
 

@@ -30,10 +30,10 @@ CrystalPlasticityBussoUpdate::validParams()
   params.addParam<Real>("w1", 1.5, "cross-hardening constants, adopted from Cheong2004");
   params.addParam<Real>("w2", 1.2, "cross-hardening constants, adopted from Cheong2004");
 
-  params.addCoupledVar("rho_edge_pos_1", 0.0, "Positive edge dislocation density: slip system 1");
-  params.addCoupledVar("rho_edge_neg_1", 0.0, "Negative edge dislocation density: slip system 1");
-  params.addCoupledVar("rho_edge_pos_2", 0.0, "Positive edge dislocation density: slip system 2");
-  params.addCoupledVar("rho_edge_neg_2", 0.0, "Negative edge dislocation density: slip system 2");
+  params.addCoupledVar("edge_dislo_den_pos_1", 0.0, "Positive edge dislocation density: slip system 1");
+  params.addCoupledVar("edge_dislo_den_neg_1", 0.0, "Negative edge dislocation density: slip system 1");
+  params.addCoupledVar("edge_dislo_den_pos_2", 0.0, "Positive edge dislocation density: slip system 2");
+  params.addCoupledVar("edge_dislo_den_neg_2", 0.0, "Negative edge dislocation density: slip system 2");
 
   return params;
 }
@@ -58,21 +58,21 @@ CrystalPlasticityBussoUpdate::CrystalPlasticityBussoUpdate(const InputParameters
 
     _backstress(_number_slip_systems),
 
-    _rho_edge_pos_1(coupledValue("rho_edge_pos_1")),
+    _edge_dislo_den_pos_1(coupledValue("edge_dislo_den_pos_1")),
 
-    _grad_rhoep1(coupledGradient("rho_edge_pos_1")), // Coupled rhoep gradient
+    _edge_dislo_den_pos_grad_1(coupledGradient("edge_dislo_den_pos_1")), // Coupled rhoep gradient
 
-    _rho_edge_neg_1(coupledValue("rho_edge_neg_1")),
+    _edge_dislo_den_neg_1(coupledValue("edge_dislo_den_neg_1")),
 
-    _grad_rhoen1(coupledGradient("rho_edge_neg_1")), // Coupled rhoen gradient
+    _edge_dislo_den_neg_grad_1(coupledGradient("edge_dislo_den_neg_1")), // Coupled rhoen gradient
 
-    _rho_edge_pos_2(coupledValue("rho_edge_pos_2")),
+    _edge_dislo_den_pos_2(coupledValue("edge_dislo_den_pos_2")),
 
-    _grad_rhoep2(coupledGradient("rho_edge_pos_2")), // Coupled rhoep gradient
+    _edge_dislo_den_pos_grad_2(coupledGradient("edge_dislo_den_pos_2")), // Coupled rhoep gradient
 
-    _rho_edge_neg_2(coupledValue("rho_edge_neg_2")),
+    _edge_dislo_den_neg_2(coupledValue("edge_dislo_den_neg_2")),
 
-    _grad_rhoen2(coupledGradient("rho_edge_neg_2")), // Coupled rhoen gradient
+    _edge_dislo_den_neg_grad_2(coupledGradient("edge_dislo_den_neg_2")), // Coupled rhoen gradient
 
     _edge_slip_direction(
         declareProperty<std::vector<Real>>("edge_slip_direction")), // Edge slip directions
@@ -101,8 +101,8 @@ CrystalPlasticityBussoUpdate::initQpStatefulProperties()
   std::vector<Real> rho_edge_pos(_number_slip_systems);
   std::vector<Real> rho_edge_neg(_number_slip_systems);
 
-  rho_edge_pos[0] = _rho_edge_pos_1[_qp];
-  rho_edge_pos[1] = _rho_edge_pos_2[_qp];
+  rho_edge_pos[0] = _edge_dislo_den_pos_1[_qp];
+  rho_edge_pos[1] = _edge_dislo_den_pos_2[_qp];
   // rho_edge_pos[2] = _rho_edge_pos_3[_qp];
   // rho_edge_pos[3] = _rho_edge_pos_4[_qp];
   // rho_edge_pos[4] = _rho_edge_pos_5[_qp];
@@ -110,12 +110,12 @@ CrystalPlasticityBussoUpdate::initQpStatefulProperties()
   // rho_edge_pos[6] = _rho_edge_pos_7[_qp];
   // rho_edge_pos[7] = _rho_edge_pos_8[_qp];
   // rho_edge_pos[8] = _rho_edge_pos_9[_qp];
-  // rho_edge_pos[9] = _rho_edge_pos_10[_qp];
-  // rho_edge_pos[10] = _rho_edge_pos_11[_qp];
-  // rho_edge_pos[11] = _rho_edge_pos_12[_qp];
+  // rho_edge_pos[9] = _edge_dislo_den_pos_10[_qp];
+  // rho_edge_pos[10] = _edge_dislo_den_pos_11[_qp];
+  // rho_edge_pos[11] = _edge_dislo_den_pos_12[_qp];
 
-  rho_edge_neg[0] = _rho_edge_neg_1[_qp];
-  rho_edge_neg[1] = _rho_edge_neg_2[_qp];
+  rho_edge_neg[0] = _edge_dislo_den_neg_1[_qp];
+  rho_edge_neg[1] = _edge_dislo_den_neg_2[_qp];
   // rho_edge_neg[2] = _rho_edge_neg_3[_qp];
   // rho_edge_neg[3] = _rho_edge_neg_4[_qp];
   // rho_edge_neg[4] = _rho_edge_neg_5[_qp];
@@ -123,9 +123,9 @@ CrystalPlasticityBussoUpdate::initQpStatefulProperties()
   // rho_edge_neg[6] = _rho_edge_neg_7[_qp];
   // rho_edge_neg[7] = _rho_edge_neg_8[_qp];
   // rho_edge_neg[8] = _rho_edge_neg_9[_qp];
-  // rho_edge_neg[9] = _rho_edge_neg_10[_qp];
-  // rho_edge_neg[10] = _rho_edge_neg_11[_qp];
-  // rho_edge_neg[11] = _rho_edge_neg_12[_qp];
+  // rho_edge_neg[9] = _edge_dislo_den_neg_10[_qp];
+  // rho_edge_neg[10] = _edge_dislo_den_neg_11[_qp];
+  // rho_edge_neg[11] = _edge_dislo_den_neg_12[_qp];
 
   // Set initial slip resistance
   for (const auto i : make_range(_number_slip_systems))
@@ -249,8 +249,8 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
   std::vector<Real> rho_edge_neg_grad_z(_number_slip_systems);
 
   // Assign dislocation density vectors
-  rho_edge_pos[0] = _rho_edge_pos_1[_qp];
-  rho_edge_pos[1] = _rho_edge_pos_2[_qp];
+  rho_edge_pos[0] = _edge_dislo_den_pos_1[_qp];
+  rho_edge_pos[1] = _edge_dislo_den_pos_2[_qp];
   // rho_edge_pos[2] = _rho_edge_pos_3[_qp];
   // rho_edge_pos[3] = _rho_edge_pos_4[_qp];
   // rho_edge_pos[4] = _rho_edge_pos_5[_qp];
@@ -258,12 +258,12 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
   // rho_edge_pos[6] = _rho_edge_pos_7[_qp];
   // rho_edge_pos[7] = _rho_edge_pos_8[_qp];
   // rho_edge_pos[8] = _rho_edge_pos_9[_qp];
-  // rho_edge_pos[9] = _rho_edge_pos_10[_qp];
-  // rho_edge_pos[10] = _rho_edge_pos_11[_qp];
-  // rho_edge_pos[11] = _rho_edge_pos_12[_qp];
+  // rho_edge_pos[9] = _edge_dislo_den_pos_10[_qp];
+  // rho_edge_pos[10] = _edge_dislo_den_pos_11[_qp];
+  // rho_edge_pos[11] = _edge_dislo_den_pos_12[_qp];
 
-  rho_edge_neg[0] = _rho_edge_neg_1[_qp];
-  rho_edge_neg[1] = _rho_edge_neg_2[_qp];
+  rho_edge_neg[0] = _edge_dislo_den_neg_1[_qp];
+  rho_edge_neg[1] = _edge_dislo_den_neg_2[_qp];
   // rho_edge_neg[2] = _rho_edge_neg_3[_qp];
   // rho_edge_neg[3] = _rho_edge_neg_4[_qp];
   // rho_edge_neg[4] = _rho_edge_neg_5[_qp];
@@ -271,28 +271,28 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
   // rho_edge_neg[6] = _rho_edge_neg_7[_qp];
   // rho_edge_neg[7] = _rho_edge_neg_8[_qp];
   // rho_edge_neg[8] = _rho_edge_neg_9[_qp];
-  // rho_edge_neg[9] = _rho_edge_neg_10[_qp];
-  // rho_edge_neg[10] = _rho_edge_neg_11[_qp];
-  // rho_edge_neg[11] = _rho_edge_neg_12[_qp];
+  // rho_edge_neg[9] = _edge_dislo_den_neg_10[_qp];
+  // rho_edge_neg[10] = _edge_dislo_den_neg_11[_qp];
+  // rho_edge_neg[11] = _edge_dislo_den_neg_12[_qp];
 
   // Assigin dislocation density gradient vectors
-  rho_edge_pos_grad_x[0] = _grad_rhoep1[_qp](0);
-  rho_edge_pos_grad_x[1] = _grad_rhoep2[_qp](0);
+  rho_edge_pos_grad_x[0] = _edge_dislo_den_pos_grad_1[_qp](0);
+  rho_edge_pos_grad_x[1] = _edge_dislo_den_pos_grad_2[_qp](0);
 
-  rho_edge_neg_grad_x[0] = _grad_rhoen1[_qp](0);
-  rho_edge_neg_grad_x[1] = _grad_rhoen2[_qp](0);
+  rho_edge_neg_grad_x[0] = _edge_dislo_den_neg_grad_1[_qp](0);
+  rho_edge_neg_grad_x[1] = _edge_dislo_den_neg_grad_2[_qp](0);
 
-  rho_edge_pos_grad_y[0] = _grad_rhoep1[_qp](1);
-  rho_edge_pos_grad_y[1] = _grad_rhoep2[_qp](1);
+  rho_edge_pos_grad_y[0] = _edge_dislo_den_pos_grad_1[_qp](1);
+  rho_edge_pos_grad_y[1] = _edge_dislo_den_pos_grad_2[_qp](1);
 
-  rho_edge_neg_grad_y[0] = _grad_rhoen1[_qp](1);
-  rho_edge_neg_grad_y[1] = _grad_rhoen2[_qp](1);
+  rho_edge_neg_grad_y[0] = _edge_dislo_den_neg_grad_1[_qp](1);
+  rho_edge_neg_grad_y[1] = _edge_dislo_den_neg_grad_2[_qp](1);
 
-  rho_edge_pos_grad_z[0] = _grad_rhoep1[_qp](2);
-  rho_edge_pos_grad_z[1] = _grad_rhoep2[_qp](2);
+  rho_edge_pos_grad_z[0] = _edge_dislo_den_pos_grad_1[_qp](2);
+  rho_edge_pos_grad_z[1] = _edge_dislo_den_pos_grad_2[_qp](2);
 
-  rho_edge_neg_grad_z[0] = _grad_rhoen1[_qp](2);
-  rho_edge_neg_grad_z[1] = _grad_rhoen2[_qp](2);
+  rho_edge_neg_grad_z[0] = _edge_dislo_den_neg_grad_1[_qp](2);
+  rho_edge_neg_grad_z[1] = _edge_dislo_den_neg_grad_2[_qp](2);
 
   Real theta = _temperature + 273.15;
   Real RhoTotSlip;
@@ -343,8 +343,8 @@ CrystalPlasticityBussoUpdate::calculateSlipResistance()
   std::vector<Real> rho_edge_pos(_number_slip_systems);
   std::vector<Real> rho_edge_neg(_number_slip_systems);
 
-  rho_edge_pos[0] = _rho_edge_pos_1[_qp];
-  rho_edge_pos[1] = _rho_edge_pos_2[_qp];
+  rho_edge_pos[0] = _edge_dislo_den_pos_1[_qp];
+  rho_edge_pos[1] = _edge_dislo_den_pos_2[_qp];
   // rho_edge_pos[2] = _rho_edge_pos_3[_qp];
   // rho_edge_pos[3] = _rho_edge_pos_4[_qp];
   // rho_edge_pos[4] = _rho_edge_pos_5[_qp];
@@ -352,12 +352,12 @@ CrystalPlasticityBussoUpdate::calculateSlipResistance()
   // rho_edge_pos[6] = _rho_edge_pos_7[_qp];
   // rho_edge_pos[7] = _rho_edge_pos_8[_qp];
   // rho_edge_pos[8] = _rho_edge_pos_9[_qp];
-  // rho_edge_pos[9] = _rho_edge_pos_10[_qp];
-  // rho_edge_pos[10] = _rho_edge_pos_11[_qp];
-  // rho_edge_pos[11] = _rho_edge_pos_12[_qp];
+  // rho_edge_pos[9] = _edge_dislo_den_pos_10[_qp];
+  // rho_edge_pos[10] = _edge_dislo_den_pos_11[_qp];
+  // rho_edge_pos[11] = _edge_dislo_den_pos_12[_qp];
 
-  rho_edge_neg[0] = _rho_edge_neg_1[_qp];
-  rho_edge_neg[1] = _rho_edge_neg_2[_qp];
+  rho_edge_neg[0] = _edge_dislo_den_neg_1[_qp];
+  rho_edge_neg[1] = _edge_dislo_den_neg_2[_qp];
   // rho_edge_neg[2] = _rho_edge_neg_3[_qp];
   // rho_edge_neg[3] = _rho_edge_neg_4[_qp];
   // rho_edge_neg[4] = _rho_edge_neg_5[_qp];
@@ -365,9 +365,9 @@ CrystalPlasticityBussoUpdate::calculateSlipResistance()
   // rho_edge_neg[6] = _rho_edge_neg_7[_qp];
   // rho_edge_neg[7] = _rho_edge_neg_8[_qp];
   // rho_edge_neg[8] = _rho_edge_neg_9[_qp];
-  // rho_edge_neg[9] = _rho_edge_neg_10[_qp];
-  // rho_edge_neg[10] = _rho_edge_neg_11[_qp];
-  // rho_edge_neg[11] = _rho_edge_neg_12[_qp];
+  // rho_edge_neg[9] = _edge_dislo_den_neg_10[_qp];
+  // rho_edge_neg[10] = _edge_dislo_den_neg_11[_qp];
+  // rho_edge_neg[11] = _edge_dislo_den_neg_12[_qp];
 
   for (const auto i : make_range(_number_slip_systems))
   {
@@ -396,8 +396,8 @@ CrystalPlasticityBussoUpdate::calculateDislocationVelocity()
 
   Real total_dislocation_density = 0.0; // total dislocation density in the current slip system
 
-  rho_edge_pos[0] = _rho_edge_pos_1[_qp];
-  rho_edge_pos[1] = _rho_edge_pos_2[_qp];
+  rho_edge_pos[0] = _edge_dislo_den_pos_1[_qp];
+  rho_edge_pos[1] = _edge_dislo_den_pos_2[_qp];
   // rho_edge_pos[2] = _rho_edge_pos_3[_qp];
   // rho_edge_pos[3] = _rho_edge_pos_4[_qp];
   // rho_edge_pos[4] = _rho_edge_pos_5[_qp];
@@ -405,12 +405,12 @@ CrystalPlasticityBussoUpdate::calculateDislocationVelocity()
   // rho_edge_pos[6] = _rho_edge_pos_7[_qp];
   // rho_edge_pos[7] = _rho_edge_pos_8[_qp];
   // rho_edge_pos[8] = _rho_edge_pos_9[_qp];
-  // rho_edge_pos[9] = _rho_edge_pos_10[_qp];
-  // rho_edge_pos[10] = _rho_edge_pos_11[_qp];
-  // rho_edge_pos[11] = _rho_edge_pos_12[_qp];
+  // rho_edge_pos[9] = _edge_dislo_den_pos_10[_qp];
+  // rho_edge_pos[10] = _edge_dislo_den_pos_11[_qp];
+  // rho_edge_pos[11] = _edge_dislo_den_pos_12[_qp];
 
-  rho_edge_neg[0] = _rho_edge_neg_1[_qp];
-  rho_edge_neg[1] = _rho_edge_neg_2[_qp];
+  rho_edge_neg[0] = _edge_dislo_den_neg_1[_qp];
+  rho_edge_neg[1] = _edge_dislo_den_neg_2[_qp];
   // rho_edge_neg[2] = _rho_edge_neg_3[_qp];
   // rho_edge_neg[3] = _rho_edge_neg_4[_qp];
   // rho_edge_neg[4] = _rho_edge_neg_5[_qp];
@@ -418,9 +418,9 @@ CrystalPlasticityBussoUpdate::calculateDislocationVelocity()
   // rho_edge_neg[6] = _rho_edge_neg_7[_qp];
   // rho_edge_neg[7] = _rho_edge_neg_8[_qp];
   // rho_edge_neg[8] = _rho_edge_neg_9[_qp];
-  // rho_edge_neg[9] = _rho_edge_neg_10[_qp];
-  // rho_edge_neg[10] = _rho_edge_neg_11[_qp];
-  // rho_edge_neg[11] = _rho_edge_neg_12[_qp];
+  // rho_edge_neg[9] = _edge_dislo_den_neg_10[_qp];
+  // rho_edge_neg[10] = _edge_dislo_den_neg_11[_qp];
+  // rho_edge_neg[11] = _edge_dislo_den_neg_12[_qp];
 
   for (const auto i : make_range(_number_slip_systems))
   {

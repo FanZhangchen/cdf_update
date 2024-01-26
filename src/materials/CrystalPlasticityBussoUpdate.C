@@ -30,10 +30,14 @@ CrystalPlasticityBussoUpdate::validParams()
   params.addParam<Real>("w1", 1.5, "cross-hardening constants, adopted from Cheong2004");
   params.addParam<Real>("w2", 1.2, "cross-hardening constants, adopted from Cheong2004");
 
-  params.addCoupledVar("edge_dislo_den_pos_1", 0.0, "Positive edge dislocation density: slip system 1");
-  params.addCoupledVar("edge_dislo_den_neg_1", 0.0, "Negative edge dislocation density: slip system 1");
-  params.addCoupledVar("edge_dislo_den_pos_2", 0.0, "Positive edge dislocation density: slip system 2");
-  params.addCoupledVar("edge_dislo_den_neg_2", 0.0, "Negative edge dislocation density: slip system 2");
+  params.addCoupledVar(
+      "edge_dislo_den_pos_1", 0.0, "Positive edge dislocation density: slip system 1");
+  params.addCoupledVar(
+      "edge_dislo_den_neg_1", 0.0, "Negative edge dislocation density: slip system 1");
+  params.addCoupledVar(
+      "edge_dislo_den_pos_2", 0.0, "Positive edge dislocation density: slip system 2");
+  params.addCoupledVar(
+      "edge_dislo_den_neg_2", 0.0, "Negative edge dislocation density: slip system 2");
 
   return params;
 }

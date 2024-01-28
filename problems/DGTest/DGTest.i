@@ -70,11 +70,6 @@
     type = ParsedFunction
     value = '0.005*4*t'
   []
-  [disp_p] 
-    type = PiecewiseLinear
-    x = '0 0.1 0.5'
-    y = '0 4.5e-4 4.5e-4'
-  []
 []
 
 [Modules/TensorMechanics/Master/all]
@@ -148,7 +143,6 @@
       dislo_character = edge
       dislo_sign = positive
       slip_sys_index = 0
-    exclude_boundary = 'top bottom right left'
   []
 
   [dg_edge_neg_1]
@@ -157,7 +151,6 @@
       dislo_character = edge
       dislo_sign = negative
       slip_sys_index = 0
-    exclude_boundary = 'top bottom right left'
   []
 
   [dg_edge_pos_2]
@@ -166,7 +159,6 @@
       dislo_character = edge
       dislo_sign = positive
       slip_sys_index = 1
-    exclude_boundary = 'top bottom right left'
   []
 
   [dg_edge_neg_2]
@@ -175,7 +167,6 @@
       dislo_character = edge
       dislo_sign = negative
       slip_sys_index = 1
-    exclude_boundary = 'top bottom right left'
   []
 
 []
@@ -342,7 +333,6 @@
   [../]
 []
 
-# Transient (time-dependent) details for simulations go here:
 [Executioner]
 
   type = Transient

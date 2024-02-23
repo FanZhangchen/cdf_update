@@ -163,13 +163,13 @@ DGAdvectionCoupled::computeQpJacobian(Moose::DGJacobianType type)
   Real r = 0;
   Real vdotn;
   Real u_vdotn;
-  Real neigh_u_vdotn;
+  // Real neigh_u_vdotn;
 
   getDislocationVelocity();
 
   vdotn = _velocity * _normals[_qp];
   u_vdotn = vdotn * _u[_qp];
-  neigh_u_vdotn = vdotn * _u_neighbor[_qp];
+  // neigh_u_vdotn = vdotn * _u_neighbor[_qp];
 
   switch (type)
   {

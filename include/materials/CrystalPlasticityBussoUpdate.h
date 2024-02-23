@@ -129,16 +129,18 @@ protected:
 
   ///@{Nodal degrees of freedom
   const VariableValue & _edge_dislo_den_pos_1;
-  const VariableValue & _edge_dislo_den_neg_1;
 
   const VariableGradient & _edge_dislo_den_pos_grad_1;
+
+  const VariableValue & _edge_dislo_den_neg_1;
 
   const VariableGradient & _edge_dislo_den_neg_grad_1;
 
   const VariableValue & _edge_dislo_den_pos_2;
-  const VariableValue & _edge_dislo_den_neg_2;
 
   const VariableGradient & _edge_dislo_den_pos_grad_2;
+
+  const VariableValue & _edge_dislo_den_neg_2;
 
   const VariableGradient & _edge_dislo_den_neg_grad_2;
   // const VariableValue & _rho_edge_pos_3;
@@ -178,9 +180,10 @@ protected:
   // Increment of increased resistance for each slip system
   const MaterialProperty<RankTwoTensor> & _deformation_gradient;
   const MaterialProperty<RankTwoTensor> & _plastic_deformation_gradient;
-  MaterialProperty<Real> & _accumulated_equivalent_plastic_strain;
-  const MaterialProperty<Real> & _accumulated_equivalent_plastic_strain_old;
 
   // Dislocation velocity
   MaterialProperty<std::vector<Real>> & _dislo_velocity;
+
+  MaterialProperty<Real> & _accumulated_equivalent_plastic_strain;
+  const MaterialProperty<Real> & _accumulated_equivalent_plastic_strain_old;
 };

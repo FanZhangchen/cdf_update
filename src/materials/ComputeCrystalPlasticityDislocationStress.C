@@ -196,8 +196,8 @@ ComputeCrystalPlasticityDislocationStress::updateStress(RankTwoTensor & cauchy_s
                                                         RankFourTensor & jacobian_mult)
 {
   // Does not support face/boundary material property calculation
-  if (isBoundaryMaterial())
-    return;
+  // if (isBoundaryMaterial())
+  //   return;
 
   // Initialize substepping variables
   unsigned int substep_iter = 1;

@@ -67,6 +67,7 @@ DGAdvectionCoupled::getDislocationVelocity()
       {
         _velocity(j) =
             _edge_slip_direction[_qp][_slip_sys_index * LIBMESH_DIM + j]; // edge direction
+        _velocity(j) *= edge_sign;
       }
       break;
     case DisloCharacter::screw:
@@ -74,6 +75,7 @@ DGAdvectionCoupled::getDislocationVelocity()
       {
         _velocity(j) =
             _screw_slip_direction[_qp][_slip_sys_index * LIBMESH_DIM + j]; // screw direction
+        _velocity(j) *= edge_sign;
       }
       break;
   }
@@ -81,7 +83,6 @@ DGAdvectionCoupled::getDislocationVelocity()
   for (const auto j : make_range(LIBMESH_DIM))
   {
     _velocity(j) *= _dislo_velocity[_qp][_slip_sys_index];
-    _velocity(j) *= edge_sign;
   }
 }
 

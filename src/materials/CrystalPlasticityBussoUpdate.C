@@ -167,6 +167,7 @@ CrystalPlasticityBussoUpdate::calculateSchmidTensor(
   std::vector<RealVectorValue> local_direction_vector, local_plane_normal;
   local_direction_vector.resize(number_slip_systems);
   local_plane_normal.resize(number_slip_systems);
+  // mooseWarning("number_slip_systems", number_slip_systems);
 
   // Temporary directions and normals to calculate
   // screw dislocation slip direction
@@ -337,6 +338,7 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
     }
   }
   calculateDislocationVelocity();
+  
   return true;
 }
 
@@ -438,6 +440,7 @@ CrystalPlasticityBussoUpdate::calculateDislocationVelocity()
     if (driving_force > _zero_tol)
     { // driving force less than 0, the dislocation could not move
       _dislo_velocity[_qp][i] = _slip_increment[_qp][i] / _burgers / total_dislocation_density;
+      // mooseWarning("_dislo_velocity", _dislo_velocity[_qp][i]);
     }
     else
     { // Case below critical resolved shear stress

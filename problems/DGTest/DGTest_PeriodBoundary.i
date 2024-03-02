@@ -277,10 +277,35 @@
     value = 0.0
   []
   [./Periodic]
-    [./all]
+    [./auto_boundary_x]
       variable = disp_x
       auto_direction = 'x'
     [../]
+
+    [./auto_boundary_y]
+      variable = disp_y
+      auto_direction = 'x'
+    [../]
+    
+    [./auto_rho_edge_pos_1_boundary_x]
+      variable = rho_edge_pos_1
+      auto_direction = 'x'
+    [../]
+    
+    [./auto_rho_edge_neg_1_boundary_x]
+      variable = rho_edge_neg_1
+      auto_direction = 'x'
+    [../] 
+
+    [./auto_rho_edge_pos_2_boundary_x]
+      variable = rho_edge_pos_2
+      auto_direction = 'x'
+    [../] 
+
+    [./auto_rho_edge_neg_2_boundary_x]
+      variable = rho_edge_neg_2
+      auto_direction = 'x'
+    [../] 
   [../]
   # [./Periodic]
 

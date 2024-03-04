@@ -7,7 +7,7 @@
 #include "CrystalPlasticityBussoUpdate.h"
 #include "libmesh/int_range.h"
 
-registerMooseObject("TensorMechanicsApp", CrystalPlasticityBussoUpdate);
+registerMooseObject("SolidMechanicsApp", CrystalPlasticityBussoUpdate);
 
 InputParameters
 CrystalPlasticityBussoUpdate::validParams()

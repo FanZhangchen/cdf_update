@@ -373,13 +373,13 @@
   line_search = 'none'
   l_max_its = 50
   nl_max_its = 50
-  nl_rel_tol = 1e-5
-  nl_abs_tol = 1e-3
-  l_tol = 1e-5
+  nl_rel_tol = 1e-7
+  nl_abs_tol = 1e-5
+  l_tol = 1e-7
 
   start_time = 0.0
   end_time = 0.5
-  dt = 5.e-6
+  dt = 5.e-7
   dtmin = 1.e-9
 []
 

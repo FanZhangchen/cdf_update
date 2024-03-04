@@ -338,7 +338,7 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
     }
   }
   calculateDislocationVelocity();
-  
+
   return true;
 }
 

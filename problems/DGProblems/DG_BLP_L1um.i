@@ -6,12 +6,12 @@
   [./gen]
     type = GeneratedMeshGenerator
     dim = 2
-    nx = 25
+    nx = 10
     ny = 50
     xmin = 0.0
     ymin = 0.0
-    xmax = 0.4
-    ymax = 0.4
+    xmax = 0.0002
+    ymax = 0.001
   []
 []
 
@@ -68,7 +68,7 @@
 [Functions]
   [disp_load]
     type = ParsedFunction
-    value = '0.005*4*t'
+    value = '0.005*0.001*t'
   []
 []
 
@@ -378,8 +378,8 @@
   l_tol = 1e-5
 
   start_time = 0.0
-  end_time = 0.5
-  dt = 1.e-6
+  end_time = 1.0 #0.5
+  dt = 5.e-7
   dtmin = 1.e-9
 []
 
@@ -427,16 +427,16 @@
   [rhoep]
     type = LineValueSampler
     variable = rho_edge_pos_1
-    start_point = '0.005 0 0'
-    end_point = '0.005 0.1 0'
+    start_point = '0.0001 0 0'
+    end_point = '0.0001 0.001 0'
     num_points = 51
     sort_by = y
   []
   [rhoen]
     type = LineValueSampler
     variable = rho_edge_neg_1
-    start_point = '0.005 0 0'
-    end_point = '0.005 0.1 0'
+    start_point = '0.0001 0 0'
+    end_point = '0.0001 0.001 0'
     num_points = 51
     sort_by = y
   []
@@ -444,7 +444,7 @@
 
 [Outputs]
   exodus = true
-  interval = 20
+  interval = 100
   [csv]
     type = CSV
     file_base = dg_test

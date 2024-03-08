@@ -86,10 +86,10 @@
     variable = rho_edge_pos_1
   []
   [Edge_Pos_Flux_1]
-    implicit = false
+    # implicit = false
     type = ConservativeAdvectionSchmid
     variable = rho_edge_pos_1
-    upwinding_type = none
+    upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 0
       dislo_character = edge
@@ -100,10 +100,10 @@
     variable = rho_edge_neg_1
   []
   [Edge_Neg_Flux_1]
-    implicit = false
+    # implicit = false
     type = ConservativeAdvectionSchmid
     variable = rho_edge_neg_1
-    upwinding_type = none
+    upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 0
       dislo_character = edge
@@ -114,10 +114,10 @@
     variable = rho_edge_pos_2
   []
   [Edge_Pos_Flux_2]
-    implicit = false
+    # implicit = false
     type = ConservativeAdvectionSchmid
     variable = rho_edge_pos_2
-    upwinding_type = none
+    upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 1
       dislo_character = edge
@@ -128,10 +128,10 @@
     variable = rho_edge_neg_2
   []
   [Edge_Neg_Flux_2]
-    implicit = false
+    # implicit = false
     type = ConservativeAdvectionSchmid
     variable = rho_edge_neg_2
-    upwinding_type = none
+    upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 1
       dislo_character = edge
@@ -142,7 +142,7 @@
 [DGKernels]
 
   [dg_edge_pos_1]
-    implicit = false
+    # implicit = false
     type = DGAdvectionCoupled
     variable = rho_edge_pos_1
       dislo_character = edge
@@ -151,7 +151,7 @@
   []
 
   [dg_edge_neg_1]
-    implicit = false
+    # implicit = false
     type = DGAdvectionCoupled
     variable = rho_edge_neg_1
       dislo_character = edge
@@ -160,7 +160,7 @@
   []
 
   [dg_edge_pos_2]
-    implicit = false
+    # implicit = false
     type = DGAdvectionCoupled
     variable = rho_edge_pos_2
       dislo_character = edge
@@ -169,7 +169,7 @@
   []
 
   [dg_edge_neg_2]
-    implicit = false
+    # implicit = false
     type = DGAdvectionCoupled
     variable = rho_edge_neg_2
       dislo_character = edge

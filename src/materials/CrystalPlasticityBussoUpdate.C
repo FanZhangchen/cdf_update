@@ -314,7 +314,7 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
     switch (_is_two_slips)
     {
       case TwoSlipCheck::yes:
-        if (_number_slip_systems == 0)
+        if (i == 0)
         {
           _backstress(i) = _burgers * _shear_modulus *
                            (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
@@ -323,7 +323,7 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
                             rho_edge_neg_grad_y[i] / std::sin(60.0 * 3.1415926 / 180)) /
                            RhoTotSlip;
         }
-        else if (_number_slip_systems == 1)
+        else if (i == 1)
         {
           _backstress(i) = _burgers * _shear_modulus *
                            (rho_edge_pos_grad_x[i] / std::cos(120.0 * 3.1415926 / 180) -

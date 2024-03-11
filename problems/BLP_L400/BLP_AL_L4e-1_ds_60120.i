@@ -260,42 +260,42 @@
       variable = disp_x
       primary = 'left'
     secondary = 'right'
-    translation = '0.01 0.0 0.0'
+    translation = '0.04 0.0 0.0'
     [../]
 
     [./auto_boundary_y]
       variable = disp_y
       primary = 'left'
     secondary = 'right'
-    translation = '0.01 0.0 0.0'
+    translation = '0.04 0.0 0.0'
     [../]
 
     [./auto_rho_edge_pos_boundary_x_1]
       variable = rho_edge_pos_1
       primary = 'left'
     secondary = 'right'
-    translation = '0.01 0.0 0.0'
+    translation = '0.04 0.0 0.0'
     [../]
 
     [./auto_rho_edge_neg_boundary_x_1]
       variable = rho_edge_neg_1
       primary = 'left'
     secondary = 'right'
-    translation = '0.01 0.0 0.0'
+    translation = '0.04 0.0 0.0'
     [../]
 
     [./auto_rho_edge_pos_boundary_x_2]
       variable = rho_edge_pos_2
       primary = 'left'
     secondary = 'right'
-    translation = '0.01 0.0 0.0'
+    translation = '0.04 0.0 0.0'
     [../]
 
     [./auto_rho_edge_neg_boundary_x_2]
       variable = rho_edge_neg_2
       primary = 'left'
     secondary = 'right'
-    translation = '0.01 0.0 0.0'
+    translation = '0.04 0.0 0.0'
     [../]
 
   [../]
@@ -392,7 +392,7 @@
 
 [Outputs]
   exodus = true
-  interval = 20
+  interval = 200
   [csv]
     type = CSV
     file_base = rhoe_x_out_l4e-1_BLP_rho0_double_60120

@@ -186,4 +186,6 @@ protected:
 
   MaterialProperty<Real> & _accumulated_equivalent_plastic_strain;
   const MaterialProperty<Real> & _accumulated_equivalent_plastic_strain_old;
+
+  const enum class TwoSlipCheck { yes, no } _is_two_slips;
 };

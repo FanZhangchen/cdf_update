@@ -25,7 +25,7 @@ protected:
 
   /// advection velocity
   RealVectorValue _velocity;
-  
+
   /// enum to make the code clearer
   enum class JacRes
   {

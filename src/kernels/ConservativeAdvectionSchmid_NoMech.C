@@ -29,7 +29,8 @@ ConservativeAdvectionSchmid_NoMech::validParams()
   return params;
 }
 
-ConservativeAdvectionSchmid_NoMech::ConservativeAdvectionSchmid_NoMech(const InputParameters & parameters)
+ConservativeAdvectionSchmid_NoMech::ConservativeAdvectionSchmid_NoMech(
+    const InputParameters & parameters)
   : Kernel(parameters),
     // _edge_slip_direction(getMaterialProperty<std::vector<Real>>("edge_slip_direction")), //Edge
     // velocity direction
@@ -73,14 +74,14 @@ ConservativeAdvectionSchmid_NoMech::negSpeedQp()
   switch (_dislo_character)
   {
     case DisloCharacter::edge:
-        _velocity(0) = _dislo_velocity[_qp][0] * edge_sign; // velocity value
-        _velocity(1) = 0.0;             // positive or negative dislocation
-        _velocity(2) = 0.0;
+      _velocity(0) = _dislo_velocity[_qp][0] * edge_sign; // velocity value
+      _velocity(1) = 0.0;                                 // positive or negative dislocation
+      _velocity(2) = 0.0;
       break;
     case DisloCharacter::screw:
-        _velocity(0) = 0.0; // velocity value
-        _velocity(1) = _dislo_velocity[_qp][1] * edge_sign;             // positive or negative dislocation
-        _velocity(2) = 0.0;
+      _velocity(0) = 0.0;                                 // velocity value
+      _velocity(1) = _dislo_velocity[_qp][1] * edge_sign; // positive or negative dislocation
+      _velocity(2) = 0.0;
       break;
   }
   return -_grad_test[_i][_qp] * _velocity;

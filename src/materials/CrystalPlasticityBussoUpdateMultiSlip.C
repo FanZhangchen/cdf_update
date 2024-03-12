@@ -4,13 +4,13 @@
 //* Centre for Micro-mechanics Modelling and Characterisation
 //* 6 Jan 2024
 
-#include "CrystalPlasticityBussoUpdate.h"
+#include "CrystalPlasticityBussoUpdateMultiSlip.h"
 #include "libmesh/int_range.h"
 
-registerMooseObject("SolidMechanicsApp", CrystalPlasticityBussoUpdate);
+registerMooseObject("SolidMechanicsApp", CrystalPlasticityBussoUpdateMultiSlip);
 
 InputParameters
-CrystalPlasticityBussoUpdate::validParams()
+CrystalPlasticityBussoUpdateMultiSlip::validParams()
 {
   InputParameters params = CrystalPlasticityDislocationUpdateBase::validParams();
   params.addClassDescription("Busso's version of crystal plasticity.");
@@ -45,7 +45,7 @@ CrystalPlasticityBussoUpdate::validParams()
   return params;
 }
 
-CrystalPlasticityBussoUpdate::CrystalPlasticityBussoUpdate(const InputParameters & parameters)
+CrystalPlasticityBussoUpdateMultiSlip::CrystalPlasticityBussoUpdateMultiSlip(const InputParameters & parameters)
   : CrystalPlasticityDislocationUpdateBase(parameters),
     // Constitutive values
     _r(getParam<Real>("r")),
@@ -64,6 +64,7 @@ CrystalPlasticityBussoUpdate::CrystalPlasticityBussoUpdate(const InputParameters
     _w2(getParam<Real>("w2")),
 
     _backstress(_number_slip_systems),
+    _backstress_total(_number_slip_systems),
 
     _edge_dislo_den_pos_1(coupledValue("edge_dislo_den_pos_1")),
 
@@ -103,7 +104,7 @@ CrystalPlasticityBussoUpdate::CrystalPlasticityBussoUpdate(const InputParameters
 }
 
 void
-CrystalPlasticityBussoUpdate::initQpStatefulProperties()
+CrystalPlasticityBussoUpdateMultiSlip::initQpStatefulProperties()
 {
   CrystalPlasticityDislocationUpdateBase::initQpStatefulProperties();
 
@@ -162,7 +163,7 @@ CrystalPlasticityBussoUpdate::initQpStatefulProperties()
 }
 
 void
-CrystalPlasticityBussoUpdate::calculateSchmidTensor(
+CrystalPlasticityBussoUpdateMultiSlip::calculateSchmidTensor(
     const unsigned int & number_slip_systems,
     const std::vector<RealVectorValue> & plane_normal_vector,
     const std::vector<RealVectorValue> & direction_vector,
@@ -229,19 +230,19 @@ CrystalPlasticityBussoUpdate::calculateSchmidTensor(
 }
 
 void
-CrystalPlasticityBussoUpdate::setInitialConstitutiveVariableValues()
+CrystalPlasticityBussoUpdateMultiSlip::setInitialConstitutiveVariableValues()
 {
   // No need for this subroutine
 }
 
 void
-CrystalPlasticityBussoUpdate::setSubstepConstitutiveVariableValues()
+CrystalPlasticityBussoUpdateMultiSlip::setSubstepConstitutiveVariableValues()
 {
   // No need for this subroutine
 }
 
 bool
-CrystalPlasticityBussoUpdate::calculateSlipRate()
+CrystalPlasticityBussoUpdateMultiSlip::calculateSlipRate()
 {
 
   calculateSlipResistance();
@@ -311,46 +312,53 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
 
     RhoTotSlip = rho_edge_pos[i] + rho_edge_neg[i];
 
-    // switch (_is_two_slips)
-    // {
-    //   case TwoSlipCheck::yes:
-    //     if (i == 0)
-    //     {
-    //       _backstress(i) = _burgers * _shear_modulus *
-    //                        (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
-    //                         rho_edge_neg_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) +
-    //                         rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -
-    //                         rho_edge_neg_grad_y[i] / std::sin(60.0 * 3.1415926 / 180)) /
-    //                        RhoTotSlip;
-    //     }
-    //     else if (i == 1)
-    //     {
-    //       _backstress(i) = _burgers * _shear_modulus *
-    //                        (rho_edge_pos_grad_x[i] / std::cos(120.0 * 3.1415926 / 180) -
-    //                         rho_edge_neg_grad_x[i] / std::cos(120.0 * 3.1415926 / 180) +
-    //                         rho_edge_pos_grad_y[i] / std::sin(120.0 * 3.1415926 / 180) -
-    //                         rho_edge_neg_grad_y[i] / std::sin(120.0 * 3.1415926 / 180)) /
-    //                        RhoTotSlip;
-    //     }
-    //     break;
+    switch (_is_two_slips)
+    {
+      case TwoSlipCheck::yes:
+        if (i == 0)
+        {
+          _backstress(i) = _burgers * _shear_modulus *
+                           (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
+                            rho_edge_neg_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) +
+                            rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -
+                            rho_edge_neg_grad_y[i] / std::sin(60.0 * 3.1415926 / 180)) /
+                           RhoTotSlip;
+        }
+        else if (i == 1)
+        {
+          _backstress(i) = _burgers * _shear_modulus *
+                           (rho_edge_pos_grad_x[i] / std::cos(120.0 * 3.1415926 / 180) -
+                            rho_edge_neg_grad_x[i] / std::cos(120.0 * 3.1415926 / 180) +
+                            rho_edge_pos_grad_y[i] / std::sin(120.0 * 3.1415926 / 180) -
+                            rho_edge_neg_grad_y[i] / std::sin(120.0 * 3.1415926 / 180)) /
+                           RhoTotSlip;
+        }
+        break;
 
-    //   case TwoSlipCheck::no:
-    //     _backstress(i) = _burgers * _shear_modulus *
-    //                      (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
-    //                       rho_edge_neg_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) +
-    //                       rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -
-    //                       rho_edge_neg_grad_y[i] / std::sin(60.0 * 3.1415926 / 180)) /
-    //                      RhoTotSlip;
-    //     break;
-    // }
-    _backstress(i) = _burgers * _shear_modulus *
-                     (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
-                      rho_edge_neg_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) +
-                      rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -
-                      rho_edge_neg_grad_y[i] / std::sin(60.0 * 3.1415926 / 180)) /
-                     RhoTotSlip;
+      case TwoSlipCheck::no:
+        _backstress(i) = _burgers * _shear_modulus *
+                         (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
+                          rho_edge_neg_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) +
+                          rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -
+                          rho_edge_neg_grad_y[i] / std::sin(60.0 * 3.1415926 / 180)) /
+                         RhoTotSlip;
+        break;
+    }
+    // _backstress(i) = _burgers * _shear_modulus *
+    //                  (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
+    //                   rho_edge_neg_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) +
+    //                   rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -
+    //                   rho_edge_neg_grad_y[i] / std::sin(60.0 * 3.1415926 / 180)) /
+    //                  RhoTotSlip;
+    }
 
-    Real driving_force = std::abs(_tau[_qp][i] - _backstress(i)) - _slip_resistance[_qp][i];
+    _backstress_total(0) = _backstress(0) - 0.466 * _backstress(1);
+    _backstress_total(1) = -0.466 * _backstress(0) + _backstress(1);
+
+    for (const auto i : make_range(_number_slip_systems))
+    {
+
+    Real driving_force = std::abs(_tau[_qp][i] - _backstress_total(i)) - _slip_resistance[_qp][i];
 
     if (driving_force < _zero_tol)
     {
@@ -362,7 +370,7 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
           _gdot0 *
           std::exp(-_f0 / _boltzmann / theta *
                    std::pow((1.0 - std::pow((driving_force / _tau_0), _p)), _q)) *
-          std::copysign(1.0, _tau[_qp][i] - _backstress(i));
+          std::copysign(1.0, _tau[_qp][i] - _backstress_total(i));
     }
 
     if (std::abs(_slip_increment[_qp][i]) * _substep_dt > _slip_incr_tol)
@@ -380,7 +388,7 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
 }
 
 void
-CrystalPlasticityBussoUpdate::calculateSlipResistance()
+CrystalPlasticityBussoUpdateMultiSlip::calculateSlipResistance()
 {
 
   std::vector<Real> rho_edge_pos(_number_slip_systems);
@@ -430,7 +438,7 @@ CrystalPlasticityBussoUpdate::calculateSlipResistance()
 }
 
 void
-CrystalPlasticityBussoUpdate::calculateDislocationVelocity()
+CrystalPlasticityBussoUpdateMultiSlip::calculateDislocationVelocity()
 {
   std::vector<Real> rho_edge_pos(_number_slip_systems);
   std::vector<Real> rho_edge_neg(_number_slip_systems);
@@ -471,7 +479,7 @@ CrystalPlasticityBussoUpdate::calculateDislocationVelocity()
     total_dislocation_density =
         rho_edge_pos[i] + rho_edge_neg[i]; // + rho_screw_pos[i] + rho_screw_neg[i];
 
-    Real driving_force = std::abs(_tau[_qp][i] - _backstress(i)) - _slip_resistance[_qp][i];
+    Real driving_force = std::abs(_tau[_qp][i] - _backstress_total(i)) - _slip_resistance[_qp][i];
     // }
 
     if (driving_force > _zero_tol)
@@ -487,7 +495,7 @@ CrystalPlasticityBussoUpdate::calculateDislocationVelocity()
 }
 
 void
-CrystalPlasticityBussoUpdate::calculateEquivalentSlipIncrement(
+CrystalPlasticityBussoUpdateMultiSlip::calculateEquivalentSlipIncrement(
     RankTwoTensor & equivalent_slip_increment)
 {
   CrystalPlasticityDislocationUpdateBase::calculateEquivalentSlipIncrement(
@@ -497,7 +505,7 @@ CrystalPlasticityBussoUpdate::calculateEquivalentSlipIncrement(
 }
 
 void
-CrystalPlasticityBussoUpdate::calculateAccumulatedEquivalentPlasticStrain()
+CrystalPlasticityBussoUpdateMultiSlip::calculateAccumulatedEquivalentPlasticStrain()
 {
   RankTwoTensor plastic_strain_rate, term1, term2;
   RankTwoTensor elastic_deformation_gradient, inverse_elastic_deformation_gradient,
@@ -522,19 +530,19 @@ CrystalPlasticityBussoUpdate::calculateAccumulatedEquivalentPlasticStrain()
 }
 
 void
-CrystalPlasticityBussoUpdate::calculateConstitutiveSlipDerivative(std::vector<Real> & dslip_dtau)
+CrystalPlasticityBussoUpdateMultiSlip::calculateConstitutiveSlipDerivative(std::vector<Real> & dslip_dtau)
 {
   Real theta = _temperature + 273.15;
   for (const auto i : make_range(_number_slip_systems))
   {
-    Real driving_force = std::abs(_tau[_qp][i] - _backstress(i)) - _slip_resistance[_qp][i];
+    Real driving_force = std::abs(_tau[_qp][i] - _backstress_total(i)) - _slip_resistance[_qp][i];
     Real u = 0.0, uprime = 0.0, vprime = 0.0;
     if (driving_force < _zero_tol)
       dslip_dtau[i] = 0.0;
     else
     {
       u = driving_force / _tau_0;
-      uprime = std::pow(u, _p - 1.0) * std::copysign(1.0, (_tau[_qp][i] - _backstress(i)));
+      uprime = std::pow(u, _p - 1.0) * std::copysign(1.0, (_tau[_qp][i] - _backstress_total(i)));
       vprime = std::pow((1.0 - std::pow(u, _p)), _q - 1.0);
       dslip_dtau[i] = _gdot0 * _p * _q * _f0 / _boltzmann / theta *
                       std::exp(-_f0 / _boltzmann / theta * std::pow((1.0 - std::pow(u, _p)), _q)) *
@@ -545,31 +553,31 @@ CrystalPlasticityBussoUpdate::calculateConstitutiveSlipDerivative(std::vector<Re
 }
 
 bool
-CrystalPlasticityBussoUpdate::areConstitutiveStateVariablesConverged()
+CrystalPlasticityBussoUpdateMultiSlip::areConstitutiveStateVariablesConverged()
 {
   return true;
 }
 
 void
-CrystalPlasticityBussoUpdate::updateSubstepConstitutiveVariableValues()
+CrystalPlasticityBussoUpdateMultiSlip::updateSubstepConstitutiveVariableValues()
 {
   // No need for this subroutine
 }
 
 void
-CrystalPlasticityBussoUpdate::cacheStateVariablesBeforeUpdate()
+CrystalPlasticityBussoUpdateMultiSlip::cacheStateVariablesBeforeUpdate()
 {
   // No need for this subroutine
 }
 
 void
-CrystalPlasticityBussoUpdate::calculateStateVariableEvolutionRateComponent()
+CrystalPlasticityBussoUpdateMultiSlip::calculateStateVariableEvolutionRateComponent()
 {
   // No need for this subroutine
 }
 
 bool
-CrystalPlasticityBussoUpdate::updateStateVariables()
+CrystalPlasticityBussoUpdateMultiSlip::updateStateVariables()
 {
   return true;
 }

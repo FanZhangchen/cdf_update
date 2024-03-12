@@ -45,7 +45,8 @@ CrystalPlasticityBussoUpdateMultiSlip::validParams()
   return params;
 }
 
-CrystalPlasticityBussoUpdateMultiSlip::CrystalPlasticityBussoUpdateMultiSlip(const InputParameters & parameters)
+CrystalPlasticityBussoUpdateMultiSlip::CrystalPlasticityBussoUpdateMultiSlip(
+    const InputParameters & parameters)
   : CrystalPlasticityDislocationUpdateBase(parameters),
     // Constitutive values
     _r(getParam<Real>("r")),
@@ -350,13 +351,13 @@ CrystalPlasticityBussoUpdateMultiSlip::calculateSlipRate()
     //                   rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -
     //                   rho_edge_neg_grad_y[i] / std::sin(60.0 * 3.1415926 / 180)) /
     //                  RhoTotSlip;
-    }
+  }
 
-    _backstress_total(0) = _backstress(0) - 0.466 * _backstress(1);
-    _backstress_total(1) = -0.466 * _backstress(0) + _backstress(1);
+  _backstress_total(0) = _backstress(0) - 0.466 * _backstress(1);
+  _backstress_total(1) = -0.466 * _backstress(0) + _backstress(1);
 
-    for (const auto i : make_range(_number_slip_systems))
-    {
+  for (const auto i : make_range(_number_slip_systems))
+  {
 
     Real driving_force = std::abs(_tau[_qp][i] - _backstress_total(i)) - _slip_resistance[_qp][i];
 
@@ -530,7 +531,8 @@ CrystalPlasticityBussoUpdateMultiSlip::calculateAccumulatedEquivalentPlasticStra
 }
 
 void
-CrystalPlasticityBussoUpdateMultiSlip::calculateConstitutiveSlipDerivative(std::vector<Real> & dslip_dtau)
+CrystalPlasticityBussoUpdateMultiSlip::calculateConstitutiveSlipDerivative(
+    std::vector<Real> & dslip_dtau)
 {
   Real theta = _temperature + 273.15;
   for (const auto i : make_range(_number_slip_systems))

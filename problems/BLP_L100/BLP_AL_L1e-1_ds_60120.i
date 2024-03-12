@@ -75,7 +75,7 @@
 [Functions]
   [disp_load]
     type = ParsedFunction
-    value = '0.005*1.0*t'
+    expression = '0.005*1.0*t'
   []
   [disp_p] 
     type = PiecewiseLinear
@@ -84,7 +84,7 @@
   []
 []
 
-[Modules/TensorMechanics/Master/all]
+[Physics/SolidMechanics/QuasiStatic/all]
   strain = FINITE
   add_variables = true
   generate_output = 'stress_xy'

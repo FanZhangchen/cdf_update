@@ -353,8 +353,20 @@ CrystalPlasticityBussoUpdateMultiSlip::calculateSlipRate()
     //                  RhoTotSlip;
   }
 
-  _backstress_total(0) = _backstress(0) + 0.5 * _backstress(1);
-  _backstress_total(1) = 0.5 * _backstress(0) + _backstress(1);
+  // the total backstress could be calculated with 3 versions
+  // (Yefimov and Van Der Giessen 2005)
+
+  // version 1
+  _backstress_total(0) = _backstress(0) + 0.267 * _backstress(1);
+  _backstress_total(1) = 0.267 * _backstress(0) + _backstress(1);
+
+  // version 2
+  // _backstress_total(0) = _backstress(0) - 0.466 * _backstress(1);
+  // _backstress_total(1) = -0.466 * _backstress(0) + _backstress(1);
+
+  // version 3
+  // _backstress_total(0) = _backstress(0) + 0.5 * _backstress(1);
+  // _backstress_total(1) = 0.5 * _backstress(0) + _backstress(1);
 
   for (const auto i : make_range(_number_slip_systems))
   {

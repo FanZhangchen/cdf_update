@@ -311,44 +311,44 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
 
     RhoTotSlip = rho_edge_pos[i] + rho_edge_neg[i];
 
-    // switch (_is_two_slips)
-    // {
-    //   case TwoSlipCheck::yes:
-    //     if (i == 0)
-    //     {
-    //       _backstress(i) = _burgers * _shear_modulus *
-    //                        (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
-    //                         rho_edge_neg_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) +
-    //                         rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -
-    //                         rho_edge_neg_grad_y[i] / std::sin(60.0 * 3.1415926 / 180)) /
-    //                        RhoTotSlip;
-    //     }
-    //     else if (i == 1)
-    //     {
-    //       _backstress(i) = _burgers * _shear_modulus *
-    //                        (rho_edge_pos_grad_x[i] / std::cos(120.0 * 3.1415926 / 180) -
-    //                         rho_edge_neg_grad_x[i] / std::cos(120.0 * 3.1415926 / 180) +
-    //                         rho_edge_pos_grad_y[i] / std::sin(120.0 * 3.1415926 / 180) -
-    //                         rho_edge_neg_grad_y[i] / std::sin(120.0 * 3.1415926 / 180)) /
-    //                        RhoTotSlip;
-    //     }
-    //     break;
+    switch (_is_two_slips)
+    {
+      case TwoSlipCheck::yes:
+        if (i == 0)
+        {
+          _backstress(i) = _burgers * _shear_modulus *
+                           (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
+                            rho_edge_neg_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) +
+                            rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -
+                            rho_edge_neg_grad_y[i] / std::sin(60.0 * 3.1415926 / 180)) /
+                           RhoTotSlip;
+        }
+        else if (i == 1)
+        {
+          _backstress(i) = _burgers * _shear_modulus *
+                           (rho_edge_pos_grad_x[i] / std::cos(120.0 * 3.1415926 / 180) -
+                            rho_edge_neg_grad_x[i] / std::cos(120.0 * 3.1415926 / 180) +
+                            rho_edge_pos_grad_y[i] / std::sin(120.0 * 3.1415926 / 180) -
+                            rho_edge_neg_grad_y[i] / std::sin(120.0 * 3.1415926 / 180)) /
+                           RhoTotSlip;
+        }
+        break;
 
-    //   case TwoSlipCheck::no:
-    //     _backstress(i) = _burgers * _shear_modulus *
-    //                      (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
-    //                       rho_edge_neg_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) +
-    //                       rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -
-    //                       rho_edge_neg_grad_y[i] / std::sin(60.0 * 3.1415926 / 180)) /
-    //                      RhoTotSlip;
-    //     break;
-    // }
-    _backstress(i) = _burgers * _shear_modulus *
-                     (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
-                      rho_edge_neg_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) +
-                      rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -
-                      rho_edge_neg_grad_y[i] / std::sin(60.0 * 3.1415926 / 180)) /
-                     RhoTotSlip;
+      case TwoSlipCheck::no:
+        _backstress(i) = _burgers * _shear_modulus *
+                         (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
+                          rho_edge_neg_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) +
+                          rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -
+                          rho_edge_neg_grad_y[i] / std::sin(60.0 * 3.1415926 / 180)) /
+                         RhoTotSlip;
+        break;
+    }
+    // _backstress(i) = _burgers * _shear_modulus *
+    //                  (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
+    //                   rho_edge_neg_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) +
+    //                   rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -
+    //                   rho_edge_neg_grad_y[i] / std::sin(60.0 * 3.1415926 / 180)) /
+    //                  RhoTotSlip;
 
     Real driving_force = std::abs(_tau[_qp][i] - _backstress(i)) - _slip_resistance[_qp][i];
 

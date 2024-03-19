@@ -37,7 +37,7 @@ ConservativeAdvectionSchmid_NoMech::ConservativeAdvectionSchmid_NoMech(
     // _screw_slip_direction(getMaterialProperty<std::vector<Real>>("screw_slip_direction")),
     // //Screw velocity direction
     _scale(getParam<Real>("scale")),
-    
+
     _dislo_velocity(
         getMaterialProperty<std::vector<Real>>("dislo_velocity")), // Velocity value (signed)
     _upwinding(getParam<MooseEnum>("upwinding_type").getEnum<UpwindingType>()),
@@ -45,7 +45,7 @@ ConservativeAdvectionSchmid_NoMech::ConservativeAdvectionSchmid_NoMech(
     _dislo_sign(getParam<MooseEnum>("dislo_sign").getEnum<DisloSign>()),
     _dislo_character(getParam<MooseEnum>("dislo_character").getEnum<DisloCharacter>()),
     _u_nodal(_var.dofValues()),
-    
+
     _upwind_node(0),
     _dtotal_mass_out(0)
 {

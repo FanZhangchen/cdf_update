@@ -20,10 +20,6 @@ DisloVelocity_1D::validParams()
 
   params.addRequiredParam<int>("nss", "Number of slip systems");
 
-  params.addRequiredCoupledVar("rhoep", "positive edge dislocation density");
-
-  params.addRequiredCoupledVar("rhoen", "negative edge dislocation density");
-
   // params.addRequiredCoupledVar("rhosp", "positive screw dislocation density");
 
   // params.addRequiredCoupledVar("rhosn", "negative screw dislocation density");
@@ -54,6 +50,10 @@ DisloVelocity_1D::validParams()
 
   params.addParam<Real>("taualpha", 2.63, "The resolved shear stress");
 
+  params.addRequiredCoupledVar("rhoep", "positive edge dislocation density");
+
+  params.addRequiredCoupledVar("rhoen", "negative edge dislocation density");
+
   // params.addParam<std::vector<Real>>("rho_edge", 16000, "The total edge dislocation density");
 
   return params;
@@ -67,6 +67,36 @@ DisloVelocity_1D::DisloVelocity_1D(const InputParameters & parameters)
     _gssT(_nss),
 
     // _slip_rate(getParam<Real>("slip_rate")),
+
+    // _rhosp(coupledValue("rhosp")), // Coupled rhosp
+
+    // _grad_rhosp(coupledGradient("rhosp")), // Coupled rhosp gradient
+
+    // _rhosn(coupledValue("rhosn")), // Coupled rhosn
+
+    // _grad_rhosn(coupledGradient("rhosn")), // Coupled rhosn gradient
+
+    _abstemp(getParam<Real>("abstemp")),
+
+    _boltzmann(getParam<Real>("boltzmann")),
+
+    _burgersvector(getParam<Real>("burgersvector")),
+
+    _F0(getParam<Real>("F0")),
+
+    _gamma0dot(getParam<Real>("gamma0dot")),
+
+    _lambda(getParam<Real>("lambda")),
+
+    _mu(getParam<Real>("mu")),
+
+    _p(getParam<Real>("p")),
+
+    _q(getParam<Real>("q")),
+
+    _tau0hat(getParam<Real>("tau0hat")),
+
+    _taualpha(getParam<Real>("taualpha")),
 
     _dislo_velocity(declareProperty<std::vector<Real>>(
         "dislo_velocity")), // Dislocation velocity at current time step t
@@ -82,35 +112,7 @@ DisloVelocity_1D::DisloVelocity_1D(const InputParameters & parameters)
 
     _grad_rhoen(coupledGradient("rhoen")), // Coupled rhoen gradient
 
-    // _rhosp(coupledValue("rhosp")), // Coupled rhosp
-
-    // _grad_rhosp(coupledGradient("rhosp")), // Coupled rhosp gradient
-
-    // _rhosn(coupledValue("rhosn")), // Coupled rhosn
-
-    // _grad_rhosn(coupledGradient("rhosn")), // Coupled rhosn gradient
-
-    _boltzmann(getParam<Real>("boltzmann")),
-
-    _abstemp(getParam<Real>("abstemp")),
-
-    _p(getParam<Real>("p")),
-
-    _q(getParam<Real>("q")),
-
-    _tau0hat(getParam<Real>("tau0hat")),
-
-    _gamma0dot(getParam<Real>("gamma0dot")),
-
-    _F0(getParam<Real>("F0")),
-
-    _lambda(getParam<Real>("lambda")),
-
-    _mu(getParam<Real>("mu")),
-
-    _taualpha(getParam<Real>("taualpha")),
-
-    _burgersvector(getParam<Real>("burgersvector")),
+    _slip_rate(declareProperty<Real>("slip_rate")),
 
     _rho_edge(declareProperty<Real>("rho_edge")),
 
@@ -118,9 +120,7 @@ DisloVelocity_1D::DisloVelocity_1D(const InputParameters & parameters)
 
     _rhot(declareProperty<Real>("rhot")),
 
-    _tau_backstress(declareProperty<Real>("tau_backstress")),
-
-    _slip_rate(declareProperty<Real>("slip_rate"))
+    _tau_backstress(declareProperty<Real>("tau_backstress"))
 
 {
 }

@@ -119,6 +119,7 @@ protected:
   const Real _burgers;
   const Real _shear_modulus;
   const Real _boltzmann;
+  const Real _scaling_Cb;
 
   const Real _dlamb;
   const Real _w1;

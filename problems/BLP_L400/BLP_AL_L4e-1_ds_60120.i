@@ -75,16 +75,11 @@
 [Functions]
   [disp_load]
     type = ParsedFunction
-    value = '0.005*4.0*t'
-  []
-  [disp_p] 
-    type = PiecewiseLinear
-    x = '0 0.1 0.5'
-    y = '0 4.5e-4 4.5e-4'
+    expression = '0.005*4.0*t'
   []
 []
 
-[Modules/TensorMechanics/Master/all]
+[Physics/SolidMechanics/QuasiStatic/all]
   strain = FINITE
   add_variables = true
   generate_output = 'stress_xy'
@@ -219,6 +214,7 @@
       q = 1.1
       f0 = 3.e-19
       gdot0 = 1.73e6
+      scaling_Cb = 0.241
     edge_dislo_den_pos_1 = rho_edge_pos_1
     edge_dislo_den_neg_1 = rho_edge_neg_1
     edge_dislo_den_pos_2 = rho_edge_pos_2

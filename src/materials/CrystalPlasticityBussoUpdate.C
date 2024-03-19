@@ -25,6 +25,7 @@ CrystalPlasticityBussoUpdate::validParams()
   params.addParam<Real>("burgers", 2.54e-7, "magnitude of burgers vector");
   params.addParam<Real>("shear_modulus", 45000.0, "shear_modulus");
   params.addParam<Real>("boltzmann", 1.38065e-23, "The Boltzmann Constant");
+  params.addParam<Real>("scaling_Cb", 1.0, "The scaling parameter for the backstress");
 
   params.addParam<Real>("dlamb", 0.3, "initial slip rate");
   params.addParam<Real>("w1", 1.5, "cross-hardening constants, adopted from Cheong2004");
@@ -58,6 +59,7 @@ CrystalPlasticityBussoUpdate::CrystalPlasticityBussoUpdate(const InputParameters
     _burgers(getParam<Real>("burgers")),
     _shear_modulus(getParam<Real>("shear_modulus")),
     _boltzmann(getParam<Real>("boltzmann")),
+    _scaling_Cb(getParam<Real>("scaling_Cb")),
 
     _dlamb(getParam<Real>("dlamb")),
     _w1(getParam<Real>("w1")),
@@ -316,7 +318,7 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
       case TwoSlipCheck::yes:
         if (i == 0)
         {
-          _backstress(i) = _burgers * _shear_modulus *
+          _backstress(i) = _scaling_Cb * _burgers * _shear_modulus *
                            (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
                             rho_edge_neg_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) +
                             rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -
@@ -325,7 +327,7 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
         }
         else if (i == 1)
         {
-          _backstress(i) = _burgers * _shear_modulus *
+          _backstress(i) = _scaling_Cb * _burgers * _shear_modulus *
                            (rho_edge_pos_grad_x[i] / std::cos(120.0 * 3.1415926 / 180) -
                             rho_edge_neg_grad_x[i] / std::cos(120.0 * 3.1415926 / 180) +
                             rho_edge_pos_grad_y[i] / std::sin(120.0 * 3.1415926 / 180) -
@@ -335,7 +337,7 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
         break;
 
       case TwoSlipCheck::no:
-        _backstress(i) = _burgers * _shear_modulus *
+        _backstress(i) = _scaling_Cb * _burgers * _shear_modulus *
                          (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
                           rho_edge_neg_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) +
                           rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -

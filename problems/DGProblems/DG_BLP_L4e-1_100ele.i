@@ -68,11 +68,11 @@
 [Functions]
   [disp_load]
     type = ParsedFunction
-    value = '0.005*4*t'
+    expression = '0.005*4*t'
   []
 []
 
-[Modules/TensorMechanics/Master/all]
+[Physics/SolidMechanics/QuasiStatic/all]
   strain = FINITE
   add_variables = true
   generate_output = 'stress_xy'
@@ -387,7 +387,7 @@
 
   start_time = 0.0
   end_time = 0.5
-  dt = 1.e-6
+  dt = 1.e-5
   dtmin = 1.e-9
 []
 
@@ -452,7 +452,7 @@
 
 [Outputs]
   exodus = true
-  interval = 20
+  interval = 10
   [csv]
     type = CSV
     file_base = dg_test

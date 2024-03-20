@@ -218,7 +218,7 @@
     edge_dislo_den_pos_2 = rho_edge_pos_2
     edge_dislo_den_neg_2 = rho_edge_neg_2
       is_two_slips = yes
-      version_number = v_3
+      version_number = v_1
   [../]
 []
 
@@ -422,7 +422,7 @@
   interval = 20
   [csv]
     type = CSV
-    file_base = rhoe_x_out_l4e-1_BLP_rho0_double_60120
+    file_base = rhoe_x_out_l4e-1_BLP_rho0_double_60120_v1
     execute_on = final
   []
 []

@@ -25,6 +25,7 @@ CrystalPlasticityBussoUpdateMultiSlip::validParams()
   params.addParam<Real>("burgers", 2.54e-7, "magnitude of burgers vector");
   params.addParam<Real>("shear_modulus", 45000.0, "shear_modulus");
   params.addParam<Real>("boltzmann", 1.38065e-23, "The Boltzmann Constant");
+  params.addParam<Real>("scaling_Cb", 1.0, "The scaling parameter for the backstress");
 
   params.addParam<Real>("dlamb", 0.3, "initial slip rate");
   params.addParam<Real>("w1", 1.5, "cross-hardening constants, adopted from Cheong2004");
@@ -41,6 +42,9 @@ CrystalPlasticityBussoUpdateMultiSlip::validParams()
 
   MooseEnum is_two_slips("yes no", "yes");
   params.addRequiredParam<MooseEnum>("is_two_slips", is_two_slips, "check two slips case.");
+
+  MooseEnum version_number("v_1 v_2 v_3", "v_3");
+  params.addRequiredParam<MooseEnum>("version_number", version_number, "turn to 3 types of multi slips case.");
 
   return params;
 }
@@ -59,6 +63,7 @@ CrystalPlasticityBussoUpdateMultiSlip::CrystalPlasticityBussoUpdateMultiSlip(
     _burgers(getParam<Real>("burgers")),
     _shear_modulus(getParam<Real>("shear_modulus")),
     _boltzmann(getParam<Real>("boltzmann")),
+    _scaling_Cb(getParam<Real>("scaling_Cb")),
 
     _dlamb(getParam<Real>("dlamb")),
     _w1(getParam<Real>("w1")),
@@ -99,7 +104,9 @@ CrystalPlasticityBussoUpdateMultiSlip::CrystalPlasticityBussoUpdateMultiSlip(
     _accumulated_equivalent_plastic_strain_old(
         getMaterialPropertyOld<Real>(_base_name + "accumulated_equivalent_plastic_strain")),
 
-    _is_two_slips(getParam<MooseEnum>("is_two_slips").getEnum<TwoSlipCheck>())
+    _is_two_slips(getParam<MooseEnum>("is_two_slips").getEnum<TwoSlipCheck>()),
+
+    _version_number(getParam<MooseEnum>("version_number").getEnum<MultiSlipsVersion>())
 
 {
 }
@@ -318,7 +325,7 @@ CrystalPlasticityBussoUpdateMultiSlip::calculateSlipRate()
       case TwoSlipCheck::yes:
         if (i == 0)
         {
-          _backstress(i) = _burgers * _shear_modulus *
+          _backstress(i) = _scaling_Cb * _burgers * _shear_modulus *
                            (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
                             rho_edge_neg_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) +
                             rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -
@@ -327,7 +334,7 @@ CrystalPlasticityBussoUpdateMultiSlip::calculateSlipRate()
         }
         else if (i == 1)
         {
-          _backstress(i) = _burgers * _shear_modulus *
+          _backstress(i) = _scaling_Cb * _burgers * _shear_modulus *
                            (rho_edge_pos_grad_x[i] / std::cos(120.0 * 3.1415926 / 180) -
                             rho_edge_neg_grad_x[i] / std::cos(120.0 * 3.1415926 / 180) +
                             rho_edge_pos_grad_y[i] / std::sin(120.0 * 3.1415926 / 180) -
@@ -337,7 +344,7 @@ CrystalPlasticityBussoUpdateMultiSlip::calculateSlipRate()
         break;
 
       case TwoSlipCheck::no:
-        _backstress(i) = _burgers * _shear_modulus *
+        _backstress(i) = _scaling_Cb * _burgers * _shear_modulus *
                          (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
                           rho_edge_neg_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) +
                           rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -
@@ -356,17 +363,27 @@ CrystalPlasticityBussoUpdateMultiSlip::calculateSlipRate()
   // the total backstress could be calculated with 3 versions
   // (Yefimov and Van Der Giessen 2005)
 
-  // version 1
-  // _backstress_total(0) = _backstress(0) + 0.267 * _backstress(1);
-  // _backstress_total(1) = 0.267 * _backstress(0) + _backstress(1);
+  switch (_version_number)
+  {
+    case MultiSlipsVersion::v_1:
+    // version 1
+    _backstress_total(0) = _backstress(0) + 0.267 * _backstress(1);
+    _backstress_total(1) = 0.267 * _backstress(0) + _backstress(1);
+    break;
 
-  // version 2
-  // _backstress_total(0) = _backstress(0) - 0.466 * _backstress(1);
-  // _backstress_total(1) = -0.466 * _backstress(0) + _backstress(1);
+    case MultiSlipsVersion::v_2:
+    // version 2
+    _backstress_total(0) = _backstress(0) - 0.466 * _backstress(1);
+    _backstress_total(1) = -0.466 * _backstress(0) + _backstress(1);
+    break;
 
-  // version 3
-  _backstress_total(0) = _backstress(0) + 0.5 * _backstress(1);
-  _backstress_total(1) = 0.5 * _backstress(0) + _backstress(1);
+    case MultiSlipsVersion::v_3:
+    // version 3
+    _backstress_total(0) = _backstress(0) + 0.5 * _backstress(1);
+    _backstress_total(1) = 0.5 * _backstress(0) + _backstress(1);
+    break;
+  }
+  
 
   for (const auto i : make_range(_number_slip_systems))
   {

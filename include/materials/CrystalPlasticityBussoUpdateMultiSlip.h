@@ -119,6 +119,7 @@ protected:
   const Real _burgers;
   const Real _shear_modulus;
   const Real _boltzmann;
+  const Real _scaling_Cb;
 
   const Real _dlamb;
   const Real _w1;
@@ -189,4 +190,6 @@ protected:
   const MaterialProperty<Real> & _accumulated_equivalent_plastic_strain_old;
 
   const enum class TwoSlipCheck { yes, no } _is_two_slips;
+
+  const enum class MultiSlipsVersion { v_1, v_2, v_3 } _version_number;
 };

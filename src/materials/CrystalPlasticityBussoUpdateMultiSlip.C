@@ -44,7 +44,8 @@ CrystalPlasticityBussoUpdateMultiSlip::validParams()
   params.addRequiredParam<MooseEnum>("is_two_slips", is_two_slips, "check two slips case.");
 
   MooseEnum version_number("v_1 v_2 v_3", "v_3");
-  params.addRequiredParam<MooseEnum>("version_number", version_number, "turn to 3 types of multi slips case.");
+  params.addRequiredParam<MooseEnum>(
+      "version_number", version_number, "turn to 3 types of multi slips case.");
 
   return params;
 }
@@ -366,24 +367,23 @@ CrystalPlasticityBussoUpdateMultiSlip::calculateSlipRate()
   switch (_version_number)
   {
     case MultiSlipsVersion::v_1:
-    // version 1
-    _backstress_total(0) = _backstress(0) + 0.267 * _backstress(1);
-    _backstress_total(1) = 0.267 * _backstress(0) + _backstress(1);
-    break;
+      // version 1
+      _backstress_total(0) = _backstress(0) + 0.267 * _backstress(1);
+      _backstress_total(1) = 0.267 * _backstress(0) + _backstress(1);
+      break;
 
     case MultiSlipsVersion::v_2:
-    // version 2
-    _backstress_total(0) = _backstress(0) - 0.466 * _backstress(1);
-    _backstress_total(1) = -0.466 * _backstress(0) + _backstress(1);
-    break;
+      // version 2
+      _backstress_total(0) = _backstress(0) - 0.466 * _backstress(1);
+      _backstress_total(1) = -0.466 * _backstress(0) + _backstress(1);
+      break;
 
     case MultiSlipsVersion::v_3:
-    // version 3
-    _backstress_total(0) = _backstress(0) + 0.5 * _backstress(1);
-    _backstress_total(1) = 0.5 * _backstress(0) + _backstress(1);
-    break;
+      // version 3
+      _backstress_total(0) = _backstress(0) + 0.5 * _backstress(1);
+      _backstress_total(1) = 0.5 * _backstress(0) + _backstress(1);
+      break;
   }
-  
 
   for (const auto i : make_range(_number_slip_systems))
   {

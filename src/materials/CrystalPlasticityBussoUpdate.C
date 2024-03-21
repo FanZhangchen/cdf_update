@@ -388,6 +388,8 @@ CrystalPlasticityBussoUpdate::calculateSlipResistance()
   std::vector<Real> rho_edge_pos(_number_slip_systems);
   std::vector<Real> rho_edge_neg(_number_slip_systems);
 
+  _slip_resistance[_qp].resize(_number_slip_systems);
+
   rho_edge_pos[0] = _edge_dislo_den_pos_1[_qp];
   rho_edge_pos[1] = _edge_dislo_den_pos_2[_qp];
   // rho_edge_pos[2] = _rho_edge_pos_3[_qp];

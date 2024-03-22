@@ -7,7 +7,7 @@
     type = GeneratedMeshGenerator
     dim = 2
     nx = 1
-    ny = 10
+    ny = 50
     xmin = 0.0
     ymin = 0.0
     xmax = 0.04
@@ -88,7 +88,7 @@
   [Edge_Pos_Flux_1]
     type = ConservativeAdvectionSchmid
     variable = rho_edge_pos_1
-    upwinding_type = none
+    upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 0
       dislo_character = edge
@@ -101,7 +101,7 @@
   [Edge_Neg_Flux_1]
     type = ConservativeAdvectionSchmid
     variable = rho_edge_neg_1
-    upwinding_type = none
+    upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 0
       dislo_character = edge
@@ -114,7 +114,7 @@
   [Edge_Pos_Flux_2]
     type = ConservativeAdvectionSchmid
     variable = rho_edge_pos_2
-    upwinding_type = none
+    upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 1
       dislo_character = edge
@@ -127,7 +127,7 @@
   [Edge_Neg_Flux_2]
     type = ConservativeAdvectionSchmid
     variable = rho_edge_neg_2
-    upwinding_type = none
+    upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 1
       dislo_character = edge
@@ -447,7 +447,7 @@
   interval = 20
   [csv]
     type = CSV
-    file_base = dg_test
+    file_base = dg_test_l400
     execute_on = final
   []
 []

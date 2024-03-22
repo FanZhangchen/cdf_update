@@ -68,11 +68,11 @@
 [Functions]
   [disp_load]
     type = ParsedFunction
-    value = '0.005*0.001*t'
+    expression = '0.005*0.001*t'
   []
 []
 
-[Modules/TensorMechanics/Master/all]
+[Physics/SolidMechanics/QuasiStatic/all]
   strain = FINITE
   add_variables = true
   generate_output = 'stress_xy'
@@ -88,7 +88,7 @@
   [Edge_Pos_Flux_1]
     type = ConservativeAdvectionSchmid
     variable = rho_edge_pos_1
-    upwinding_type = none
+    upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 0
       dislo_character = edge
@@ -101,7 +101,7 @@
   [Edge_Neg_Flux_1]
     type = ConservativeAdvectionSchmid
     variable = rho_edge_neg_1
-    upwinding_type = none
+    upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 0
       dislo_character = edge
@@ -114,7 +114,7 @@
   [Edge_Pos_Flux_2]
     type = ConservativeAdvectionSchmid
     variable = rho_edge_pos_2
-    upwinding_type = none
+    upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 1
       dislo_character = edge
@@ -127,7 +127,7 @@
   [Edge_Neg_Flux_2]
     type = ConservativeAdvectionSchmid
     variable = rho_edge_neg_2
-    upwinding_type = none
+    upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 1
       dislo_character = edge
@@ -379,7 +379,7 @@
 
   start_time = 0.0
   end_time = 1.0 #0.5
-  dt = 5.e-7
+  dt = 5.e-6
   dtmin = 1.e-9
 []
 
@@ -444,10 +444,10 @@
 
 [Outputs]
   exodus = true
-  interval = 100
+  interval = 200
   [csv]
     type = CSV
-    file_base = dg_test
+    file_base = dg_test_1um
     execute_on = final
   []
 []

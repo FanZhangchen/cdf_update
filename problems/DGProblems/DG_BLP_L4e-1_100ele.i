@@ -452,7 +452,7 @@
 
 [Outputs]
   exodus = true
-  interval = 10
+  time_step_interval = 10
   [csv]
     type = CSV
     file_base = dg_test

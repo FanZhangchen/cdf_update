@@ -68,7 +68,7 @@
 [Functions]
   [disp_load]
     type = ParsedFunction
-    expression = '0.005*0.001*t'
+    expression = '0.005*0.01*t'
   []
 []
 

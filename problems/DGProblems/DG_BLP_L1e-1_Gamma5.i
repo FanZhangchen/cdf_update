@@ -10,8 +10,8 @@
     ny = 50
     xmin = 0.0
     ymin = 0.0
-    xmax = 0.04
-    ymax = 0.4
+    xmax = 0.01
+    ymax = 0.1
   []
 []
 
@@ -68,7 +68,7 @@
 [Functions]
   [disp_load]
     type = ParsedFunction
-    expression = '0.005*4.0*t'
+    expression = '0.005*1.0*t'
   []
 []
 
@@ -460,16 +460,16 @@
   [rhoep]
     type = LineValueSampler
     variable = rho_edge_pos_1
-    start_point = '0.02 0 0'
-    end_point = '0.02 0.4 0'
+    start_point = '0.005 0 0'
+    end_point = '0.005 0.1 0'
     num_points = 51
     sort_by = y
   []
   [rhoen]
     type = LineValueSampler
     variable = rho_edge_neg_1
-    start_point = '0.02 0 0'
-    end_point = '0.02 0.4 0'
+    start_point = '0.005 0 0'
+    end_point = '0.005 0.1 0'
     num_points = 51
     sort_by = y
   []
@@ -480,7 +480,7 @@
   interval = 50
   [csv]
     type = CSV
-    file_base = dg_test_l400_explicit_gamma5
+    file_base = dg_test_l100_explicit_gamma5
     execute_on = final
   []
 []

@@ -108,35 +108,43 @@ DisloVelocity_2D8::DisloVelocity_2D8(const InputParameters & parameters)
 
     _edge_dislo_den_1(coupledValue("edge_dislo_den_1")), // Coupled edge_dislo_den_p
 
-    _grad_edge_dislo_den_1(coupledGradient("edge_dislo_den_1")), // Coupled edge_dislo_den_p gradient
+    _grad_edge_dislo_den_1(
+        coupledGradient("edge_dislo_den_1")), // Coupled edge_dislo_den_p gradient
 
     _edge_dislo_den_2(coupledValue("edge_dislo_den_2")), // Coupled edge_dislo_den_n
 
-    _grad_edge_dislo_den_2(coupledGradient("edge_dislo_den_2")), // Coupled edge_dislo_den_n gradient
+    _grad_edge_dislo_den_2(
+        coupledGradient("edge_dislo_den_2")), // Coupled edge_dislo_den_n gradient
 
     _edge_dislo_den_3(coupledValue("edge_dislo_den_3")), // Coupled edge_dislo_den_p
 
-    _grad_edge_dislo_den_3(coupledGradient("edge_dislo_den_3")), // Coupled edge_dislo_den_p gradient
+    _grad_edge_dislo_den_3(
+        coupledGradient("edge_dislo_den_3")), // Coupled edge_dislo_den_p gradient
 
     _edge_dislo_den_4(coupledValue("edge_dislo_den_4")), // Coupled edge_dislo_den_n
 
-    _grad_edge_dislo_den_4(coupledGradient("edge_dislo_den_4")), // Coupled edge_dislo_den_n gradient
+    _grad_edge_dislo_den_4(
+        coupledGradient("edge_dislo_den_4")), // Coupled edge_dislo_den_n gradient
 
     _screw_dislo_den_1(coupledValue("screw_dislo_den_1")), // Coupled screw_dislo_den_p
 
-    _grad_screw_dislo_den_1(coupledGradient("screw_dislo_den_1")), // Coupled screw_dislo_den_p gradient
+    _grad_screw_dislo_den_1(
+        coupledGradient("screw_dislo_den_1")), // Coupled screw_dislo_den_p gradient
 
     _screw_dislo_den_2(coupledValue("screw_dislo_den_2")), // Coupled screw_dislo_den_n
 
-    _grad_screw_dislo_den_2(coupledGradient("screw_dislo_den_2")), // Coupled screw_dislo_den_n gradient
+    _grad_screw_dislo_den_2(
+        coupledGradient("screw_dislo_den_2")), // Coupled screw_dislo_den_n gradient
 
     _screw_dislo_den_3(coupledValue("screw_dislo_den_3")), // Coupled screw_dislo_den_p
 
-    _grad_screw_dislo_den_3(coupledGradient("screw_dislo_den_3")), // Coupled screw_dislo_den_p gradient
+    _grad_screw_dislo_den_3(
+        coupledGradient("screw_dislo_den_3")), // Coupled screw_dislo_den_p gradient
 
     _screw_dislo_den_4(coupledValue("screw_dislo_den_4")), // Coupled screw_dislo_den_n
 
-    _grad_screw_dislo_den_4(coupledGradient("screw_dislo_den_4")), // Coupled screw_dislo_den_n gradient
+    _grad_screw_dislo_den_4(
+        coupledGradient("screw_dislo_den_4")), // Coupled screw_dislo_den_n gradient
 
     _slip_rate(declareProperty<Real>("slip_rate")),
 
@@ -163,17 +171,20 @@ DisloVelocity_2D8::computeQpProperties()
 
   // initialize the edge dislocation density
 
-  _rho_edge[_qp] = _edge_dislo_den_1[_qp] + _edge_dislo_den_2[_qp] + _edge_dislo_den_3[_qp] + _edge_dislo_den_4[_qp];
+  _rho_edge[_qp] = _edge_dislo_den_1[_qp] + _edge_dislo_den_2[_qp] + _edge_dislo_den_3[_qp] +
+                   _edge_dislo_den_4[_qp];
 
-  _rho_screw[_qp] = _screw_dislo_den_1[_qp] + _screw_dislo_den_2[_qp] + _screw_dislo_den_3[_qp] + _screw_dislo_den_4[_qp];
+  _rho_screw[_qp] = _screw_dislo_den_1[_qp] + _screw_dislo_den_2[_qp] + _screw_dislo_den_3[_qp] +
+                    _screw_dislo_den_4[_qp];
 
   _rhot[_qp] = _rho_edge[_qp] + _rho_screw[_qp];
 
-  _tau_backstress[_qp] =
-      _burgersvector * _mu *
-      (_grad_edge_dislo_den_1[_qp](0) + _grad_edge_dislo_den_2[_qp](0) - _grad_edge_dislo_den_3[_qp](0) - _grad_edge_dislo_den_4[_qp](0) -
-       _grad_screw_dislo_den_1[_qp](1) + _grad_screw_dislo_den_2[_qp](1) + _grad_screw_dislo_den_3[_qp](1) - _grad_screw_dislo_den_4[_qp](1)) /
-      _rhot[_qp];
+  _tau_backstress[_qp] = _burgersvector * _mu *
+                         (_grad_edge_dislo_den_1[_qp](0) + _grad_edge_dislo_den_2[_qp](0) -
+                          _grad_edge_dislo_den_3[_qp](0) - _grad_edge_dislo_den_4[_qp](0) -
+                          _grad_screw_dislo_den_1[_qp](1) + _grad_screw_dislo_den_2[_qp](1) +
+                          _grad_screw_dislo_den_3[_qp](1) - _grad_screw_dislo_den_4[_qp](1)) /
+                         _rhot[_qp];
 
   _slip_rate[_qp] =
       _gamma0dot *
@@ -205,17 +216,20 @@ DisloVelocity_2D8::initQpStatefulProperties()
 
   // initialize the edge dislocation density
 
-  _rho_edge[_qp] = _edge_dislo_den_1[_qp] + _edge_dislo_den_2[_qp] + _edge_dislo_den_3[_qp] + _edge_dislo_den_4[_qp];
+  _rho_edge[_qp] = _edge_dislo_den_1[_qp] + _edge_dislo_den_2[_qp] + _edge_dislo_den_3[_qp] +
+                   _edge_dislo_den_4[_qp];
 
-  _rho_screw[_qp] = _screw_dislo_den_1[_qp] + _screw_dislo_den_2[_qp] + _screw_dislo_den_3[_qp] + _screw_dislo_den_4[_qp];
+  _rho_screw[_qp] = _screw_dislo_den_1[_qp] + _screw_dislo_den_2[_qp] + _screw_dislo_den_3[_qp] +
+                    _screw_dislo_den_4[_qp];
 
   _rhot[_qp] = _rho_edge[_qp] + _rho_screw[_qp];
 
-  _tau_backstress[_qp] =
-      _burgersvector * _mu *
-      (_grad_edge_dislo_den_1[_qp](0) + _grad_edge_dislo_den_2[_qp](0) - _grad_edge_dislo_den_3[_qp](0) - _grad_edge_dislo_den_4[_qp](0) +
-       _grad_screw_dislo_den_1[_qp](1) - _grad_screw_dislo_den_2[_qp](1) - _grad_screw_dislo_den_3[_qp](1) + _grad_screw_dislo_den_4[_qp](1)) /
-      _rhot[_qp];
+  _tau_backstress[_qp] = _burgersvector * _mu *
+                         (_grad_edge_dislo_den_1[_qp](0) + _grad_edge_dislo_den_2[_qp](0) -
+                          _grad_edge_dislo_den_3[_qp](0) - _grad_edge_dislo_den_4[_qp](0) +
+                          _grad_screw_dislo_den_1[_qp](1) - _grad_screw_dislo_den_2[_qp](1) -
+                          _grad_screw_dislo_den_3[_qp](1) + _grad_screw_dislo_den_4[_qp](1)) /
+                         _rhot[_qp];
 
   _slip_rate[_qp] =
       _gamma0dot *

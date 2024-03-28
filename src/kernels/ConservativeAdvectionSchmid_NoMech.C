@@ -25,7 +25,7 @@ ConservativeAdvectionSchmid_NoMech::validParams()
   MooseEnum dislo_character("edge screw", "edge");
   params.addRequiredParam<MooseEnum>(
       "dislo_character", dislo_character, "Character of dislocations: edge or screw.");
-  params.addParam<Real>("scale", 1.0, "Scale parameters");
+  params.addParam<Real>("scale", 0.5, "Scale parameters");
   return params;
 }
 
@@ -82,7 +82,7 @@ ConservativeAdvectionSchmid_NoMech::negSpeedQp()
       break;
     case DisloCharacter::screw:
       _velocity(0) = 0.0;                                 // velocity value
-      _velocity(1) = _dislo_velocity[_qp][1] * edge_sign; // positive or negative dislocation
+      _velocity(1) = _scale * _dislo_velocity[_qp][1] * edge_sign; // positive or negative dislocation
       _velocity(2) = 0.0;
       break;
   }

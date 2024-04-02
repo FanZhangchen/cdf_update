@@ -26,6 +26,9 @@ protected:
   /// advection velocity
   std::vector<Real> _velocity;
 
+  // statistically stored dislocations
+  std::vector<Real> _statis_stored_dislocation;
+
   /// enum to make the code clearer
   enum class JacRes
   {
@@ -42,6 +45,12 @@ protected:
   // Dislocation velocity value (signed) on all slip systems
   const MaterialProperty<std::vector<Real>> & _dislo_velocity;
 
+  // SSD for edge dislocation density
+  const MaterialProperty<std::vector<Real>> & _edge_dislocation_increment;
+
+  // SSD for screw dislocation density
+  const MaterialProperty<std::vector<Real>> & _screw_dislocation_increment;
+
   /// Type of upwinding
   const enum class UpwindingType { none, full } _upwinding;
 
@@ -53,6 +62,9 @@ protected:
 
   // Character of dislocations (edge or screw)
   const enum class DisloCharacter { edge, screw } _dislo_character;
+
+  // is statistically stored dislocations considered
+  const enum class SSDInclude { yes, no } _is_ssd_inclued;
 
   /// Nodal value of u, used for full upwinding
   const VariableValue & _u_nodal;

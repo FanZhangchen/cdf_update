@@ -73,8 +73,9 @@ TotalDislocationDensity::computeValue()
   // the parenthesis operator.
   Real rhot;
 
-  rhot = (_rhoe1[_qp] + _rhoe2[_qp] + _rhoe3[_qp] + _rhoe4[_qp] 
-    + _rhos1[_qp] + _rhos2[_qp] + _rhos3[_qp] + _rhos4[_qp]) / _initial_total_dislo_den;
+  rhot = (_rhoe1[_qp] + _rhoe2[_qp] + _rhoe3[_qp] + _rhoe4[_qp] + _rhos1[_qp] + _rhos2[_qp] +
+          _rhos3[_qp] + _rhos4[_qp]) /
+         _initial_total_dislo_den;
 
   return rhot;
 }

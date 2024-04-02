@@ -48,5 +48,4 @@ protected:
   const VariableValue & _rhos4;
 
   const Real _initial_total_dislo_den;
-
 };

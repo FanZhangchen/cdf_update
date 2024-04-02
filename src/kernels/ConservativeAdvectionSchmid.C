@@ -25,6 +25,9 @@ ConservativeAdvectionSchmid::validParams()
   MooseEnum dislo_character("edge screw", "edge");
   params.addRequiredParam<MooseEnum>(
       "dislo_character", dislo_character, "Character of dislocations: edge or screw.");
+  MooseEnum is_ssd_included("yes no", "no");
+  params.addRequiredParam<MooseEnum>(
+      "is_ssd_included", is_ssd_included, "is statistically stored dislocations considered.");
   return params;
 }
 
@@ -36,10 +39,13 @@ ConservativeAdvectionSchmid::ConservativeAdvectionSchmid(const InputParameters &
         getMaterialProperty<std::vector<Real>>("screw_slip_direction")), // Screw velocity direction
     _dislo_velocity(
         getMaterialProperty<std::vector<Real>>("dislo_velocity")), // Velocity value (signed)
+    _edge_dislocation_increment(getMaterialProperty<std::vector<Real>>("edge_dislocation_increment")),
+    _screw_dislocation_increment(getMaterialProperty<std::vector<Real>>("screw_dislocation_increment")),
     _upwinding(getParam<MooseEnum>("upwinding_type").getEnum<UpwindingType>()),
     _slip_sys_index(getParam<int>("slip_sys_index")),
     _dislo_sign(getParam<MooseEnum>("dislo_sign").getEnum<DisloSign>()),
     _dislo_character(getParam<MooseEnum>("dislo_character").getEnum<DisloCharacter>()),
+    _is_ssd_inclued(getParam<MooseEnum>("is_ssd_included").getEnum<SSDInclude>()),
     _u_nodal(_var.dofValues()),
     _upwind_node(0),
     _dtotal_mass_out(0)
@@ -96,7 +102,30 @@ ConservativeAdvectionSchmid::computeQpResidual()
 {
   // This is the no-upwinded version
   // It gets called via Kernel::computeResidual()
-  return negSpeedQp() * _u[_qp];
+  _statis_stored_dislocation.resize(12, 0.0);
+  switch (_dislo_character)
+  {
+    case DisloCharacter::edge:
+      _statis_stored_dislocation[_slip_sys_index] = 
+          _edge_dislocation_increment[_qp][_slip_sys_index]; // edge ssd
+      break;
+    case DisloCharacter::screw:
+      _statis_stored_dislocation[_slip_sys_index] = 
+          _screw_dislocation_increment[_qp][_slip_sys_index]; // screw ssd
+      break;
+  }
+
+  switch (_is_ssd_inclued)
+  {
+    case SSDInclude::yes:
+      _statis_stored_dislocation[_slip_sys_index] = _statis_stored_dislocation[_slip_sys_index];
+      break;
+    case SSDInclude::no:
+      _statis_stored_dislocation[_slip_sys_index] = 0.0;
+      break;
+  }
+
+  return negSpeedQp() * _u[_qp] + _statis_stored_dislocation[_slip_sys_index];
 }
 
 Real

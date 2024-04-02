@@ -29,19 +29,9 @@ protected:
 
   std::vector<Real> _gssT;
 
-  const Real _abstemp;
-
   const Real _boltzmann;
 
-  const Real _burgersvector;
-
-  const Real _F0;
-
-  const Real _gamma0dot;
-
-  const Real _lambda;
-
-  const Real _mu;
+  const Real _abstemp;
 
   const Real _p;
 
@@ -49,7 +39,17 @@ protected:
 
   const Real _tau0hat;
 
+  const Real _gamma0dot;
+
+  const Real _F0;
+
+  const Real _lambda;
+
+  const Real _mu;
+
   const Real _taualpha;
+  
+  const Real _burgersvector;
 
   const Real _scale;
 

@@ -286,6 +286,10 @@ bool
 CrystalPlasticityBussoUpdate::calculateSlipRate()
 {
 
+  std::vector<Real> local_edge_slip_direction, local_screw_slip_direction;
+  local_edge_slip_direction.resize(LIBMESH_DIM);
+  local_screw_slip_direction.resize(LIBMESH_DIM);
+
   calculateSlipResistance();
 
   std::vector<Real> rho_edge_pos(_number_slip_systems);
@@ -350,47 +354,50 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
   Real RhoTotSlip;
   for (const auto i : make_range(_number_slip_systems))
   {
+    if (rho_edge_pos[i] <= _zero_tol)
+      rho_edge_pos[i] = 0.0;
+
+    if (rho_edge_neg[i] <= _zero_tol)
+      rho_edge_neg[i] = 0.0;
 
     RhoTotSlip = rho_edge_pos[i] + rho_edge_neg[i];
 
-    switch (_is_two_slips)
-    {
-      case TwoSlipCheck::yes:
-        if (i == 0)
-        {
-          _backstress(i) = _scaling_Cb * _burgers * _shear_modulus *
-                           (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
-                            rho_edge_neg_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) +
-                            rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -
-                            rho_edge_neg_grad_y[i] / std::sin(60.0 * 3.1415926 / 180)) /
-                           RhoTotSlip;
-        }
-        else if (i == 1)
-        {
-          _backstress(i) = _scaling_Cb * _burgers * _shear_modulus *
-                           (rho_edge_pos_grad_x[i] / std::cos(120.0 * 3.1415926 / 180) -
-                            rho_edge_neg_grad_x[i] / std::cos(120.0 * 3.1415926 / 180) +
-                            rho_edge_pos_grad_y[i] / std::sin(120.0 * 3.1415926 / 180) -
-                            rho_edge_neg_grad_y[i] / std::sin(120.0 * 3.1415926 / 180)) /
-                           RhoTotSlip;
-        }
-        break;
+    if (_edge_slip_direction[_qp][i * LIBMESH_DIM] < 1.e-10)
+      local_edge_slip_direction[0] = 0.0;
+    else
+      local_edge_slip_direction[0] = 1.0 / _edge_slip_direction[_qp][i * LIBMESH_DIM];
 
-      case TwoSlipCheck::no:
-        _backstress(i) = _scaling_Cb * _burgers * _shear_modulus *
-                         (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
-                          rho_edge_neg_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) +
-                          rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -
-                          rho_edge_neg_grad_y[i] / std::sin(60.0 * 3.1415926 / 180)) /
-                         RhoTotSlip;
-        break;
-    }
-    // _backstress(i) = _burgers * _shear_modulus *
-    //                  (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
-    //                   rho_edge_neg_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) +
-    //                   rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -
-    //                   rho_edge_neg_grad_y[i] / std::sin(60.0 * 3.1415926 / 180)) /
-    //                  RhoTotSlip;
+    if (_edge_slip_direction[_qp][i * LIBMESH_DIM + 1] < 1.e-10)
+      local_edge_slip_direction[1] = 0.0;
+    else
+      local_edge_slip_direction[1] = 1.0 / _edge_slip_direction[_qp][i * LIBMESH_DIM + 1];
+
+    if (_edge_slip_direction[_qp][i * LIBMESH_DIM + 2] < 1.e-10)
+      local_edge_slip_direction[2] = 0.0;
+    else
+      local_edge_slip_direction[2] = 1.0 / _edge_slip_direction[_qp][i * LIBMESH_DIM + 2];
+
+    if (_screw_slip_direction[_qp][i * LIBMESH_DIM] < 1.e-10)
+      local_screw_slip_direction[0] = 0.0;
+    else
+      local_screw_slip_direction[0] = 1.0 / _screw_slip_direction[_qp][i * LIBMESH_DIM];
+
+    if (_screw_slip_direction[_qp][i * LIBMESH_DIM + 1] < 1.e-10)
+      local_screw_slip_direction[1] = 0.0;
+    else
+      local_screw_slip_direction[1] = 1.0 / _screw_slip_direction[_qp][i * LIBMESH_DIM + 1];
+
+    if (_screw_slip_direction[_qp][i * LIBMESH_DIM + 2] < 1.e-10)
+      local_screw_slip_direction[2] = 0.0;
+    else
+      local_screw_slip_direction[2] = 1.0 / _screw_slip_direction[_qp][i * LIBMESH_DIM + 2];
+
+    _backstress(i) = _scaling_Cb * _burgers * _shear_modulus *
+                     (rho_edge_pos_grad_x[i] * local_edge_slip_direction[0] -
+                      rho_edge_neg_grad_x[i] * local_edge_slip_direction[0] +
+                      rho_edge_pos_grad_y[i] * local_edge_slip_direction[1] -
+                      rho_edge_neg_grad_y[i] * local_edge_slip_direction[1]) /
+                     RhoTotSlip;
 
     Real driving_force = std::abs(_tau[_qp][i] - _backstress(i)) - _slip_resistance[_qp][i];
 
@@ -458,6 +465,12 @@ CrystalPlasticityBussoUpdate::calculateSlipResistance()
 
   for (const auto i : make_range(_number_slip_systems))
   {
+    if (rho_edge_pos[i] <= _zero_tol)
+      rho_edge_pos[i] = 0.0;
+
+    if (rho_edge_neg[i] <= _zero_tol)
+      rho_edge_neg[i] = 0.0;
+
     Real hardening_total_dislocation_density = 0.0;
     for (const auto j : make_range(_number_slip_systems))
     {
@@ -511,6 +524,12 @@ CrystalPlasticityBussoUpdate::calculateDislocationVelocity()
 
   for (const auto i : make_range(_number_slip_systems))
   {
+
+    if (rho_edge_pos[i] <= _zero_tol)
+      rho_edge_pos[i] = 0.0;
+
+    if (rho_edge_neg[i] <= _zero_tol)
+      rho_edge_neg[i] = 0.0;
 
     total_dislocation_density =
         rho_edge_pos[i] + rho_edge_neg[i]; // + rho_screw_pos[i] + rho_screw_neg[i];

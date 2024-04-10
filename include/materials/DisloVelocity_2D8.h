@@ -48,7 +48,7 @@ protected:
   const Real _mu;
 
   const Real _taualpha;
-  
+
   const Real _burgersvector;
 
   const Real _scale;

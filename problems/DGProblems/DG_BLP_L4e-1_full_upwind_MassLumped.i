@@ -82,52 +82,52 @@
 [Kernels]
 
   [Edeg_Pos_Time_Deri_1]
-    type = TimeDerivative
+    type = MassLumpedTimeDerivative
     variable = rho_edge_pos_1
   []
   [Edge_Pos_Flux_1]
     type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_pos_1
-    upwinding_type = full
+    upwinding_type = none
       dislo_sign = positive
       slip_sys_index = 0
       dislo_character = edge
   []
 
   [Edeg_Neg_Time_Deri_1]
-    type = TimeDerivative
+    type = MassLumpedTimeDerivative
     variable = rho_edge_neg_1
   []
   [Edge_Neg_Flux_1]
     type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_neg_1
-    upwinding_type = full
+    upwinding_type = none
       dislo_sign = negative
       slip_sys_index = 0
       dislo_character = edge
   []
 
   [Edeg_Pos_Time_Deri_2]
-    type = TimeDerivative
+    type = MassLumpedTimeDerivative
     variable = rho_edge_pos_2
   []
   [Edge_Pos_Flux_2]
     type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_pos_2
-    upwinding_type = full
+    upwinding_type = none
       dislo_sign = positive
       slip_sys_index = 1
       dislo_character = edge
   []
 
   [Edeg_Neg_Time_Deri_2]
-    type = TimeDerivative
+    type = MassLumpedTimeDerivative
     variable = rho_edge_neg_2
   []
   [Edge_Neg_Flux_2]
     type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_neg_2
-    upwinding_type = full
+    upwinding_type = none
       dislo_sign = negative
       slip_sys_index = 1
       dislo_character = edge

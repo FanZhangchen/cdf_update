@@ -86,9 +86,9 @@
     variable = rho_edge_pos_1
   []
   [Edge_Pos_Flux_1]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_pos_1
-    upwinding_type = full
+    upwinding_type = none
       dislo_sign = positive
       slip_sys_index = 0
       dislo_character = edge
@@ -99,9 +99,9 @@
     variable = rho_edge_neg_1
   []
   [Edge_Neg_Flux_1]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_neg_1
-    upwinding_type = full
+    upwinding_type = none
       dislo_sign = negative
       slip_sys_index = 0
       dislo_character = edge
@@ -112,9 +112,9 @@
     variable = rho_edge_pos_2
   []
   [Edge_Pos_Flux_2]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_pos_2
-    upwinding_type = full
+    upwinding_type = none
       dislo_sign = positive
       slip_sys_index = 1
       dislo_character = edge
@@ -125,9 +125,9 @@
     variable = rho_edge_neg_2
   []
   [Edge_Neg_Flux_2]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_neg_2
-    upwinding_type = full
+    upwinding_type = none
       dislo_sign = negative
       slip_sys_index = 1
       dislo_character = edge
@@ -366,21 +366,57 @@
 [Executioner]
 
   type = Transient
-  solve_type = 'NEWTON'
+
+  [./TimeIntegrator]
+    # type = ImplicitEuler
+    # type = BDF2
+    # type = CrankNicolson
+    # type = ImplicitMidpoint
+    type = LStableDirk2
+    # type = LStableDirk3
+    # type = LStableDirk4
+    # type = AStableDirk4
+    #
+    # Explicit methods
+    # type = ExplicitEuler
+    # type = ExplicitMidpoint
+    # type = Heun
+    # type = Ralston
+  [../]
+
+  solve_type = 'PJFNK'
   petsc_options = '-snes_ksp_ew'
-  petsc_options_iname = '-pc_type -pc_hypre_type -ksp_gmres_restart'
-  petsc_options_value = 'lu    boomeramg          31'
+  petsc_options_iname = '-pc_type -pc_factor_mat_solver_package'
+  petsc_options_value = 'lu superlu_dist'
   line_search = 'none'
+  automatic_scaling = true
+
   l_max_its = 50
   nl_max_its = 50
   nl_rel_tol = 1e-5
   nl_abs_tol = 1e-3
-  l_tol = 1e-5
+  # l_tol = 1e-5
 
   start_time = 0.0
   end_time = 0.5
-  dt = 5.e-6
-  dtmin = 1.e-9
+  dt = 2.e-6
+  dtmin = 1.e-10
+  # type = Transient
+  # solve_type = 'NEWTON'
+  # petsc_options = '-snes_ksp_ew'
+  # petsc_options_iname = '-pc_type -pc_hypre_type -ksp_gmres_restart'
+  # petsc_options_value = 'lu    boomeramg          31'
+  # line_search = 'none'
+  # l_max_its = 50
+  # nl_max_its = 50
+  # nl_rel_tol = 1e-5
+  # nl_abs_tol = 1e-3
+  # l_tol = 1e-5
+
+  # start_time = 0.0
+  # end_time = 0.5
+  # dt = 5.e-6
+  # dtmin = 1.e-9
 []
 
 [Postprocessors]

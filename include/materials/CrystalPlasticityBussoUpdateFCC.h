@@ -332,7 +332,7 @@ protected:
   const VariableGradient & _grad_screw_dislo_den_12_Q3;
   const VariableValue & _screw_dislo_den_12_Q4;
   const VariableGradient & _grad_screw_dislo_den_12_Q4;
-  
+
   ///@}
 
   // Rotated slip direction to couple with dislocation transport

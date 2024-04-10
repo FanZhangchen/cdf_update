@@ -31,14 +31,10 @@ CrystalPlasticityBussoUpdateFCC::validParams()
   params.addParam<Real>("w1", 1.5, "cross-hardening constants, adopted from Cheong2004");
   params.addParam<Real>("w2", 1.2, "cross-hardening constants, adopted from Cheong2004");
 
-  params.addCoupledVar(
-      "edge_dislo_den_1_Q1", 0.0, "edge dislocation density in Q1: slip system 1");
-  params.addCoupledVar(
-      "edge_dislo_den_1_Q2", 0.0, "edge dislocation density in Q2: slip system 1");
-  params.addCoupledVar(
-      "edge_dislo_den_1_Q3", 0.0, "edge dislocation density in Q3: slip system 1");
-  params.addCoupledVar(
-      "edge_dislo_den_1_Q4", 0.0, "edge dislocation density in Q4: slip system 1");
+  params.addCoupledVar("edge_dislo_den_1_Q1", 0.0, "edge dislocation density in Q1: slip system 1");
+  params.addCoupledVar("edge_dislo_den_1_Q2", 0.0, "edge dislocation density in Q2: slip system 1");
+  params.addCoupledVar("edge_dislo_den_1_Q3", 0.0, "edge dislocation density in Q3: slip system 1");
+  params.addCoupledVar("edge_dislo_den_1_Q4", 0.0, "edge dislocation density in Q4: slip system 1");
   params.addCoupledVar(
       "screw_dislo_den_1_Q1", 0.0, "screw dislocation density in Q1: slip system 1");
   params.addCoupledVar(
@@ -48,14 +44,10 @@ CrystalPlasticityBussoUpdateFCC::validParams()
   params.addCoupledVar(
       "screw_dislo_den_1_Q4", 0.0, "screw dislocation density in Q4: slip system 1");
 
-  params.addCoupledVar(
-      "edge_dislo_den_2_Q1", 0.0, "edge dislocation density in Q1: slip system 2");
-  params.addCoupledVar(
-      "edge_dislo_den_2_Q2", 0.0, "edge dislocation density in Q2: slip system 2");
-  params.addCoupledVar(
-      "edge_dislo_den_2_Q3", 0.0, "edge dislocation density in Q3: slip system 2");
-  params.addCoupledVar(
-      "edge_dislo_den_2_Q4", 0.0, "edge dislocation density in Q4: slip system 2");
+  params.addCoupledVar("edge_dislo_den_2_Q1", 0.0, "edge dislocation density in Q1: slip system 2");
+  params.addCoupledVar("edge_dislo_den_2_Q2", 0.0, "edge dislocation density in Q2: slip system 2");
+  params.addCoupledVar("edge_dislo_den_2_Q3", 0.0, "edge dislocation density in Q3: slip system 2");
+  params.addCoupledVar("edge_dislo_den_2_Q4", 0.0, "edge dislocation density in Q4: slip system 2");
   params.addCoupledVar(
       "screw_dislo_den_2_Q1", 0.0, "screw dislocation density in Q1: slip system 2");
   params.addCoupledVar(
@@ -65,14 +57,10 @@ CrystalPlasticityBussoUpdateFCC::validParams()
   params.addCoupledVar(
       "screw_dislo_den_2_Q4", 0.0, "screw dislocation density in Q4: slip system 2");
 
-  params.addCoupledVar(
-      "edge_dislo_den_3_Q1", 0.0, "edge dislocation density in Q1: slip system 3");
-  params.addCoupledVar(
-      "edge_dislo_den_3_Q2", 0.0, "edge dislocation density in Q2: slip system 3");
-  params.addCoupledVar(
-      "edge_dislo_den_3_Q3", 0.0, "edge dislocation density in Q3: slip system 3");
-  params.addCoupledVar(
-      "edge_dislo_den_3_Q4", 0.0, "edge dislocation density in Q4: slip system 3");
+  params.addCoupledVar("edge_dislo_den_3_Q1", 0.0, "edge dislocation density in Q1: slip system 3");
+  params.addCoupledVar("edge_dislo_den_3_Q2", 0.0, "edge dislocation density in Q2: slip system 3");
+  params.addCoupledVar("edge_dislo_den_3_Q3", 0.0, "edge dislocation density in Q3: slip system 3");
+  params.addCoupledVar("edge_dislo_den_3_Q4", 0.0, "edge dislocation density in Q4: slip system 3");
   params.addCoupledVar(
       "screw_dislo_den_3_Q1", 0.0, "screw dislocation density in Q1: slip system 3");
   params.addCoupledVar(
@@ -82,14 +70,10 @@ CrystalPlasticityBussoUpdateFCC::validParams()
   params.addCoupledVar(
       "screw_dislo_den_3_Q4", 0.0, "screw dislocation density in Q4: slip system 3");
 
-  params.addCoupledVar(
-      "edge_dislo_den_4_Q1", 0.0, "edge dislocation density in Q1: slip system 4");
-  params.addCoupledVar(
-      "edge_dislo_den_4_Q2", 0.0, "edge dislocation density in Q2: slip system 4");
-  params.addCoupledVar(
-      "edge_dislo_den_4_Q3", 0.0, "edge dislocation density in Q3: slip system 4");
-  params.addCoupledVar(
-      "edge_dislo_den_4_Q4", 0.0, "edge dislocation density in Q4: slip system 4");
+  params.addCoupledVar("edge_dislo_den_4_Q1", 0.0, "edge dislocation density in Q1: slip system 4");
+  params.addCoupledVar("edge_dislo_den_4_Q2", 0.0, "edge dislocation density in Q2: slip system 4");
+  params.addCoupledVar("edge_dislo_den_4_Q3", 0.0, "edge dislocation density in Q3: slip system 4");
+  params.addCoupledVar("edge_dislo_den_4_Q4", 0.0, "edge dislocation density in Q4: slip system 4");
   params.addCoupledVar(
       "screw_dislo_den_4_Q1", 0.0, "screw dislocation density in Q1: slip system 4");
   params.addCoupledVar(
@@ -99,14 +83,10 @@ CrystalPlasticityBussoUpdateFCC::validParams()
   params.addCoupledVar(
       "screw_dislo_den_4_Q4", 0.0, "screw dislocation density in Q4: slip system 4");
 
-  params.addCoupledVar(
-      "edge_dislo_den_5_Q1", 0.0, "edge dislocation density in Q1: slip system 5");
-  params.addCoupledVar(
-      "edge_dislo_den_5_Q2", 0.0, "edge dislocation density in Q2: slip system 5");
-  params.addCoupledVar(
-      "edge_dislo_den_5_Q3", 0.0, "edge dislocation density in Q3: slip system 5");
-  params.addCoupledVar(
-      "edge_dislo_den_5_Q4", 0.0, "edge dislocation density in Q4: slip system 5");
+  params.addCoupledVar("edge_dislo_den_5_Q1", 0.0, "edge dislocation density in Q1: slip system 5");
+  params.addCoupledVar("edge_dislo_den_5_Q2", 0.0, "edge dislocation density in Q2: slip system 5");
+  params.addCoupledVar("edge_dislo_den_5_Q3", 0.0, "edge dislocation density in Q3: slip system 5");
+  params.addCoupledVar("edge_dislo_den_5_Q4", 0.0, "edge dislocation density in Q4: slip system 5");
   params.addCoupledVar(
       "screw_dislo_den_5_Q1", 0.0, "screw dislocation density in Q1: slip system 5");
   params.addCoupledVar(
@@ -116,14 +96,10 @@ CrystalPlasticityBussoUpdateFCC::validParams()
   params.addCoupledVar(
       "screw_dislo_den_5_Q4", 0.0, "screw dislocation density in Q4: slip system 5");
 
-  params.addCoupledVar(
-      "edge_dislo_den_6_Q1", 0.0, "edge dislocation density in Q1: slip system 6");
-  params.addCoupledVar(
-      "edge_dislo_den_6_Q2", 0.0, "edge dislocation density in Q2: slip system 6");
-  params.addCoupledVar(
-      "edge_dislo_den_6_Q3", 0.0, "edge dislocation density in Q3: slip system 6");
-  params.addCoupledVar(
-      "edge_dislo_den_6_Q4", 0.0, "edge dislocation density in Q4: slip system 6");
+  params.addCoupledVar("edge_dislo_den_6_Q1", 0.0, "edge dislocation density in Q1: slip system 6");
+  params.addCoupledVar("edge_dislo_den_6_Q2", 0.0, "edge dislocation density in Q2: slip system 6");
+  params.addCoupledVar("edge_dislo_den_6_Q3", 0.0, "edge dislocation density in Q3: slip system 6");
+  params.addCoupledVar("edge_dislo_den_6_Q4", 0.0, "edge dislocation density in Q4: slip system 6");
   params.addCoupledVar(
       "screw_dislo_den_6_Q1", 0.0, "screw dislocation density in Q1: slip system 6");
   params.addCoupledVar(
@@ -133,14 +109,10 @@ CrystalPlasticityBussoUpdateFCC::validParams()
   params.addCoupledVar(
       "screw_dislo_den_6_Q4", 0.0, "screw dislocation density in Q4: slip system 6");
 
-  params.addCoupledVar(
-      "edge_dislo_den_7_Q1", 0.0, "edge dislocation density in Q1: slip system 7");
-  params.addCoupledVar(
-      "edge_dislo_den_7_Q2", 0.0, "edge dislocation density in Q2: slip system 7");
-  params.addCoupledVar(
-      "edge_dislo_den_7_Q3", 0.0, "edge dislocation density in Q3: slip system 7");
-  params.addCoupledVar(
-      "edge_dislo_den_7_Q4", 0.0, "edge dislocation density in Q4: slip system 7");
+  params.addCoupledVar("edge_dislo_den_7_Q1", 0.0, "edge dislocation density in Q1: slip system 7");
+  params.addCoupledVar("edge_dislo_den_7_Q2", 0.0, "edge dislocation density in Q2: slip system 7");
+  params.addCoupledVar("edge_dislo_den_7_Q3", 0.0, "edge dislocation density in Q3: slip system 7");
+  params.addCoupledVar("edge_dislo_den_7_Q4", 0.0, "edge dislocation density in Q4: slip system 7");
   params.addCoupledVar(
       "screw_dislo_den_7_Q1", 0.0, "screw dislocation density in Q1: slip system 7");
   params.addCoupledVar(
@@ -150,14 +122,10 @@ CrystalPlasticityBussoUpdateFCC::validParams()
   params.addCoupledVar(
       "screw_dislo_den_7_Q4", 0.0, "screw dislocation density in Q4: slip system 7");
 
-  params.addCoupledVar(
-      "edge_dislo_den_8_Q1", 0.0, "edge dislocation density in Q1: slip system 8");
-  params.addCoupledVar(
-      "edge_dislo_den_8_Q2", 0.0, "edge dislocation density in Q2: slip system 8");
-  params.addCoupledVar(
-      "edge_dislo_den_8_Q3", 0.0, "edge dislocation density in Q3: slip system 8");
-  params.addCoupledVar(
-      "edge_dislo_den_8_Q4", 0.0, "edge dislocation density in Q4: slip system 8");
+  params.addCoupledVar("edge_dislo_den_8_Q1", 0.0, "edge dislocation density in Q1: slip system 8");
+  params.addCoupledVar("edge_dislo_den_8_Q2", 0.0, "edge dislocation density in Q2: slip system 8");
+  params.addCoupledVar("edge_dislo_den_8_Q3", 0.0, "edge dislocation density in Q3: slip system 8");
+  params.addCoupledVar("edge_dislo_den_8_Q4", 0.0, "edge dislocation density in Q4: slip system 8");
   params.addCoupledVar(
       "screw_dislo_den_8_Q1", 0.0, "screw dislocation density in Q1: slip system 8");
   params.addCoupledVar(
@@ -167,14 +135,10 @@ CrystalPlasticityBussoUpdateFCC::validParams()
   params.addCoupledVar(
       "screw_dislo_den_8_Q4", 0.0, "screw dislocation density in Q4: slip system 8");
 
-  params.addCoupledVar(
-      "edge_dislo_den_9_Q1", 0.0, "edge dislocation density in Q1: slip system 9");
-  params.addCoupledVar(
-      "edge_dislo_den_9_Q2", 0.0, "edge dislocation density in Q2: slip system 9");
-  params.addCoupledVar(
-      "edge_dislo_den_9_Q3", 0.0, "edge dislocation density in Q3: slip system 9");
-  params.addCoupledVar(
-      "edge_dislo_den_9_Q4", 0.0, "edge dislocation density in Q4: slip system 9");
+  params.addCoupledVar("edge_dislo_den_9_Q1", 0.0, "edge dislocation density in Q1: slip system 9");
+  params.addCoupledVar("edge_dislo_den_9_Q2", 0.0, "edge dislocation density in Q2: slip system 9");
+  params.addCoupledVar("edge_dislo_den_9_Q3", 0.0, "edge dislocation density in Q3: slip system 9");
+  params.addCoupledVar("edge_dislo_den_9_Q4", 0.0, "edge dislocation density in Q4: slip system 9");
   params.addCoupledVar(
       "screw_dislo_den_9_Q1", 0.0, "screw dislocation density in Q1: slip system 9");
   params.addCoupledVar(
@@ -234,7 +198,7 @@ CrystalPlasticityBussoUpdateFCC::validParams()
       "screw_dislo_den_12_Q3", 0.0, "screw dislocation density in Q3: slip system 12");
   params.addCoupledVar(
       "screw_dislo_den_12_Q4", 0.0, "screw dislocation density in Q4: slip system 12");
-  
+
   MooseEnum is_two_slips("yes no", "yes");
   params.addRequiredParam<MooseEnum>("is_two_slips", is_two_slips, "check two slips case.");
 
@@ -298,7 +262,7 @@ CrystalPlasticityBussoUpdateFCC::CrystalPlasticityBussoUpdateFCC(const InputPara
     _screw_dislo_den_2_Q4(coupledValue("screw_dislo_den_2_Q4")),
     _grad_screw_dislo_den_2_Q4(coupledGradient("screw_dislo_den_2_Q4")), // Coupled rhoen gradient
 
-    //slip 3
+    // slip 3
     _edge_dislo_den_3_Q1(coupledValue("edge_dislo_den_3_Q1")),
     _grad_edge_dislo_den_3_Q1(coupledGradient("edge_dislo_den_3_Q1")), // Coupled rhoep gradient
     _edge_dislo_den_3_Q2(coupledValue("edge_dislo_den_3_Q2")),
@@ -626,14 +590,15 @@ CrystalPlasticityBussoUpdateFCC::initQpStatefulProperties()
       // mooseWarning("x0-",i,j);
       if (i == j) // self vs. latent hardening
         initial_hardening_total_dislocation_density +=
-            (_w1 + 1.0 - _w2) * (rho_edge_Q1[j] + rho_edge_Q2[j] + rho_edge_Q3[j] + rho_edge_Q4[j] 
-              + rho_screw_Q1[j] + rho_screw_Q2[j] + rho_screw_Q3[j] + rho_screw_Q4[j]);
+            (_w1 + 1.0 - _w2) *
+            (rho_edge_Q1[j] + rho_edge_Q2[j] + rho_edge_Q3[j] + rho_edge_Q4[j] + rho_screw_Q1[j] +
+             rho_screw_Q2[j] + rho_screw_Q3[j] + rho_screw_Q4[j]);
       // (_w1 + 1.0 - _w2) * (_edge_dislocation_density[_qp][j] +
       // _screw_dislocation_density[_qp][j]); // self hardening
       else
-        initial_hardening_total_dislocation_density += 
-            _w1 * (rho_edge_Q1[j] + rho_edge_Q2[j] + rho_edge_Q3[j] + rho_edge_Q4[j] 
-              + rho_screw_Q1[j] + rho_screw_Q2[j] + rho_screw_Q3[j] + rho_screw_Q4[j]);
+        initial_hardening_total_dislocation_density +=
+            _w1 * (rho_edge_Q1[j] + rho_edge_Q2[j] + rho_edge_Q3[j] + rho_edge_Q4[j] +
+                   rho_screw_Q1[j] + rho_screw_Q2[j] + rho_screw_Q3[j] + rho_screw_Q4[j]);
       // _w1   * (_edge_dislocation_density[_qp][j] + _screw_dislocation_density[_qp][j]); // latent
       // hardening
     }
@@ -738,19 +703,19 @@ CrystalPlasticityBussoUpdateFCC::calculateSlipRate()
   // global_z.resize(LIBMESH_DIM);
 
   // // Unit vector along the x-axis
-  // global_x[0] = 1.0; 
-  // global_x[1] = 0.0; 
-  // global_x[2] = 0.0; 
+  // global_x[0] = 1.0;
+  // global_x[1] = 0.0;
+  // global_x[2] = 0.0;
 
   // // Unit vector along the y-axis
-  // global_y[0] = 0.0; 
+  // global_y[0] = 0.0;
   // global_y[1] = 1.0;
   // global_y[2] = 0.0;
 
   // // Unit vector along the z-axis
-  // global_z[0] = 0.0; 
-  // global_z[1] = 0.0; 
-  // global_z[2] = 1.0; 
+  // global_z[0] = 0.0;
+  // global_z[1] = 0.0;
+  // global_z[2] = 1.0;
 
   std::vector<Real> local_edge_slip_direction, local_screw_slip_direction;
   local_edge_slip_direction.resize(LIBMESH_DIM);
@@ -1297,68 +1262,68 @@ CrystalPlasticityBussoUpdateFCC::calculateSlipRate()
   for (const auto i : make_range(_number_slip_systems))
   {
 
-    RhoTotSlip = rho_edge_Q1[i] + rho_edge_Q2[i] + rho_edge_Q3[i] + rho_edge_Q4[i] 
-              + rho_screw_Q1[i] + rho_screw_Q2[i] + rho_screw_Q3[i] + rho_screw_Q4[i];
+    RhoTotSlip = rho_edge_Q1[i] + rho_edge_Q2[i] + rho_edge_Q3[i] + rho_edge_Q4[i] +
+                 rho_screw_Q1[i] + rho_screw_Q2[i] + rho_screw_Q3[i] + rho_screw_Q4[i];
 
     // mooseWarning("Edge slip direction vector",
     //                  _edge_slip_direction[_qp][i*LIBMESH_DIM]);
 
-    if (_edge_slip_direction[_qp][i*LIBMESH_DIM] < 1.e-10)
+    if (_edge_slip_direction[_qp][i * LIBMESH_DIM] < 1.e-10)
       local_edge_slip_direction[0] = 0.0;
     else
-      local_edge_slip_direction[0] = 1.0 / _edge_slip_direction[_qp][i*LIBMESH_DIM];
+      local_edge_slip_direction[0] = 1.0 / _edge_slip_direction[_qp][i * LIBMESH_DIM];
 
-    if (_edge_slip_direction[_qp][i*LIBMESH_DIM + 1] < 1.e-10)
+    if (_edge_slip_direction[_qp][i * LIBMESH_DIM + 1] < 1.e-10)
       local_edge_slip_direction[1] = 0.0;
     else
-      local_edge_slip_direction[1] = 1.0 / _edge_slip_direction[_qp][i*LIBMESH_DIM + 1];
+      local_edge_slip_direction[1] = 1.0 / _edge_slip_direction[_qp][i * LIBMESH_DIM + 1];
 
-    if (_edge_slip_direction[_qp][i*LIBMESH_DIM + 2] < 1.e-10)
+    if (_edge_slip_direction[_qp][i * LIBMESH_DIM + 2] < 1.e-10)
       local_edge_slip_direction[2] = 0.0;
     else
-      local_edge_slip_direction[2] = 1.0 / _edge_slip_direction[_qp][i*LIBMESH_DIM + 2];
+      local_edge_slip_direction[2] = 1.0 / _edge_slip_direction[_qp][i * LIBMESH_DIM + 2];
 
-    if (_screw_slip_direction[_qp][i*LIBMESH_DIM] < 1.e-10)
+    if (_screw_slip_direction[_qp][i * LIBMESH_DIM] < 1.e-10)
       local_screw_slip_direction[0] = 0.0;
     else
-      local_screw_slip_direction[0] = 1.0 / _screw_slip_direction[_qp][i*LIBMESH_DIM];
+      local_screw_slip_direction[0] = 1.0 / _screw_slip_direction[_qp][i * LIBMESH_DIM];
 
-    if (_screw_slip_direction[_qp][i*LIBMESH_DIM + 1] < 1.e-10)
+    if (_screw_slip_direction[_qp][i * LIBMESH_DIM + 1] < 1.e-10)
       local_screw_slip_direction[1] = 0.0;
     else
-      local_screw_slip_direction[1] = 1.0 / _screw_slip_direction[_qp][i*LIBMESH_DIM + 1];
+      local_screw_slip_direction[1] = 1.0 / _screw_slip_direction[_qp][i * LIBMESH_DIM + 1];
 
-    if (_screw_slip_direction[_qp][i*LIBMESH_DIM + 2] < 1.e-10)
+    if (_screw_slip_direction[_qp][i * LIBMESH_DIM + 2] < 1.e-10)
       local_screw_slip_direction[2] = 0.0;
     else
-      local_screw_slip_direction[2] = 1.0 / _screw_slip_direction[_qp][i*LIBMESH_DIM + 2];
+      local_screw_slip_direction[2] = 1.0 / _screw_slip_direction[_qp][i * LIBMESH_DIM + 2];
 
     _backstress(i) = _burgers * _shear_modulus *
-                       ((grad_x_rho_edge_Q1[i] * local_edge_slip_direction[0] +
-                        grad_x_rho_edge_Q2[i] * local_edge_slip_direction[0] -
-                        grad_x_rho_edge_Q3[i] * local_edge_slip_direction[0] -
-                        grad_x_rho_edge_Q4[i] * local_edge_slip_direction[0] +
-                        grad_y_rho_edge_Q1[i] * local_edge_slip_direction[1] +
-                        grad_y_rho_edge_Q2[i] * local_edge_slip_direction[1] -
-                        grad_y_rho_edge_Q3[i] * local_edge_slip_direction[1] -
-                        grad_y_rho_edge_Q4[i] * local_edge_slip_direction[1] +
-                        grad_z_rho_edge_Q1[i] * local_edge_slip_direction[2] +
-                        grad_z_rho_edge_Q2[i] * local_edge_slip_direction[2] -
-                        grad_z_rho_edge_Q3[i] * local_edge_slip_direction[2] -
-                        grad_z_rho_edge_Q4[i] * local_edge_slip_direction[2]) +
-                       (grad_x_rho_screw_Q1[i] * local_screw_slip_direction[0] -
-                        grad_x_rho_screw_Q2[i] * local_screw_slip_direction[0] -
-                        grad_x_rho_screw_Q3[i] * local_screw_slip_direction[0] +
-                        grad_x_rho_screw_Q4[i] * local_screw_slip_direction[0] +
-                        grad_y_rho_screw_Q1[i] * local_screw_slip_direction[1] -
-                        grad_y_rho_screw_Q2[i] * local_screw_slip_direction[1] -
-                        grad_y_rho_screw_Q3[i] * local_screw_slip_direction[1] +
-                        grad_y_rho_screw_Q4[i] * local_screw_slip_direction[1] +
-                        grad_z_rho_screw_Q1[i] * local_screw_slip_direction[2] -
-                        grad_z_rho_screw_Q2[i] * local_screw_slip_direction[2] -
-                        grad_z_rho_screw_Q3[i] * local_screw_slip_direction[2] +
-                        grad_z_rho_screw_Q4[i] * local_screw_slip_direction[2])) /
-                       RhoTotSlip;
+                     ((grad_x_rho_edge_Q1[i] * local_edge_slip_direction[0] +
+                       grad_x_rho_edge_Q2[i] * local_edge_slip_direction[0] -
+                       grad_x_rho_edge_Q3[i] * local_edge_slip_direction[0] -
+                       grad_x_rho_edge_Q4[i] * local_edge_slip_direction[0] +
+                       grad_y_rho_edge_Q1[i] * local_edge_slip_direction[1] +
+                       grad_y_rho_edge_Q2[i] * local_edge_slip_direction[1] -
+                       grad_y_rho_edge_Q3[i] * local_edge_slip_direction[1] -
+                       grad_y_rho_edge_Q4[i] * local_edge_slip_direction[1] +
+                       grad_z_rho_edge_Q1[i] * local_edge_slip_direction[2] +
+                       grad_z_rho_edge_Q2[i] * local_edge_slip_direction[2] -
+                       grad_z_rho_edge_Q3[i] * local_edge_slip_direction[2] -
+                       grad_z_rho_edge_Q4[i] * local_edge_slip_direction[2]) +
+                      (grad_x_rho_screw_Q1[i] * local_screw_slip_direction[0] -
+                       grad_x_rho_screw_Q2[i] * local_screw_slip_direction[0] -
+                       grad_x_rho_screw_Q3[i] * local_screw_slip_direction[0] +
+                       grad_x_rho_screw_Q4[i] * local_screw_slip_direction[0] +
+                       grad_y_rho_screw_Q1[i] * local_screw_slip_direction[1] -
+                       grad_y_rho_screw_Q2[i] * local_screw_slip_direction[1] -
+                       grad_y_rho_screw_Q3[i] * local_screw_slip_direction[1] +
+                       grad_y_rho_screw_Q4[i] * local_screw_slip_direction[1] +
+                       grad_z_rho_screw_Q1[i] * local_screw_slip_direction[2] -
+                       grad_z_rho_screw_Q2[i] * local_screw_slip_direction[2] -
+                       grad_z_rho_screw_Q3[i] * local_screw_slip_direction[2] +
+                       grad_z_rho_screw_Q4[i] * local_screw_slip_direction[2])) /
+                     RhoTotSlip;
 
     Real driving_force = std::abs(_tau[_qp][i] - _backstress(i)) - _slip_resistance[_qp][i];
 
@@ -1513,12 +1478,14 @@ CrystalPlasticityBussoUpdateFCC::calculateSlipResistance()
     {
       if (i == j) // self vs. latent hardening
         hardening_total_dislocation_density +=
-            (_w1 + 1.0 - _w2) * (rho_edge_Q1[j] + rho_edge_Q2[j] + rho_edge_Q3[j] + rho_edge_Q4[j] 
-              + rho_screw_Q1[j] + rho_screw_Q2[j] + rho_screw_Q3[j] + rho_screw_Q4[j]); // self hardening
+            (_w1 + 1.0 - _w2) *
+            (rho_edge_Q1[j] + rho_edge_Q2[j] + rho_edge_Q3[j] + rho_edge_Q4[j] + rho_screw_Q1[j] +
+             rho_screw_Q2[j] + rho_screw_Q3[j] + rho_screw_Q4[j]); // self hardening
       else
         hardening_total_dislocation_density +=
-            _w1 * (rho_edge_Q1[j] + rho_edge_Q2[j] + rho_edge_Q3[j] + rho_edge_Q4[j] 
-              + rho_screw_Q1[j] + rho_screw_Q2[j] + rho_screw_Q3[j] + rho_screw_Q4[j]); // latent hardening
+            _w1 *
+            (rho_edge_Q1[j] + rho_edge_Q2[j] + rho_edge_Q3[j] + rho_edge_Q4[j] + rho_screw_Q1[j] +
+             rho_screw_Q2[j] + rho_screw_Q3[j] + rho_screw_Q4[j]); // latent hardening
     }
     _slip_resistance[_qp][i] =
         _dlamb * _shear_modulus * _burgers * std::sqrt(hardening_total_dislocation_density);
@@ -1648,9 +1615,9 @@ CrystalPlasticityBussoUpdateFCC::calculateDislocationVelocity()
   for (const auto i : make_range(_number_slip_systems))
   {
 
-    total_dislocation_density =
-        rho_edge_Q1[i] + rho_edge_Q2[i] + rho_edge_Q3[i] + rho_edge_Q4[i] 
-        + rho_screw_Q1[i] + rho_screw_Q2[i] + rho_screw_Q3[i] + rho_screw_Q4[i];
+    total_dislocation_density = rho_edge_Q1[i] + rho_edge_Q2[i] + rho_edge_Q3[i] + rho_edge_Q4[i] +
+                                rho_screw_Q1[i] + rho_screw_Q2[i] + rho_screw_Q3[i] +
+                                rho_screw_Q4[i];
 
     Real driving_force = std::abs(_tau[_qp][i] - _backstress(i)) - _slip_resistance[_qp][i];
     // }

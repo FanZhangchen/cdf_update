@@ -16,7 +16,7 @@ SSDUpdate::validParams()
   params.addParam<Real>("ds", 4.0e-6, "critical screw annihilation distance");
   params.addParam<Real>("Ce", 0.5, "edge proportional constant");
   params.addParam<Real>("Cs", 0.5, "screw proportional constant");
-  
+
   params.addRequiredParam<int>("nss", "Number of slip systems");
   // Coupled Variables of Slip 1
   params.addCoupledVar("edge_dislo_den_1_Q1", 0.0, "edge dislocation density in Q1");
@@ -147,135 +147,132 @@ SSDUpdate::SSDUpdate(const InputParameters & parameters)
     _gssT(_nss),
 
     // Get the coupled value of NDOFs of Slip 1
-    _edge_dislo_den_1_Q1(coupledValue("edge_dislo_den_1_Q1")), // Coupled Slip 1 Edge in Q1
-    _edge_dislo_den_1_Q2(coupledValue("edge_dislo_den_1_Q2")), // Coupled Slip 1 Edge in Q2
-    _edge_dislo_den_1_Q3(coupledValue("edge_dislo_den_1_Q3")), // Coupled Slip 1 Edge in Q3
-    _edge_dislo_den_1_Q4(coupledValue("edge_dislo_den_1_Q4")), // Coupled Slip 1 Edge in Q4
+    _edge_dislo_den_1_Q1(coupledValue("edge_dislo_den_1_Q1")),   // Coupled Slip 1 Edge in Q1
+    _edge_dislo_den_1_Q2(coupledValue("edge_dislo_den_1_Q2")),   // Coupled Slip 1 Edge in Q2
+    _edge_dislo_den_1_Q3(coupledValue("edge_dislo_den_1_Q3")),   // Coupled Slip 1 Edge in Q3
+    _edge_dislo_den_1_Q4(coupledValue("edge_dislo_den_1_Q4")),   // Coupled Slip 1 Edge in Q4
     _screw_dislo_den_1_Q1(coupledValue("screw_dislo_den_1_Q1")), // Coupled Slip 1 Screw in Q1
     _screw_dislo_den_1_Q2(coupledValue("screw_dislo_den_1_Q2")), // Coupled Slip 1 Screw in Q2
     _screw_dislo_den_1_Q3(coupledValue("screw_dislo_den_1_Q3")), // Coupled Slip 1 Screw in Q3
     _screw_dislo_den_1_Q4(coupledValue("screw_dislo_den_1_Q4")), // Coupled Slip 1 Screw in Q4
 
     // Get the coupled value of NDOFs of Slip 2
-    _edge_dislo_den_2_Q1(coupledValue("edge_dislo_den_2_Q1")), // Coupled Slip 1 Edge in Q1
-    _edge_dislo_den_2_Q2(coupledValue("edge_dislo_den_2_Q2")), // Coupled Slip 1 Edge in Q2
-    _edge_dislo_den_2_Q3(coupledValue("edge_dislo_den_2_Q3")), // Coupled Slip 1 Edge in Q3
-    _edge_dislo_den_2_Q4(coupledValue("edge_dislo_den_2_Q4")), // Coupled Slip 1 Edge in Q4
+    _edge_dislo_den_2_Q1(coupledValue("edge_dislo_den_2_Q1")),   // Coupled Slip 1 Edge in Q1
+    _edge_dislo_den_2_Q2(coupledValue("edge_dislo_den_2_Q2")),   // Coupled Slip 1 Edge in Q2
+    _edge_dislo_den_2_Q3(coupledValue("edge_dislo_den_2_Q3")),   // Coupled Slip 1 Edge in Q3
+    _edge_dislo_den_2_Q4(coupledValue("edge_dislo_den_2_Q4")),   // Coupled Slip 1 Edge in Q4
     _screw_dislo_den_2_Q1(coupledValue("screw_dislo_den_2_Q1")), // Coupled Slip 1 Screw in Q1
     _screw_dislo_den_2_Q2(coupledValue("screw_dislo_den_2_Q2")), // Coupled Slip 1 Screw in Q2
     _screw_dislo_den_2_Q3(coupledValue("screw_dislo_den_2_Q3")), // Coupled Slip 1 Screw in Q3
     _screw_dislo_den_2_Q4(coupledValue("screw_dislo_den_2_Q4")), // Coupled Slip 1 Screw in Q4
 
     // Get the coupled value of NDOFs of Slip 3
-    _edge_dislo_den_3_Q1(coupledValue("edge_dislo_den_3_Q1")), // Coupled Slip 1 Edge in Q1
-    _edge_dislo_den_3_Q2(coupledValue("edge_dislo_den_3_Q2")), // Coupled Slip 1 Edge in Q2
-    _edge_dislo_den_3_Q3(coupledValue("edge_dislo_den_3_Q3")), // Coupled Slip 1 Edge in Q3
-    _edge_dislo_den_3_Q4(coupledValue("edge_dislo_den_3_Q4")), // Coupled Slip 1 Edge in Q4
+    _edge_dislo_den_3_Q1(coupledValue("edge_dislo_den_3_Q1")),   // Coupled Slip 1 Edge in Q1
+    _edge_dislo_den_3_Q2(coupledValue("edge_dislo_den_3_Q2")),   // Coupled Slip 1 Edge in Q2
+    _edge_dislo_den_3_Q3(coupledValue("edge_dislo_den_3_Q3")),   // Coupled Slip 1 Edge in Q3
+    _edge_dislo_den_3_Q4(coupledValue("edge_dislo_den_3_Q4")),   // Coupled Slip 1 Edge in Q4
     _screw_dislo_den_3_Q1(coupledValue("screw_dislo_den_3_Q1")), // Coupled Slip 1 Screw in Q1
     _screw_dislo_den_3_Q2(coupledValue("screw_dislo_den_3_Q2")), // Coupled Slip 1 Screw in Q2
     _screw_dislo_den_3_Q3(coupledValue("screw_dislo_den_3_Q3")), // Coupled Slip 1 Screw in Q3
     _screw_dislo_den_3_Q4(coupledValue("screw_dislo_den_3_Q4")), // Coupled Slip 1 Screw in Q4
 
     // Get the coupled value of NDOFs of Slip 4
-    _edge_dislo_den_4_Q1(coupledValue("edge_dislo_den_4_Q1")), // Coupled Slip 1 Edge in Q1
-    _edge_dislo_den_4_Q2(coupledValue("edge_dislo_den_4_Q2")), // Coupled Slip 1 Edge in Q2
-    _edge_dislo_den_4_Q3(coupledValue("edge_dislo_den_4_Q3")), // Coupled Slip 1 Edge in Q3
-    _edge_dislo_den_4_Q4(coupledValue("edge_dislo_den_4_Q4")), // Coupled Slip 1 Edge in Q4
+    _edge_dislo_den_4_Q1(coupledValue("edge_dislo_den_4_Q1")),   // Coupled Slip 1 Edge in Q1
+    _edge_dislo_den_4_Q2(coupledValue("edge_dislo_den_4_Q2")),   // Coupled Slip 1 Edge in Q2
+    _edge_dislo_den_4_Q3(coupledValue("edge_dislo_den_4_Q3")),   // Coupled Slip 1 Edge in Q3
+    _edge_dislo_den_4_Q4(coupledValue("edge_dislo_den_4_Q4")),   // Coupled Slip 1 Edge in Q4
     _screw_dislo_den_4_Q1(coupledValue("screw_dislo_den_4_Q1")), // Coupled Slip 1 Screw in Q1
     _screw_dislo_den_4_Q2(coupledValue("screw_dislo_den_4_Q2")), // Coupled Slip 1 Screw in Q2
     _screw_dislo_den_4_Q3(coupledValue("screw_dislo_den_4_Q3")), // Coupled Slip 1 Screw in Q3
     _screw_dislo_den_4_Q4(coupledValue("screw_dislo_den_4_Q4")), // Coupled Slip 1 Screw in Q4
 
     // Get the coupled value of NDOFs of Slip 5
-    _edge_dislo_den_5_Q1(coupledValue("edge_dislo_den_5_Q1")), // Coupled Slip 1 Edge in Q1
-    _edge_dislo_den_5_Q2(coupledValue("edge_dislo_den_5_Q2")), // Coupled Slip 1 Edge in Q2
-    _edge_dislo_den_5_Q3(coupledValue("edge_dislo_den_5_Q3")), // Coupled Slip 1 Edge in Q3
-    _edge_dislo_den_5_Q4(coupledValue("edge_dislo_den_5_Q4")), // Coupled Slip 1 Edge in Q4
+    _edge_dislo_den_5_Q1(coupledValue("edge_dislo_den_5_Q1")),   // Coupled Slip 1 Edge in Q1
+    _edge_dislo_den_5_Q2(coupledValue("edge_dislo_den_5_Q2")),   // Coupled Slip 1 Edge in Q2
+    _edge_dislo_den_5_Q3(coupledValue("edge_dislo_den_5_Q3")),   // Coupled Slip 1 Edge in Q3
+    _edge_dislo_den_5_Q4(coupledValue("edge_dislo_den_5_Q4")),   // Coupled Slip 1 Edge in Q4
     _screw_dislo_den_5_Q1(coupledValue("screw_dislo_den_5_Q1")), // Coupled Slip 1 Screw in Q1
     _screw_dislo_den_5_Q2(coupledValue("screw_dislo_den_5_Q2")), // Coupled Slip 1 Screw in Q2
     _screw_dislo_den_5_Q3(coupledValue("screw_dislo_den_5_Q3")), // Coupled Slip 1 Screw in Q3
     _screw_dislo_den_5_Q4(coupledValue("screw_dislo_den_5_Q4")), // Coupled Slip 1 Screw in Q4
 
     // Get the coupled value of NDOFs of Slip 6
-    _edge_dislo_den_6_Q1(coupledValue("edge_dislo_den_6_Q1")), // Coupled Slip 1 Edge in Q1
-    _edge_dislo_den_6_Q2(coupledValue("edge_dislo_den_6_Q2")), // Coupled Slip 1 Edge in Q2
-    _edge_dislo_den_6_Q3(coupledValue("edge_dislo_den_6_Q3")), // Coupled Slip 1 Edge in Q3
-    _edge_dislo_den_6_Q4(coupledValue("edge_dislo_den_6_Q4")), // Coupled Slip 1 Edge in Q4
+    _edge_dislo_den_6_Q1(coupledValue("edge_dislo_den_6_Q1")),   // Coupled Slip 1 Edge in Q1
+    _edge_dislo_den_6_Q2(coupledValue("edge_dislo_den_6_Q2")),   // Coupled Slip 1 Edge in Q2
+    _edge_dislo_den_6_Q3(coupledValue("edge_dislo_den_6_Q3")),   // Coupled Slip 1 Edge in Q3
+    _edge_dislo_den_6_Q4(coupledValue("edge_dislo_den_6_Q4")),   // Coupled Slip 1 Edge in Q4
     _screw_dislo_den_6_Q1(coupledValue("screw_dislo_den_6_Q1")), // Coupled Slip 1 Screw in Q1
     _screw_dislo_den_6_Q2(coupledValue("screw_dislo_den_6_Q2")), // Coupled Slip 1 Screw in Q2
     _screw_dislo_den_6_Q3(coupledValue("screw_dislo_den_6_Q3")), // Coupled Slip 1 Screw in Q3
     _screw_dislo_den_6_Q4(coupledValue("screw_dislo_den_6_Q4")), // Coupled Slip 1 Screw in Q4
 
     // Get the coupled value of NDOFs of Slip 7
-    _edge_dislo_den_7_Q1(coupledValue("edge_dislo_den_7_Q1")), // Coupled Slip 1 Edge in Q1
-    _edge_dislo_den_7_Q2(coupledValue("edge_dislo_den_7_Q2")), // Coupled Slip 1 Edge in Q2
-    _edge_dislo_den_7_Q3(coupledValue("edge_dislo_den_7_Q3")), // Coupled Slip 1 Edge in Q3
-    _edge_dislo_den_7_Q4(coupledValue("edge_dislo_den_7_Q4")), // Coupled Slip 1 Edge in Q4
+    _edge_dislo_den_7_Q1(coupledValue("edge_dislo_den_7_Q1")),   // Coupled Slip 1 Edge in Q1
+    _edge_dislo_den_7_Q2(coupledValue("edge_dislo_den_7_Q2")),   // Coupled Slip 1 Edge in Q2
+    _edge_dislo_den_7_Q3(coupledValue("edge_dislo_den_7_Q3")),   // Coupled Slip 1 Edge in Q3
+    _edge_dislo_den_7_Q4(coupledValue("edge_dislo_den_7_Q4")),   // Coupled Slip 1 Edge in Q4
     _screw_dislo_den_7_Q1(coupledValue("screw_dislo_den_7_Q1")), // Coupled Slip 1 Screw in Q1
     _screw_dislo_den_7_Q2(coupledValue("screw_dislo_den_7_Q2")), // Coupled Slip 1 Screw in Q2
     _screw_dislo_den_7_Q3(coupledValue("screw_dislo_den_7_Q3")), // Coupled Slip 1 Screw in Q3
     _screw_dislo_den_7_Q4(coupledValue("screw_dislo_den_7_Q4")), // Coupled Slip 1 Screw in Q4
 
     // Get the coupled value of NDOFs of Slip 8
-    _edge_dislo_den_8_Q1(coupledValue("edge_dislo_den_8_Q1")), // Coupled Slip 1 Edge in Q1
-    _edge_dislo_den_8_Q2(coupledValue("edge_dislo_den_8_Q2")), // Coupled Slip 1 Edge in Q2
-    _edge_dislo_den_8_Q3(coupledValue("edge_dislo_den_8_Q3")), // Coupled Slip 1 Edge in Q3
-    _edge_dislo_den_8_Q4(coupledValue("edge_dislo_den_8_Q4")), // Coupled Slip 1 Edge in Q4
+    _edge_dislo_den_8_Q1(coupledValue("edge_dislo_den_8_Q1")),   // Coupled Slip 1 Edge in Q1
+    _edge_dislo_den_8_Q2(coupledValue("edge_dislo_den_8_Q2")),   // Coupled Slip 1 Edge in Q2
+    _edge_dislo_den_8_Q3(coupledValue("edge_dislo_den_8_Q3")),   // Coupled Slip 1 Edge in Q3
+    _edge_dislo_den_8_Q4(coupledValue("edge_dislo_den_8_Q4")),   // Coupled Slip 1 Edge in Q4
     _screw_dislo_den_8_Q1(coupledValue("screw_dislo_den_8_Q1")), // Coupled Slip 1 Screw in Q1
     _screw_dislo_den_8_Q2(coupledValue("screw_dislo_den_8_Q2")), // Coupled Slip 1 Screw in Q2
     _screw_dislo_den_8_Q3(coupledValue("screw_dislo_den_8_Q3")), // Coupled Slip 1 Screw in Q3
     _screw_dislo_den_8_Q4(coupledValue("screw_dislo_den_8_Q4")), // Coupled Slip 1 Screw in Q4
 
     // Get the coupled value of NDOFs of Slip 9
-    _edge_dislo_den_9_Q1(coupledValue("edge_dislo_den_9_Q1")), // Coupled Slip 1 Edge in Q1
-    _edge_dislo_den_9_Q2(coupledValue("edge_dislo_den_9_Q2")), // Coupled Slip 1 Edge in Q2
-    _edge_dislo_den_9_Q3(coupledValue("edge_dislo_den_9_Q3")), // Coupled Slip 1 Edge in Q3
-    _edge_dislo_den_9_Q4(coupledValue("edge_dislo_den_9_Q4")), // Coupled Slip 1 Edge in Q4
+    _edge_dislo_den_9_Q1(coupledValue("edge_dislo_den_9_Q1")),   // Coupled Slip 1 Edge in Q1
+    _edge_dislo_den_9_Q2(coupledValue("edge_dislo_den_9_Q2")),   // Coupled Slip 1 Edge in Q2
+    _edge_dislo_den_9_Q3(coupledValue("edge_dislo_den_9_Q3")),   // Coupled Slip 1 Edge in Q3
+    _edge_dislo_den_9_Q4(coupledValue("edge_dislo_den_9_Q4")),   // Coupled Slip 1 Edge in Q4
     _screw_dislo_den_9_Q1(coupledValue("screw_dislo_den_9_Q1")), // Coupled Slip 1 Screw in Q1
     _screw_dislo_den_9_Q2(coupledValue("screw_dislo_den_9_Q2")), // Coupled Slip 1 Screw in Q2
     _screw_dislo_den_9_Q3(coupledValue("screw_dislo_den_9_Q3")), // Coupled Slip 1 Screw in Q3
     _screw_dislo_den_9_Q4(coupledValue("screw_dislo_den_9_Q4")), // Coupled Slip 1 Screw in Q4
 
     // Get the coupled value of NDOFs of Slip 10
-    _edge_dislo_den_10_Q1(coupledValue("edge_dislo_den_10_Q1")), // Coupled Slip 1 Edge in Q1
-    _edge_dislo_den_10_Q2(coupledValue("edge_dislo_den_10_Q2")), // Coupled Slip 1 Edge in Q2
-    _edge_dislo_den_10_Q3(coupledValue("edge_dislo_den_10_Q3")), // Coupled Slip 1 Edge in Q3
-    _edge_dislo_den_10_Q4(coupledValue("edge_dislo_den_10_Q4")), // Coupled Slip 1 Edge in Q4
+    _edge_dislo_den_10_Q1(coupledValue("edge_dislo_den_10_Q1")),   // Coupled Slip 1 Edge in Q1
+    _edge_dislo_den_10_Q2(coupledValue("edge_dislo_den_10_Q2")),   // Coupled Slip 1 Edge in Q2
+    _edge_dislo_den_10_Q3(coupledValue("edge_dislo_den_10_Q3")),   // Coupled Slip 1 Edge in Q3
+    _edge_dislo_den_10_Q4(coupledValue("edge_dislo_den_10_Q4")),   // Coupled Slip 1 Edge in Q4
     _screw_dislo_den_10_Q1(coupledValue("screw_dislo_den_10_Q1")), // Coupled Slip 1 Screw in Q1
     _screw_dislo_den_10_Q2(coupledValue("screw_dislo_den_10_Q2")), // Coupled Slip 1 Screw in Q2
     _screw_dislo_den_10_Q3(coupledValue("screw_dislo_den_10_Q3")), // Coupled Slip 1 Screw in Q3
     _screw_dislo_den_10_Q4(coupledValue("screw_dislo_den_10_Q4")), // Coupled Slip 1 Screw in Q4
 
     // Get the coupled value of NDOFs of Slip 11
-    _edge_dislo_den_11_Q1(coupledValue("edge_dislo_den_11_Q1")), // Coupled Slip 1 Edge in Q1
-    _edge_dislo_den_11_Q2(coupledValue("edge_dislo_den_11_Q2")), // Coupled Slip 1 Edge in Q2
-    _edge_dislo_den_11_Q3(coupledValue("edge_dislo_den_11_Q3")), // Coupled Slip 1 Edge in Q3
-    _edge_dislo_den_11_Q4(coupledValue("edge_dislo_den_11_Q4")), // Coupled Slip 1 Edge in Q4
+    _edge_dislo_den_11_Q1(coupledValue("edge_dislo_den_11_Q1")),   // Coupled Slip 1 Edge in Q1
+    _edge_dislo_den_11_Q2(coupledValue("edge_dislo_den_11_Q2")),   // Coupled Slip 1 Edge in Q2
+    _edge_dislo_den_11_Q3(coupledValue("edge_dislo_den_11_Q3")),   // Coupled Slip 1 Edge in Q3
+    _edge_dislo_den_11_Q4(coupledValue("edge_dislo_den_11_Q4")),   // Coupled Slip 1 Edge in Q4
     _screw_dislo_den_11_Q1(coupledValue("screw_dislo_den_11_Q1")), // Coupled Slip 1 Screw in Q1
     _screw_dislo_den_11_Q2(coupledValue("screw_dislo_den_11_Q2")), // Coupled Slip 1 Screw in Q2
     _screw_dislo_den_11_Q3(coupledValue("screw_dislo_den_11_Q3")), // Coupled Slip 1 Screw in Q3
     _screw_dislo_den_11_Q4(coupledValue("screw_dislo_den_11_Q4")), // Coupled Slip 1 Screw in Q4
 
     // Get the coupled value of NDOFs of Slip 12
-    _edge_dislo_den_12_Q1(coupledValue("edge_dislo_den_12_Q1")), // Coupled Slip 1 Edge in Q1
-    _edge_dislo_den_12_Q2(coupledValue("edge_dislo_den_12_Q2")), // Coupled Slip 1 Edge in Q2
-    _edge_dislo_den_12_Q3(coupledValue("edge_dislo_den_12_Q3")), // Coupled Slip 1 Edge in Q3
-    _edge_dislo_den_12_Q4(coupledValue("edge_dislo_den_12_Q4")), // Coupled Slip 1 Edge in Q4
+    _edge_dislo_den_12_Q1(coupledValue("edge_dislo_den_12_Q1")),   // Coupled Slip 1 Edge in Q1
+    _edge_dislo_den_12_Q2(coupledValue("edge_dislo_den_12_Q2")),   // Coupled Slip 1 Edge in Q2
+    _edge_dislo_den_12_Q3(coupledValue("edge_dislo_den_12_Q3")),   // Coupled Slip 1 Edge in Q3
+    _edge_dislo_den_12_Q4(coupledValue("edge_dislo_den_12_Q4")),   // Coupled Slip 1 Edge in Q4
     _screw_dislo_den_12_Q1(coupledValue("screw_dislo_den_12_Q1")), // Coupled Slip 1 Screw in Q1
     _screw_dislo_den_12_Q2(coupledValue("screw_dislo_den_12_Q2")), // Coupled Slip 1 Screw in Q2
     _screw_dislo_den_12_Q3(coupledValue("screw_dislo_den_12_Q3")), // Coupled Slip 1 Screw in Q3
     _screw_dislo_den_12_Q4(coupledValue("screw_dislo_den_12_Q4")), // Coupled Slip 1 Screw in Q4
 
-    
     _slip_increment(getMaterialProperty<std::vector<Real>>("slip_increment")),
     // Declare the current value and older value of SSD density
-    _edge_dislocation_increment(
-        declareProperty<std::vector<Real>>("edge_dislocation_increment")),
+    _edge_dislocation_increment(declareProperty<std::vector<Real>>("edge_dislocation_increment")),
     _edge_dislocation_increment_old(
         getMaterialPropertyOld<std::vector<Real>>("edge_dislocation_increment")),
 
-    _screw_dislocation_increment(
-        declareProperty<std::vector<Real>>("screw_dislocation_increment")),
+    _screw_dislocation_increment(declareProperty<std::vector<Real>>("screw_dislocation_increment")),
     _screw_dislocation_increment_old(
         getMaterialPropertyOld<std::vector<Real>>("screw_dislocation_increment"))
 
@@ -285,7 +282,7 @@ SSDUpdate::SSDUpdate(const InputParameters & parameters)
 void
 SSDUpdate::initQpStatefulProperties()
 {
-  
+
   std::vector<Real> edge_dislo_den_Q1(_nss);
   std::vector<Real> edge_dislo_den_Q2(_nss);
   std::vector<Real> edge_dislo_den_Q3(_nss);
@@ -410,11 +407,13 @@ SSDUpdate::initQpStatefulProperties()
 
   for (const auto i : make_range(_nss))
   {
-    edge_dislocation_density[i] = edge_dislo_den_Q1[i] + edge_dislo_den_Q2[i] + edge_dislo_den_Q3[i] + edge_dislo_den_Q4[i];
-    
-    screw_dislocation_density[i] = screw_dislo_den_Q1[i] + screw_dislo_den_Q2[i] + screw_dislo_den_Q3[i] + screw_dislo_den_Q4[i];
-    
-    total_dislocation_density[i] = edge_dislocation_density[i] + screw_dislocation_density[i];      
+    edge_dislocation_density[i] =
+        edge_dislo_den_Q1[i] + edge_dislo_den_Q2[i] + edge_dislo_den_Q3[i] + edge_dislo_den_Q4[i];
+
+    screw_dislocation_density[i] = screw_dislo_den_Q1[i] + screw_dislo_den_Q2[i] +
+                                   screw_dislo_den_Q3[i] + screw_dislo_den_Q4[i];
+
+    total_dislocation_density[i] = edge_dislocation_density[i] + screw_dislocation_density[i];
 
     TotalDislocationDensity_ALL = 0;
     const Real abs_slip_increment = std::abs(_slip_increment[_qp][i]);
@@ -423,19 +422,23 @@ SSDUpdate::initQpStatefulProperties()
     {
       TotalDislocationDensity_ALL += total_dislocation_density[j];
     }
-    
+
     if (edge_dislocation_density[i] > 0.0)
     {
-      _edge_dislocation_increment[_qp][i] = _Ce * _ke_b * std::sqrt(TotalDislocationDensity_ALL) * abs_slip_increment 
-      - _Ce / _burgers * 2.0 * _de * edge_dislocation_density[i] * abs_slip_increment;
+      _edge_dislocation_increment[_qp][i] =
+          _Ce * _ke_b * std::sqrt(TotalDislocationDensity_ALL) * abs_slip_increment -
+          _Ce / _burgers * 2.0 * _de * edge_dislocation_density[i] * abs_slip_increment;
     }
 
     if (screw_dislocation_density[i] > 0.0)
     {
-      _screw_dislocation_increment[_qp][i] = _Cs * _ks_b * std::sqrt(TotalDislocationDensity_ALL) * abs_slip_increment 
-         - _Cs / _burgers * (M_PI * std::pow(_ds,2.0) * _ks_b * _burgers * std::sqrt(TotalDislocationDensity_ALL) 
-                             + 2.0 * _ds)
-         * screw_dislocation_density[i] * abs_slip_increment;
+      _screw_dislocation_increment[_qp][i] =
+          _Cs * _ks_b * std::sqrt(TotalDislocationDensity_ALL) * abs_slip_increment -
+          _Cs / _burgers *
+              (M_PI * std::pow(_ds, 2.0) * _ks_b * _burgers *
+                   std::sqrt(TotalDislocationDensity_ALL) +
+               2.0 * _ds) *
+              screw_dislocation_density[i] * abs_slip_increment;
     }
   }
 }
@@ -564,11 +567,13 @@ SSDUpdate::computeQpProperties()
 
   for (const auto i : make_range(_nss))
   {
-    edge_dislocation_density[i] = edge_dislo_den_Q1[i] + edge_dislo_den_Q2[i] + edge_dislo_den_Q3[i] + edge_dislo_den_Q4[i];
-    
-    screw_dislocation_density[i] = screw_dislo_den_Q1[i] + screw_dislo_den_Q2[i] + screw_dislo_den_Q3[i] + screw_dislo_den_Q4[i];
-    
-    total_dislocation_density[i] = edge_dislocation_density[i] + screw_dislocation_density[i];      
+    edge_dislocation_density[i] =
+        edge_dislo_den_Q1[i] + edge_dislo_den_Q2[i] + edge_dislo_den_Q3[i] + edge_dislo_den_Q4[i];
+
+    screw_dislocation_density[i] = screw_dislo_den_Q1[i] + screw_dislo_den_Q2[i] +
+                                   screw_dislo_den_Q3[i] + screw_dislo_den_Q4[i];
+
+    total_dislocation_density[i] = edge_dislocation_density[i] + screw_dislocation_density[i];
 
     TotalDislocationDensity_ALL = 0;
 
@@ -578,21 +583,27 @@ SSDUpdate::computeQpProperties()
     {
       TotalDislocationDensity_ALL += total_dislocation_density[j];
     }
-    
+
     if (edge_dislocation_density[i] > 0.0)
     {
-      _edge_dislocation_increment[_qp][i] = _edge_dislocation_increment_old[_qp][i] 
-      + (_Ce * _ke_b * std::sqrt(TotalDislocationDensity_ALL) * abs_slip_increment 
-      - _Ce / _burgers * 2.0 * _de * edge_dislocation_density[i] * abs_slip_increment) * _dt;
+      _edge_dislocation_increment[_qp][i] =
+          _edge_dislocation_increment_old[_qp][i] +
+          (_Ce * _ke_b * std::sqrt(TotalDislocationDensity_ALL) * abs_slip_increment -
+           _Ce / _burgers * 2.0 * _de * edge_dislocation_density[i] * abs_slip_increment) *
+              _dt;
     }
 
     if (screw_dislocation_density[i] > 0.0)
     {
-      _screw_dislocation_increment[_qp][i] = _screw_dislocation_increment_old[_qp][i] 
-      + (_Cs * _ks_b * std::sqrt(TotalDislocationDensity_ALL) * abs_slip_increment 
-         - _Cs / _burgers * (M_PI * std::pow(_ds,2.0) * _ks_b * _burgers * std::sqrt(TotalDislocationDensity_ALL) 
-                             + 2.0 * _ds)
-         * screw_dislocation_density[i] * abs_slip_increment) * _dt;
+      _screw_dislocation_increment[_qp][i] =
+          _screw_dislocation_increment_old[_qp][i] +
+          (_Cs * _ks_b * std::sqrt(TotalDislocationDensity_ALL) * abs_slip_increment -
+           _Cs / _burgers *
+               (M_PI * std::pow(_ds, 2.0) * _ks_b * _burgers *
+                    std::sqrt(TotalDislocationDensity_ALL) +
+                2.0 * _ds) *
+               screw_dislocation_density[i] * abs_slip_increment) *
+              _dt;
     }
-  } 
+  }
 }

@@ -24,7 +24,6 @@ protected:
   virtual void initQpStatefulProperties();
 
 private:
-
   const Real _burgers;
   const Real _ke_b;
   const Real _ks_b;

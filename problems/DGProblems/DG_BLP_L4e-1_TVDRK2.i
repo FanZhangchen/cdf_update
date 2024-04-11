@@ -461,16 +461,16 @@
   [rhoep]
     type = LineValueSampler
     variable = rho_edge_pos_1
-    start_point = '0.005 0 0'
-    end_point = '0.005 0.1 0'
+    start_point = '0.00005 0 0'
+    end_point = '0.00005 0.001 0'
     num_points = 51
     sort_by = y
   []
   [rhoen]
     type = LineValueSampler
     variable = rho_edge_neg_1
-    start_point = '0.005 0 0'
-    end_point = '0.005 0.1 0'
+    start_point = '0.00005 0 0'
+    end_point = '0.00005 0.001 0'
     num_points = 51
     sort_by = y
   []

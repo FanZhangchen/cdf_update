@@ -371,9 +371,9 @@
     # type = ImplicitEuler
     # type = BDF2
     # type = CrankNicolson
-    # type = ImplicitMidpoint
+    type = ImplicitMidpoint
     # type = LStableDirk2
-    type = LStableDirk3
+    # type = LStableDirk3
     # type = LStableDirk4
     # type = AStableDirk4
     #
@@ -384,10 +384,10 @@
     # type = Ralston
   [../]
 
-  solve_type = 'PJFNK'
+  solve_type = 'NEWTON'
   petsc_options = '-snes_ksp_ew'
-  petsc_options_iname = '-pc_type -pc_factor_mat_solver_package'
-  petsc_options_value = 'lu superlu_dist'
+  petsc_options_iname = '-ksp_type -pc_type -sub_pc_type -pc_factor_mat_solver_package'
+  petsc_options_value = 'gmres asm lu superlu_dist'
   line_search = 'basic'
   automatic_scaling = true
 

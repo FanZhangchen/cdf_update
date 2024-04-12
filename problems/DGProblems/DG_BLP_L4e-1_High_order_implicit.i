@@ -384,10 +384,12 @@
     # type = Ralston
   [../]
 
-  solve_type = 'NEWTON'
+  solve_type = 'PJFNK'
   petsc_options = '-snes_ksp_ew'
-  petsc_options_iname = '-ksp_type -pc_type -sub_pc_type -pc_factor_mat_solver_package'
-  petsc_options_value = 'gmres asm lu superlu_dist'
+  # petsc_options_iname = '-ksp_type -pc_type -sub_pc_type -pc_factor_mat_solver_package'
+  # petsc_options_value = 'gmres asm lu superlu_dist'
+  petsc_options_iname = '-pc_type -pc_hypre_type -ksp_gmres_restart'
+  petsc_options_value = 'hypre    boomeramg          31'
   line_search = 'basic'
   automatic_scaling = true
 

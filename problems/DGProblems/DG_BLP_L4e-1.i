@@ -371,8 +371,8 @@
     # type = ImplicitEuler
     # type = BDF2
     # type = CrankNicolson
-    # type = ImplicitMidpoint
-    type = LStableDirk2
+    type = ImplicitMidpoint
+    # type = LStableDirk2
     # type = LStableDirk3
     # type = LStableDirk4
     # type = AStableDirk4

@@ -129,6 +129,7 @@ protected:
   ///@}
 
   ///@{Nodal degrees of freedom
+
   const VariableValue & _edge_dislo_den_pos_1;
 
   const VariableGradient & _edge_dislo_den_pos_grad_1;
@@ -144,6 +145,7 @@ protected:
   const VariableValue & _edge_dislo_den_neg_2;
 
   const VariableGradient & _edge_dislo_den_neg_grad_2;
+
   // const VariableValue & _rho_edge_pos_3;
   // const VariableValue & _rho_edge_neg_3;
   // const VariableValue & _rho_edge_pos_4;

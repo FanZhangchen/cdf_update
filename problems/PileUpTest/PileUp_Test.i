@@ -59,22 +59,22 @@
 []
 
 [AuxKernels]
-  [rhot]
-    type = TotalDislocationDensity
-    variable = rhot
-    execute_on = timestep_end
-    rhoe1 = rhoep
-    rhoe3 = rhoen
-    initial_total_dislo_den = 16.e3
-  []
-  [rhognd]
-    type = GNDDislocationDensity
-    variable = rhognd
-    execute_on = timestep_end
-    rhoe1 = rhoep
-    rhoe3 = rhoen
-    initial_total_dislo_den = 16.e3
-  []
+  # [rhot]
+  #   type = TotalDislocationDensity
+  #   variable = rhot
+  #   execute_on = timestep_end
+  #   rhoe1 = rhoep
+  #   rhoe3 = rhoen
+  #   initial_total_dislo_den = 16.e3
+  # []
+  # [rhognd]
+  #   type = GNDDislocationDensity
+  #   variable = rhognd
+  #   execute_on = timestep_end
+  #   rhoe1 = rhoep
+  #   rhoe3 = rhoen
+  #   initial_total_dislo_den = 16.e3
+  # []
 []
 
 [Materials]

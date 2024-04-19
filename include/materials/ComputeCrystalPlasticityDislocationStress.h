@@ -15,15 +15,15 @@
 #include "RankFourTensor.h"
 
 /**
- * ComputeCrystalPlasticityDislocationStress (used together with CrystalPlasticityDislocationUpdateBase)
- * uses the multiplicative decomposition of the deformation gradient and solves the PK2 stress
- * residual equation at the intermediate configuration to evolve the material state. The internal
- * variables are updated using an iterative predictor-corrector algorithm. Backward Euler
- * integration rule is used for the rate equations.
+ * ComputeCrystalPlasticityDislocationStress (used together with
+ * CrystalPlasticityDislocationUpdateBase) uses the multiplicative decomposition of the deformation
+ * gradient and solves the PK2 stress residual equation at the intermediate configuration to evolve
+ * the material state. The internal variables are updated using an iterative predictor-corrector
+ * algorithm. Backward Euler integration rule is used for the rate equations.
  *
  * The only difference between this file and the origin ComputeMultipleCrystalPlasticityStress
  * is to replace CrystalPlasticityStressUpdateBase by CrystalPlasticityDislocationUpdateBase.
- * 
+ *
  */
 class ComputeCrystalPlasticityDislocationStress : public ComputeFiniteStrainElasticStress
 {

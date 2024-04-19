@@ -4,13 +4,13 @@
 //* Centre for Micro-mechanics Modelling and Characterisation
 //* 6 Jan 2024
 
-#include "CrystalPlasticityBussoUpdate.h"
+#include "CrystalPlasticityBussoUpdateMultiSlip.h"
 #include "libmesh/int_range.h"
 
-registerMooseObject("SolidMechanicsApp", CrystalPlasticityBussoUpdate);
+registerMooseObject("SolidMechanicsApp", CrystalPlasticityBussoUpdateMultiSlip);
 
 InputParameters
-CrystalPlasticityBussoUpdate::validParams()
+CrystalPlasticityBussoUpdateMultiSlip::validParams()
 {
   InputParameters params = CrystalPlasticityDislocationUpdateBase::validParams();
   params.addClassDescription("Busso's version of crystal plasticity.");
@@ -39,54 +39,19 @@ CrystalPlasticityBussoUpdate::validParams()
       "edge_dislo_den_pos_2", 0.0, "Positive edge dislocation density: slip system 2");
   params.addCoupledVar(
       "edge_dislo_den_neg_2", 0.0, "Negative edge dislocation density: slip system 2");
-  params.addCoupledVar(
-      "edge_dislo_den_pos_3", 0.0, "Positive edge dislocation density: slip system 3");
-  params.addCoupledVar(
-      "edge_dislo_den_neg_3", 0.0, "Negative edge dislocation density: slip system 3");
-  params.addCoupledVar(
-      "edge_dislo_den_pos_4", 0.0, "Positive edge dislocation density: slip system 4");
-  params.addCoupledVar(
-      "edge_dislo_den_neg_4", 0.0, "Negative edge dislocation density: slip system 4");
-  params.addCoupledVar(
-      "edge_dislo_den_pos_5", 0.0, "Positive edge dislocation density: slip system 5");
-  params.addCoupledVar(
-      "edge_dislo_den_neg_5", 0.0, "Negative edge dislocation density: slip system 5");
-  params.addCoupledVar(
-      "edge_dislo_den_pos_6", 0.0, "Positive edge dislocation density: slip system 6");
-  params.addCoupledVar(
-      "edge_dislo_den_neg_6", 0.0, "Negative edge dislocation density: slip system 6");
-  params.addCoupledVar(
-      "edge_dislo_den_pos_7", 0.0, "Positive edge dislocation density: slip system 7");
-  params.addCoupledVar(
-      "edge_dislo_den_neg_7", 0.0, "Negative edge dislocation density: slip system 7");
-  params.addCoupledVar(
-      "edge_dislo_den_pos_8", 0.0, "Positive edge dislocation density: slip system 8");
-  params.addCoupledVar(
-      "edge_dislo_den_neg_8", 0.0, "Negative edge dislocation density: slip system 8");
-  params.addCoupledVar(
-      "edge_dislo_den_pos_9", 0.0, "Positive edge dislocation density: slip system 9");
-  params.addCoupledVar(
-      "edge_dislo_den_neg_9", 0.0, "Negative edge dislocation density: slip system 9");
-  params.addCoupledVar(
-      "edge_dislo_den_pos_10", 0.0, "Positive edge dislocation density: slip system 10");
-  params.addCoupledVar(
-      "edge_dislo_den_neg_10", 0.0, "Negative edge dislocation density: slip system 10");
-  params.addCoupledVar(
-      "edge_dislo_den_pos_11", 0.0, "Positive edge dislocation density: slip system 11");
-  params.addCoupledVar(
-      "edge_dislo_den_neg_11", 0.0, "Negative edge dislocation density: slip system 11");
-  params.addCoupledVar(
-      "edge_dislo_den_pos_12", 0.0, "Positive edge dislocation density: slip system 12");
-  params.addCoupledVar(
-      "edge_dislo_den_neg_12", 0.0, "Negative edge dislocation density: slip system 12");
 
   MooseEnum is_two_slips("yes no", "yes");
   params.addRequiredParam<MooseEnum>("is_two_slips", is_two_slips, "check two slips case.");
 
+  MooseEnum version_number("v_1 v_2 v_3", "v_3");
+  params.addRequiredParam<MooseEnum>(
+      "version_number", version_number, "turn to 3 types of multi slips case.");
+
   return params;
 }
 
-CrystalPlasticityBussoUpdate::CrystalPlasticityBussoUpdate(const InputParameters & parameters)
+CrystalPlasticityBussoUpdateMultiSlip::CrystalPlasticityBussoUpdateMultiSlip(
+    const InputParameters & parameters)
   : CrystalPlasticityDislocationUpdateBase(parameters),
     // Constitutive values
     _r(getParam<Real>("r")),
@@ -106,6 +71,7 @@ CrystalPlasticityBussoUpdate::CrystalPlasticityBussoUpdate(const InputParameters
     _w2(getParam<Real>("w2")),
 
     _backstress(_number_slip_systems),
+    _backstress_total(_number_slip_systems),
 
     _edge_dislo_den_pos_1(coupledValue("edge_dislo_den_pos_1")),
 
@@ -139,13 +105,15 @@ CrystalPlasticityBussoUpdate::CrystalPlasticityBussoUpdate(const InputParameters
     _accumulated_equivalent_plastic_strain_old(
         getMaterialPropertyOld<Real>(_base_name + "accumulated_equivalent_plastic_strain")),
 
-    _is_two_slips(getParam<MooseEnum>("is_two_slips").getEnum<TwoSlipCheck>())
+    _is_two_slips(getParam<MooseEnum>("is_two_slips").getEnum<TwoSlipCheck>()),
+
+    _version_number(getParam<MooseEnum>("version_number").getEnum<MultiSlipsVersion>())
 
 {
 }
 
 void
-CrystalPlasticityBussoUpdate::initQpStatefulProperties()
+CrystalPlasticityBussoUpdateMultiSlip::initQpStatefulProperties()
 {
   CrystalPlasticityDislocationUpdateBase::initQpStatefulProperties();
 
@@ -154,26 +122,26 @@ CrystalPlasticityBussoUpdate::initQpStatefulProperties()
 
   rho_edge_pos[0] = _edge_dislo_den_pos_1[_qp];
   rho_edge_pos[1] = _edge_dislo_den_pos_2[_qp];
-  // rho_edge_pos[2] = _edge_dislo_den_pos_3[_qp];
-  // rho_edge_pos[3] = _edge_dislo_den_pos_4[_qp];
-  // rho_edge_pos[4] = _edge_dislo_den_pos_5[_qp];
-  // rho_edge_pos[5] = _edge_dislo_den_pos_6[_qp];
-  // rho_edge_pos[6] = _edge_dislo_den_pos_7[_qp];
-  // rho_edge_pos[7] = _edge_dislo_den_pos_8[_qp];
-  // rho_edge_pos[8] = _edge_dislo_den_pos_9[_qp];
+  // rho_edge_pos[2] = _rho_edge_pos_3[_qp];
+  // rho_edge_pos[3] = _rho_edge_pos_4[_qp];
+  // rho_edge_pos[4] = _rho_edge_pos_5[_qp];
+  // rho_edge_pos[5] = _rho_edge_pos_6[_qp];
+  // rho_edge_pos[6] = _rho_edge_pos_7[_qp];
+  // rho_edge_pos[7] = _rho_edge_pos_8[_qp];
+  // rho_edge_pos[8] = _rho_edge_pos_9[_qp];
   // rho_edge_pos[9] = _edge_dislo_den_pos_10[_qp];
   // rho_edge_pos[10] = _edge_dislo_den_pos_11[_qp];
   // rho_edge_pos[11] = _edge_dislo_den_pos_12[_qp];
 
   rho_edge_neg[0] = _edge_dislo_den_neg_1[_qp];
   rho_edge_neg[1] = _edge_dislo_den_neg_2[_qp];
-  // rho_edge_neg[2] = _edge_dislo_den_neg_3[_qp];
-  // rho_edge_neg[3] = _edge_dislo_den_neg_4[_qp];
-  // rho_edge_neg[4] = _edge_dislo_den_neg_5[_qp];
-  // rho_edge_neg[5] = _edge_dislo_den_neg_6[_qp];
-  // rho_edge_neg[6] = _edge_dislo_den_neg_7[_qp];
-  // rho_edge_neg[7] = _edge_dislo_den_neg_8[_qp];
-  // rho_edge_neg[8] = _edge_dislo_den_neg_9[_qp];
+  // rho_edge_neg[2] = _rho_edge_neg_3[_qp];
+  // rho_edge_neg[3] = _rho_edge_neg_4[_qp];
+  // rho_edge_neg[4] = _rho_edge_neg_5[_qp];
+  // rho_edge_neg[5] = _rho_edge_neg_6[_qp];
+  // rho_edge_neg[6] = _rho_edge_neg_7[_qp];
+  // rho_edge_neg[7] = _rho_edge_neg_8[_qp];
+  // rho_edge_neg[8] = _rho_edge_neg_9[_qp];
   // rho_edge_neg[9] = _edge_dislo_den_neg_10[_qp];
   // rho_edge_neg[10] = _edge_dislo_den_neg_11[_qp];
   // rho_edge_neg[11] = _edge_dislo_den_neg_12[_qp];
@@ -204,7 +172,7 @@ CrystalPlasticityBussoUpdate::initQpStatefulProperties()
 }
 
 void
-CrystalPlasticityBussoUpdate::calculateSchmidTensor(
+CrystalPlasticityBussoUpdateMultiSlip::calculateSchmidTensor(
     const unsigned int & number_slip_systems,
     const std::vector<RealVectorValue> & plane_normal_vector,
     const std::vector<RealVectorValue> & direction_vector,
@@ -271,31 +239,27 @@ CrystalPlasticityBussoUpdate::calculateSchmidTensor(
 }
 
 void
-CrystalPlasticityBussoUpdate::setInitialConstitutiveVariableValues()
+CrystalPlasticityBussoUpdateMultiSlip::setInitialConstitutiveVariableValues()
 {
   // No need for this subroutine
 }
 
 void
-CrystalPlasticityBussoUpdate::setSubstepConstitutiveVariableValues()
+CrystalPlasticityBussoUpdateMultiSlip::setSubstepConstitutiveVariableValues()
 {
   // No need for this subroutine
 }
 
 bool
-CrystalPlasticityBussoUpdate::calculateSlipRate()
+CrystalPlasticityBussoUpdateMultiSlip::calculateSlipRate()
 {
-
-  std::vector<Real> local_edge_slip_direction, local_screw_slip_direction;
-  local_edge_slip_direction.resize(LIBMESH_DIM);
-  local_screw_slip_direction.resize(LIBMESH_DIM);
 
   calculateSlipResistance();
 
   std::vector<Real> rho_edge_pos(_number_slip_systems);
   std::vector<Real> rho_edge_neg(_number_slip_systems);
-  std::vector<Real> rho_screw_pos(_number_slip_systems);
-  std::vector<Real> rho_screw_neg(_number_slip_systems);
+  // std::vector<Real> rho_screw_pos(_nss);
+  // std::vector<Real> rho_screw_neg(_nss);
 
   std::vector<Real> rho_edge_pos_grad_x(_number_slip_systems);
   std::vector<Real> rho_edge_neg_grad_x(_number_slip_systems);
@@ -307,26 +271,26 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
   // Assign dislocation density vectors
   rho_edge_pos[0] = _edge_dislo_den_pos_1[_qp];
   rho_edge_pos[1] = _edge_dislo_den_pos_2[_qp];
-  // rho_edge_pos[2] = _edge_dislo_den_pos_3[_qp];
-  // rho_edge_pos[3] = _edge_dislo_den_pos_4[_qp];
-  // rho_edge_pos[4] = _edge_dislo_den_pos_5[_qp];
-  // rho_edge_pos[5] = _edge_dislo_den_pos_6[_qp];
-  // rho_edge_pos[6] = _edge_dislo_den_pos_7[_qp];
-  // rho_edge_pos[7] = _edge_dislo_den_pos_8[_qp];
-  // rho_edge_pos[8] = _edge_dislo_den_pos_9[_qp];
+  // rho_edge_pos[2] = _rho_edge_pos_3[_qp];
+  // rho_edge_pos[3] = _rho_edge_pos_4[_qp];
+  // rho_edge_pos[4] = _rho_edge_pos_5[_qp];
+  // rho_edge_pos[5] = _rho_edge_pos_6[_qp];
+  // rho_edge_pos[6] = _rho_edge_pos_7[_qp];
+  // rho_edge_pos[7] = _rho_edge_pos_8[_qp];
+  // rho_edge_pos[8] = _rho_edge_pos_9[_qp];
   // rho_edge_pos[9] = _edge_dislo_den_pos_10[_qp];
   // rho_edge_pos[10] = _edge_dislo_den_pos_11[_qp];
   // rho_edge_pos[11] = _edge_dislo_den_pos_12[_qp];
 
   rho_edge_neg[0] = _edge_dislo_den_neg_1[_qp];
   rho_edge_neg[1] = _edge_dislo_den_neg_2[_qp];
-  // rho_edge_neg[2] = _edge_dislo_den_neg_3[_qp];
-  // rho_edge_neg[3] = _edge_dislo_den_neg_4[_qp];
-  // rho_edge_neg[4] = _edge_dislo_den_neg_5[_qp];
-  // rho_edge_neg[5] = _edge_dislo_den_neg_6[_qp];
-  // rho_edge_neg[6] = _edge_dislo_den_neg_7[_qp];
-  // rho_edge_neg[7] = _edge_dislo_den_neg_8[_qp];
-  // rho_edge_neg[8] = _edge_dislo_den_neg_9[_qp];
+  // rho_edge_neg[2] = _rho_edge_neg_3[_qp];
+  // rho_edge_neg[3] = _rho_edge_neg_4[_qp];
+  // rho_edge_neg[4] = _rho_edge_neg_5[_qp];
+  // rho_edge_neg[5] = _rho_edge_neg_6[_qp];
+  // rho_edge_neg[6] = _rho_edge_neg_7[_qp];
+  // rho_edge_neg[7] = _rho_edge_neg_8[_qp];
+  // rho_edge_neg[8] = _rho_edge_neg_9[_qp];
   // rho_edge_neg[9] = _edge_dislo_den_neg_10[_qp];
   // rho_edge_neg[10] = _edge_dislo_den_neg_11[_qp];
   // rho_edge_neg[11] = _edge_dislo_den_neg_12[_qp];
@@ -354,52 +318,77 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
   Real RhoTotSlip;
   for (const auto i : make_range(_number_slip_systems))
   {
-    if (rho_edge_pos[i] <= _zero_tol)
-      rho_edge_pos[i] = 0.0;
-
-    if (rho_edge_neg[i] <= _zero_tol)
-      rho_edge_neg[i] = 0.0;
 
     RhoTotSlip = rho_edge_pos[i] + rho_edge_neg[i];
 
-    if (_edge_slip_direction[_qp][i * LIBMESH_DIM] < 1.e-10)
-      local_edge_slip_direction[0] = 0.0;
-    else
-      local_edge_slip_direction[0] = 1.0 / _edge_slip_direction[_qp][i * LIBMESH_DIM];
+    switch (_is_two_slips)
+    {
+      case TwoSlipCheck::yes:
+        if (i == 0)
+        {
+          _backstress(i) = _scaling_Cb * _burgers * _shear_modulus *
+                           (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
+                            rho_edge_neg_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) +
+                            rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -
+                            rho_edge_neg_grad_y[i] / std::sin(60.0 * 3.1415926 / 180)) /
+                           RhoTotSlip;
+        }
+        else if (i == 1)
+        {
+          _backstress(i) = _scaling_Cb * _burgers * _shear_modulus *
+                           (rho_edge_pos_grad_x[i] / std::cos(120.0 * 3.1415926 / 180) -
+                            rho_edge_neg_grad_x[i] / std::cos(120.0 * 3.1415926 / 180) +
+                            rho_edge_pos_grad_y[i] / std::sin(120.0 * 3.1415926 / 180) -
+                            rho_edge_neg_grad_y[i] / std::sin(120.0 * 3.1415926 / 180)) /
+                           RhoTotSlip;
+        }
+        break;
 
-    if (_edge_slip_direction[_qp][i * LIBMESH_DIM + 1] < 1.e-10)
-      local_edge_slip_direction[1] = 0.0;
-    else
-      local_edge_slip_direction[1] = 1.0 / _edge_slip_direction[_qp][i * LIBMESH_DIM + 1];
+      case TwoSlipCheck::no:
+        _backstress(i) = _scaling_Cb * _burgers * _shear_modulus *
+                         (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
+                          rho_edge_neg_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) +
+                          rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -
+                          rho_edge_neg_grad_y[i] / std::sin(60.0 * 3.1415926 / 180)) /
+                         RhoTotSlip;
+        break;
+    }
+    // _backstress(i) = _burgers * _shear_modulus *
+    //                  (rho_edge_pos_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) -
+    //                   rho_edge_neg_grad_x[i] / std::cos(60.0 * 3.1415926 / 180) +
+    //                   rho_edge_pos_grad_y[i] / std::sin(60.0 * 3.1415926 / 180) -
+    //                   rho_edge_neg_grad_y[i] / std::sin(60.0 * 3.1415926 / 180)) /
+    //                  RhoTotSlip;
+  }
 
-    if (_edge_slip_direction[_qp][i * LIBMESH_DIM + 2] < 1.e-10)
-      local_edge_slip_direction[2] = 0.0;
-    else
-      local_edge_slip_direction[2] = 1.0 / _edge_slip_direction[_qp][i * LIBMESH_DIM + 2];
+  // the total backstress could be calculated with 3 versions
+  // (Yefimov and Van Der Giessen 2005)
 
-    if (_screw_slip_direction[_qp][i * LIBMESH_DIM] < 1.e-10)
-      local_screw_slip_direction[0] = 0.0;
-    else
-      local_screw_slip_direction[0] = 1.0 / _screw_slip_direction[_qp][i * LIBMESH_DIM];
+  switch (_version_number)
+  {
+    case MultiSlipsVersion::v_1:
+      // version 1
+      _backstress_total(0) = _backstress(0) + 0.267 * _backstress(1);
+      _backstress_total(1) = 0.267 * _backstress(0) + _backstress(1);
+      break;
 
-    if (_screw_slip_direction[_qp][i * LIBMESH_DIM + 1] < 1.e-10)
-      local_screw_slip_direction[1] = 0.0;
-    else
-      local_screw_slip_direction[1] = 1.0 / _screw_slip_direction[_qp][i * LIBMESH_DIM + 1];
+    case MultiSlipsVersion::v_2:
+      // version 2
+      _backstress_total(0) = _backstress(0) - 0.466 * _backstress(1);
+      _backstress_total(1) = -0.466 * _backstress(0) + _backstress(1);
+      break;
 
-    if (_screw_slip_direction[_qp][i * LIBMESH_DIM + 2] < 1.e-10)
-      local_screw_slip_direction[2] = 0.0;
-    else
-      local_screw_slip_direction[2] = 1.0 / _screw_slip_direction[_qp][i * LIBMESH_DIM + 2];
+    case MultiSlipsVersion::v_3:
+      // version 3
+      _backstress_total(0) = _backstress(0) + 0.5 * _backstress(1);
+      _backstress_total(1) = 0.5 * _backstress(0) + _backstress(1);
+      break;
+  }
 
-    _backstress(i) = _scaling_Cb * _burgers * _shear_modulus *
-                     (rho_edge_pos_grad_x[i] * local_edge_slip_direction[0] -
-                      rho_edge_neg_grad_x[i] * local_edge_slip_direction[0] +
-                      rho_edge_pos_grad_y[i] * local_edge_slip_direction[1] -
-                      rho_edge_neg_grad_y[i] * local_edge_slip_direction[1]) /
-                     RhoTotSlip;
+  for (const auto i : make_range(_number_slip_systems))
+  {
 
-    Real driving_force = std::abs(_tau[_qp][i] - _backstress(i)) - _slip_resistance[_qp][i];
+    Real driving_force = std::abs(_tau[_qp][i] - _backstress_total(i)) - _slip_resistance[_qp][i];
 
     if (driving_force < _zero_tol)
     {
@@ -411,7 +400,7 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
           _gdot0 *
           std::exp(-_f0 / _boltzmann / theta *
                    std::pow((1.0 - std::pow((driving_force / _tau_0), _p)), _q)) *
-          std::copysign(1.0, _tau[_qp][i] - _backstress(i));
+          std::copysign(1.0, _tau[_qp][i] - _backstress_total(i));
     }
 
     if (std::abs(_slip_increment[_qp][i]) * _substep_dt > _slip_incr_tol)
@@ -429,13 +418,11 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
 }
 
 void
-CrystalPlasticityBussoUpdate::calculateSlipResistance()
+CrystalPlasticityBussoUpdateMultiSlip::calculateSlipResistance()
 {
 
   std::vector<Real> rho_edge_pos(_number_slip_systems);
   std::vector<Real> rho_edge_neg(_number_slip_systems);
-
-  _slip_resistance[_qp].resize(_number_slip_systems);
 
   rho_edge_pos[0] = _edge_dislo_den_pos_1[_qp];
   rho_edge_pos[1] = _edge_dislo_den_pos_2[_qp];
@@ -465,12 +452,6 @@ CrystalPlasticityBussoUpdate::calculateSlipResistance()
 
   for (const auto i : make_range(_number_slip_systems))
   {
-    if (rho_edge_pos[i] <= _zero_tol)
-      rho_edge_pos[i] = 0.0;
-
-    if (rho_edge_neg[i] <= _zero_tol)
-      rho_edge_neg[i] = 0.0;
-
     Real hardening_total_dislocation_density = 0.0;
     for (const auto j : make_range(_number_slip_systems))
     {
@@ -487,7 +468,7 @@ CrystalPlasticityBussoUpdate::calculateSlipResistance()
 }
 
 void
-CrystalPlasticityBussoUpdate::calculateDislocationVelocity()
+CrystalPlasticityBussoUpdateMultiSlip::calculateDislocationVelocity()
 {
   std::vector<Real> rho_edge_pos(_number_slip_systems);
   std::vector<Real> rho_edge_neg(_number_slip_systems);
@@ -525,16 +506,10 @@ CrystalPlasticityBussoUpdate::calculateDislocationVelocity()
   for (const auto i : make_range(_number_slip_systems))
   {
 
-    if (rho_edge_pos[i] <= _zero_tol)
-      rho_edge_pos[i] = 0.0;
-
-    if (rho_edge_neg[i] <= _zero_tol)
-      rho_edge_neg[i] = 0.0;
-
     total_dislocation_density =
         rho_edge_pos[i] + rho_edge_neg[i]; // + rho_screw_pos[i] + rho_screw_neg[i];
 
-    Real driving_force = std::abs(_tau[_qp][i] - _backstress(i)) - _slip_resistance[_qp][i];
+    Real driving_force = std::abs(_tau[_qp][i] - _backstress_total(i)) - _slip_resistance[_qp][i];
     // }
 
     if (driving_force > _zero_tol)
@@ -550,7 +525,7 @@ CrystalPlasticityBussoUpdate::calculateDislocationVelocity()
 }
 
 void
-CrystalPlasticityBussoUpdate::calculateEquivalentSlipIncrement(
+CrystalPlasticityBussoUpdateMultiSlip::calculateEquivalentSlipIncrement(
     RankTwoTensor & equivalent_slip_increment)
 {
   CrystalPlasticityDislocationUpdateBase::calculateEquivalentSlipIncrement(
@@ -560,7 +535,7 @@ CrystalPlasticityBussoUpdate::calculateEquivalentSlipIncrement(
 }
 
 void
-CrystalPlasticityBussoUpdate::calculateAccumulatedEquivalentPlasticStrain()
+CrystalPlasticityBussoUpdateMultiSlip::calculateAccumulatedEquivalentPlasticStrain()
 {
   RankTwoTensor plastic_strain_rate, term1, term2;
   RankTwoTensor elastic_deformation_gradient, inverse_elastic_deformation_gradient,
@@ -585,19 +560,20 @@ CrystalPlasticityBussoUpdate::calculateAccumulatedEquivalentPlasticStrain()
 }
 
 void
-CrystalPlasticityBussoUpdate::calculateConstitutiveSlipDerivative(std::vector<Real> & dslip_dtau)
+CrystalPlasticityBussoUpdateMultiSlip::calculateConstitutiveSlipDerivative(
+    std::vector<Real> & dslip_dtau)
 {
   Real theta = _temperature + 273.15;
   for (const auto i : make_range(_number_slip_systems))
   {
-    Real driving_force = std::abs(_tau[_qp][i] - _backstress(i)) - _slip_resistance[_qp][i];
+    Real driving_force = std::abs(_tau[_qp][i] - _backstress_total(i)) - _slip_resistance[_qp][i];
     Real u = 0.0, uprime = 0.0, vprime = 0.0;
     if (driving_force < _zero_tol)
       dslip_dtau[i] = 0.0;
     else
     {
       u = driving_force / _tau_0;
-      uprime = std::pow(u, _p - 1.0) * std::copysign(1.0, (_tau[_qp][i] - _backstress(i)));
+      uprime = std::pow(u, _p - 1.0) * std::copysign(1.0, (_tau[_qp][i] - _backstress_total(i)));
       vprime = std::pow((1.0 - std::pow(u, _p)), _q - 1.0);
       dslip_dtau[i] = _gdot0 * _p * _q * _f0 / _boltzmann / theta *
                       std::exp(-_f0 / _boltzmann / theta * std::pow((1.0 - std::pow(u, _p)), _q)) *
@@ -608,31 +584,31 @@ CrystalPlasticityBussoUpdate::calculateConstitutiveSlipDerivative(std::vector<Re
 }
 
 bool
-CrystalPlasticityBussoUpdate::areConstitutiveStateVariablesConverged()
+CrystalPlasticityBussoUpdateMultiSlip::areConstitutiveStateVariablesConverged()
 {
   return true;
 }
 
 void
-CrystalPlasticityBussoUpdate::updateSubstepConstitutiveVariableValues()
+CrystalPlasticityBussoUpdateMultiSlip::updateSubstepConstitutiveVariableValues()
 {
   // No need for this subroutine
 }
 
 void
-CrystalPlasticityBussoUpdate::cacheStateVariablesBeforeUpdate()
+CrystalPlasticityBussoUpdateMultiSlip::cacheStateVariablesBeforeUpdate()
 {
   // No need for this subroutine
 }
 
 void
-CrystalPlasticityBussoUpdate::calculateStateVariableEvolutionRateComponent()
+CrystalPlasticityBussoUpdateMultiSlip::calculateStateVariableEvolutionRateComponent()
 {
   // No need for this subroutine
 }
 
 bool
-CrystalPlasticityBussoUpdate::updateStateVariables()
+CrystalPlasticityBussoUpdateMultiSlip::updateStateVariables()
 {
   return true;
 }

@@ -205,14 +205,16 @@ CrystalPlasticityDislocationUpdateBase::transformHexagonalMillerBravaisSlipSyste
 
   if (_unit_cell_dimension[0] != _unit_cell_dimension[1] ||
       _unit_cell_dimension[0] == _unit_cell_dimension[2])
-    mooseError("CrystalPlasticityDislocationUpdateBase Error: The specified unit cell dimensions are "
-               "not consistent with expectations for "
-               "HCP crystal hexagonal lattices.");
+    mooseError(
+        "CrystalPlasticityDislocationUpdateBase Error: The specified unit cell dimensions are "
+        "not consistent with expectations for "
+        "HCP crystal hexagonal lattices.");
   else if (reader.getData(0).size() != miller_bravais_indices * 2)
-    mooseError("CrystalPlasticityDislocationUpdateBase Error: The number of entries in the first row of "
-               "the slip system file is not consistent with the expectations for the 4-index "
-               "Miller-Bravais assumption for HCP crystals. This file should represent both the "
-               "slip plane normal and the slip direction with 4-indices each.");
+    mooseError(
+        "CrystalPlasticityDislocationUpdateBase Error: The number of entries in the first row of "
+        "the slip system file is not consistent with the expectations for the 4-index "
+        "Miller-Bravais assumption for HCP crystals. This file should represent both the "
+        "slip plane normal and the slip direction with 4-indices each.");
 
   // set up the tranformation matrices
   RankTwoTensor transform_matrix;
@@ -234,7 +236,8 @@ CrystalPlasticityDislocationUpdateBase::transformHexagonalMillerBravaisSlipSyste
 
       if (basal_pl_sum > _zero_tol)
         mooseError(
-            "CrystalPlasticityDislocationUpdateBase Error: The specified HCP basal plane Miller-Bravais "
+            "CrystalPlasticityDislocationUpdateBase Error: The specified HCP basal plane "
+            "Miller-Bravais "
             "indices do not sum to zero. Check the values supplied in the associated text file.");
 
       // Check that the slip direction indices of the basal plane sum to zero for consistency

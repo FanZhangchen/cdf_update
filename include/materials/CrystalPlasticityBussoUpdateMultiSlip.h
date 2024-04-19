@@ -8,22 +8,22 @@
 
 #include "CrystalPlasticityDislocationUpdateBase.h"
 
-class CrystalPlasticityBussoUpdate;
+class CrystalPlasticityBussoUpdateMultiSlip;
 
 /**
- * CrystalPlasticityBussoUpdate uses the multiplicative decomposition of the
+ * CrystalPlasticityBussoUpdateMultiSlip uses the multiplicative decomposition of the
  * deformation gradient and solves the PK2 stress residual equation at the
  * intermediate configuration to evolve the material state. The internal
  * variables are updated using an interative predictor-corrector algorithm.
  * Backward Euler integration rule is used for the rate equations.
  */
 
-class CrystalPlasticityBussoUpdate : public CrystalPlasticityDislocationUpdateBase
+class CrystalPlasticityBussoUpdateMultiSlip : public CrystalPlasticityDislocationUpdateBase
 {
 public:
   static InputParameters validParams();
 
-  CrystalPlasticityBussoUpdate(const InputParameters & parameters);
+  CrystalPlasticityBussoUpdateMultiSlip(const InputParameters & parameters);
 
 protected:
   /**
@@ -126,6 +126,7 @@ protected:
   const Real _w2;
 
   DenseVector<Real> _backstress;
+  DenseVector<Real> _backstress_total;
   ///@}
 
   ///@{Nodal degrees of freedom
@@ -144,7 +145,6 @@ protected:
   const VariableValue & _edge_dislo_den_neg_2;
 
   const VariableGradient & _edge_dislo_den_neg_grad_2;
-
   // const VariableValue & _rho_edge_pos_3;
   // const VariableValue & _rho_edge_neg_3;
   // const VariableValue & _rho_edge_pos_4;
@@ -190,4 +190,6 @@ protected:
   const MaterialProperty<Real> & _accumulated_equivalent_plastic_strain_old;
 
   const enum class TwoSlipCheck { yes, no } _is_two_slips;
+
+  const enum class MultiSlipsVersion { v_1, v_2, v_3 } _version_number;
 };

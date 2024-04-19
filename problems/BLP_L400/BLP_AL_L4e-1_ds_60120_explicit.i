@@ -10,8 +10,8 @@
     ny = 50
     xmin = 0.0
     ymin = 0.0
-    xmax = 0.01
-    ymax = 0.1
+    xmax = 0.04
+    ymax = 0.4
   []
   [./pin_point]
     type = BoundingBoxNodeSetGenerator
@@ -75,7 +75,7 @@
 [Functions]
   [disp_load]
     type = ParsedFunction
-    expression = '0.005*1.0*t'
+    expression = '0.005*4.0*t'
   []
 []
 
@@ -93,6 +93,7 @@
     variable = rho_edge_pos_1
   []
   [Edge_Pos_Flux_1]
+    implicit = false
     type = ConservativeAdvectionSchmid
     variable = rho_edge_pos_1
     upwinding_type = full
@@ -106,6 +107,7 @@
     variable = rho_edge_neg_1
   []
   [Edge_Neg_Flux_1]
+    implicit = false
     type = ConservativeAdvectionSchmid
     variable = rho_edge_neg_1
     upwinding_type = full
@@ -119,6 +121,7 @@
     variable = rho_edge_pos_2
   []
   [Edge_Pos_Flux_2]
+    implicit = false
     type = ConservativeAdvectionSchmid
     variable = rho_edge_pos_2
     upwinding_type = full
@@ -132,6 +135,7 @@
     variable = rho_edge_neg_2
   []
   [Edge_Neg_Flux_2]
+    implicit = false
     type = ConservativeAdvectionSchmid
     variable = rho_edge_neg_2
     upwinding_type = full
@@ -256,42 +260,42 @@
       variable = disp_x
       primary = 'left'
     secondary = 'right'
-    translation = '0.01 0.0 0.0'
+    translation = '0.04 0.0 0.0'
     [../]
 
     [./auto_boundary_y]
       variable = disp_y
       primary = 'left'
     secondary = 'right'
-    translation = '0.01 0.0 0.0'
+    translation = '0.04 0.0 0.0'
     [../]
 
     [./auto_rho_edge_pos_boundary_x_1]
       variable = rho_edge_pos_1
       primary = 'left'
     secondary = 'right'
-    translation = '0.01 0.0 0.0'
+    translation = '0.04 0.0 0.0'
     [../]
 
     [./auto_rho_edge_neg_boundary_x_1]
       variable = rho_edge_neg_1
       primary = 'left'
     secondary = 'right'
-    translation = '0.01 0.0 0.0'
+    translation = '0.04 0.0 0.0'
     [../]
 
     [./auto_rho_edge_pos_boundary_x_2]
       variable = rho_edge_pos_2
       primary = 'left'
     secondary = 'right'
-    translation = '0.01 0.0 0.0'
+    translation = '0.04 0.0 0.0'
     [../]
 
     [./auto_rho_edge_neg_boundary_x_2]
       variable = rho_edge_neg_2
       primary = 'left'
     secondary = 'right'
-    translation = '0.01 0.0 0.0'
+    translation = '0.04 0.0 0.0'
     [../]
 
   [../]
@@ -310,6 +314,22 @@
 [Executioner]
 
   type = Transient
+  [./TimeIntegrator]
+    # type = ImplicitEuler
+    # type = BDF2
+    # type = CrankNicolson
+    # type = ImplicitMidpoint
+    # type = LStableDirk2
+    # type = LStableDirk3
+    # type = LStableDirk4
+    # type = AStableDirk4
+    #
+    # Explicit methods
+    # type = ExplicitEuler
+    type = ExplicitMidpoint
+    # type = Heun
+    # type = Ralston
+  [../]
   solve_type = 'NEWTON'
   petsc_options = '-snes_ksp_ew'
   petsc_options_iname = '-pc_type -pc_hypre_type -ksp_gmres_restart'
@@ -372,7 +392,7 @@
     type = LineValueSampler
     variable = rho_edge_pos_1
     start_point = '0.005 0 0'
-    end_point = '0.005 0.1 0'
+    end_point = '0.005 0.4 0'
     num_points = 51
     sort_by = y
   []
@@ -380,7 +400,7 @@
     type = LineValueSampler
     variable = rho_edge_neg_1
     start_point = '0.005 0 0'
-    end_point = '0.005 0.1 0'
+    end_point = '0.005 0.4 0'
     num_points = 51
     sort_by = y
   []
@@ -391,7 +411,7 @@
   interval = 20
   [csv]
     type = CSV
-    file_base = rhoe_x_out_l1e-1_BLP_rho0_double_60120
+    file_base = rhoe_x_out_l4e-1_BLP_rho0_double_60120
     execute_on = final
   []
 []

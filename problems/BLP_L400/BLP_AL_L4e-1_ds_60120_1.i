@@ -10,8 +10,8 @@
     ny = 50
     xmin = 0.0
     ymin = 0.0
-    xmax = 0.01
-    ymax = 0.1
+    xmax = 0.04
+    ymax = 0.4
   []
   [./pin_point]
     type = BoundingBoxNodeSetGenerator
@@ -75,11 +75,16 @@
 [Functions]
   [disp_load]
     type = ParsedFunction
-    expression = '0.005*1.0*t'
+    value = '0.005*4.0*t'
+  []
+  [disp_p] 
+    type = PiecewiseLinear
+    x = '0 0.1 0.5'
+    y = '0 4.5e-4 4.5e-4'
   []
 []
 
-[Physics/SolidMechanics/QuasiStatic/all]
+[Modules/TensorMechanics/Master/all]
   strain = FINITE
   add_variables = true
   generate_output = 'stress_xy'
@@ -214,7 +219,6 @@
       q = 1.1
       f0 = 3.e-19
       gdot0 = 1.73e6
-      scaling_Cb = 0.241
     edge_dislo_den_pos_1 = rho_edge_pos_1
     edge_dislo_den_neg_1 = rho_edge_neg_1
     edge_dislo_den_pos_2 = rho_edge_pos_2
@@ -256,42 +260,42 @@
       variable = disp_x
       primary = 'left'
     secondary = 'right'
-    translation = '0.01 0.0 0.0'
+    translation = '0.04 0.0 0.0'
     [../]
 
     [./auto_boundary_y]
       variable = disp_y
       primary = 'left'
     secondary = 'right'
-    translation = '0.01 0.0 0.0'
+    translation = '0.04 0.0 0.0'
     [../]
 
     [./auto_rho_edge_pos_boundary_x_1]
       variable = rho_edge_pos_1
       primary = 'left'
     secondary = 'right'
-    translation = '0.01 0.0 0.0'
+    translation = '0.04 0.0 0.0'
     [../]
 
     [./auto_rho_edge_neg_boundary_x_1]
       variable = rho_edge_neg_1
       primary = 'left'
     secondary = 'right'
-    translation = '0.01 0.0 0.0'
+    translation = '0.04 0.0 0.0'
     [../]
 
     [./auto_rho_edge_pos_boundary_x_2]
       variable = rho_edge_pos_2
       primary = 'left'
     secondary = 'right'
-    translation = '0.01 0.0 0.0'
+    translation = '0.04 0.0 0.0'
     [../]
 
     [./auto_rho_edge_neg_boundary_x_2]
       variable = rho_edge_neg_2
       primary = 'left'
     secondary = 'right'
-    translation = '0.01 0.0 0.0'
+    translation = '0.04 0.0 0.0'
     [../]
 
   [../]
@@ -372,7 +376,7 @@
     type = LineValueSampler
     variable = rho_edge_pos_1
     start_point = '0.005 0 0'
-    end_point = '0.005 0.1 0'
+    end_point = '0.005 0.4 0'
     num_points = 51
     sort_by = y
   []
@@ -380,7 +384,7 @@
     type = LineValueSampler
     variable = rho_edge_neg_1
     start_point = '0.005 0 0'
-    end_point = '0.005 0.1 0'
+    end_point = '0.005 0.4 0'
     num_points = 51
     sort_by = y
   []
@@ -391,7 +395,7 @@
   interval = 20
   [csv]
     type = CSV
-    file_base = rhoe_x_out_l1e-1_BLP_rho0_double_60120
+    file_base = rhoe_x_out_l4e-1_BLP_rho0_double_60120
     execute_on = final
   []
 []

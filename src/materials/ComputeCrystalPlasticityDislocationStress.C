@@ -11,7 +11,7 @@
 #include "Conversion.h"
 #include "MooseException.h"
 
-registerMooseObject("TensorMechanicsApp", ComputeCrystalPlasticityDislocationStress);
+registerMooseObject("SolidMechanicsApp", ComputeCrystalPlasticityDislocationStress);
 
 InputParameters
 ComputeCrystalPlasticityDislocationStress::validParams()
@@ -193,11 +193,11 @@ ComputeCrystalPlasticityDislocationStress::computeQpStress()
 
 void
 ComputeCrystalPlasticityDislocationStress::updateStress(RankTwoTensor & cauchy_stress,
-                                                     RankFourTensor & jacobian_mult)
+                                                        RankFourTensor & jacobian_mult)
 {
   // Does not support face/boundary material property calculation
-  if (isBoundaryMaterial())
-    return;
+  // if (isBoundaryMaterial())
+  //   return;
 
   // Initialize substepping variables
   unsigned int substep_iter = 1;
@@ -291,7 +291,7 @@ ComputeCrystalPlasticityDislocationStress::solveQp()
 
 void
 ComputeCrystalPlasticityDislocationStress::postSolveQp(RankTwoTensor & cauchy_stress,
-                                                    RankFourTensor & jacobian_mult)
+                                                       RankFourTensor & jacobian_mult)
 {
   cauchy_stress = _elastic_deformation_gradient * _pk2[_qp] *
                   _elastic_deformation_gradient.transpose() / _elastic_deformation_gradient.det();
@@ -399,11 +399,12 @@ ComputeCrystalPlasticityDislocationStress::solveStress()
   if (_convergence_failed)
   {
     if (_print_convergence_message)
-      mooseWarning("ComputeCrystalPlasticityDislocationStress: the slip increment exceeds tolerance "
-                   "at element ",
-                   _current_elem->id(),
-                   " and Gauss point ",
-                   _qp);
+      mooseWarning(
+          "ComputeCrystalPlasticityDislocationStress: the slip increment exceeds tolerance "
+          "at element ",
+          _current_elem->id(),
+          " and Gauss point ",
+          _qp);
 
     return;
   }
@@ -424,11 +425,12 @@ ComputeCrystalPlasticityDislocationStress::solveStress()
     if (_convergence_failed)
     {
       if (_print_convergence_message)
-        mooseWarning("ComputeCrystalPlasticityDislocationStress: the slip increment exceeds tolerance "
-                     "at element ",
-                     _current_elem->id(),
-                     " and Gauss point ",
-                     _qp);
+        mooseWarning(
+            "ComputeCrystalPlasticityDislocationStress: the slip increment exceeds tolerance "
+            "at element ",
+            _current_elem->id(),
+            " and Gauss point ",
+            _qp);
 
       return;
     }
@@ -572,7 +574,8 @@ ComputeCrystalPlasticityDislocationStress::calcTangentModuli(RankFourTensor & ja
 }
 
 void
-ComputeCrystalPlasticityDislocationStress::elastoPlasticTangentModuli(RankFourTensor & jacobian_mult)
+ComputeCrystalPlasticityDislocationStress::elastoPlasticTangentModuli(
+    RankFourTensor & jacobian_mult)
 {
   RankFourTensor tan_mod;
   RankTwoTensor pk2fet, fepk2, feiginvfpinv;
@@ -626,7 +629,7 @@ ComputeCrystalPlasticityDislocationStress::elasticTangentModuli(RankFourTensor &
 
 bool
 ComputeCrystalPlasticityDislocationStress::lineSearchUpdate(const Real & rnorm_prev,
-                                                         const RankTwoTensor & dpk2)
+                                                            const RankTwoTensor & dpk2)
 {
   if (_line_search_method == LineSearchMethod::CutHalf)
   {

@@ -6,19 +6,12 @@
   [./gen]
     type = GeneratedMeshGenerator
     dim = 2
-    nx = 1
+    nx = 10
     ny = 50
     xmin = 0.0
     ymin = 0.0
-    xmax = 0.01
-    ymax = 0.1
-  []
-  [./pin_point]
-    type = BoundingBoxNodeSetGenerator
-    new_boundary = 'pin'
-    input = 'gen'
-    top_right = '-0.00001 -0.00001 0'
-    bottom_left = '0.00001 0.00001 0'
+    xmax = 0.0002
+    ymax = 0.001
   []
 []
 
@@ -50,7 +43,7 @@
     order = CONSTANT
     family = MONOMIAL
   [../]
-  [./fp_xy]
+  [./fp_xx]
     order = CONSTANT
     family = MONOMIAL
   [../]
@@ -75,7 +68,7 @@
 [Functions]
   [disp_load]
     type = ParsedFunction
-    expression = '0.005*1.0*t'
+    expression = '0.005*0.01*t'
   []
 []
 
@@ -89,7 +82,7 @@
 [Kernels]
 
   [Edeg_Pos_Time_Deri_1]
-    type = MassLumpedTimeDerivative
+    type = TimeDerivative
     variable = rho_edge_pos_1
   []
   [Edge_Pos_Flux_1]
@@ -102,7 +95,7 @@
   []
 
   [Edeg_Neg_Time_Deri_1]
-    type = MassLumpedTimeDerivative
+    type = TimeDerivative
     variable = rho_edge_neg_1
   []
   [Edge_Neg_Flux_1]
@@ -115,7 +108,7 @@
   []
 
   [Edeg_Pos_Time_Deri_2]
-    type = MassLumpedTimeDerivative
+    type = TimeDerivative
     variable = rho_edge_pos_2
   []
   [Edge_Pos_Flux_2]
@@ -128,7 +121,7 @@
   []
 
   [Edeg_Neg_Time_Deri_2]
-    type = MassLumpedTimeDerivative
+    type = TimeDerivative
     variable = rho_edge_neg_2
   []
   [Edge_Neg_Flux_2]
@@ -138,6 +131,42 @@
       dislo_sign = negative
       slip_sys_index = 1
       dislo_character = edge
+  []
+
+[]
+
+[DGKernels]
+
+  [dg_edge_pos_1]
+    type = DGAdvectionCoupled
+    variable = rho_edge_pos_1
+      dislo_character = edge
+      dislo_sign = positive
+      slip_sys_index = 0
+  []
+
+  [dg_edge_neg_1]
+    type = DGAdvectionCoupled
+    variable = rho_edge_neg_1
+      dislo_character = edge
+      dislo_sign = negative
+      slip_sys_index = 0
+  []
+
+  [dg_edge_pos_2]
+    type = DGAdvectionCoupled
+    variable = rho_edge_pos_2
+      dislo_character = edge
+      dislo_sign = positive
+      slip_sys_index = 1
+  []
+
+  [dg_edge_neg_2]
+    type = DGAdvectionCoupled
+    variable = rho_edge_neg_2
+      dislo_character = edge
+      dislo_sign = negative
+      slip_sys_index = 1
   []
 
 []
@@ -159,12 +188,12 @@
     index_i = 1
     execute_on = timestep_end
   [../]
-  [./fp_xy]
+  [./fp_xx]
     type = RankTwoAux
-    variable = fp_xy
+    variable = fp_xx
     rank_two_tensor = plastic_deformation_gradient
     index_j = 0
-    index_i = 1
+    index_i = 0
     execute_on = timestep_end
   [../]
   [./slip_inc]
@@ -214,12 +243,10 @@
       q = 1.1
       f0 = 3.e-19
       gdot0 = 1.73e6
-      scaling_Cb = 0.241
     edge_dislo_den_pos_1 = rho_edge_pos_1
     edge_dislo_den_neg_1 = rho_edge_neg_1
     edge_dislo_den_pos_2 = rho_edge_pos_2
     edge_dislo_den_neg_2 = rho_edge_neg_2
-      is_two_slips = yes
   [../]
 []
 
@@ -249,52 +276,82 @@
     boundary = 'top'
     value = 0.0
   []
-
   [./Periodic]
-
     [./auto_boundary_x]
       variable = disp_x
-      primary = 'left'
-    secondary = 'right'
-    translation = '0.01 0.0 0.0'
+      auto_direction = 'x'
     [../]
 
     [./auto_boundary_y]
       variable = disp_y
-      primary = 'left'
-    secondary = 'right'
-    translation = '0.01 0.0 0.0'
+      auto_direction = 'x'
     [../]
-
-    [./auto_rho_edge_pos_boundary_x_1]
+    
+    [./auto_rho_edge_pos_1_boundary_x]
       variable = rho_edge_pos_1
-      primary = 'left'
-    secondary = 'right'
-    translation = '0.01 0.0 0.0'
+      auto_direction = 'x'
     [../]
-
-    [./auto_rho_edge_neg_boundary_x_1]
+    
+    [./auto_rho_edge_neg_1_boundary_x]
       variable = rho_edge_neg_1
-      primary = 'left'
-    secondary = 'right'
-    translation = '0.01 0.0 0.0'
-    [../]
+      auto_direction = 'x'
+    [../] 
 
-    [./auto_rho_edge_pos_boundary_x_2]
+    [./auto_rho_edge_pos_2_boundary_x]
       variable = rho_edge_pos_2
-      primary = 'left'
-    secondary = 'right'
-    translation = '0.01 0.0 0.0'
-    [../]
+      auto_direction = 'x'
+    [../] 
 
-    [./auto_rho_edge_neg_boundary_x_2]
+    [./auto_rho_edge_neg_2_boundary_x]
       variable = rho_edge_neg_2
-      primary = 'left'
-    secondary = 'right'
-    translation = '0.01 0.0 0.0'
-    [../]
-
+      auto_direction = 'x'
+    [../] 
   [../]
+  # [./Periodic]
+
+  #   [./auto_boundary_x]
+  #     variable = disp_x
+  #     primary = 'left'
+  #   secondary = 'right'
+  #   translation = '0.04 0.0 0.0'
+  #   [../]
+
+  #   [./auto_boundary_y]
+  #     variable = disp_y
+  #     primary = 'left'
+  #   secondary = 'right'
+  #   translation = '0.04 0.0 0.0'
+  #   [../]
+
+  #   [./auto_rho_edge_pos_boundary_x_1]
+  #     variable = rho_edge_pos_1
+  #     primary = 'left'
+  #   secondary = 'right'
+  #   translation = '0.04 0.0 0.0'
+  #   [../]
+
+  #   [./auto_rho_edge_neg_boundary_x_1]
+  #     variable = rho_edge_neg_1
+  #     primary = 'left'
+  #   secondary = 'right'
+  #   translation = '0.04 0.0 0.0'
+  #   [../]
+
+  #   [./auto_rho_edge_pos_boundary_x_2]
+  #     variable = rho_edge_pos_2
+  #     primary = 'left'
+  #   secondary = 'right'
+  #   translation = '0.04 0.0 0.0'
+  #   [../]
+
+  #   [./auto_rho_edge_neg_boundary_x_2]
+  #     variable = rho_edge_neg_2
+  #     primary = 'left'
+  #   secondary = 'right'
+  #   translation = '0.04 0.0 0.0'
+  #   [../]
+
+  # [../]
 
 []
 
@@ -306,10 +363,25 @@
   [../]
 []
 
-# Transient (time-dependent) details for simulations go here:
 [Executioner]
 
   type = Transient
+  [./TimeIntegrator]
+    # type = ImplicitEuler
+    # type = BDF2
+    type = CrankNicolson
+    # type = ImplicitMidpoint
+    # type = LStableDirk2
+    # type = LStableDirk3
+    # type = LStableDirk4
+    # type = AStableDirk4
+    #
+    # Explicit methods
+    # type = ExplicitEuler
+    # type = ExplicitMidpoint
+    # type = Heun
+    # type = Ralston
+  [../]
   solve_type = 'NEWTON'
   petsc_options = '-snes_ksp_ew'
   petsc_options_iname = '-pc_type -pc_hypre_type -ksp_gmres_restart'
@@ -322,7 +394,7 @@
   l_tol = 1e-5
 
   start_time = 0.0
-  end_time = 0.5 #0.01
+  end_time = 1.0 #0.5
   dt = 5.e-6
   dtmin = 1.e-9
 []
@@ -336,9 +408,9 @@
    type = ElementAverageValue
    variable = pk2
   [../]
-  [./fp_xy]
+  [./fp_xx]
     type = ElementAverageValue
-    variable = fp_xy
+    variable = fp_xx
   [../]
   [./exy]
     type = ElementAverageValue
@@ -355,7 +427,7 @@
   [./disp_x]
      type = NodalVariableValue
      variable = disp_x
-     nodeid = 101
+     nodeid = 1
   [../]
   [./strain_xy]
     type = ElementAverageValue
@@ -371,16 +443,16 @@
   [rhoep]
     type = LineValueSampler
     variable = rho_edge_pos_1
-    start_point = '0.005 0 0'
-    end_point = '0.005 0.1 0'
+    start_point = '0.0001 0 0'
+    end_point = '0.0001 0.001 0'
     num_points = 51
     sort_by = y
   []
   [rhoen]
     type = LineValueSampler
     variable = rho_edge_neg_1
-    start_point = '0.005 0 0'
-    end_point = '0.005 0.1 0'
+    start_point = '0.0001 0 0'
+    end_point = '0.0001 0.001 0'
     num_points = 51
     sort_by = y
   []
@@ -388,10 +460,10 @@
 
 [Outputs]
   exodus = true
-  interval = 20
+  time_step_interval = 200
   [csv]
     type = CSV
-    file_base = rhoe_x_out_l1e-1_BLP_rho0_double_60120
+    file_base = dg_test_1um
     execute_on = final
   []
 []

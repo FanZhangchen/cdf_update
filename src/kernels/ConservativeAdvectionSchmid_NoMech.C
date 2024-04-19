@@ -1,11 +1,11 @@
-#include "ConservativeAdvectionSchmid.h"
+#include "ConservativeAdvectionSchmid_NoMech.h"
 #include "SystemBase.h"
 #include "libmesh/utility.h"
 
-registerMooseObject("cdf_updateApp", ConservativeAdvectionSchmid);
+registerMooseObject("cdf_updateApp", ConservativeAdvectionSchmid_NoMech);
 
 InputParameters
-ConservativeAdvectionSchmid::validParams()
+ConservativeAdvectionSchmid_NoMech::validParams()
 {
   InputParameters params = Kernel::validParams();
   params.addClassDescription("Conservative form of $\\nabla \\cdot \\vec{v} u$ which in its weak "
@@ -25,37 +25,34 @@ ConservativeAdvectionSchmid::validParams()
   MooseEnum dislo_character("edge screw", "edge");
   params.addRequiredParam<MooseEnum>(
       "dislo_character", dislo_character, "Character of dislocations: edge or screw.");
-  MooseEnum is_ssd_included("yes no", "no");
-  params.addRequiredParam<MooseEnum>(
-      "is_ssd_included", is_ssd_included, "is statistically stored dislocations considered.");
+  params.addParam<Real>("scale", 0.5, "Scale parameters");
   return params;
 }
 
-ConservativeAdvectionSchmid::ConservativeAdvectionSchmid(const InputParameters & parameters)
+ConservativeAdvectionSchmid_NoMech::ConservativeAdvectionSchmid_NoMech(
+    const InputParameters & parameters)
   : Kernel(parameters),
-    _edge_slip_direction(
-        getMaterialProperty<std::vector<Real>>("edge_slip_direction")), // Edge velocity direction
-    _screw_slip_direction(
-        getMaterialProperty<std::vector<Real>>("screw_slip_direction")), // Screw velocity direction
+    // _edge_slip_direction(getMaterialProperty<std::vector<Real>>("edge_slip_direction")), //Edge
+    // velocity direction
+    // _screw_slip_direction(getMaterialProperty<std::vector<Real>>("screw_slip_direction")),
+    // //Screw velocity direction
+    _scale(getParam<Real>("scale")),
+
     _dislo_velocity(
         getMaterialProperty<std::vector<Real>>("dislo_velocity")), // Velocity value (signed)
-    _edge_dislocation_increment(
-        getMaterialProperty<std::vector<Real>>("edge_dislocation_increment")),
-    _screw_dislocation_increment(
-        getMaterialProperty<std::vector<Real>>("screw_dislocation_increment")),
     _upwinding(getParam<MooseEnum>("upwinding_type").getEnum<UpwindingType>()),
     _slip_sys_index(getParam<int>("slip_sys_index")),
     _dislo_sign(getParam<MooseEnum>("dislo_sign").getEnum<DisloSign>()),
     _dislo_character(getParam<MooseEnum>("dislo_character").getEnum<DisloCharacter>()),
-    _is_ssd_inclued(getParam<MooseEnum>("is_ssd_included").getEnum<SSDInclude>()),
     _u_nodal(_var.dofValues()),
+
     _upwind_node(0),
     _dtotal_mass_out(0)
 {
 }
 
 Real
-ConservativeAdvectionSchmid::negSpeedQp()
+ConservativeAdvectionSchmid_NoMech::negSpeedQp()
 {
   Real edge_sign;
 
@@ -69,69 +66,40 @@ ConservativeAdvectionSchmid::negSpeedQp()
       break;
   }
 
-  _velocity.resize(3, 0.0);
+  // for (const auto j : make_range(LIBMESH_DIM))
+  // {
+  //   _velocity[j] = _dislo_velocity[_qp][j]; // velocity value
+  //   _velocity[j] *= edge_sign;            // positive or negative dislocation
+  // }
 
   // Find dislocation velocity based on slip systems index and dislocation character
   switch (_dislo_character)
   {
     case DisloCharacter::edge:
-      for (const auto j : make_range(LIBMESH_DIM))
-      {
-        _velocity[j] =
-            _edge_slip_direction[_qp][_slip_sys_index * LIBMESH_DIM + j]; // edge direction
-      }
+      _velocity(0) = _dislo_velocity[_qp][0] * edge_sign; // velocity value
+      _velocity(1) = 0.0;                                 // positive or negative dislocation
+      _velocity(2) = 0.0;
       break;
     case DisloCharacter::screw:
-      for (const auto j : make_range(LIBMESH_DIM))
-      {
-        _velocity[j] =
-            _screw_slip_direction[_qp][_slip_sys_index * LIBMESH_DIM + j]; // screw direction
-      }
+      _velocity(0) = 0.0;                                 // velocity value
+      _velocity(1) =
+          _scale * _dislo_velocity[_qp][1] * edge_sign; // positive or negative dislocation
+      _velocity(2) = 0.0;
       break;
   }
-
-  for (const auto j : make_range(LIBMESH_DIM))
-  {
-    _velocity[j] *= _dislo_velocity[_qp][_slip_sys_index]; // velocity value
-    _velocity[j] *= edge_sign;                             // positive or negative dislocation
-  }
-
-  return -_grad_test[_i][_qp] * RealVectorValue(_velocity[0], _velocity[1], _velocity[2]);
+  return -_grad_test[_i][_qp] * _velocity;
 }
 
 Real
-ConservativeAdvectionSchmid::computeQpResidual()
+ConservativeAdvectionSchmid_NoMech::computeQpResidual()
 {
   // This is the no-upwinded version
   // It gets called via Kernel::computeResidual()
-  _statis_stored_dislocation.resize(12, 0.0);
-  switch (_dislo_character)
-  {
-    case DisloCharacter::edge:
-      _statis_stored_dislocation[_slip_sys_index] =
-          _edge_dislocation_increment[_qp][_slip_sys_index]; // edge ssd
-      break;
-    case DisloCharacter::screw:
-      _statis_stored_dislocation[_slip_sys_index] =
-          _screw_dislocation_increment[_qp][_slip_sys_index]; // screw ssd
-      break;
-  }
-
-  switch (_is_ssd_inclued)
-  {
-    case SSDInclude::yes:
-      _statis_stored_dislocation[_slip_sys_index] = _statis_stored_dislocation[_slip_sys_index];
-      break;
-    case SSDInclude::no:
-      _statis_stored_dislocation[_slip_sys_index] = 0.0;
-      break;
-  }
-
-  return negSpeedQp() * _u[_qp] + _statis_stored_dislocation[_slip_sys_index];
+  return negSpeedQp() * _u[_qp];
 }
 
 Real
-ConservativeAdvectionSchmid::computeQpJacobian()
+ConservativeAdvectionSchmid_NoMech::computeQpJacobian()
 {
   // This is the no-upwinded version
   // It gets called via Kernel::computeJacobian()
@@ -139,7 +107,7 @@ ConservativeAdvectionSchmid::computeQpJacobian()
 }
 
 void
-ConservativeAdvectionSchmid::computeResidual()
+ConservativeAdvectionSchmid_NoMech::computeResidual()
 {
   switch (_upwinding)
   {
@@ -153,7 +121,7 @@ ConservativeAdvectionSchmid::computeResidual()
 }
 
 void
-ConservativeAdvectionSchmid::computeJacobian()
+ConservativeAdvectionSchmid_NoMech::computeJacobian()
 {
   switch (_upwinding)
   {
@@ -167,7 +135,7 @@ ConservativeAdvectionSchmid::computeJacobian()
 }
 
 void
-ConservativeAdvectionSchmid::fullUpwind(JacRes res_or_jac)
+ConservativeAdvectionSchmid_NoMech::fullUpwind(JacRes res_or_jac)
 {
   // The number of nodes in the element
   const unsigned int num_nodes = _test.size();

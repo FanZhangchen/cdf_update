@@ -10,12 +10,12 @@
  * Signed edge and screw dislocations are considered
  */
 
-class ConservativeAdvectionSchmid : public Kernel
+class ConservativeAdvectionSchmid_NoMech : public Kernel
 {
 public:
   static InputParameters validParams();
 
-  ConservativeAdvectionSchmid(const InputParameters & parameters);
+  ConservativeAdvectionSchmid_NoMech(const InputParameters & parameters);
 
 protected:
   virtual Real computeQpResidual() override;
@@ -24,10 +24,7 @@ protected:
   virtual void computeJacobian() override;
 
   /// advection velocity
-  std::vector<Real> _velocity;
-
-  // statistically stored dislocations
-  std::vector<Real> _statis_stored_dislocation;
+  RealVectorValue _velocity;
 
   /// enum to make the code clearer
   enum class JacRes
@@ -37,19 +34,16 @@ protected:
   };
 
   // Edge slip directions of all slip systems
-  const MaterialProperty<std::vector<Real>> & _edge_slip_direction;
+  // const MaterialProperty<std::vector<Real>> & _edge_slip_direction;
 
   // Screw slip directions of all slip systems
-  const MaterialProperty<std::vector<Real>> & _screw_slip_direction;
+  // const MaterialProperty<std::vector<Real>> & _screw_slip_direction;
 
   // Dislocation velocity value (signed) on all slip systems
+
+  const Real _scale;
+
   const MaterialProperty<std::vector<Real>> & _dislo_velocity;
-
-  // SSD for edge dislocation density
-  const MaterialProperty<std::vector<Real>> & _edge_dislocation_increment;
-
-  // SSD for screw dislocation density
-  const MaterialProperty<std::vector<Real>> & _screw_dislocation_increment;
 
   /// Type of upwinding
   const enum class UpwindingType { none, full } _upwinding;
@@ -62,9 +56,6 @@ protected:
 
   // Character of dislocations (edge or screw)
   const enum class DisloCharacter { edge, screw } _dislo_character;
-
-  // is statistically stored dislocations considered
-  const enum class SSDInclude { yes, no } _is_ssd_inclued;
 
   /// Nodal value of u, used for full upwinding
   const VariableValue & _u_nodal;

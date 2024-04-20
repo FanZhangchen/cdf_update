@@ -1808,6 +1808,1162 @@
     boundary = right #front
     function = '0.003*t'
   [../]
+
+  [./Periodic]
+    [./auto_boundary_edge_dislo_1_Q1_x]
+      variable = edge_dislo_1_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_1_Q1_y]
+      variable = edge_dislo_1_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_1_Q1_z]
+      variable = edge_dislo_1_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_1_Q2_x]
+      variable = edge_dislo_1_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_1_Q2_y]
+      variable = edge_dislo_1_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_1_Q2_z]
+      variable = edge_dislo_1_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_1_Q3_x]
+      variable = edge_dislo_1_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_1_Q3_y]
+      variable = edge_dislo_1_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_1_Q3_z]
+      variable = edge_dislo_1_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_1_Q4_x]
+      variable = edge_dislo_1_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_1_Q4_y]
+      variable = edge_dislo_1_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_1_Q4_z]
+      variable = edge_dislo_1_Q4
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_2_Q1_x]
+      variable = edge_dislo_2_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_2_Q1_y]
+      variable = edge_dislo_2_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_2_Q1_z]
+      variable = edge_dislo_2_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_2_Q2_x]
+      variable = edge_dislo_2_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_2_Q2_y]
+      variable = edge_dislo_2_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_2_Q2_z]
+      variable = edge_dislo_2_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_2_Q3_x]
+      variable = edge_dislo_2_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_2_Q3_y]
+      variable = edge_dislo_2_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_2_Q3_z]
+      variable = edge_dislo_2_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_2_Q4_x]
+      variable = edge_dislo_2_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_2_Q4_y]
+      variable = edge_dislo_2_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_2_Q4_z]
+      variable = edge_dislo_2_Q4
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_3_Q1_x]
+      variable = edge_dislo_3_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_3_Q1_y]
+      variable = edge_dislo_3_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_3_Q1_z]
+      variable = edge_dislo_3_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_3_Q2_x]
+      variable = edge_dislo_3_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_3_Q2_y]
+      variable = edge_dislo_3_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_3_Q2_z]
+      variable = edge_dislo_3_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_3_Q3_x]
+      variable = edge_dislo_3_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_3_Q3_y]
+      variable = edge_dislo_3_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_3_Q3_z]
+      variable = edge_dislo_3_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_3_Q4_x]
+      variable = edge_dislo_3_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_3_Q4_y]
+      variable = edge_dislo_3_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_3_Q4_z]
+      variable = edge_dislo_3_Q4
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_4_Q1_x]
+      variable = edge_dislo_4_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_4_Q1_y]
+      variable = edge_dislo_4_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_4_Q1_z]
+      variable = edge_dislo_4_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_4_Q2_x]
+      variable = edge_dislo_4_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_4_Q2_y]
+      variable = edge_dislo_4_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_4_Q2_z]
+      variable = edge_dislo_4_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_4_Q3_x]
+      variable = edge_dislo_4_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_4_Q3_y]
+      variable = edge_dislo_4_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_4_Q3_z]
+      variable = edge_dislo_4_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_4_Q4_x]
+      variable = edge_dislo_4_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_4_Q4_y]
+      variable = edge_dislo_4_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_4_Q4_z]
+      variable = edge_dislo_4_Q4
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_5_Q1_x]
+      variable = edge_dislo_5_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_5_Q1_y]
+      variable = edge_dislo_5_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_5_Q1_z]
+      variable = edge_dislo_5_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_5_Q2_x]
+      variable = edge_dislo_5_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_5_Q2_y]
+      variable = edge_dislo_5_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_5_Q2_z]
+      variable = edge_dislo_5_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_5_Q3_x]
+      variable = edge_dislo_5_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_5_Q3_y]
+      variable = edge_dislo_5_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_5_Q3_z]
+      variable = edge_dislo_5_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_5_Q4_x]
+      variable = edge_dislo_5_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_5_Q4_y]
+      variable = edge_dislo_5_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_5_Q4_z]
+      variable = edge_dislo_5_Q4
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_6_Q1_x]
+      variable = edge_dislo_6_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_6_Q1_y]
+      variable = edge_dislo_6_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_6_Q1_z]
+      variable = edge_dislo_6_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_6_Q2_x]
+      variable = edge_dislo_6_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_6_Q2_y]
+      variable = edge_dislo_6_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_6_Q2_z]
+      variable = edge_dislo_6_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_6_Q3_x]
+      variable = edge_dislo_6_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_6_Q3_y]
+      variable = edge_dislo_6_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_6_Q3_z]
+      variable = edge_dislo_6_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_6_Q4_x]
+      variable = edge_dislo_6_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_6_Q4_y]
+      variable = edge_dislo_6_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_6_Q4_z]
+      variable = edge_dislo_6_Q4
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_7_Q1_x]
+      variable = edge_dislo_7_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_7_Q1_y]
+      variable = edge_dislo_7_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_7_Q1_z]
+      variable = edge_dislo_7_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_7_Q2_x]
+      variable = edge_dislo_7_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_7_Q2_y]
+      variable = edge_dislo_7_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_7_Q2_z]
+      variable = edge_dislo_7_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_7_Q3_x]
+      variable = edge_dislo_7_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_7_Q3_y]
+      variable = edge_dislo_7_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_7_Q3_z]
+      variable = edge_dislo_7_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_7_Q4_x]
+      variable = edge_dislo_7_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_7_Q4_y]
+      variable = edge_dislo_7_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_7_Q4_z]
+      variable = edge_dislo_7_Q4
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_8_Q1_x]
+      variable = edge_dislo_8_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_8_Q1_y]
+      variable = edge_dislo_8_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_8_Q1_z]
+      variable = edge_dislo_8_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_8_Q2_x]
+      variable = edge_dislo_8_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_8_Q2_y]
+      variable = edge_dislo_8_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_8_Q2_z]
+      variable = edge_dislo_8_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_8_Q3_x]
+      variable = edge_dislo_8_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_8_Q3_y]
+      variable = edge_dislo_8_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_8_Q3_z]
+      variable = edge_dislo_8_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_8_Q4_x]
+      variable = edge_dislo_8_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_8_Q4_y]
+      variable = edge_dislo_8_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_8_Q4_z]
+      variable = edge_dislo_8_Q4
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_9_Q1_x]
+      variable = edge_dislo_9_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_9_Q1_y]
+      variable = edge_dislo_9_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_9_Q1_z]
+      variable = edge_dislo_9_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_9_Q2_x]
+      variable = edge_dislo_9_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_9_Q2_y]
+      variable = edge_dislo_9_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_9_Q2_z]
+      variable = edge_dislo_9_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_9_Q3_x]
+      variable = edge_dislo_9_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_9_Q3_y]
+      variable = edge_dislo_9_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_9_Q3_z]
+      variable = edge_dislo_9_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_9_Q4_x]
+      variable = edge_dislo_9_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_9_Q4_y]
+      variable = edge_dislo_9_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_9_Q4_z]
+      variable = edge_dislo_9_Q4
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_10_Q1_x]
+      variable = edge_dislo_10_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_10_Q1_y]
+      variable = edge_dislo_10_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_10_Q1_z]
+      variable = edge_dislo_10_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_10_Q2_x]
+      variable = edge_dislo_10_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_10_Q2_y]
+      variable = edge_dislo_10_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_10_Q2_z]
+      variable = edge_dislo_10_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_10_Q3_x]
+      variable = edge_dislo_10_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_10_Q3_y]
+      variable = edge_dislo_10_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_10_Q3_z]
+      variable = edge_dislo_10_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_10_Q4_x]
+      variable = edge_dislo_10_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_10_Q4_y]
+      variable = edge_dislo_10_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_10_Q4_z]
+      variable = edge_dislo_10_Q4
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_11_Q1_x]
+      variable = edge_dislo_11_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_11_Q1_y]
+      variable = edge_dislo_11_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_11_Q1_z]
+      variable = edge_dislo_11_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_11_Q2_x]
+      variable = edge_dislo_11_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_11_Q2_y]
+      variable = edge_dislo_11_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_11_Q2_z]
+      variable = edge_dislo_11_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_11_Q3_x]
+      variable = edge_dislo_11_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_11_Q3_y]
+      variable = edge_dislo_11_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_11_Q3_z]
+      variable = edge_dislo_11_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_11_Q4_x]
+      variable = edge_dislo_11_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_11_Q4_y]
+      variable = edge_dislo_11_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_11_Q4_z]
+      variable = edge_dislo_11_Q4
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_12_Q1_x]
+      variable = edge_dislo_12_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_12_Q1_y]
+      variable = edge_dislo_12_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_12_Q1_z]
+      variable = edge_dislo_12_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_12_Q2_x]
+      variable = edge_dislo_12_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_12_Q2_y]
+      variable = edge_dislo_12_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_12_Q2_z]
+      variable = edge_dislo_12_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_12_Q3_x]
+      variable = edge_dislo_12_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_12_Q3_y]
+      variable = edge_dislo_12_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_12_Q3_z]
+      variable = edge_dislo_12_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_edge_dislo_12_Q4_x]
+      variable = edge_dislo_12_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_edge_dislo_12_Q4_y]
+      variable = edge_dislo_12_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_edge_dislo_12_Q4_z]
+      variable = edge_dislo_12_Q4
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_1_Q1_x]
+      variable = screw_dislo_1_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_1_Q1_y]
+      variable = screw_dislo_1_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_1_Q1_z]
+      variable = screw_dislo_1_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_1_Q2_x]
+      variable = screw_dislo_1_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_1_Q2_y]
+      variable = screw_dislo_1_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_1_Q2_z]
+      variable = screw_dislo_1_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_1_Q3_x]
+      variable = screw_dislo_1_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_1_Q3_y]
+      variable = screw_dislo_1_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_1_Q3_z]
+      variable = screw_dislo_1_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_1_Q4_x]
+      variable = screw_dislo_1_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_1_Q4_y]
+      variable = screw_dislo_1_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_1_Q4_z]
+      variable = screw_dislo_1_Q4
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_2_Q1_x]
+      variable = screw_dislo_2_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_2_Q1_y]
+      variable = screw_dislo_2_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_2_Q1_z]
+      variable = screw_dislo_2_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_2_Q2_x]
+      variable = screw_dislo_2_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_2_Q2_y]
+      variable = screw_dislo_2_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_2_Q2_z]
+      variable = screw_dislo_2_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_2_Q3_x]
+      variable = screw_dislo_2_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_2_Q3_y]
+      variable = screw_dislo_2_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_2_Q3_z]
+      variable = screw_dislo_2_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_2_Q4_x]
+      variable = screw_dislo_2_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_2_Q4_y]
+      variable = screw_dislo_2_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_2_Q4_z]
+      variable = screw_dislo_2_Q4
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_3_Q1_x]
+      variable = screw_dislo_3_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_3_Q1_y]
+      variable = screw_dislo_3_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_3_Q1_z]
+      variable = screw_dislo_3_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_3_Q2_x]
+      variable = screw_dislo_3_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_3_Q2_y]
+      variable = screw_dislo_3_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_3_Q2_z]
+      variable = screw_dislo_3_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_3_Q3_x]
+      variable = screw_dislo_3_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_3_Q3_y]
+      variable = screw_dislo_3_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_3_Q3_z]
+      variable = screw_dislo_3_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_3_Q4_x]
+      variable = screw_dislo_3_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_3_Q4_y]
+      variable = screw_dislo_3_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_3_Q4_z]
+      variable = screw_dislo_3_Q4
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_4_Q1_x]
+      variable = screw_dislo_4_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_4_Q1_y]
+      variable = screw_dislo_4_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_4_Q1_z]
+      variable = screw_dislo_4_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_4_Q2_x]
+      variable = screw_dislo_4_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_4_Q2_y]
+      variable = screw_dislo_4_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_4_Q2_z]
+      variable = screw_dislo_4_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_4_Q3_x]
+      variable = screw_dislo_4_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_4_Q3_y]
+      variable = screw_dislo_4_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_4_Q3_z]
+      variable = screw_dislo_4_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_4_Q4_x]
+      variable = screw_dislo_4_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_4_Q4_y]
+      variable = screw_dislo_4_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_4_Q4_z]
+      variable = screw_dislo_4_Q4
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_5_Q1_x]
+      variable = screw_dislo_5_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_5_Q1_y]
+      variable = screw_dislo_5_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_5_Q1_z]
+      variable = screw_dislo_5_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_5_Q2_x]
+      variable = screw_dislo_5_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_5_Q2_y]
+      variable = screw_dislo_5_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_5_Q2_z]
+      variable = screw_dislo_5_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_5_Q3_x]
+      variable = screw_dislo_5_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_5_Q3_y]
+      variable = screw_dislo_5_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_5_Q3_z]
+      variable = screw_dislo_5_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_5_Q4_x]
+      variable = screw_dislo_5_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_5_Q4_y]
+      variable = screw_dislo_5_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_5_Q4_z]
+      variable = screw_dislo_5_Q4
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_6_Q1_x]
+      variable = screw_dislo_6_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_6_Q1_y]
+      variable = screw_dislo_6_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_6_Q1_z]
+      variable = screw_dislo_6_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_6_Q2_x]
+      variable = screw_dislo_6_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_6_Q2_y]
+      variable = screw_dislo_6_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_6_Q2_z]
+      variable = screw_dislo_6_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_6_Q3_x]
+      variable = screw_dislo_6_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_6_Q3_y]
+      variable = screw_dislo_6_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_6_Q3_z]
+      variable = screw_dislo_6_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_6_Q4_x]
+      variable = screw_dislo_6_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_6_Q4_y]
+      variable = screw_dislo_6_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_6_Q4_z]
+      variable = screw_dislo_6_Q4
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_7_Q1_x]
+      variable = screw_dislo_7_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_7_Q1_y]
+      variable = screw_dislo_7_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_7_Q1_z]
+      variable = screw_dislo_7_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_7_Q2_x]
+      variable = screw_dislo_7_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_7_Q2_y]
+      variable = screw_dislo_7_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_7_Q2_z]
+      variable = screw_dislo_7_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_7_Q3_x]
+      variable = screw_dislo_7_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_7_Q3_y]
+      variable = screw_dislo_7_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_7_Q3_z]
+      variable = screw_dislo_7_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_7_Q4_x]
+      variable = screw_dislo_7_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_7_Q4_y]
+      variable = screw_dislo_7_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_7_Q4_z]
+      variable = screw_dislo_7_Q4
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_8_Q1_x]
+      variable = screw_dislo_8_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_8_Q1_y]
+      variable = screw_dislo_8_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_8_Q1_z]
+      variable = screw_dislo_8_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_8_Q2_x]
+      variable = screw_dislo_8_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_8_Q2_y]
+      variable = screw_dislo_8_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_8_Q2_z]
+      variable = screw_dislo_8_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_8_Q3_x]
+      variable = screw_dislo_8_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_8_Q3_y]
+      variable = screw_dislo_8_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_8_Q3_z]
+      variable = screw_dislo_8_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_8_Q4_x]
+      variable = screw_dislo_8_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_8_Q4_y]
+      variable = screw_dislo_8_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_8_Q4_z]
+      variable = screw_dislo_8_Q4
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_9_Q1_x]
+      variable = screw_dislo_9_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_9_Q1_y]
+      variable = screw_dislo_9_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_9_Q1_z]
+      variable = screw_dislo_9_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_9_Q2_x]
+      variable = screw_dislo_9_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_9_Q2_y]
+      variable = screw_dislo_9_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_9_Q2_z]
+      variable = screw_dislo_9_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_9_Q3_x]
+      variable = screw_dislo_9_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_9_Q3_y]
+      variable = screw_dislo_9_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_9_Q3_z]
+      variable = screw_dislo_9_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_9_Q4_x]
+      variable = screw_dislo_9_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_9_Q4_y]
+      variable = screw_dislo_9_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_9_Q4_z]
+      variable = screw_dislo_9_Q4
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_10_Q1_x]
+      variable = screw_dislo_10_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_10_Q1_y]
+      variable = screw_dislo_10_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_10_Q1_z]
+      variable = screw_dislo_10_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_10_Q2_x]
+      variable = screw_dislo_10_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_10_Q2_y]
+      variable = screw_dislo_10_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_10_Q2_z]
+      variable = screw_dislo_10_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_10_Q3_x]
+      variable = screw_dislo_10_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_10_Q3_y]
+      variable = screw_dislo_10_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_10_Q3_z]
+      variable = screw_dislo_10_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_10_Q4_x]
+      variable = screw_dislo_10_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_10_Q4_y]
+      variable = screw_dislo_10_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_10_Q4_z]
+      variable = screw_dislo_10_Q4
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_11_Q1_x]
+      variable = screw_dislo_11_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_11_Q1_y]
+      variable = screw_dislo_11_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_11_Q1_z]
+      variable = screw_dislo_11_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_11_Q2_x]
+      variable = screw_dislo_11_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_11_Q2_y]
+      variable = screw_dislo_11_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_11_Q2_z]
+      variable = screw_dislo_11_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_11_Q3_x]
+      variable = screw_dislo_11_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_11_Q3_y]
+      variable = screw_dislo_11_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_11_Q3_z]
+      variable = screw_dislo_11_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_11_Q4_x]
+      variable = screw_dislo_11_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_11_Q4_y]
+      variable = screw_dislo_11_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_11_Q4_z]
+      variable = screw_dislo_11_Q4
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_12_Q1_x]
+      variable = screw_dislo_12_Q1
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_12_Q1_y]
+      variable = screw_dislo_12_Q1
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_12_Q1_z]
+      variable = screw_dislo_12_Q1
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_12_Q2_x]
+      variable = screw_dislo_12_Q2
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_12_Q2_y]
+      variable = screw_dislo_12_Q2
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_12_Q2_z]
+      variable = screw_dislo_12_Q2
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_12_Q3_x]
+      variable = screw_dislo_12_Q3
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_12_Q3_y]
+      variable = screw_dislo_12_Q3
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_12_Q3_z]
+      variable = screw_dislo_12_Q3
+      auto_direction = 'z'
+      [../]
+      [./auto_boundary_screw_dislo_12_Q4_x]
+      variable = screw_dislo_12_Q4
+      auto_direction = 'x'
+      [../]
+      [./auto_boundary_screw_dislo_12_Q4_y]
+      variable = screw_dislo_12_Q4
+      auto_direction = 'y'
+      [../]
+      [./auto_boundary_screw_dislo_12_Q4_z]
+      variable = screw_dislo_12_Q4
+      auto_direction = 'z'
+      [../]
+      
+  [../]
 []
 
 [Materials]

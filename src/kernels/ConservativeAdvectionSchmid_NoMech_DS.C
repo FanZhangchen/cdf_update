@@ -81,7 +81,7 @@ ConservativeAdvectionSchmid_NoMech_DS::negSpeedQp()
       _velocity(2) = 0.0;
       break;
     case DisloCharacter::edge_90:
-      _velocity(0) = 0.0; // velocity value
+      _velocity(0) = 0.0;                                 // velocity value
       _velocity(1) = _dislo_velocity[_qp][1] * edge_sign; // positive or negative dislocation
       _velocity(2) = 0.0;
       break;

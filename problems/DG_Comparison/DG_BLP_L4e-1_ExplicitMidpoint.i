@@ -86,7 +86,7 @@
     variable = rho_edge_pos_1
   []
   [Edge_Pos_Flux_1]
-    implicit = true
+    implicit = false
     type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_pos_1
     upwinding_type = none
@@ -100,7 +100,7 @@
     variable = rho_edge_neg_1
   []
   [Edge_Neg_Flux_1]
-    implicit = true
+    implicit = false
     type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_neg_1
     upwinding_type = none
@@ -114,7 +114,7 @@
     variable = rho_edge_pos_2
   []
   [Edge_Pos_Flux_2]
-    implicit = true
+    implicit = false
     type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_pos_2
     upwinding_type = none
@@ -128,7 +128,7 @@
     variable = rho_edge_neg_2
   []
   [Edge_Neg_Flux_2]
-    implicit = true
+    implicit = false
     type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_neg_2
     upwinding_type = none
@@ -142,7 +142,7 @@
 [DGKernels]
 
   [dg_edge_pos_1]
-    implicit = true
+    implicit = false
     type = DGAdvectionCoupled
     variable = rho_edge_pos_1
       dislo_character = edge
@@ -151,7 +151,7 @@
   []
 
   [dg_edge_neg_1]
-    implicit = true
+    implicit = false
     type = DGAdvectionCoupled
     variable = rho_edge_neg_1
       dislo_character = edge
@@ -160,7 +160,7 @@
   []
 
   [dg_edge_pos_2]
-    implicit = true
+    implicit = false
     type = DGAdvectionCoupled
     variable = rho_edge_pos_2
       dislo_character = edge
@@ -169,7 +169,7 @@
   []
 
   [dg_edge_neg_2]
-    implicit = true
+    implicit = false
     type = DGAdvectionCoupled
     variable = rho_edge_neg_2
       dislo_character = edge
@@ -411,7 +411,7 @@
   # l_tol = 1e-5
 
   start_time = 0.0
-  end_time = 5.0
+  end_time = 0.5
   dt = 2.e-6
   dtmin = 1.e-10
 []
@@ -477,10 +477,10 @@
 
 [Outputs]
   exodus = true
-  interval = 50
+  time_step_interval = 50
   [csv]
     type = CSV
-    file_base = dg_test_l400_explicit_gamma5
+    file_base = dg_test_l400_midpoint_noUW
     execute_on = final
   []
 []

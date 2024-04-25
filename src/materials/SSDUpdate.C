@@ -590,8 +590,8 @@ SSDUpdate::computeQpProperties()
           _edge_dislocation_increment_old[_qp][i] +
           (_Ce * _ke_b * std::sqrt(TotalDislocationDensity_ALL) * abs_slip_increment -
            _Ce / _burgers * 2.0 * _de * edge_dislocation_density[i] * abs_slip_increment);
-            // *
-            //   _dt;
+      // *
+      //   _dt;
     }
     mooseWarning("_edge_dislocation_increment: ", _edge_dislocation_increment[_qp][i]);
 
@@ -605,8 +605,8 @@ SSDUpdate::computeQpProperties()
                     std::sqrt(TotalDislocationDensity_ALL) +
                 2.0 * _ds) *
                screw_dislocation_density[i] * abs_slip_increment);
-              //   *
-              // _dt;
+      //   *
+      // _dt;
     }
   }
 }

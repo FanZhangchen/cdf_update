@@ -80,9 +80,6 @@ CrystalPlasticityBussoUpdate::validParams()
   params.addCoupledVar(
       "edge_dislo_den_neg_12", 0.0, "Negative edge dislocation density: slip system 12");
 
-  MooseEnum is_two_slips("yes no", "yes");
-  params.addRequiredParam<MooseEnum>("is_two_slips", is_two_slips, "check two slips case.");
-
   return params;
 }
 
@@ -137,9 +134,7 @@ CrystalPlasticityBussoUpdate::CrystalPlasticityBussoUpdate(const InputParameters
     _accumulated_equivalent_plastic_strain(
         declareProperty<Real>(_base_name + "accumulated_equivalent_plastic_strain")),
     _accumulated_equivalent_plastic_strain_old(
-        getMaterialPropertyOld<Real>(_base_name + "accumulated_equivalent_plastic_strain")),
-
-    _is_two_slips(getParam<MooseEnum>("is_two_slips").getEnum<TwoSlipCheck>())
+        getMaterialPropertyOld<Real>(_base_name + "accumulated_equivalent_plastic_strain"))
 
 {
 }

@@ -593,7 +593,7 @@ SSDUpdate::computeQpProperties()
       // *
       //   _dt;
     }
-    mooseWarning("_edge_dislocation_increment: ", _edge_dislocation_increment[_qp][i]);
+    // mooseWarning("_edge_dislocation_increment: ", _edge_dislocation_increment[_qp][i]);
 
     if (screw_dislocation_density[i] > 0.0)
     {

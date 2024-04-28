@@ -461,7 +461,7 @@
 
 [Outputs]
   exodus = true
-  time_step_interval = 50
+  time_step_interval = 200
   [csv]
     type = CSV
     file_base = dg_test_l100_midpoint_noUW

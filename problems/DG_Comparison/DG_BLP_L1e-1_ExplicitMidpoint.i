@@ -412,7 +412,7 @@
 
   start_time = 0.0
   end_time = 0.5
-  dt = 2.e-6
+  dt = 5.e-7
   dtmin = 1.e-10
 []
 

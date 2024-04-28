@@ -412,7 +412,7 @@
 
   start_time = 0.0
   end_time = 0.5
-  dt = 5.e-7
+  dt = 2.e-7
   dtmin = 1.e-10
 []
 
@@ -461,7 +461,7 @@
 
 [Outputs]
   exodus = true
-  time_step_interval = 200
+  time_step_interval = 500
   [csv]
     type = CSV
     file_base = dg_test_l100_tvdrk2

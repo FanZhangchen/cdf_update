@@ -450,7 +450,7 @@
 
 [Outputs]
   exodus = true
-  interval = 1
+  interval = 200
   [csv]
     type = CSV
     file_base = dg_test_l100_fullupwind

@@ -68,7 +68,7 @@
 [Functions]
   [disp_load]
     type = ParsedFunction
-    expression = '0.005*4.0*t'
+    expression = '0.005*1.0*t'
   []
 []
 
@@ -366,6 +366,25 @@
 [Executioner]
 
   type = Transient
+
+  [./TimeIntegrator]
+    # type = ImplicitEuler
+    # type = BDF2
+    # type = CrankNicolson
+    # type = ImplicitMidpoint
+    # type = LStableDirk2
+    # type = LStableDirk3
+    # type = LStableDirk4
+    # type = AStableDirk4
+    #
+    # Explicit methods
+    type = ExplicitTVDRK2
+    # type = ExplicitEuler
+    # type = ExplicitMidpoint
+    # type = Heun
+    # type = Ralston
+  [../]
+
   # solve_type = 'NEWTON'
   # petsc_options = '-snes_ksp_ew'
   # petsc_options_iname = '-pc_type -pc_hypre_type -ksp_gmres_restart'
@@ -453,7 +472,7 @@
   interval = 200
   [csv]
     type = CSV
-    file_base = dg_test_l100_fullupwind
+    file_base = dg_test_l100_fullupwind_explicittvdrk2
     execute_on = final
   []
 []

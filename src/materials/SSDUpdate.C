@@ -525,7 +525,6 @@ SSDUpdate::computeQpProperties()
   screw_dislo_den_Q1[9] = _screw_dislo_den_10_Q1[_qp];
   screw_dislo_den_Q1[10] = _screw_dislo_den_11_Q1[_qp];
   screw_dislo_den_Q1[11] = _screw_dislo_den_12_Q1[_qp];
-
   screw_dislo_den_Q2[0] = _screw_dislo_den_1_Q2[_qp];
   screw_dislo_den_Q2[1] = _screw_dislo_den_2_Q2[_qp];
   screw_dislo_den_Q2[2] = _screw_dislo_den_3_Q2[_qp];
@@ -589,9 +588,7 @@ SSDUpdate::computeQpProperties()
       _edge_dislocation_increment[_qp][i] =
           _edge_dislocation_increment_old[_qp][i] +
           (_Ce * _ke_b * std::sqrt(TotalDislocationDensity_ALL) * abs_slip_increment -
-           _Ce / _burgers * 2.0 * _de * edge_dislocation_density[i] * abs_slip_increment);
-      // *
-      //   _dt;
+           _Ce / _burgers * 2.0 * _de * edge_dislocation_density[i] * abs_slip_increment) * _dt;
     }
     // mooseWarning("_edge_dislocation_increment: ", _edge_dislocation_increment[_qp][i]);
 
@@ -604,9 +601,7 @@ SSDUpdate::computeQpProperties()
                (M_PI * std::pow(_ds, 2.0) * _ks_b * _burgers *
                     std::sqrt(TotalDislocationDensity_ALL) +
                 2.0 * _ds) *
-               screw_dislocation_density[i] * abs_slip_increment);
-      //   *
-      // _dt;
+               screw_dislocation_density[i] * abs_slip_increment) * _dt;
     }
   }
 }

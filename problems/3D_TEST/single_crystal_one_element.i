@@ -3100,6 +3100,7 @@
   [./ssd]
     type = SSDUpdate
     nss = 12
+    Ce = 200.
     edge_dislo_den_1_Q1 = edge_dislo_1_Q1
     edge_dislo_den_1_Q2 = edge_dislo_1_Q2
     edge_dislo_den_1_Q3 = edge_dislo_1_Q3

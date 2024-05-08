@@ -315,7 +315,7 @@
 
   start_time = 0.0
   end_time = 0.5 #0.01
-  dt = 2.e-6
+  dt = 5.e-6
   dtmin = 1.e-9
 []
 
@@ -380,7 +380,7 @@
 
 [Outputs]
   exodus = true
-  interval = 50
+  interval = 20
   [csv]
     type = CSV
     file_base = rhoe_x_out_l4e-1_BLP_rho0_double_60120

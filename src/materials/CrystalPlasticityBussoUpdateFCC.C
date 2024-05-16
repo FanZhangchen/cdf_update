@@ -1298,7 +1298,7 @@ CrystalPlasticityBussoUpdateFCC::calculateSlipRate()
     else
       local_screw_slip_direction[2] = 1.0 / _screw_slip_direction[_qp][i * LIBMESH_DIM + 2];
 
-    _backstress(i) = _burgers * _shear_modulus *
+    _backstress(i) = _scaling_Cb * _burgers * _shear_modulus *
                      ((grad_x_rho_edge_Q1[i] * local_edge_slip_direction[0] +
                        grad_x_rho_edge_Q2[i] * local_edge_slip_direction[0] -
                        grad_x_rho_edge_Q3[i] * local_edge_slip_direction[0] -

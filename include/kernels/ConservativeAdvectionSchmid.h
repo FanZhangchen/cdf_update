@@ -28,6 +28,7 @@ protected:
 
   // statistically stored dislocations
   std::vector<Real> _statis_stored_dislocation;
+  std::vector<Real> _statis_stored_dislocation_increment;
 
   /// enum to make the code clearer
   enum class JacRes

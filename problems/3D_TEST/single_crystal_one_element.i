@@ -356,6 +356,14 @@
    order = CONSTANT
    family = MONOMIAL
   [../]
+  [./edge_dislocation_increment]
+    order = CONSTANT
+    family = MONOMIAL
+  [../]
+  [./total_dislo_den]
+    order = CONSTANT
+    family = MONOMIAL_VEC
+  [../]
 []
 
 [Physics/SolidMechanics/QuasiStatic/all]
@@ -1775,12 +1783,115 @@
    property = accumulated_equivalent_plastic_strain
    execute_on = timestep_end
   [../]
-  # [./sed]
-  #  type = MaterialRealAux
-  #  variable = sed
-  #  property = stored_energy_density
-  #  execute_on = timestep_end
-  # [../]
+  [./edi]
+   type = MaterialStdVectorAux
+   variable = edge_dislocation_increment
+   property = edge_dislocation_increment
+   index = 1
+   execute_on = timestep_end
+  [../]
+  [./total_dislo_den]
+    type = TotalDislocationDensity
+    variable = total_dislo_den
+    execute_on = timestep_end
+    nss = 12
+    edge_dislo_den_1_Q1 = edge_dislo_1_Q1
+    edge_dislo_den_1_Q2 = edge_dislo_1_Q2
+    edge_dislo_den_1_Q3 = edge_dislo_1_Q3
+    edge_dislo_den_1_Q4 = edge_dislo_1_Q4
+    screw_dislo_den_1_Q1 = screw_dislo_1_Q1
+    screw_dislo_den_1_Q2 = screw_dislo_1_Q2
+    screw_dislo_den_1_Q3 = screw_dislo_1_Q3
+    screw_dislo_den_1_Q4 = screw_dislo_1_Q4
+    edge_dislo_den_2_Q1 = edge_dislo_2_Q1
+    edge_dislo_den_2_Q2 = edge_dislo_2_Q2
+    edge_dislo_den_2_Q3 = edge_dislo_2_Q3
+    edge_dislo_den_2_Q4 = edge_dislo_2_Q4
+    screw_dislo_den_2_Q1 = screw_dislo_2_Q1
+    screw_dislo_den_2_Q2 = screw_dislo_2_Q2
+    screw_dislo_den_2_Q3 = screw_dislo_2_Q3
+    screw_dislo_den_2_Q4 = screw_dislo_2_Q4
+    edge_dislo_den_3_Q1 = edge_dislo_3_Q1
+    edge_dislo_den_3_Q2 = edge_dislo_3_Q2
+    edge_dislo_den_3_Q3 = edge_dislo_3_Q3
+    edge_dislo_den_3_Q4 = edge_dislo_3_Q4
+    screw_dislo_den_3_Q1 = screw_dislo_3_Q1
+    screw_dislo_den_3_Q2 = screw_dislo_3_Q2
+    screw_dislo_den_3_Q3 = screw_dislo_3_Q3
+    screw_dislo_den_3_Q4 = screw_dislo_3_Q4
+    edge_dislo_den_4_Q1 = edge_dislo_4_Q1
+    edge_dislo_den_4_Q2 = edge_dislo_4_Q2
+    edge_dislo_den_4_Q3 = edge_dislo_4_Q3
+    edge_dislo_den_4_Q4 = edge_dislo_4_Q4
+    screw_dislo_den_4_Q1 = screw_dislo_4_Q1
+    screw_dislo_den_4_Q2 = screw_dislo_4_Q2
+    screw_dislo_den_4_Q3 = screw_dislo_4_Q3
+    screw_dislo_den_4_Q4 = screw_dislo_4_Q4
+    edge_dislo_den_5_Q1 = edge_dislo_5_Q1
+    edge_dislo_den_5_Q2 = edge_dislo_5_Q2
+    edge_dislo_den_5_Q3 = edge_dislo_5_Q3
+    edge_dislo_den_5_Q4 = edge_dislo_5_Q4
+    screw_dislo_den_5_Q1 = screw_dislo_5_Q1
+    screw_dislo_den_5_Q2 = screw_dislo_5_Q2
+    screw_dislo_den_5_Q3 = screw_dislo_5_Q3
+    screw_dislo_den_5_Q4 = screw_dislo_5_Q4
+    edge_dislo_den_6_Q1 = edge_dislo_6_Q1
+    edge_dislo_den_6_Q2 = edge_dislo_6_Q2
+    edge_dislo_den_6_Q3 = edge_dislo_6_Q3
+    edge_dislo_den_6_Q4 = edge_dislo_6_Q4
+    screw_dislo_den_6_Q1 = screw_dislo_6_Q1
+    screw_dislo_den_6_Q2 = screw_dislo_6_Q2
+    screw_dislo_den_6_Q3 = screw_dislo_6_Q3
+    screw_dislo_den_6_Q4 = screw_dislo_6_Q4
+    edge_dislo_den_7_Q1 = edge_dislo_7_Q1
+    edge_dislo_den_7_Q2 = edge_dislo_7_Q2
+    edge_dislo_den_7_Q3 = edge_dislo_7_Q3
+    edge_dislo_den_7_Q4 = edge_dislo_7_Q4
+    screw_dislo_den_7_Q1 = screw_dislo_7_Q1
+    screw_dislo_den_7_Q2 = screw_dislo_7_Q2
+    screw_dislo_den_7_Q3 = screw_dislo_7_Q3
+    screw_dislo_den_7_Q4 = screw_dislo_7_Q4
+    edge_dislo_den_8_Q1 = edge_dislo_8_Q1
+    edge_dislo_den_8_Q2 = edge_dislo_8_Q2
+    edge_dislo_den_8_Q3 = edge_dislo_8_Q3
+    edge_dislo_den_8_Q4 = edge_dislo_8_Q4
+    screw_dislo_den_8_Q1 = screw_dislo_8_Q1
+    screw_dislo_den_8_Q2 = screw_dislo_8_Q2
+    screw_dislo_den_8_Q3 = screw_dislo_8_Q3
+    screw_dislo_den_8_Q4 = screw_dislo_8_Q4
+    edge_dislo_den_9_Q1 = edge_dislo_9_Q1
+    edge_dislo_den_9_Q2 = edge_dislo_9_Q2
+    edge_dislo_den_9_Q3 = edge_dislo_9_Q3
+    edge_dislo_den_9_Q4 = edge_dislo_9_Q4
+    screw_dislo_den_9_Q1 = screw_dislo_9_Q1
+    screw_dislo_den_9_Q2 = screw_dislo_9_Q2
+    screw_dislo_den_9_Q3 = screw_dislo_9_Q3
+    screw_dislo_den_9_Q4 = screw_dislo_9_Q4
+    edge_dislo_den_10_Q1 = edge_dislo_10_Q1
+    edge_dislo_den_10_Q2 = edge_dislo_10_Q2
+    edge_dislo_den_10_Q3 = edge_dislo_10_Q3
+    edge_dislo_den_10_Q4 = edge_dislo_10_Q4
+    screw_dislo_den_10_Q1 = screw_dislo_10_Q1
+    screw_dislo_den_10_Q2 = screw_dislo_10_Q2
+    screw_dislo_den_10_Q3 = screw_dislo_10_Q3
+    screw_dislo_den_10_Q4 = screw_dislo_10_Q4
+    edge_dislo_den_11_Q1 = edge_dislo_11_Q1
+    edge_dislo_den_11_Q2 = edge_dislo_11_Q2
+    edge_dislo_den_11_Q3 = edge_dislo_11_Q3
+    edge_dislo_den_11_Q4 = edge_dislo_11_Q4
+    screw_dislo_den_11_Q1 = screw_dislo_11_Q1
+    screw_dislo_den_11_Q2 = screw_dislo_11_Q2
+    screw_dislo_den_11_Q3 = screw_dislo_11_Q3
+    screw_dislo_den_11_Q4 = screw_dislo_11_Q4
+    edge_dislo_den_12_Q1 = edge_dislo_12_Q1
+    edge_dislo_den_12_Q2 = edge_dislo_12_Q2
+    edge_dislo_den_12_Q3 = edge_dislo_12_Q3
+    edge_dislo_den_12_Q4 = edge_dislo_12_Q4
+    screw_dislo_den_12_Q1 = screw_dislo_12_Q1
+    screw_dislo_den_12_Q2 = screw_dislo_12_Q2
+    screw_dislo_den_12_Q3 = screw_dislo_12_Q3
+    screw_dislo_den_12_Q4 = screw_dislo_12_Q4
+  [../]
 []
 
 [BCs]
@@ -2998,7 +3109,7 @@
       q = 1.2
       f0 = 2.77e-19
       gdot0 = 1.e6
-      # scaling_Cb = 0.241
+      scaling_Cb = 0.241
     slip_sys_file_name = input_slip_fcc_sys.txt
     edge_dislo_den_1_Q1 = edge_dislo_1_Q1
     edge_dislo_den_1_Q2 = edge_dislo_1_Q2
@@ -3100,7 +3211,9 @@
   [./ssd]
     type = SSDUpdate
     nss = 12
-    Ce = 200.
+    # Ce = 200.0
+    de = 0.0
+    ds = 0.0
     edge_dislo_den_1_Q1 = edge_dislo_1_Q1
     edge_dislo_den_1_Q2 = edge_dislo_1_Q2
     edge_dislo_den_1_Q3 = edge_dislo_1_Q3
@@ -3233,10 +3346,10 @@
     type = ElementAverageValue
     variable = epeq
   [../]
-  # [./sed]
-  #  type = ElementAverageValue
-  #  variable = sed
-  # [../]
+  [./edge_dislocation_increment]
+   type = ElementAverageValue
+   variable = edge_dislocation_increment
+  [../]
   [./disp_x]
      type = NodalVariableValue
      variable = disp_x
@@ -3352,6 +3465,6 @@
   []
 []
 
-# [Debug]
-#   show_material_props = true
-# []
+[Debug]
+  show_material_props = true
+[]

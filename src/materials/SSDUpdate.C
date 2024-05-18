@@ -418,33 +418,33 @@ SSDUpdate::initQpStatefulProperties()
 
     TotalDislocationDensity_ALL = 0;
 
-  for (const auto i : make_range(_nss))
-  {
-    const Real abs_slip_increment = std::abs(_slip_increment[_qp][i]);
-
-    for (const auto j : make_range(_nss))
+    for (const auto i : make_range(_nss))
     {
-      TotalDislocationDensity_ALL += total_dislocation_density[j];
-    }
+      const Real abs_slip_increment = std::abs(_slip_increment[_qp][i]);
 
-    if (edge_dislocation_density[i] > 0.0)
-    {
-      _edge_dislocation_increment[_qp][i] =
-          _Ce * _ke_b * std::sqrt(TotalDislocationDensity_ALL) * abs_slip_increment -
-          _Ce / _burgers * 2.0 * _de * edge_dislocation_density[i] * abs_slip_increment;
-    }
+      for (const auto j : make_range(_nss))
+      {
+        TotalDislocationDensity_ALL += total_dislocation_density[j];
+      }
 
-    if (screw_dislocation_density[i] > 0.0)
-    {
-      _screw_dislocation_increment[_qp][i] =
-          _Cs * _ks_b * std::sqrt(TotalDislocationDensity_ALL) * abs_slip_increment -
-          _Cs / _burgers *
-              (M_PI * std::pow(_ds, 2.0) * _ks_b * _burgers *
-                   std::sqrt(TotalDislocationDensity_ALL) +
-               2.0 * _ds) *
-              screw_dislocation_density[i] * abs_slip_increment;
+      if (edge_dislocation_density[i] > 0.0)
+      {
+        _edge_dislocation_increment[_qp][i] =
+            _Ce * _ke_b * std::sqrt(TotalDislocationDensity_ALL) * abs_slip_increment -
+            _Ce / _burgers * 2.0 * _de * edge_dislocation_density[i] * abs_slip_increment;
+      }
+
+      if (screw_dislocation_density[i] > 0.0)
+      {
+        _screw_dislocation_increment[_qp][i] =
+            _Cs * _ks_b * std::sqrt(TotalDislocationDensity_ALL) * abs_slip_increment -
+            _Cs / _burgers *
+                (M_PI * std::pow(_ds, 2.0) * _ks_b * _burgers *
+                     std::sqrt(TotalDislocationDensity_ALL) +
+                 2.0 * _ds) *
+                screw_dislocation_density[i] * abs_slip_increment;
+      }
     }
-  }
 }
 
 void
@@ -602,7 +602,7 @@ SSDUpdate::computeQpProperties()
           _edge_dislocation_increment_old[_qp][i] +
           (_Ce * _ke_b * std::sqrt(TotalDislocationDensity_ALL) * abs_slip_increment -
            _Ce / _burgers * 2.0 * _de * edge_dislocation_density[i] * abs_slip_increment);
-             // * _dt;
+      // * _dt;
     }
     // mooseWarning("_edge_dislocation_increment: ", _edge_dislocation_increment[_qp][i]);
 
@@ -615,10 +615,8 @@ SSDUpdate::computeQpProperties()
                (M_PI * std::pow(_ds, 2.0) * _ks_b * _burgers *
                     std::sqrt(TotalDislocationDensity_ALL) +
                 2.0 * _ds) *
-               screw_dislocation_density[i] * abs_slip_increment); 
-             // * _dt;
+               screw_dislocation_density[i] * abs_slip_increment);
+      // * _dt;
     }
-
   }
-
 }

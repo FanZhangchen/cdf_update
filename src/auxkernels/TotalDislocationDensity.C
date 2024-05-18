@@ -545,8 +545,8 @@ TotalDislocationDensity::computeValue()
 
   for (const auto i : make_range(_nss))
   {
-    rhot += rho_edge_Q1[i] + rho_edge_Q2[i] + rho_edge_Q3[i] + rho_edge_Q4[i] +
-            rho_screw_Q1[i] + rho_screw_Q2[i] + rho_screw_Q3[i] + rho_screw_Q4[i];
+    rhot += rho_edge_Q1[i] + rho_edge_Q2[i] + rho_edge_Q3[i] + rho_edge_Q4[i] + rho_screw_Q1[i] +
+            rho_screw_Q2[i] + rho_screw_Q3[i] + rho_screw_Q4[i];
   }
 
   normalized_rhot = rhot / _initial_total_dislo_den;

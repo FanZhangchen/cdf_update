@@ -121,14 +121,15 @@ ConservativeAdvectionSchmid::computeQpResidual()
   switch (_is_ssd_inclued)
   {
     case SSDInclude::yes:
-      _statis_stored_dislocation_increment[_slip_sys_index] = _statis_stored_dislocation[_slip_sys_index];
+      _statis_stored_dislocation_increment[_slip_sys_index] =
+          _statis_stored_dislocation[_slip_sys_index];
       break;
     case SSDInclude::no:
       _statis_stored_dislocation_increment[_slip_sys_index] = 0.0;
       break;
   }
 
-  return negSpeedQp() * _u[_qp]+ _statis_stored_dislocation_increment[_slip_sys_index];
+  return negSpeedQp() * _u[_qp] + _statis_stored_dislocation_increment[_slip_sys_index];
 }
 
 Real

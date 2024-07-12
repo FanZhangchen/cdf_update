@@ -50,13 +50,6 @@
       dislo_sign = positive
       slip_sys_index = 0
   []
-  [Edge_Pos_Source_1]
-    type = MatCoupledDisloDensity
-    variable = edge_dislo_den_pos_1
-      dislo_character = edge
-      slip_sys_index = 0
-    v = 'edge_dislo_den_neg_1 edge_dislo_den_pos_2 edge_dislo_den_neg_2'
-  []
 
   [Edeg_Neg_Time_Deri_1]
     type = TimeDerivative
@@ -69,13 +62,6 @@
       dislo_character = edge_00
       dislo_sign = negative
       slip_sys_index = 0
-  []
-  [Edge_Neg_Source_1]
-    type = MatCoupledDisloDensity
-    variable = edge_dislo_den_neg_1
-      dislo_character = edge
-      slip_sys_index = 0
-    v = 'edge_dislo_den_pos_1 edge_dislo_den_pos_2 edge_dislo_den_neg_2'
   []
 
   [Edeg_Pos_Time_Deri_2]
@@ -90,13 +76,6 @@
       dislo_sign = positive
       slip_sys_index = 1
   []
-  [Edge_Pos_Source_2]
-    type = MatCoupledDisloDensity
-    variable = edge_dislo_den_pos_2
-      dislo_character = edge
-      slip_sys_index = 1
-    v = 'edge_dislo_den_neg_2 edge_dislo_den_pos_1 edge_dislo_den_neg_1'
-  []
 
   [Edeg_Neg_Time_Deri_2]
     type = TimeDerivative
@@ -110,13 +89,7 @@
       dislo_sign = negative
       slip_sys_index = 1
   []
-  [Edge_Neg_Source_2]
-    type = MatCoupledDisloDensity
-    variable = edge_dislo_den_neg_2
-      dislo_character = edge
-      slip_sys_index = 1
-    v = 'edge_dislo_den_pos_2 edge_dislo_den_pos_1 edge_dislo_den_neg_1'
-  []
+
 []
 
 [AuxKernels]
@@ -229,22 +202,22 @@
   []
   [num_slip_sys_1_pos]
     type = CSV
-    file_base = patterning_num_slip_sys_1_pos_out
+    file_base = patterning_num_slip_sys_1_pos_wo_source_out
     show = 'slip_sys_1_pos'
   []
   [num_slip_sys_1_neg]
     type = CSV
-    file_base = patterning_num_slip_sys_1_neg_out
+    file_base = patterning_num_slip_sys_1_neg_wo_source_out
     show = 'slip_sys_1_neg'
   []
   [num_slip_sys_2_pos]
     type = CSV
-    file_base = patterning_num_slip_sys_2_pos_out
+    file_base = patterning_num_slip_sys_2_pos_wo_source_out
     show = 'slip_sys_2_pos'
   []
   [num_slip_sys_2_neg]
     type = CSV
-    file_base = patterning_num_slip_sys_2_neg_out
+    file_base = patterning_num_slip_sys_2_neg_wo_source_out
     show = 'slip_sys_2_neg'
   []
 []

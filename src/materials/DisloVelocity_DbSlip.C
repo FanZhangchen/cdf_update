@@ -109,6 +109,8 @@ DisloVelocity_DbSlip::DisloVelocity_DbSlip(const InputParameters & parameters)
     _velocity_old(
         getMaterialPropertyOld<std::vector<Real>>("dislo_velocity")), // Dislocation velocity at t-1
 
+    _slip_increment(declareProperty<std::vector<Real>>("slip_increment")), // Dislocation slip increment/rate
+
     _edge_dislo_den_pos_1(coupledValue("edge_dislo_den_pos_1")), // Coupled rhoep
 
     _grad_edge_dislo_den_pos_1(coupledGradient("edge_dislo_den_pos_1")), // Coupled rhoep gradient
@@ -197,6 +199,7 @@ DisloVelocity_DbSlip::computeQpProperties()
   }
 
   _dislo_velocity[_qp].resize(_nss);
+  _slip_increment[_qp].resize(_nss);
 
   for (const auto i : make_range(_nss))
   {
@@ -230,11 +233,13 @@ DisloVelocity_DbSlip::computeQpProperties()
                                                       _p)),
                                         _q)) *
                       std::copysign(1.0, (_taualpha - _tau_backstress[_qp]));
+
+    _slip_increment[_qp][i] = _slip_rate[_qp];
   }
 
   for (const auto i : make_range(_nss))
   {
-    _dislo_velocity[_qp][i] = _slip_rate[_qp] / _burgers / _total_dislo_den[_qp][i];
+    _dislo_velocity[_qp][i] = _slip_increment[_qp][i] / _burgers / _total_dislo_den[_qp][i];
   }
 }
 
@@ -295,6 +300,7 @@ DisloVelocity_DbSlip::initQpStatefulProperties()
   }
 
   _dislo_velocity[_qp].resize(_nss);
+  _slip_increment[_qp].resize(_nss);
 
   for (unsigned int i = 0; i < _nss; ++i)
   {
@@ -328,10 +334,13 @@ DisloVelocity_DbSlip::initQpStatefulProperties()
                                                       _p)),
                                         _q)) *
                       std::copysign(1.0, (_taualpha - _tau_backstress[_qp]));
+
+    _slip_increment[_qp][i] = _slip_rate[_qp];
+
   }
 
   for (unsigned int i = 0; i < _nss; ++i)
   {
-    _dislo_velocity[_qp][i] = _slip_rate[_qp] / _burgers / _total_dislo_den[_qp][i];
+    _dislo_velocity[_qp][i] = _slip_increment[_qp][i] / _burgers / _total_dislo_den[_qp][i];
   }
 }

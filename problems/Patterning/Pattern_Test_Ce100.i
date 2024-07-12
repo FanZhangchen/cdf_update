@@ -2,8 +2,8 @@
   [gen]
     type = GeneratedMeshGenerator
     dim = 2
-    nx = 10
-    ny = 10
+    nx = 50
+    ny = 50
     xmin = 0.0
     ymin = 0.0
     xmax = 0.1
@@ -56,6 +56,7 @@
       dislo_character = edge
       slip_sys_index = 0
     v = 'edge_dislo_den_neg_1 edge_dislo_den_pos_2 edge_dislo_den_neg_2'
+      Ce = 1.
   []
 
   [Edeg_Neg_Time_Deri_1]
@@ -76,6 +77,7 @@
       dislo_character = edge
       slip_sys_index = 0
     v = 'edge_dislo_den_pos_1 edge_dislo_den_pos_2 edge_dislo_den_neg_2'
+      Ce = 1.
   []
 
   [Edeg_Pos_Time_Deri_2]
@@ -96,6 +98,7 @@
       dislo_character = edge
       slip_sys_index = 1
     v = 'edge_dislo_den_neg_2 edge_dislo_den_pos_1 edge_dislo_den_neg_1'
+      Ce = 1.
   []
 
   [Edeg_Neg_Time_Deri_2]
@@ -116,6 +119,7 @@
       dislo_character = edge
       slip_sys_index = 1
     v = 'edge_dislo_den_pos_2 edge_dislo_den_pos_1 edge_dislo_den_neg_1'
+      Ce = 1.
   []
 []
 
@@ -229,22 +233,22 @@
   []
   [num_slip_sys_1_pos]
     type = CSV
-    file_base = patterning_num_slip_sys_1_pos_out
+    file_base = patterning_num_slip_sys_1_pos_Ce_100_out
     show = 'slip_sys_1_pos'
   []
   [num_slip_sys_1_neg]
     type = CSV
-    file_base = patterning_num_slip_sys_1_neg_out
+    file_base = patterning_num_slip_sys_1_neg_Ce_100_out
     show = 'slip_sys_1_neg'
   []
   [num_slip_sys_2_pos]
     type = CSV
-    file_base = patterning_num_slip_sys_2_pos_out
+    file_base = patterning_num_slip_sys_2_pos_Ce_100_out
     show = 'slip_sys_2_pos'
   []
   [num_slip_sys_2_neg]
     type = CSV
-    file_base = patterning_num_slip_sys_2_neg_out
+    file_base = patterning_num_slip_sys_2_neg_Ce_100_out
     show = 'slip_sys_2_neg'
   []
 []

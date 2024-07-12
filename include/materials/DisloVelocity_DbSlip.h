@@ -61,6 +61,8 @@ private:
   /// member variable to hold the computed convection velocity gradient term
   const MaterialProperty<std::vector<Real>> & _velocity_old;
 
+  MaterialProperty<std::vector<Real>> & _slip_increment;
+
   const VariableValue & _edge_dislo_den_pos_1;
 
   const VariableGradient & _grad_edge_dislo_den_pos_1;

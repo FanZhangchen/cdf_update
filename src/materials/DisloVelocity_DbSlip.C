@@ -109,7 +109,8 @@ DisloVelocity_DbSlip::DisloVelocity_DbSlip(const InputParameters & parameters)
     _velocity_old(
         getMaterialPropertyOld<std::vector<Real>>("dislo_velocity")), // Dislocation velocity at t-1
 
-    _slip_increment(declareProperty<std::vector<Real>>("slip_increment")), // Dislocation slip increment/rate
+    _slip_increment(
+        declareProperty<std::vector<Real>>("slip_increment")), // Dislocation slip increment/rate
 
     _edge_dislo_den_pos_1(coupledValue("edge_dislo_den_pos_1")), // Coupled rhoep
 
@@ -336,7 +337,6 @@ DisloVelocity_DbSlip::initQpStatefulProperties()
                       std::copysign(1.0, (_taualpha - _tau_backstress[_qp]));
 
     _slip_increment[_qp][i] = _slip_rate[_qp];
-
   }
 
   for (unsigned int i = 0; i < _nss; ++i)

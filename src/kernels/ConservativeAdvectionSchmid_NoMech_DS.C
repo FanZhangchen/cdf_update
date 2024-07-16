@@ -226,7 +226,7 @@ ConservativeAdvectionSchmid_NoMech_DS::fullUpwind(JacRes res_or_jac)
 
       Threads::spin_mutex::scoped_lock lock(Threads::spin_mtx);
       for (const auto & var : _diag_save_in)
-        var->sys().solution().add_vector(diag, var->dofIndices());  
-    } 
+        var->sys().solution().add_vector(diag, var->dofIndices());
+    }
   }
-} 
+}

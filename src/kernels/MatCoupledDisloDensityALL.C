@@ -7,14 +7,14 @@
 //* Licensed under LGPL 2.1, please see LICENSE for details
 //* https://www.gnu.org/licenses/lgpl-2.1.html
 
-#include "MatCoupledDisloDensity.h"
+#include "MatCoupledDisloDensityALL.h"
 
 #include "MooseVariable.h"
 
-registerMooseObject("cdf_updateApp", MatCoupledDisloDensity);
+registerMooseObject("cdf_updateApp", MatCoupledDisloDensityALL);
 
 InputParameters
-MatCoupledDisloDensity::validParams()
+MatCoupledDisloDensityALL::validParams()
 {
   InputParameters params = Kernel::validParams();
 
@@ -47,7 +47,7 @@ MatCoupledDisloDensity::validParams()
   return params;
 }
 
-MatCoupledDisloDensity::MatCoupledDisloDensity(const InputParameters & parameters)
+MatCoupledDisloDensityALL::MatCoupledDisloDensityALL(const InputParameters & parameters)
   : Kernel(parameters),
     _n_coupled(coupledComponents("v")),
     _coupled_props(isParamValid("material_properties")),
@@ -77,7 +77,7 @@ MatCoupledDisloDensity::MatCoupledDisloDensity(const InputParameters & parameter
     if (_var.number() == _v_var[j])
       paramError(
           "v",
-          "Coupled variable 'v' needs to be different from 'variable' with MatCoupledDisloDensity, "
+          "Coupled variable 'v' needs to be different from 'variable' with MatCoupledDisloDensityALL, "
           "consider using Reaction or somethig similar");
   }
 
@@ -97,7 +97,7 @@ MatCoupledDisloDensity::MatCoupledDisloDensity(const InputParameters & parameter
 }
 
 Real
-MatCoupledDisloDensity::computeQpResidual()
+MatCoupledDisloDensityALL::computeQpResidual()
 {
   Real r = 0;
   Real total_dislocation_density = 0;
@@ -113,7 +113,10 @@ MatCoupledDisloDensity::computeQpResidual()
     total_dislocation_density += (*_v[j])[_qp];
   }
 
-  temp_type_dislocation_density = (*_v[0])[_qp];
+  for (unsigned int k = 0; k < 3; ++k)
+  {
+    temp_type_dislocation_density += (*_v[k])[_qp];
+  }
 
   switch (_dislo_character)
   {
@@ -152,7 +155,7 @@ MatCoupledDisloDensity::computeQpResidual()
 }
 
 Real
-MatCoupledDisloDensity::computeQpJacobian()
+MatCoupledDisloDensityALL::computeQpJacobian()
 {
   Real r = 0;
   Real total_dislocation_density = 0;
@@ -198,11 +201,42 @@ MatCoupledDisloDensity::computeQpJacobian()
 }
 
 Real
-MatCoupledDisloDensity::computeQpOffDiagJacobian(unsigned int jvar)
+MatCoupledDisloDensityALL::computeQpOffDiagJacobian(unsigned int jvar)
 {
   auto p = _v_var_to_index.find(jvar);
   if (p == _v_var_to_index.end())
     return 0;
+
+  Real r = 0;
+  Real total_dislocation_density = 0;
+  Real source = 0;
+  Real sink = 0;
+
+  switch (_dislo_character)
+  {
+    case DisloCharacter::edge:
+      if (jvar == 0 || jvar == 1 || jvar == 2)
+      {
+        return 0;
+      } 
+      else 
+      {
+        // Handle unexpected jvar values (optional)
+        return 0; // Or throw an error
+      }
+      break;
+    case DisloCharacter::screw:
+      if (jvar == 0 || jvar == 1 || jvar == 2)
+      {
+        return 0;
+      } 
+      else 
+      {
+        // Handle unexpected jvar values (optional)
+        return 0; // Or throw an error
+      }
+      break;
+  }
 
   if (_coupled_props)
     return -_phi[_j][_qp] * _test[_i][_qp];

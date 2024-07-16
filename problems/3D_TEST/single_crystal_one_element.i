@@ -3435,10 +3435,10 @@
   # end_time = 500
 
   type = Transient
-  solve_type = 'NEWTON'
+  solve_type = 'PJFNK' #'NEWTON'
   petsc_options = '-snes_ksp_ew'
   petsc_options_iname = '-pc_type -pc_hypre_type -ksp_gmres_restart'
-  petsc_options_value = 'lu    boomeramg          31'
+  petsc_options_value = 'hypre    boomeramg          31'
   line_search = 'none'
   l_max_its = 50
   nl_max_its = 50
@@ -3465,6 +3465,6 @@
   []
 []
 
-[Debug]
-  show_material_props = true
-[]
+# [Debug]
+#   show_material_props = true
+# []

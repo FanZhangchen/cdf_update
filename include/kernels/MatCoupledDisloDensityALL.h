@@ -17,12 +17,12 @@
  * m_j is a vector of material properties, and v_j is a vector
  * of variables
  */
-class MatCoupledDisloDensity : public Kernel
+class MatCoupledDisloDensityALL : public Kernel
 {
 public:
   static InputParameters validParams();
 
-  MatCoupledDisloDensity(const InputParameters & parameters);
+  MatCoupledDisloDensityALL(const InputParameters & parameters);
 
 protected:
   virtual Real computeQpResidual() override;

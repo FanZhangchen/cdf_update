@@ -69,8 +69,7 @@ protected:
 
   // Check that dislocation density is positive
   // if it went below zero, it should not be further decreased
-  bool _check_rho_positive;  
-
+  bool _check_rho_positive;
 
   // Slip increment of the slip systems
   const MaterialProperty<std::vector<Real>> & _slip_increment;
@@ -80,5 +79,4 @@ protected:
 
   /// Returns the source and sink terms for Jacobian
   Real sourcesink_jacobian();
-
 };

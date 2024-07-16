@@ -75,10 +75,10 @@ MatCoupledDisloDensityALL::MatCoupledDisloDensityALL(const InputParameters & par
     _v_var_to_index[_v_var[j]] = j;
 
     if (_var.number() == _v_var[j])
-      paramError(
-          "v",
-          "Coupled variable 'v' needs to be different from 'variable' with MatCoupledDisloDensityALL, "
-          "consider using Reaction or somethig similar");
+      paramError("v",
+                 "Coupled variable 'v' needs to be different from 'variable' with "
+                 "MatCoupledDisloDensityALL, "
+                 "consider using Reaction or somethig similar");
   }
 
   if (isParamValid("coef") && _coef.size() != _n_coupled)
@@ -218,8 +218,8 @@ MatCoupledDisloDensityALL::computeQpOffDiagJacobian(unsigned int jvar)
       if (jvar == 0 || jvar == 1 || jvar == 2)
       {
         return 0;
-      } 
-      else 
+      }
+      else
       {
         // Handle unexpected jvar values (optional)
         return 0; // Or throw an error
@@ -229,8 +229,8 @@ MatCoupledDisloDensityALL::computeQpOffDiagJacobian(unsigned int jvar)
       if (jvar == 0 || jvar == 1 || jvar == 2)
       {
         return 0;
-      } 
-      else 
+      }
+      else
       {
         // Handle unexpected jvar values (optional)
         return 0; // Or throw an error

@@ -50,7 +50,8 @@ CrystalPlasticityBussoUpdateSingleSlipSys::validParams()
   return params;
 }
 
-CrystalPlasticityBussoUpdateSingleSlipSys::CrystalPlasticityBussoUpdateSingleSlipSys(const InputParameters & parameters)
+CrystalPlasticityBussoUpdateSingleSlipSys::CrystalPlasticityBussoUpdateSingleSlipSys(
+    const InputParameters & parameters)
   : CrystalPlasticityDislocationUpdateBase(parameters),
     // Constitutive values
     _r(getParam<Real>("r")),
@@ -129,15 +130,15 @@ CrystalPlasticityBussoUpdateSingleSlipSys::initQpStatefulProperties()
   rho_edge_Q2[0] = _edge_dislo_den_1_Q2[_qp];
 
   rho_edge_Q3[0] = _edge_dislo_den_1_Q3[_qp];
-  
+
   rho_edge_Q4[0] = _edge_dislo_den_1_Q4[_qp];
-  
+
   rho_screw_Q1[0] = _screw_dislo_den_1_Q1[_qp];
 
   rho_screw_Q2[0] = _screw_dislo_den_1_Q2[_qp];
 
   rho_screw_Q3[0] = _screw_dislo_den_1_Q3[_qp];
-  
+
   rho_screw_Q4[0] = _screw_dislo_den_1_Q4[_qp];
 
   // Set initial slip resistance
@@ -321,15 +322,15 @@ CrystalPlasticityBussoUpdateSingleSlipSys::calculateSlipRate()
   rho_edge_Q2[0] = _edge_dislo_den_1_Q2[_qp];
 
   rho_edge_Q3[0] = _edge_dislo_den_1_Q3[_qp];
-  
+
   rho_edge_Q4[0] = _edge_dislo_den_1_Q4[_qp];
-  
+
   rho_screw_Q1[0] = _screw_dislo_den_1_Q1[_qp];
 
   rho_screw_Q2[0] = _screw_dislo_den_1_Q2[_qp];
 
   rho_screw_Q3[0] = _screw_dislo_den_1_Q3[_qp];
-  
+
   rho_screw_Q4[0] = _screw_dislo_den_1_Q4[_qp];
 
   // Assigin dislocation density gradient vectors Slip 1
@@ -481,15 +482,15 @@ CrystalPlasticityBussoUpdateSingleSlipSys::calculateSlipResistance()
   rho_edge_Q2[0] = _edge_dislo_den_1_Q2[_qp];
 
   rho_edge_Q3[0] = _edge_dislo_den_1_Q3[_qp];
-  
+
   rho_edge_Q4[0] = _edge_dislo_den_1_Q4[_qp];
-  
+
   rho_screw_Q1[0] = _screw_dislo_den_1_Q1[_qp];
 
   rho_screw_Q2[0] = _screw_dislo_den_1_Q2[_qp];
 
   rho_screw_Q3[0] = _screw_dislo_den_1_Q3[_qp];
-  
+
   rho_screw_Q4[0] = _screw_dislo_den_1_Q4[_qp];
 
   for (const auto i : make_range(_number_slip_systems))
@@ -535,15 +536,15 @@ CrystalPlasticityBussoUpdateSingleSlipSys::calculateDislocationVelocity()
   rho_edge_Q2[0] = _edge_dislo_den_1_Q2[_qp];
 
   rho_edge_Q3[0] = _edge_dislo_den_1_Q3[_qp];
-  
+
   rho_edge_Q4[0] = _edge_dislo_den_1_Q4[_qp];
-  
+
   rho_screw_Q1[0] = _screw_dislo_den_1_Q1[_qp];
 
   rho_screw_Q2[0] = _screw_dislo_den_1_Q2[_qp];
 
   rho_screw_Q3[0] = _screw_dislo_den_1_Q3[_qp];
-  
+
   rho_screw_Q4[0] = _screw_dislo_den_1_Q4[_qp];
 
   for (const auto i : make_range(_number_slip_systems))
@@ -604,7 +605,8 @@ CrystalPlasticityBussoUpdateSingleSlipSys::calculateAccumulatedEquivalentPlastic
 }
 
 void
-CrystalPlasticityBussoUpdateSingleSlipSys::calculateConstitutiveSlipDerivative(std::vector<Real> & dslip_dtau)
+CrystalPlasticityBussoUpdateSingleSlipSys::calculateConstitutiveSlipDerivative(
+    std::vector<Real> & dslip_dtau)
 {
   Real theta = _temperature + 273.15;
   for (const auto i : make_range(_number_slip_systems))

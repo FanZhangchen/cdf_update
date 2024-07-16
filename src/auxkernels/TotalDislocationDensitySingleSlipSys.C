@@ -38,7 +38,8 @@ TotalDislocationDensitySingleSlipSys::validParams()
   return params;
 }
 
-TotalDislocationDensitySingleSlipSys::TotalDislocationDensitySingleSlipSys(const InputParameters & parameters)
+TotalDislocationDensitySingleSlipSys::TotalDislocationDensitySingleSlipSys(
+    const InputParameters & parameters)
   : AuxKernel(parameters),
 
     _nss(getParam<int>("nss")),

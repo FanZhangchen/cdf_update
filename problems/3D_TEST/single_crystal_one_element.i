@@ -31,303 +31,303 @@
       family = LAGRANGE
   []
   [edge_dislo_1_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_1_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_1_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_1_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_1_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_1_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_1_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_1_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   
   [edge_dislo_2_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_2_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_2_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_2_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_2_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_2_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_2_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_2_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
 
   [edge_dislo_3_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_3_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_3_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_3_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_3_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_3_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_3_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_3_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
 
   [edge_dislo_4_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_4_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_4_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_4_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_4_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_4_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_4_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_4_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
 
   [edge_dislo_5_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_5_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_5_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_5_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_5_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_5_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_5_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_5_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
 
   [edge_dislo_6_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_6_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_6_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_6_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_6_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_6_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_6_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_6_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
 
   [edge_dislo_7_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_7_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_7_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_7_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_7_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_7_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_7_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_7_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
 
   [edge_dislo_8_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_8_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_8_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_8_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_8_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_8_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_8_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_8_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
 
   [edge_dislo_9_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_9_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_9_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_9_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_9_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_9_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_9_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_9_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
 
   [edge_dislo_10_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_10_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_10_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_10_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_10_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_10_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_10_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_10_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
 
   [edge_dislo_11_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_11_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_11_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_11_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_11_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_11_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_11_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_11_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
 
   [edge_dislo_12_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_12_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_12_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [edge_dislo_12_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_12_Q1]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_12_Q2]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_12_Q3]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
   [screw_dislo_12_Q4]
-    initial_condition = 1.e3
+    initial_condition = 5.5e5
   []
 []
 
@@ -356,7 +356,11 @@
    order = CONSTANT
    family = MONOMIAL
   [../]
-  [./edge_dislocation_increment]
+  [./gss]
+    order = CONSTANT
+    family = MONOMIAL
+  [../]
+  [./tau]
     order = CONSTANT
     family = MONOMIAL
   [../]
@@ -380,13 +384,35 @@
     variable = edge_dislo_1_Q1
   []
   [Edge_Dislo_Den_Slip_1_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_1_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 0
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_1_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_1_Q1
+      dislo_character = edge
+      slip_sys_index = 0
+    v = 'edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+      edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+      edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+      edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+      edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+      edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+      edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+      edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+      edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+      edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+      edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+      edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_1_Q2_Time]
@@ -394,13 +420,35 @@
     variable = edge_dislo_1_Q2
   []
   [Edge_Dislo_Den_Slip_1_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_1_Q2
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 0
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_1_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_1_Q2
+      dislo_character = edge
+      slip_sys_index = 0
+    v = 'edge_dislo_1_Q1 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+      edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+      edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+      edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+      edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+      edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+      edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+      edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+      edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+      edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+      edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+      edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_1_Q3_Time]
@@ -408,13 +456,35 @@
     variable = edge_dislo_1_Q3
   []
   [Edge_Dislo_Den_Slip_1_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_1_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 0
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_1_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_1_Q3
+      dislo_character = edge
+      slip_sys_index = 0
+    v = 'edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_1_Q4_Time]
@@ -422,13 +492,35 @@
     variable = edge_dislo_1_Q4
   []
   [Edge_Dislo_Den_Slip_1_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_1_Q4
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 0
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_1_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_1_Q4
+      dislo_character = edge
+      slip_sys_index = 0
+    v = 'edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_1_Q1_Time]
@@ -436,13 +528,35 @@
     variable = screw_dislo_1_Q1
   []
   [screw_Dislo_Den_Slip_1_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_1_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 0
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_1_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_1_Q1
+      dislo_character = screw
+      slip_sys_index = 0
+    v = 'screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4 edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_1_Q2_Time]
@@ -450,13 +564,35 @@
     variable = screw_dislo_1_Q2
   []
   [screw_Dislo_Den_Slip_1_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_1_Q2
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 0
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_1_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_1_Q2
+      dislo_character = screw
+      slip_sys_index = 0
+    v = 'screw_dislo_1_Q1 screw_dislo_1_Q3 screw_dislo_1_Q4 edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_1_Q3_Time]
@@ -464,13 +600,35 @@
     variable = screw_dislo_1_Q3
   []
   [screw_Dislo_Den_Slip_1_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_1_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 0
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_1_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_1_Q3
+      dislo_character = screw
+      slip_sys_index = 0
+    v = 'screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q4 edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_1_Q4_Time]
@@ -478,13 +636,35 @@
     variable = screw_dislo_1_Q4
   []
   [screw_Dislo_Den_Slip_1_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_1_Q4
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 0
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_1_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_1_Q4
+      dislo_character = screw
+      slip_sys_index = 0
+    v = 'screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   # Slip 2
@@ -493,13 +673,35 @@
     variable = edge_dislo_2_Q1
   []
   [Edge_Dislo_Den_Slip_2_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_2_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 1
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_2_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_2_Q1
+      dislo_character = edge
+      slip_sys_index = 1
+    v = 'edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_2_Q2_Time]
@@ -507,13 +709,35 @@
     variable = edge_dislo_2_Q2
   []
   [Edge_Dislo_Den_Slip_2_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_2_Q2
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 1
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_2_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_2_Q2
+      dislo_character = edge
+      slip_sys_index = 1
+    v = 'edge_dislo_2_Q1 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_2_Q3_Time]
@@ -521,13 +745,35 @@
     variable = edge_dislo_2_Q3
   []
   [Edge_Dislo_Den_Slip_2_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_2_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 1
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_2_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_2_Q3
+      dislo_character = edge
+      slip_sys_index = 1
+    v = 'edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_2_Q4_Time]
@@ -535,13 +781,35 @@
     variable = edge_dislo_2_Q4
   []
   [Edge_Dislo_Den_Slip_2_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_2_Q4
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 1
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_2_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_2_Q4
+      dislo_character = edge
+      slip_sys_index = 1
+    v = 'edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_2_Q1_Time]
@@ -549,13 +817,35 @@
     variable = screw_dislo_2_Q1
   []
   [screw_Dislo_Den_Slip_2_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_2_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 1
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_2_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_2_Q1
+      dislo_character = screw
+      slip_sys_index = 1
+    v = 'screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4 edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_2_Q2_Time]
@@ -563,13 +853,35 @@
     variable = screw_dislo_2_Q2
   []
   [screw_Dislo_Den_Slip_2_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_2_Q2
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 1
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_2_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_2_Q2
+      dislo_character = screw
+      slip_sys_index = 1
+    v = 'screw_dislo_2_Q1 screw_dislo_2_Q3 screw_dislo_2_Q4 edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_2_Q3_Time]
@@ -577,13 +889,35 @@
     variable = screw_dislo_2_Q3
   []
   [screw_Dislo_Den_Slip_2_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_2_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 1
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_2_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_2_Q3
+      dislo_character = screw
+      slip_sys_index = 1
+    v = 'screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q4 edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_2_Q4_Time]
@@ -591,28 +925,72 @@
     variable = screw_dislo_2_Q4
   []
   [screw_Dislo_Den_Slip_2_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_2_Q4
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 1
       dislo_character = screw
-    is_ssd_included = yes
   []
-
+  [screw_Dislo_Den_Slip_2_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_2_Q4
+      dislo_character = screw
+      slip_sys_index = 1
+    v = 'screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
+  []
+  
   # Slip 3 
   [Edge_Dislo_Den_Slip_3_Q1_Time]
     type = MassLumpedTimeDerivative
     variable = edge_dislo_3_Q1
   []
   [Edge_Dislo_Den_Slip_3_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_3_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 2
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_3_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_3_Q1
+      dislo_character = edge
+      slip_sys_index = 2
+    v = 'edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_3_Q2_Time]
@@ -620,13 +998,35 @@
     variable = edge_dislo_3_Q2
   []
   [Edge_Dislo_Den_Slip_3_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_3_Q2
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 2
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_3_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_3_Q2
+      dislo_character = edge
+      slip_sys_index = 2
+    v = 'edge_dislo_3_Q1 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_3_Q3_Time]
@@ -634,13 +1034,35 @@
     variable = edge_dislo_3_Q3
   []
   [Edge_Dislo_Den_Slip_3_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_3_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 2
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_3_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_3_Q3
+      dislo_character = edge
+      slip_sys_index = 2
+    v = 'edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_3_Q4_Time]
@@ -648,13 +1070,35 @@
     variable = edge_dislo_3_Q4
   []
   [Edge_Dislo_Den_Slip_3_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_3_Q4
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 2
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_3_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_3_Q4
+      dislo_character = edge
+      slip_sys_index = 2
+    v = 'edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_3_Q1_Time]
@@ -662,13 +1106,35 @@
     variable = screw_dislo_3_Q1
   []
   [screw_Dislo_Den_Slip_3_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_3_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 2
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_3_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_3_Q1
+      dislo_character = screw
+      slip_sys_index = 2
+    v = 'screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4 edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_3_Q2_Time]
@@ -676,13 +1142,35 @@
     variable = screw_dislo_3_Q2
   []
   [screw_Dislo_Den_Slip_3_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_3_Q2
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 2
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_3_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_3_Q2
+      dislo_character = screw
+      slip_sys_index = 2
+    v = 'screw_dislo_3_Q1 screw_dislo_3_Q3 screw_dislo_3_Q4 edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_3_Q3_Time]
@@ -690,13 +1178,35 @@
     variable = screw_dislo_3_Q3
   []
   [screw_Dislo_Den_Slip_3_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_3_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 2
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_3_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_3_Q3
+      dislo_character = screw
+      slip_sys_index = 2
+    v = 'screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q4 edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_3_Q4_Time]
@@ -704,13 +1214,35 @@
     variable = screw_dislo_3_Q4
   []
   [screw_Dislo_Den_Slip_3_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_3_Q4
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 2
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_3_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_3_Q4
+      dislo_character = screw
+      slip_sys_index = 2
+    v = 'screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   # Slip 4
@@ -719,13 +1251,35 @@
     variable = edge_dislo_4_Q1
   []
   [Edge_Dislo_Den_Slip_4_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_4_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 3
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_4_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_4_Q1
+      dislo_character = edge
+      slip_sys_index = 3
+    v = 'edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_4_Q2_Time]
@@ -733,13 +1287,35 @@
     variable = edge_dislo_4_Q2
   []
   [Edge_Dislo_Den_Slip_4_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_4_Q2
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 3
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_4_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_4_Q2
+      dislo_character = edge
+      slip_sys_index = 3
+    v = 'edge_dislo_4_Q1 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_4_Q3_Time]
@@ -747,13 +1323,35 @@
     variable = edge_dislo_4_Q3
   []
   [Edge_Dislo_Den_Slip_4_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_4_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 3
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_4_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_4_Q3
+      dislo_character = edge
+      slip_sys_index = 3
+    v = 'edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_4_Q4_Time]
@@ -761,13 +1359,35 @@
     variable = edge_dislo_4_Q4
   []
   [Edge_Dislo_Den_Slip_4_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_4_Q4
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 3
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_4_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_4_Q4
+      dislo_character = edge
+      slip_sys_index = 3
+    v = 'edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_4_Q1_Time]
@@ -775,13 +1395,35 @@
     variable = screw_dislo_4_Q1
   []
   [screw_Dislo_Den_Slip_4_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_4_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 3
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_4_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_4_Q1
+      dislo_character = screw
+      slip_sys_index = 3
+    v = 'screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4 edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_4_Q2_Time]
@@ -789,13 +1431,35 @@
     variable = screw_dislo_4_Q2
   []
   [screw_Dislo_Den_Slip_4_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_4_Q2
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 3
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_4_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_4_Q2
+      dislo_character = screw
+      slip_sys_index = 3
+    v = 'screw_dislo_4_Q1 screw_dislo_4_Q3 screw_dislo_4_Q4 edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_4_Q3_Time]
@@ -803,13 +1467,35 @@
     variable = screw_dislo_4_Q3
   []
   [screw_Dislo_Den_Slip_4_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_4_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 3
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_4_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_4_Q3
+      dislo_character = screw
+      slip_sys_index = 3
+    v = 'screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q4 edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_4_Q4_Time]
@@ -817,13 +1503,35 @@
     variable = screw_dislo_4_Q4
   []
   [screw_Dislo_Den_Slip_4_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_4_Q4
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 3
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_4_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_4_Q4
+      dislo_character = screw
+      slip_sys_index = 3
+    v = 'screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   # Slip 5
@@ -832,13 +1540,35 @@
     variable = edge_dislo_5_Q1
   []
   [Edge_Dislo_Den_Slip_5_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_5_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 4
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_5_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_5_Q1
+      dislo_character = edge
+      slip_sys_index = 4
+    v = 'edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_5_Q2_Time]
@@ -846,13 +1576,35 @@
     variable = edge_dislo_5_Q2
   []
   [Edge_Dislo_Den_Slip_5_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_5_Q2
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 4
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_5_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_5_Q2
+      dislo_character = edge
+      slip_sys_index = 4
+    v = 'edge_dislo_5_Q1 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_5_Q3_Time]
@@ -860,13 +1612,35 @@
     variable = edge_dislo_5_Q3
   []
   [Edge_Dislo_Den_Slip_5_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_5_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 4
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_5_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_5_Q3
+      dislo_character = edge
+      slip_sys_index = 4
+    v = 'edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_5_Q4_Time]
@@ -874,13 +1648,35 @@
     variable = edge_dislo_5_Q4
   []
   [Edge_Dislo_Den_Slip_5_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_5_Q4
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 4
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_5_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_5_Q4
+      dislo_character = edge
+      slip_sys_index = 4
+    v = 'edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_5_Q1_Time]
@@ -888,13 +1684,35 @@
     variable = screw_dislo_5_Q1
   []
   [screw_Dislo_Den_Slip_5_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_5_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 4
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_5_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_5_Q1
+      dislo_character = screw
+      slip_sys_index = 4
+    v = 'screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4 edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_5_Q2_Time]
@@ -902,13 +1720,35 @@
     variable = screw_dislo_5_Q2
   []
   [screw_Dislo_Den_Slip_5_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_5_Q2
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 4
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_5_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_5_Q2
+      dislo_character = screw
+      slip_sys_index = 4
+    v = 'screw_dislo_5_Q1 screw_dislo_5_Q3 screw_dislo_5_Q4 edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_5_Q3_Time]
@@ -916,13 +1756,35 @@
     variable = screw_dislo_5_Q3
   []
   [screw_Dislo_Den_Slip_5_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_5_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 4
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_5_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_5_Q3
+      dislo_character = screw
+      slip_sys_index = 4
+    v = 'screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q4 edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_5_Q4_Time]
@@ -930,13 +1792,35 @@
     variable = screw_dislo_5_Q4
   []
   [screw_Dislo_Den_Slip_5_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_5_Q4
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 4
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_5_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_5_Q4
+      dislo_character = screw
+      slip_sys_index = 4
+    v = 'screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   # Slip 6
@@ -945,13 +1829,35 @@
     variable = edge_dislo_6_Q1
   []
   [Edge_Dislo_Den_Slip_6_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_6_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 5
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_6_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_6_Q1
+      dislo_character = edge
+      slip_sys_index = 5
+    v = 'edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_6_Q2_Time]
@@ -959,13 +1865,35 @@
     variable = edge_dislo_6_Q2
   []
   [Edge_Dislo_Den_Slip_6_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_6_Q2
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 5
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_6_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_6_Q2
+      dislo_character = edge
+      slip_sys_index = 5
+    v = 'edge_dislo_6_Q1 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_6_Q3_Time]
@@ -973,13 +1901,35 @@
     variable = edge_dislo_6_Q3
   []
   [Edge_Dislo_Den_Slip_6_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_6_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 5
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_6_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_6_Q3
+      dislo_character = edge
+      slip_sys_index = 5
+    v = 'edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_6_Q4_Time]
@@ -987,13 +1937,35 @@
     variable = edge_dislo_6_Q4
   []
   [Edge_Dislo_Den_Slip_6_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_6_Q4
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 5
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_6_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_6_Q4
+      dislo_character = edge
+      slip_sys_index = 5
+    v = 'edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_6_Q1_Time]
@@ -1001,13 +1973,35 @@
     variable = screw_dislo_6_Q1
   []
   [screw_Dislo_Den_Slip_6_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_6_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 5
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_6_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_6_Q1
+      dislo_character = screw
+      slip_sys_index = 5
+    v = 'screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4 edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_6_Q2_Time]
@@ -1015,13 +2009,35 @@
     variable = screw_dislo_6_Q2
   []
   [screw_Dislo_Den_Slip_6_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_6_Q2
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 5
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_6_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_6_Q2
+      dislo_character = screw
+      slip_sys_index = 5
+    v = 'screw_dislo_6_Q1 screw_dislo_6_Q3 screw_dislo_6_Q4 edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_6_Q3_Time]
@@ -1029,13 +2045,35 @@
     variable = screw_dislo_6_Q3
   []
   [screw_Dislo_Den_Slip_6_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_6_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 5
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_6_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_6_Q3
+      dislo_character = screw
+      slip_sys_index = 5
+    v = 'screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q4 edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_6_Q4_Time]
@@ -1043,13 +2081,35 @@
     variable = screw_dislo_6_Q4
   []
   [screw_Dislo_Den_Slip_6_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_6_Q4
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 5
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_6_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_6_Q4
+      dislo_character = screw
+      slip_sys_index = 5
+    v = 'screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   # Slip 7 
@@ -1058,13 +2118,35 @@
     variable = edge_dislo_7_Q1
   []
   [Edge_Dislo_Den_Slip_7_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_7_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 6
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_7_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_7_Q1
+      dislo_character = edge
+      slip_sys_index = 6
+    v = 'edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_7_Q2_Time]
@@ -1072,13 +2154,35 @@
     variable = edge_dislo_7_Q2
   []
   [Edge_Dislo_Den_Slip_7_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_7_Q2
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 6
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_7_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_7_Q2
+      dislo_character = edge
+      slip_sys_index = 6
+    v = 'edge_dislo_7_Q1 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_7_Q3_Time]
@@ -1086,13 +2190,35 @@
     variable = edge_dislo_7_Q3
   []
   [Edge_Dislo_Den_Slip_7_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_7_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 6
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_7_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_7_Q3
+      dislo_character = edge
+      slip_sys_index = 6
+    v = 'edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_7_Q4_Time]
@@ -1100,13 +2226,35 @@
     variable = edge_dislo_7_Q4
   []
   [Edge_Dislo_Den_Slip_7_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_7_Q4
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 6
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_7_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_7_Q4
+      dislo_character = edge
+      slip_sys_index = 6
+    v = 'edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_7_Q1_Time]
@@ -1114,13 +2262,35 @@
     variable = screw_dislo_7_Q1
   []
   [screw_Dislo_Den_Slip_7_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_7_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 6
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_7_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_7_Q1
+      dislo_character = screw
+      slip_sys_index = 6
+    v = 'screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4 edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_7_Q2_Time]
@@ -1128,13 +2298,35 @@
     variable = screw_dislo_7_Q2
   []
   [screw_Dislo_Den_Slip_7_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_7_Q2
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 6
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_7_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_7_Q2
+      dislo_character = screw
+      slip_sys_index = 6
+    v = 'screw_dislo_7_Q1 screw_dislo_7_Q3 screw_dislo_7_Q4 edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_7_Q3_Time]
@@ -1142,13 +2334,35 @@
     variable = screw_dislo_7_Q3
   []
   [screw_Dislo_Den_Slip_7_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_7_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 6
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_7_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_7_Q3
+      dislo_character = screw
+      slip_sys_index = 6
+    v = 'screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q4 edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_7_Q4_Time]
@@ -1156,13 +2370,35 @@
     variable = screw_dislo_7_Q4
   []
   [screw_Dislo_Den_Slip_7_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_7_Q4
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 6
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_7_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_7_Q4
+      dislo_character = screw
+      slip_sys_index = 6
+    v = 'screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   # Slip 8
@@ -1171,13 +2407,35 @@
     variable = edge_dislo_8_Q1
   []
   [Edge_Dislo_Den_Slip_8_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_8_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 7
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_8_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_8_Q1
+      dislo_character = edge
+      slip_sys_index = 7
+    v = 'edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_8_Q2_Time]
@@ -1185,13 +2443,35 @@
     variable = edge_dislo_8_Q2
   []
   [Edge_Dislo_Den_Slip_8_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_8_Q2
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 7
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_8_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_8_Q2
+      dislo_character = edge
+      slip_sys_index = 7
+    v = 'edge_dislo_8_Q1 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_8_Q3_Time]
@@ -1199,13 +2479,35 @@
     variable = edge_dislo_8_Q3
   []
   [Edge_Dislo_Den_Slip_8_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_8_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 7
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_8_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_8_Q3
+      dislo_character = edge
+      slip_sys_index = 7
+    v = 'edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_8_Q4_Time]
@@ -1213,13 +2515,35 @@
     variable = edge_dislo_8_Q4
   []
   [Edge_Dislo_Den_Slip_8_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_8_Q4
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 7
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_8_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_8_Q4
+      dislo_character = edge
+      slip_sys_index = 7
+    v = 'edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_8_Q1_Time]
@@ -1227,13 +2551,35 @@
     variable = screw_dislo_8_Q1
   []
   [screw_Dislo_Den_Slip_8_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_8_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 7
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_8_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_8_Q1
+      dislo_character = screw
+      slip_sys_index = 7
+    v = 'screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4 edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_8_Q2_Time]
@@ -1241,13 +2587,35 @@
     variable = screw_dislo_8_Q2
   []
   [screw_Dislo_Den_Slip_8_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_8_Q2
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 7
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_8_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_8_Q2
+      dislo_character = screw
+      slip_sys_index = 7
+    v = 'screw_dislo_8_Q1 screw_dislo_8_Q3 screw_dislo_8_Q4 edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_8_Q3_Time]
@@ -1255,13 +2623,35 @@
     variable = screw_dislo_8_Q3
   []
   [screw_Dislo_Den_Slip_8_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_8_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 7
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_8_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_8_Q3
+      dislo_character = screw
+      slip_sys_index = 7
+    v = 'screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q4 edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_8_Q4_Time]
@@ -1269,13 +2659,35 @@
     variable = screw_dislo_8_Q4
   []
   [screw_Dislo_Den_Slip_8_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_8_Q4
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 7
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_8_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_8_Q4
+      dislo_character = screw
+      slip_sys_index = 7
+    v = 'screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   # Slip 9
@@ -1284,13 +2696,35 @@
     variable = edge_dislo_9_Q1
   []
   [Edge_Dislo_Den_Slip_9_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_9_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 8
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_9_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_9_Q1
+      dislo_character = edge
+      slip_sys_index = 8
+    v = 'edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_9_Q2_Time]
@@ -1298,13 +2732,35 @@
     variable = edge_dislo_9_Q2
   []
   [Edge_Dislo_Den_Slip_9_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_9_Q2
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 8
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_9_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_9_Q2
+      dislo_character = edge
+      slip_sys_index = 8
+    v = 'edge_dislo_9_Q1 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_9_Q3_Time]
@@ -1312,13 +2768,35 @@
     variable = edge_dislo_9_Q3
   []
   [Edge_Dislo_Den_Slip_9_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_9_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 8
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_9_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_9_Q3
+      dislo_character = edge
+      slip_sys_index = 8
+    v = 'edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_9_Q4_Time]
@@ -1326,13 +2804,35 @@
     variable = edge_dislo_9_Q4
   []
   [Edge_Dislo_Den_Slip_9_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_9_Q4
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 8
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_9_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_9_Q4
+      dislo_character = edge
+      slip_sys_index = 8
+    v = 'edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_9_Q1_Time]
@@ -1340,13 +2840,35 @@
     variable = screw_dislo_9_Q1
   []
   [screw_Dislo_Den_Slip_9_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_9_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 8
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_9_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_9_Q1
+      dislo_character = screw
+      slip_sys_index = 8
+    v = 'screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4 edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_9_Q2_Time]
@@ -1354,13 +2876,35 @@
     variable = screw_dislo_9_Q2
   []
   [screw_Dislo_Den_Slip_9_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_9_Q2
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 8
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_9_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_9_Q2
+      dislo_character = screw
+      slip_sys_index = 8
+    v = 'screw_dislo_9_Q1 screw_dislo_9_Q3 screw_dislo_9_Q4 edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_9_Q3_Time]
@@ -1368,13 +2912,35 @@
     variable = screw_dislo_9_Q3
   []
   [screw_Dislo_Den_Slip_9_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_9_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 8
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_9_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_9_Q3
+      dislo_character = screw
+      slip_sys_index = 8
+    v = 'screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q4 edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_9_Q4_Time]
@@ -1382,13 +2948,35 @@
     variable = screw_dislo_9_Q4
   []
   [screw_Dislo_Den_Slip_9_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_9_Q4
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 8
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_9_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_9_Q4
+      dislo_character = screw
+      slip_sys_index = 8
+    v = 'screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   # Slip 10 
@@ -1397,13 +2985,35 @@
     variable = edge_dislo_10_Q1
   []
   [Edge_Dislo_Den_Slip_10_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_10_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 9
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_10_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_10_Q1
+      dislo_character = edge
+      slip_sys_index = 9
+    v = 'edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_10_Q2_Time]
@@ -1411,13 +3021,35 @@
     variable = edge_dislo_10_Q2
   []
   [Edge_Dislo_Den_Slip_10_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_10_Q2
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 9
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_10_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_10_Q2
+      dislo_character = edge
+      slip_sys_index = 9
+    v = 'edge_dislo_10_Q1 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_10_Q3_Time]
@@ -1425,13 +3057,35 @@
     variable = edge_dislo_10_Q3
   []
   [Edge_Dislo_Den_Slip_10_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_10_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 9
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_10_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_10_Q3
+      dislo_character = edge
+      slip_sys_index = 9
+    v = 'edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_10_Q4_Time]
@@ -1439,13 +3093,35 @@
     variable = edge_dislo_10_Q4
   []
   [Edge_Dislo_Den_Slip_10_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_10_Q4
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 9
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_10_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_10_Q4
+      dislo_character = edge
+      slip_sys_index = 9
+    v = 'edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_10_Q1_Time]
@@ -1453,13 +3129,35 @@
     variable = screw_dislo_10_Q1
   []
   [screw_Dislo_Den_Slip_10_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_10_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 9
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_10_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_10_Q1
+      dislo_character = screw
+      slip_sys_index = 9
+    v = 'screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4 edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_10_Q2_Time]
@@ -1467,13 +3165,35 @@
     variable = screw_dislo_10_Q2
   []
   [screw_Dislo_Den_Slip_10_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_10_Q2
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 9
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_10_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_10_Q2
+      dislo_character = screw
+      slip_sys_index = 9
+    v = 'screw_dislo_10_Q1 screw_dislo_10_Q3 screw_dislo_10_Q4 edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_10_Q3_Time]
@@ -1481,13 +3201,35 @@
     variable = screw_dislo_10_Q3
   []
   [screw_Dislo_Den_Slip_10_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_10_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 9
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_10_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_10_Q3
+      dislo_character = screw
+      slip_sys_index = 9
+    v = 'screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q4 edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_10_Q4_Time]
@@ -1495,13 +3237,35 @@
     variable = screw_dislo_10_Q4
   []
   [screw_Dislo_Den_Slip_10_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_10_Q4
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 9
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_10_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_10_Q4
+      dislo_character = screw
+      slip_sys_index = 9
+    v = 'screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   # Slip 11 
@@ -1510,13 +3274,35 @@
     variable = edge_dislo_11_Q1
   []
   [Edge_Dislo_Den_Slip_11_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_11_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 10
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_11_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_11_Q1
+      dislo_character = edge
+      slip_sys_index = 10
+    v = 'edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_11_Q2_Time]
@@ -1524,13 +3310,35 @@
     variable = edge_dislo_11_Q2
   []
   [Edge_Dislo_Den_Slip_11_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_11_Q2
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 10
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_11_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_11_Q2
+      dislo_character = edge
+      slip_sys_index = 10
+    v = 'edge_dislo_11_Q1 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_11_Q3_Time]
@@ -1538,13 +3346,35 @@
     variable = edge_dislo_11_Q3
   []
   [Edge_Dislo_Den_Slip_11_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_11_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 10
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_11_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_11_Q3
+      dislo_character = edge
+      slip_sys_index = 10
+    v = 'edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_11_Q4_Time]
@@ -1552,13 +3382,35 @@
     variable = edge_dislo_11_Q4
   []
   [Edge_Dislo_Den_Slip_11_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_11_Q4
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 10
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_11_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_11_Q4
+      dislo_character = edge
+      slip_sys_index = 10
+    v = 'edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_11_Q1_Time]
@@ -1566,13 +3418,35 @@
     variable = screw_dislo_11_Q1
   []
   [screw_Dislo_Den_Slip_11_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_11_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 10
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_11_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_11_Q1
+      dislo_character = screw
+      slip_sys_index = 10
+    v = 'screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4 edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_11_Q2_Time]
@@ -1580,13 +3454,35 @@
     variable = screw_dislo_11_Q2
   []
   [screw_Dislo_Den_Slip_11_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_11_Q2
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 10
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_11_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_11_Q2
+      dislo_character = screw
+      slip_sys_index = 10
+    v = 'screw_dislo_11_Q1 screw_dislo_11_Q3 screw_dislo_11_Q4 edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_11_Q3_Time]
@@ -1594,13 +3490,35 @@
     variable = screw_dislo_11_Q3
   []
   [screw_Dislo_Den_Slip_11_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_11_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 10
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_11_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_11_Q3
+      dislo_character = screw
+      slip_sys_index = 10
+    v = 'screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q4 edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_11_Q4_Time]
@@ -1608,13 +3526,35 @@
     variable = screw_dislo_11_Q4
   []
   [screw_Dislo_Den_Slip_11_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_11_Q4
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 10
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_11_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_11_Q4
+      dislo_character = screw
+      slip_sys_index = 10
+    v = 'screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   # Slip 12 
@@ -1623,13 +3563,35 @@
     variable = edge_dislo_12_Q1
   []
   [Edge_Dislo_Den_Slip_12_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_12_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 11
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_12_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_12_Q1
+      dislo_character = edge
+      slip_sys_index = 11
+    v = 'edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_12_Q2_Time]
@@ -1637,13 +3599,35 @@
     variable = edge_dislo_12_Q2
   []
   [Edge_Dislo_Den_Slip_12_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_12_Q2
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 11
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_12_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_12_Q2
+      dislo_character = edge
+      slip_sys_index = 11
+    v = 'edge_dislo_12_Q1 edge_dislo_12_Q3 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_12_Q3_Time]
@@ -1651,13 +3635,35 @@
     variable = edge_dislo_12_Q3
   []
   [Edge_Dislo_Den_Slip_12_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_12_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 11
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_12_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_12_Q3
+      dislo_character = edge
+      slip_sys_index = 11
+    v = 'edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q4 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [Edge_Dislo_Den_Slip_12_Q4_Time]
@@ -1665,13 +3671,35 @@
     variable = edge_dislo_12_Q4
   []
   [Edge_Dislo_Den_Slip_12_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = edge_dislo_12_Q4
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 11
       dislo_character = edge
-    is_ssd_included = yes
+  []
+  [Edge_Dislo_Den_Slip_12_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = edge_dislo_12_Q4
+      dislo_character = edge
+      slip_sys_index = 11
+    v = 'edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_12_Q1_Time]
@@ -1679,13 +3707,35 @@
     variable = screw_dislo_12_Q1
   []
   [screw_Dislo_Den_Slip_12_Q1_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_12_Q1
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 11
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_12_Q1_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_12_Q1
+      dislo_character = screw
+      slip_sys_index = 11
+    v = 'screw_dislo_12_Q2 screw_dislo_12_Q3 screw_dislo_12_Q4 edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_12_Q2_Time]
@@ -1693,13 +3743,35 @@
     variable = screw_dislo_12_Q2
   []
   [screw_Dislo_Den_Slip_12_Q2_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_12_Q2
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 11
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_12_Q2_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_12_Q2
+      dislo_character = screw
+      slip_sys_index = 11
+    v = 'screw_dislo_12_Q1 screw_dislo_12_Q3 screw_dislo_12_Q4 edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_12_Q3_Time]
@@ -1707,13 +3779,35 @@
     variable = screw_dislo_12_Q3
   []
   [screw_Dislo_Den_Slip_12_Q3_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_12_Q3
     upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 11
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_12_Q3_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_12_Q3
+      dislo_character = screw
+      slip_sys_index = 11
+    v = 'screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q4 edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 
   [screw_Dislo_Den_Slip_12_Q4_Time]
@@ -1721,13 +3815,35 @@
     variable = screw_dislo_12_Q4
   []
   [screw_Dislo_Den_Slip_12_Q4_Flux]
-    type = ConservativeAdvectionSchmid
+    type = ConservativeAdvectionSchmidNoSSD
     variable = screw_dislo_12_Q4
     upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 11
       dislo_character = screw
-    is_ssd_included = yes
+  []
+  [screw_Dislo_Den_Slip_12_Q4_Source]
+    type = MatCoupledDisloDensityALL
+    variable = screw_dislo_12_Q4
+      dislo_character = screw
+      slip_sys_index = 11
+    v = 'screw_dislo_12_Q1 screw_dislo_12_Q2 screw_dislo_12_Q3 edge_dislo_12_Q1 edge_dislo_12_Q2 edge_dislo_12_Q3 edge_dislo_12_Q4
+    edge_dislo_1_Q1 edge_dislo_1_Q2 edge_dislo_1_Q3 edge_dislo_1_Q4 screw_dislo_1_Q1 screw_dislo_1_Q2 screw_dislo_1_Q3 screw_dislo_1_Q4
+    edge_dislo_2_Q1 edge_dislo_2_Q2 edge_dislo_2_Q3 edge_dislo_2_Q4 screw_dislo_2_Q1 screw_dislo_2_Q2 screw_dislo_2_Q3 screw_dislo_2_Q4
+    edge_dislo_3_Q1 edge_dislo_3_Q2 edge_dislo_3_Q3 edge_dislo_3_Q4 screw_dislo_3_Q1 screw_dislo_3_Q2 screw_dislo_3_Q3 screw_dislo_3_Q4
+    edge_dislo_4_Q1 edge_dislo_4_Q2 edge_dislo_4_Q3 edge_dislo_4_Q4 screw_dislo_4_Q1 screw_dislo_4_Q2 screw_dislo_4_Q3 screw_dislo_4_Q4
+    edge_dislo_5_Q1 edge_dislo_5_Q2 edge_dislo_5_Q3 edge_dislo_5_Q4 screw_dislo_5_Q1 screw_dislo_5_Q2 screw_dislo_5_Q3 screw_dislo_5_Q4
+    edge_dislo_6_Q1 edge_dislo_6_Q2 edge_dislo_6_Q3 edge_dislo_6_Q4 screw_dislo_6_Q1 screw_dislo_6_Q2 screw_dislo_6_Q3 screw_dislo_6_Q4
+    edge_dislo_7_Q1 edge_dislo_7_Q2 edge_dislo_7_Q3 edge_dislo_7_Q4 screw_dislo_7_Q1 screw_dislo_7_Q2 screw_dislo_7_Q3 screw_dislo_7_Q4
+    edge_dislo_8_Q1 edge_dislo_8_Q2 edge_dislo_8_Q3 edge_dislo_8_Q4 screw_dislo_8_Q1 screw_dislo_8_Q2 screw_dislo_8_Q3 screw_dislo_8_Q4
+    edge_dislo_9_Q1 edge_dislo_9_Q2 edge_dislo_9_Q3 edge_dislo_9_Q4 screw_dislo_9_Q1 screw_dislo_9_Q2 screw_dislo_9_Q3 screw_dislo_9_Q4
+    edge_dislo_10_Q1 edge_dislo_10_Q2 edge_dislo_10_Q3 edge_dislo_10_Q4 screw_dislo_10_Q1 screw_dislo_10_Q2 screw_dislo_10_Q3 screw_dislo_10_Q4
+    edge_dislo_11_Q1 edge_dislo_11_Q2 edge_dislo_11_Q3 edge_dislo_11_Q4 screw_dislo_11_Q1 screw_dislo_11_Q2 screw_dislo_11_Q3 screw_dislo_11_Q4'
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+    Ce = 0.5
   []
 []
 
@@ -1756,20 +3872,20 @@
     index_i = 0
     execute_on = timestep_end
   [../]
-  # [./tau]
-  #  type = MaterialStdVectorAux
-  #  variable = tau
-  #  property = tau
-  #  index = 0
-  #  execute_on = timestep_end
-  # [../]
-  # [./gss]
-  #  type = MaterialStdVectorAux
-  #  variable = gss
-  #  property = slip_resistance
-  #  index = 1
-  #  execute_on = timestep_end
-  # [../]
+  [./tau]
+   type = MaterialStdVectorAux
+   variable = tau
+   property = applied_shear_stress
+   index = 0
+   execute_on = timestep_end
+  [../]
+  [./gss]
+   type = MaterialStdVectorAux
+   variable = gss
+   property = slip_resistance
+   index = 1
+   execute_on = timestep_end
+  [../]
   [./slip_inc]
    type = MaterialStdVectorAux
    variable = slip_increment
@@ -1781,13 +3897,6 @@
    type = MaterialRealAux
    variable = epeq
    property = accumulated_equivalent_plastic_strain
-   execute_on = timestep_end
-  [../]
-  [./edi]
-   type = MaterialStdVectorAux
-   variable = edge_dislocation_increment
-   property = edge_dislocation_increment
-   index = 1
    execute_on = timestep_end
   [../]
   [./total_dislo_den]
@@ -3080,7 +5189,8 @@
 [Materials]
   [./elasticity_tensor]
     type = ComputeElasticityTensorCP
-    C_ijkl = '168500.0 121500.0 121500.0 168500.0 121500.0 168500.0 75600.0 75600.0 75600.0'
+    # C_ijkl = '168500.0 121500.0 121500.0 168500.0 121500.0 168500.0 75600.0 75600.0 75600.0'
+    C_ijkl = '188997.0 135312.0 135312.0 188997.0 135312.0 188997.0 90191.0 90191.0 90191.0'
     fill_method = symmetric9
     euler_angle_1 = 0.0
     euler_angle_2 = 0.0
@@ -3104,116 +5214,23 @@
     number_slip_systems = 12
       w1 = 1.5
       w2 = 1.2
-      tau_0 = 20.0
-      p = 0.2
-      q = 1.2
-      f0 = 2.77e-19
+      tau_0 = 127.0
+      p = 0.3
+      q = 1.3
+      f0 = 4.75e-19
       gdot0 = 1.e6
-      scaling_Cb = 0.241
+      scaling_Cb = 0.2
+      shear_modulus = 90191
+      burgers = 0.257e-6
+      # w1 = 1.5
+      # w2 = 1.2
+      # tau_0 = 20.0
+      # p = 0.2
+      # q = 1.2
+      # f0 = 2.77e-19
+      # gdot0 = 1.e6
+      # scaling_Cb = 0.241
     slip_sys_file_name = input_slip_fcc_sys.txt
-    edge_dislo_den_1_Q1 = edge_dislo_1_Q1
-    edge_dislo_den_1_Q2 = edge_dislo_1_Q2
-    edge_dislo_den_1_Q3 = edge_dislo_1_Q3
-    edge_dislo_den_1_Q4 = edge_dislo_1_Q4
-    screw_dislo_den_1_Q1 = screw_dislo_1_Q1
-    screw_dislo_den_1_Q2 = screw_dislo_1_Q2
-    screw_dislo_den_1_Q3 = screw_dislo_1_Q3
-    screw_dislo_den_1_Q4 = screw_dislo_1_Q4
-    edge_dislo_den_2_Q1 = edge_dislo_2_Q1
-    edge_dislo_den_2_Q2 = edge_dislo_2_Q2
-    edge_dislo_den_2_Q3 = edge_dislo_2_Q3
-    edge_dislo_den_2_Q4 = edge_dislo_2_Q4
-    screw_dislo_den_2_Q1 = screw_dislo_2_Q1
-    screw_dislo_den_2_Q2 = screw_dislo_2_Q2
-    screw_dislo_den_2_Q3 = screw_dislo_2_Q3
-    screw_dislo_den_2_Q4 = screw_dislo_2_Q4
-    edge_dislo_den_3_Q1 = edge_dislo_3_Q1
-    edge_dislo_den_3_Q2 = edge_dislo_3_Q2
-    edge_dislo_den_3_Q3 = edge_dislo_3_Q3
-    edge_dislo_den_3_Q4 = edge_dislo_3_Q4
-    screw_dislo_den_3_Q1 = screw_dislo_3_Q1
-    screw_dislo_den_3_Q2 = screw_dislo_3_Q2
-    screw_dislo_den_3_Q3 = screw_dislo_3_Q3
-    screw_dislo_den_3_Q4 = screw_dislo_3_Q4
-    edge_dislo_den_4_Q1 = edge_dislo_4_Q1
-    edge_dislo_den_4_Q2 = edge_dislo_4_Q2
-    edge_dislo_den_4_Q3 = edge_dislo_4_Q3
-    edge_dislo_den_4_Q4 = edge_dislo_4_Q4
-    screw_dislo_den_4_Q1 = screw_dislo_4_Q1
-    screw_dislo_den_4_Q2 = screw_dislo_4_Q2
-    screw_dislo_den_4_Q3 = screw_dislo_4_Q3
-    screw_dislo_den_4_Q4 = screw_dislo_4_Q4
-    edge_dislo_den_5_Q1 = edge_dislo_5_Q1
-    edge_dislo_den_5_Q2 = edge_dislo_5_Q2
-    edge_dislo_den_5_Q3 = edge_dislo_5_Q3
-    edge_dislo_den_5_Q4 = edge_dislo_5_Q4
-    screw_dislo_den_5_Q1 = screw_dislo_5_Q1
-    screw_dislo_den_5_Q2 = screw_dislo_5_Q2
-    screw_dislo_den_5_Q3 = screw_dislo_5_Q3
-    screw_dislo_den_5_Q4 = screw_dislo_5_Q4
-    edge_dislo_den_6_Q1 = edge_dislo_6_Q1
-    edge_dislo_den_6_Q2 = edge_dislo_6_Q2
-    edge_dislo_den_6_Q3 = edge_dislo_6_Q3
-    edge_dislo_den_6_Q4 = edge_dislo_6_Q4
-    screw_dislo_den_6_Q1 = screw_dislo_6_Q1
-    screw_dislo_den_6_Q2 = screw_dislo_6_Q2
-    screw_dislo_den_6_Q3 = screw_dislo_6_Q3
-    screw_dislo_den_6_Q4 = screw_dislo_6_Q4
-    edge_dislo_den_7_Q1 = edge_dislo_7_Q1
-    edge_dislo_den_7_Q2 = edge_dislo_7_Q2
-    edge_dislo_den_7_Q3 = edge_dislo_7_Q3
-    edge_dislo_den_7_Q4 = edge_dislo_7_Q4
-    screw_dislo_den_7_Q1 = screw_dislo_7_Q1
-    screw_dislo_den_7_Q2 = screw_dislo_7_Q2
-    screw_dislo_den_7_Q3 = screw_dislo_7_Q3
-    screw_dislo_den_7_Q4 = screw_dislo_7_Q4
-    edge_dislo_den_8_Q1 = edge_dislo_8_Q1
-    edge_dislo_den_8_Q2 = edge_dislo_8_Q2
-    edge_dislo_den_8_Q3 = edge_dislo_8_Q3
-    edge_dislo_den_8_Q4 = edge_dislo_8_Q4
-    screw_dislo_den_8_Q1 = screw_dislo_8_Q1
-    screw_dislo_den_8_Q2 = screw_dislo_8_Q2
-    screw_dislo_den_8_Q3 = screw_dislo_8_Q3
-    screw_dislo_den_8_Q4 = screw_dislo_8_Q4
-    edge_dislo_den_9_Q1 = edge_dislo_9_Q1
-    edge_dislo_den_9_Q2 = edge_dislo_9_Q2
-    edge_dislo_den_9_Q3 = edge_dislo_9_Q3
-    edge_dislo_den_9_Q4 = edge_dislo_9_Q4
-    screw_dislo_den_9_Q1 = screw_dislo_9_Q1
-    screw_dislo_den_9_Q2 = screw_dislo_9_Q2
-    screw_dislo_den_9_Q3 = screw_dislo_9_Q3
-    screw_dislo_den_9_Q4 = screw_dislo_9_Q4
-    edge_dislo_den_10_Q1 = edge_dislo_10_Q1
-    edge_dislo_den_10_Q2 = edge_dislo_10_Q2
-    edge_dislo_den_10_Q3 = edge_dislo_10_Q3
-    edge_dislo_den_10_Q4 = edge_dislo_10_Q4
-    screw_dislo_den_10_Q1 = screw_dislo_10_Q1
-    screw_dislo_den_10_Q2 = screw_dislo_10_Q2
-    screw_dislo_den_10_Q3 = screw_dislo_10_Q3
-    screw_dislo_den_10_Q4 = screw_dislo_10_Q4
-    edge_dislo_den_11_Q1 = edge_dislo_11_Q1
-    edge_dislo_den_11_Q2 = edge_dislo_11_Q2
-    edge_dislo_den_11_Q3 = edge_dislo_11_Q3
-    edge_dislo_den_11_Q4 = edge_dislo_11_Q4
-    screw_dislo_den_11_Q1 = screw_dislo_11_Q1
-    screw_dislo_den_11_Q2 = screw_dislo_11_Q2
-    screw_dislo_den_11_Q3 = screw_dislo_11_Q3
-    screw_dislo_den_11_Q4 = screw_dislo_11_Q4
-    edge_dislo_den_12_Q1 = edge_dislo_12_Q1
-    edge_dislo_den_12_Q2 = edge_dislo_12_Q2
-    edge_dislo_den_12_Q3 = edge_dislo_12_Q3
-    edge_dislo_den_12_Q4 = edge_dislo_12_Q4
-    screw_dislo_den_12_Q1 = screw_dislo_12_Q1
-    screw_dislo_den_12_Q2 = screw_dislo_12_Q2
-    screw_dislo_den_12_Q3 = screw_dislo_12_Q3
-    screw_dislo_den_12_Q4 = screw_dislo_12_Q4
-  [../]
-  [./ssd]
-    type = SSDUpdate
-    nss = 12
-    # Ce = 200.0
-    de = 0.0
-    ds = 0.0
     edge_dislo_den_1_Q1 = edge_dislo_1_Q1
     edge_dislo_den_1_Q2 = edge_dislo_1_Q2
     edge_dislo_den_1_Q3 = edge_dislo_1_Q3
@@ -3330,14 +5347,14 @@
     type = ElementAverageValue
     variable = e_xx
   [../]
-  # [./tau]
-  #   type = ElementAverageValue
-  #   variable = tau
-  # [../]
-  # [./gss]
-  #   type = ElementAverageValue
-  #   variable = gss
-  # [../]
+  [./tau]
+    type = ElementAverageValue
+    variable = tau
+  [../]
+  [./gss]
+    type = ElementAverageValue
+    variable = gss
+  [../]
   [./slip_increment]
    type = ElementAverageValue
    variable = slip_increment
@@ -3345,10 +5362,6 @@
   [./epeq]
     type = ElementAverageValue
     variable = epeq
-  [../]
-  [./edge_dislocation_increment]
-   type = ElementAverageValue
-   variable = edge_dislocation_increment
   [../]
   [./disp_x]
      type = NodalVariableValue

@@ -91,5 +91,7 @@ private:
 
   MaterialProperty<Real> & _tau_backstress;
 
+  MaterialProperty<Real> & _tau_diffusion;
+
   const Real _scale;
 };

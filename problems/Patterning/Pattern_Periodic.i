@@ -17,10 +17,10 @@
   [edge_dislo_den_neg_1]
   []
   [edge_dislo_den_pos_2]
-    initial_condition = 8.e3
+    initial_condition = 1.0
   []
   [edge_dislo_den_neg_2]
-    initial_condition = 8.e3
+    initial_condition = 1.0
   []
 []
 
@@ -40,9 +40,9 @@
 [Functions]
   [./Gaussian]
     type = ParsedFunction
-    expression = '1 / sigma / sqrt(2.0 * pi) * exp(-((x-mu)^2/(2*sigma^2))) + 8000'
+    expression = '1 / sigma / sqrt(2.0 * pi) * exp(-((x-mu)^2/(2*sigma^2))) + 1.0'
     symbol_names = 'sigma mu'
-    symbol_values = '1.0 50.0'
+    symbol_values = '1.2 25.0'
   [../]
 []
 
@@ -65,7 +65,7 @@
   [Edge_Pos_Flux_1]
     type = ConservativeAdvectionSchmid_NoMech_DS
     variable = edge_dislo_den_pos_1
-    upwinding_type = none
+    upwinding_type = full
       dislo_character = edge_00
       dislo_sign = positive
       slip_sys_index = 0
@@ -78,7 +78,7 @@
   [Edge_Neg_Flux_1]
     type = ConservativeAdvectionSchmid_NoMech_DS
     variable = edge_dislo_den_neg_1
-    upwinding_type = none
+    upwinding_type = full
       dislo_character = edge_00
       dislo_sign = negative
       slip_sys_index = 0
@@ -91,7 +91,7 @@
   [Edge_Pos_Flux_2]
     type = ConservativeAdvectionSchmid_NoMech_DS
     variable = edge_dislo_den_pos_2
-    upwinding_type = none
+    upwinding_type = full
       dislo_character = edge_90
       dislo_sign = positive
       slip_sys_index = 1
@@ -104,7 +104,7 @@
   [Edge_Neg_Flux_2]
     type = ConservativeAdvectionSchmid_NoMech_DS
     variable = edge_dislo_den_neg_2
-    upwinding_type = none
+    upwinding_type = full
       dislo_character = edge_90
       dislo_sign = negative
       slip_sys_index = 1
@@ -135,7 +135,14 @@
   [vel]
     type = DisloVelocity_DbSlip
     nss = 1
-    taualpha = 2.63
+    taualpha = 0.3
+    boltzmann = 1.0
+    abstemp = 1.0
+    tau0hat = 1.0
+    gdot0 = 1.0
+    f0 = 1.0
+    # shear_modulus = 1.0
+    # burgers = 1.0
     w1 = 0.0
     w2 = 0.0
     edge_dislo_den_pos_1 = edge_dislo_den_pos_1
@@ -182,9 +189,9 @@
   line_search = 'none'
   l_max_its = 50
   nl_max_its = 50
-  nl_rel_tol = 1e-8
-  nl_abs_tol = 1e-6
-  l_tol = 1e-8
+  nl_rel_tol = 1e-6
+  nl_abs_tol = 1e-4
+  l_tol = 1e-6
 
   start_time = 0.0
   end_time = 0.2
@@ -232,7 +239,7 @@
 
 [Outputs]
   exodus = true
-  time_step_interval = 50
+  time_step_interval = 1
   [csv]
     type = CSV
     file_base = patterning_test_x_out_l1e-1

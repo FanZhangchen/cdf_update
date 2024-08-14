@@ -220,34 +220,35 @@ DisloVelocity_DbSlip::computeQpProperties()
     if (i == 0)
     {
       _tau_backstress[_qp] =
-        _shear_modulus * _burgers *
-        (_grad_edge_dislo_den_pos_1[_qp](0) - _grad_edge_dislo_den_neg_1[_qp](0)) /
-        _total_dislo_den[_qp][i];
+          _shear_modulus * _burgers *
+          (_grad_edge_dislo_den_pos_1[_qp](0) - _grad_edge_dislo_den_neg_1[_qp](0)) /
+          _total_dislo_den[_qp][i];
       _tau_diffusion[_qp] =
-        _shear_modulus * _burgers *
-        (_grad_edge_dislo_den_pos_1[_qp](0) + _grad_edge_dislo_den_neg_1[_qp](0)) /
-        _total_dislo_den[_qp][i];
+          _shear_modulus * _burgers *
+          (_grad_edge_dislo_den_pos_1[_qp](0) + _grad_edge_dislo_den_neg_1[_qp](0)) /
+          _total_dislo_den[_qp][i];
     }
     else if (i == 1)
     {
       _tau_backstress[_qp] =
-        _shear_modulus * _burgers *
-        (_grad_edge_dislo_den_pos_2[_qp](1) - _grad_edge_dislo_den_neg_2[_qp](1)) /
-        _total_dislo_den[_qp][i];
-      _tau_diffusion[_qp] = 
-        _shear_modulus * _burgers *
-        (_grad_edge_dislo_den_pos_2[_qp](1) + _grad_edge_dislo_den_neg_2[_qp](1)) /
-        _total_dislo_den[_qp][i];
+          _shear_modulus * _burgers *
+          (_grad_edge_dislo_den_pos_2[_qp](1) - _grad_edge_dislo_den_neg_2[_qp](1)) /
+          _total_dislo_den[_qp][i];
+      _tau_diffusion[_qp] =
+          _shear_modulus * _burgers *
+          (_grad_edge_dislo_den_pos_2[_qp](1) + _grad_edge_dislo_den_neg_2[_qp](1)) /
+          _total_dislo_den[_qp][i];
     }
 
-    _slip_rate[_qp] = _gdot0 *
-                      std::exp(-_f0 / _boltzmann / _abstemp *
-                               std::pow((1 - std::pow(((std::abs(_taualpha - _tau_backstress[_qp]) - _tau_diffusion[_qp] -
-                                                        _slip_resistance[_qp][i]) /
-                                                       _tau0hat),
-                                                      _p)),
-                                        _q)) *
-                      std::copysign(1.0, (_taualpha - _tau_backstress[_qp]));
+    _slip_rate[_qp] =
+        _gdot0 *
+        std::exp(-_f0 / _boltzmann / _abstemp *
+                 std::pow((1 - std::pow(((std::abs(_taualpha - _tau_backstress[_qp]) -
+                                          _tau_diffusion[_qp] - _slip_resistance[_qp][i]) /
+                                         _tau0hat),
+                                        _p)),
+                          _q)) *
+        std::copysign(1.0, (_taualpha - _tau_backstress[_qp]));
 
     _slip_increment[_qp][i] = _slip_rate[_qp];
   }
@@ -333,34 +334,35 @@ DisloVelocity_DbSlip::initQpStatefulProperties()
     if (i == 0)
     {
       _tau_backstress[_qp] =
-        _shear_modulus * _burgers *
-        (_grad_edge_dislo_den_pos_1[_qp](0) - _grad_edge_dislo_den_neg_1[_qp](0)) /
-        _total_dislo_den[_qp][i];
+          _shear_modulus * _burgers *
+          (_grad_edge_dislo_den_pos_1[_qp](0) - _grad_edge_dislo_den_neg_1[_qp](0)) /
+          _total_dislo_den[_qp][i];
       _tau_diffusion[_qp] =
-        _shear_modulus * _burgers *
-        (_grad_edge_dislo_den_pos_1[_qp](0) + _grad_edge_dislo_den_neg_1[_qp](0)) /
-        _total_dislo_den[_qp][i];
+          _shear_modulus * _burgers *
+          (_grad_edge_dislo_den_pos_1[_qp](0) + _grad_edge_dislo_den_neg_1[_qp](0)) /
+          _total_dislo_den[_qp][i];
     }
     else if (i == 1)
     {
       _tau_backstress[_qp] =
-        _shear_modulus * _burgers *
-        (_grad_edge_dislo_den_pos_2[_qp](1) - _grad_edge_dislo_den_neg_2[_qp](1)) /
-        _total_dislo_den[_qp][i];
-      _tau_diffusion[_qp] = 
-        _shear_modulus * _burgers *
-        (_grad_edge_dislo_den_pos_2[_qp](1) + _grad_edge_dislo_den_neg_2[_qp](1)) /
-        _total_dislo_den[_qp][i];
+          _shear_modulus * _burgers *
+          (_grad_edge_dislo_den_pos_2[_qp](1) - _grad_edge_dislo_den_neg_2[_qp](1)) /
+          _total_dislo_den[_qp][i];
+      _tau_diffusion[_qp] =
+          _shear_modulus * _burgers *
+          (_grad_edge_dislo_den_pos_2[_qp](1) + _grad_edge_dislo_den_neg_2[_qp](1)) /
+          _total_dislo_den[_qp][i];
     }
 
-    _slip_rate[_qp] = _gdot0 *
-                      std::exp(-_f0 / _boltzmann / _abstemp *
-                               std::pow((1 - std::pow(((std::abs(_taualpha - _tau_backstress[_qp]) - _tau_diffusion[_qp] -
-                                                        _slip_resistance[_qp][i]) /
-                                                       _tau0hat),
-                                                      _p)),
-                                        _q)) *
-                      std::copysign(1.0, (_taualpha - _tau_backstress[_qp]));
+    _slip_rate[_qp] =
+        _gdot0 *
+        std::exp(-_f0 / _boltzmann / _abstemp *
+                 std::pow((1 - std::pow(((std::abs(_taualpha - _tau_backstress[_qp]) -
+                                          _tau_diffusion[_qp] - _slip_resistance[_qp][i]) /
+                                         _tau0hat),
+                                        _p)),
+                          _q)) *
+        std::copysign(1.0, (_taualpha - _tau_backstress[_qp]));
 
     _slip_increment[_qp][i] = _slip_rate[_qp];
   }

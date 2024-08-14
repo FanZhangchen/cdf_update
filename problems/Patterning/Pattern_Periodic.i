@@ -135,7 +135,7 @@
   [vel]
     type = DisloVelocity_DbSlip
     nss = 1
-    taualpha = 0.3
+    taualpha = 0.303
     boltzmann = 1.0
     abstemp = 1.0
     tau0hat = 1.0
@@ -194,7 +194,7 @@
   l_tol = 1e-6
 
   start_time = 0.0
-  end_time = 0.2
+  end_time = 1.0
   dt = 2.e-6
   dtmin = 1.e-9
 []
@@ -239,7 +239,7 @@
 
 [Outputs]
   exodus = true
-  time_step_interval = 1
+  time_step_interval = 50
   [csv]
     type = CSV
     file_base = patterning_test_x_out_l1e-1

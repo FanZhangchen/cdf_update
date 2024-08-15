@@ -240,7 +240,15 @@ DisloVelocity_DbSlip::computeQpProperties()
           _total_dislo_den[_qp][i];
     }
 
-    _slip_rate[_qp] =
+    Real driving_force = std::abs(_taualpha - _tau_backstress[_qp]) - _slip_resistance[_qp][i];
+
+    if (driving_force < 0.0)
+    {
+      _slip_rate[_qp] = 0.0;
+    }
+    else
+    {
+      _slip_rate[_qp] =
         _gdot0 *
         std::exp(-_f0 / _boltzmann / _abstemp *
                  std::pow((1 - std::pow(((std::abs(_taualpha - _tau_backstress[_qp]) -
@@ -249,6 +257,7 @@ DisloVelocity_DbSlip::computeQpProperties()
                                         _p)),
                           _q)) *
         std::copysign(1.0, (_taualpha - _tau_backstress[_qp]));
+    }
 
     _slip_increment[_qp][i] = _slip_rate[_qp];
   }
@@ -354,7 +363,15 @@ DisloVelocity_DbSlip::initQpStatefulProperties()
           _total_dislo_den[_qp][i];
     }
 
-    _slip_rate[_qp] =
+    Real driving_force = std::abs(_taualpha - _tau_backstress[_qp]) - _slip_resistance[_qp][i];
+
+    if (driving_force < 0.0)
+    {
+      _slip_rate[_qp] = 0.0;
+    }
+    else
+    {
+      _slip_rate[_qp] =
         _gdot0 *
         std::exp(-_f0 / _boltzmann / _abstemp *
                  std::pow((1 - std::pow(((std::abs(_taualpha - _tau_backstress[_qp]) -
@@ -363,6 +380,7 @@ DisloVelocity_DbSlip::initQpStatefulProperties()
                                         _p)),
                           _q)) *
         std::copysign(1.0, (_taualpha - _tau_backstress[_qp]));
+    }
 
     _slip_increment[_qp][i] = _slip_rate[_qp];
   }

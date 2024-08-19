@@ -249,14 +249,14 @@ DisloVelocity_DbSlip::computeQpProperties()
     else
     {
       _slip_rate[_qp] =
-        _gdot0 *
-        std::exp(-_f0 / _boltzmann / _abstemp *
-                 std::pow((1 - std::pow(((std::abs(_taualpha - _tau_backstress[_qp]) -
-                                          _tau_diffusion[_qp] - _slip_resistance[_qp][i]) /
-                                         _tau0hat),
-                                        _p)),
-                          _q)) *
-        std::copysign(1.0, (_taualpha - _tau_backstress[_qp]));
+          _gdot0 *
+          std::exp(-_f0 / _boltzmann / _abstemp *
+                   std::pow((1 - std::pow(((std::abs(_taualpha - _tau_backstress[_qp]) -
+                                            _tau_diffusion[_qp] - _slip_resistance[_qp][i]) /
+                                           _tau0hat),
+                                          _p)),
+                            _q)) *
+          std::copysign(1.0, (_taualpha - _tau_backstress[_qp]));
     }
 
     _slip_increment[_qp][i] = _slip_rate[_qp];
@@ -372,14 +372,14 @@ DisloVelocity_DbSlip::initQpStatefulProperties()
     else
     {
       _slip_rate[_qp] =
-        _gdot0 *
-        std::exp(-_f0 / _boltzmann / _abstemp *
-                 std::pow((1 - std::pow(((std::abs(_taualpha - _tau_backstress[_qp]) -
-                                          _tau_diffusion[_qp] - _slip_resistance[_qp][i]) /
-                                         _tau0hat),
-                                        _p)),
-                          _q)) *
-        std::copysign(1.0, (_taualpha - _tau_backstress[_qp]));
+          _gdot0 *
+          std::exp(-_f0 / _boltzmann / _abstemp *
+                   std::pow((1 - std::pow(((std::abs(_taualpha - _tau_backstress[_qp]) -
+                                            _tau_diffusion[_qp] - _slip_resistance[_qp][i]) /
+                                           _tau0hat),
+                                          _p)),
+                            _q)) *
+          std::copysign(1.0, (_taualpha - _tau_backstress[_qp]));
     }
 
     _slip_increment[_qp][i] = _slip_rate[_qp];

@@ -42,7 +42,7 @@
     type = ParsedFunction
     expression = '1 / sigma / sqrt(2.0 * pi) * exp(-((x-mu)^2/(2*sigma^2))) + 1.0'
     symbol_names = 'sigma mu'
-    symbol_values = '1.2 25.0'
+    symbol_values = '1.2 250.0'
   [../]
 []
 

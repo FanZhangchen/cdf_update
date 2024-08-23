@@ -2,12 +2,12 @@
   [gen]
     type = GeneratedMeshGenerator
     dim = 2
-    nx = 100
+    nx = 250
     ny = 10
     xmin = 0.0
     ymin = 0.0
     xmax = 500.0
-    ymax = 100.0   
+    ymax = 500.0   
   []
 []
 
@@ -40,7 +40,7 @@
 [Functions]
   [./Gaussian]
     type = ParsedFunction
-    expression = '1 / sigma / sqrt(2.0 * pi) * exp(-((x-mu)^2/(2*sigma^2))) + 1.0'
+    expression = '1 / sigma / sqrt(2.0 * pi) * exp(-((x-mu)^2/(2*sigma^2))) + 0.5'
     symbol_names = 'sigma mu'
     symbol_values = '1.2 250.0'
   [../]
@@ -141,8 +141,8 @@
     tau0hat = 1.0
     gdot0 = 1.0
     f0 = 1.0
-    # shear_modulus = 1.0
-    # burgers = 1.0
+    shear_modulus = 1.0
+    burgers = 1.0
     w1 = 0.0
     w2 = 0.0
     edge_dislo_den_pos_1 = edge_dislo_den_pos_1

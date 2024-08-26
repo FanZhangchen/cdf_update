@@ -2,7 +2,7 @@
   [gen]
     type = GeneratedMeshGenerator
     dim = 2
-    nx = 250
+    nx = 100
     ny = 10
     xmin = 0.0
     ymin = 0.0
@@ -65,7 +65,7 @@
   [Edge_Pos_Flux_1]
     type = ConservativeAdvectionSchmid_NoMech_DS
     variable = edge_dislo_den_pos_1
-    upwinding_type = full
+    upwinding_type = none
       dislo_character = edge_00
       dislo_sign = positive
       slip_sys_index = 0
@@ -78,7 +78,7 @@
   [Edge_Neg_Flux_1]
     type = ConservativeAdvectionSchmid_NoMech_DS
     variable = edge_dislo_den_neg_1
-    upwinding_type = full
+    upwinding_type = none
       dislo_character = edge_00
       dislo_sign = negative
       slip_sys_index = 0
@@ -91,7 +91,7 @@
   [Edge_Pos_Flux_2]
     type = ConservativeAdvectionSchmid_NoMech_DS
     variable = edge_dislo_den_pos_2
-    upwinding_type = full
+    upwinding_type = none
       dislo_character = edge_90
       dislo_sign = positive
       slip_sys_index = 1
@@ -104,11 +104,51 @@
   [Edge_Neg_Flux_2]
     type = ConservativeAdvectionSchmid_NoMech_DS
     variable = edge_dislo_den_neg_2
-    upwinding_type = full
+    upwinding_type = none
       dislo_character = edge_90
       dislo_sign = negative
       slip_sys_index = 1
   []
+
+[]
+
+[DGKernels]
+
+  [dg_edge_pos_1]
+    implicit = false
+    type = DGAdvectionCoupled_NoMech_DS
+    variable = edge_dislo_den_pos_1
+      dislo_character = edge_00
+      dislo_sign = positive
+      slip_sys_index = 0
+  []
+
+  [dg_edge_neg_1]
+    implicit = false
+    type = DGAdvectionCoupled_NoMech_DS
+    variable = edge_dislo_den_neg_1
+      dislo_character = edge_00
+      dislo_sign = negative
+      slip_sys_index = 0
+  []
+
+#   [dg_edge_pos_2]
+#     implicit = false
+#     type = DGAdvectionCoupled_NoMech_DS
+#     variable = edge_dislo_den_pos_2
+#       dislo_character = edge
+#       dislo_sign = positive
+#       slip_sys_index = 1
+#   []
+
+#   [dg_edge_neg_2]
+#     implicit = false
+#     type = DGAdvectionCoupled_NoMech_DS
+#     variable = edge_dislo_den_neg_2
+#       dislo_character = edge
+#       dislo_sign = negative
+#       slip_sys_index = 1
+#   []
 
 []
 
@@ -183,15 +223,34 @@
 # Transient (time-dependent) details for simulations go here:
 [Executioner]
   type = Transient   # Here we use the Transient Executioner (instead of steady)
+
+  [./TimeIntegrator]
+    # type = ImplicitEuler
+    # type = BDF2
+    # type = CrankNicolson
+    # type = ImplicitMidpoint
+    # type = LStableDirk2
+    # type = LStableDirk3
+    # type = LStableDirk4
+    # type = AStableDirk4
+    #
+    # Explicit methods
+    # type = ExplicitEuler
+    # type = ExplicitMidpoint
+    # type = Heun
+    # type = Ralston
+    type = ExplicitTVDRK2
+  [../]
+
   solve_type = 'PJFNK'
   petsc_options_iname = '-pc_type -pc_hypre_type -ksp_gmres_restart'
   petsc_options_value = 'lu boomeramg          31'
   line_search = 'none'
   l_max_its = 50
   nl_max_its = 50
-  nl_rel_tol = 1e-6
-  nl_abs_tol = 1e-4
-  l_tol = 1e-6
+  nl_rel_tol = 1e-5
+  nl_abs_tol = 1e-3
+  l_tol = 1e-5
 
   start_time = 0.0
   end_time = 1.0
@@ -239,7 +298,7 @@
 
 [Outputs]
   exodus = true
-  time_step_interval = 50
+  time_step_interval = 500
   [csv]
     type = CSV
     file_base = patterning_test_x_out_l1e-1

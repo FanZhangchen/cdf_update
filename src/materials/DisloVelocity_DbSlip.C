@@ -50,16 +50,20 @@ DisloVelocity_DbSlip::validParams()
 
   params.addParam<Real>("w2", 0.0, "cross-hardening constants");
 
+  params.addParam<Real>("c_backs", 1.0, "coefficient of the backstress term");
+
+  params.addParam<Real>("c_diffu", 1.0, "coefficient of the diffusion term");
+
   params.addRequiredCoupledVar("edge_dislo_den_pos_1",
                                "positive edge dislocation density on Slip 1");
 
   params.addRequiredCoupledVar("edge_dislo_den_neg_1",
                                "negative edge dislocation density on Slip 1");
 
-  params.addRequiredCoupledVar("edge_dislo_den_pos_2",
+  params.addCoupledVar("edge_dislo_den_pos_2", 0.0,
                                "positive screw dislocation density on Slip 2");
 
-  params.addRequiredCoupledVar("edge_dislo_den_neg_2",
+  params.addCoupledVar("edge_dislo_den_neg_2", 0.0,
                                "negative screw dislocation density on Slip 2");
 
   params.addParam<Real>("scale", 0.5, "The scaling value of screw dislocation velocity");
@@ -102,6 +106,9 @@ DisloVelocity_DbSlip::DisloVelocity_DbSlip(const InputParameters & parameters)
 
     _w1(getParam<Real>("w1")),
     _w2(getParam<Real>("w2")),
+
+    _c_backs(getParam<Real>("c_backs")),
+    _c_diffu(getParam<Real>("c_diffu")),
 
     _dislo_velocity(declareProperty<std::vector<Real>>(
         "dislo_velocity")), // Dislocation velocity at current time step t
@@ -235,7 +242,7 @@ DisloVelocity_DbSlip::computeQpProperties()
           (_grad_edge_dislo_den_pos_2[_qp](1) - _grad_edge_dislo_den_neg_2[_qp](1)) /
           _total_dislo_den[_qp][i];
       _tau_diffusion[_qp] =
-          _shear_modulus * _burgers *
+          _c_diffu * _shear_modulus * _burgers *
           (_grad_edge_dislo_den_pos_2[_qp](1) + _grad_edge_dislo_den_neg_2[_qp](1)) /
           _total_dislo_den[_qp][i];
     }
@@ -347,7 +354,7 @@ DisloVelocity_DbSlip::initQpStatefulProperties()
           (_grad_edge_dislo_den_pos_1[_qp](0) - _grad_edge_dislo_den_neg_1[_qp](0)) /
           _total_dislo_den[_qp][i];
       _tau_diffusion[_qp] =
-          _shear_modulus * _burgers *
+          _c_diffu * _shear_modulus * _burgers *
           (_grad_edge_dislo_den_pos_1[_qp](0) + _grad_edge_dislo_den_neg_1[_qp](0)) /
           _total_dislo_den[_qp][i];
     }

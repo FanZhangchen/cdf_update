@@ -55,6 +55,10 @@ protected:
 
   const Real _w2;
 
+  const Real _c_backs;
+
+  const Real _c_diffu;
+
 private:
   /// member variable to hold the computed diffusivity coefficient
   MaterialProperty<std::vector<Real>> & _dislo_velocity;

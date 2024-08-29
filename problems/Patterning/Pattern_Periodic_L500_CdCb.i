@@ -198,6 +198,8 @@
     burgers = 1.0
     w1 = 0.0
     w2 = 0.0
+      c_backs = 0.5
+      c_diffu = 0.5
     edge_dislo_den_pos_1 = edge_dislo_den_pos_1
     edge_dislo_den_neg_1 = edge_dislo_den_neg_1
     # edge_dislo_den_pos_2 = edge_dislo_den_pos_2

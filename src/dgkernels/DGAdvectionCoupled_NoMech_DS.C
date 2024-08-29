@@ -69,7 +69,6 @@ DGAdvectionCoupled_NoMech_DS::getDislocationVelocity()
       _velocity(2) = 0.0;
       break;
   }
-
 }
 
 Real

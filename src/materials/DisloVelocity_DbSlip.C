@@ -60,11 +60,9 @@ DisloVelocity_DbSlip::validParams()
   params.addRequiredCoupledVar("edge_dislo_den_neg_1",
                                "negative edge dislocation density on Slip 1");
 
-  params.addCoupledVar("edge_dislo_den_pos_2", 0.0,
-                               "positive screw dislocation density on Slip 2");
+  params.addCoupledVar("edge_dislo_den_pos_2", 0.0, "positive screw dislocation density on Slip 2");
 
-  params.addCoupledVar("edge_dislo_den_neg_2", 0.0,
-                               "negative screw dislocation density on Slip 2");
+  params.addCoupledVar("edge_dislo_den_neg_2", 0.0, "negative screw dislocation density on Slip 2");
 
   params.addParam<Real>("scale", 0.5, "The scaling value of screw dislocation velocity");
 

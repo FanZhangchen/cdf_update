@@ -261,3 +261,16 @@ DGAdvectionCoupled::computeQpJacobian(Moose::DGJacobianType type)
 
   return r;
 }
+
+Real
+DGAdvectionCoupled::computeQpOffDiagJacobian(Moose::DGJacobianType type, unsigned int jvar)
+{
+  // Real r = 0;
+  // Real vdotn;
+  // Real u_vdotn;
+
+  // getDislocationVelocity();
+
+  // vdotn = _velocity * _normals[_qp];
+  // u_vdotn = vdotn * _u[_qp];
+}

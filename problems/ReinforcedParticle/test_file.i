@@ -72,7 +72,7 @@
   [disp_load]
     type = PiecewiseLinear
     x = '0.0 2.0  4.0'
-    y = '0.0 0.001 0.0'
+    y = '0.0 0.0001 0.0'
   []
 []
 
@@ -268,28 +268,28 @@
       variable = disp_x
       primary = 'left'
     secondary = 'right'
-    translation = '0.01732 0.0 0.0'
+    translation = '0.00346400007 0.0 0.0'
     [../]
 
     [./auto_boundary_y]
       variable = disp_y
       primary = 'left'
     secondary = 'right'
-    translation = '0.01732 0.0 0.0'
+    translation = '0.00346400007 0.0 0.0'
     [../]
 
     [./auto_rho_edge_pos_boundary_x_1]
       variable = rho_edge_pos_1
       primary = 'left'
     secondary = 'right'
-    translation = '0.01732 0.0 0.0'
+    translation = '0.00346400007 0.0 0.0'
     [../]
 
     [./auto_rho_edge_neg_boundary_x_1]
       variable = rho_edge_neg_1
       primary = 'left'
     secondary = 'right'
-    translation = '0.01732 0.0 0.0'
+    translation = '0.00346400007 0.0 0.0'
     [../]
   [../]
 

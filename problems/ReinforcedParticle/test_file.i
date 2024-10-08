@@ -71,7 +71,7 @@
 [Functions]
   [disp_load]
     type = PiecewiseLinear
-    x = '0.0 2.0  4.0'
+    x = '0.0 1.0  2.0'
     y = '0.0 0.0001 0.0'
   []
 []

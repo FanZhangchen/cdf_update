@@ -192,6 +192,7 @@
 
 [Materials]
   [./elasticity_tensor]
+    implicit = false
     type = ComputeElasticityTensorCP
     C_ijkl = '1.129e5 0.664e5 0.664e5 1.129e5 0.664e5 1.129e5 0.279e5 0.279e5 0.279e5'
     fill_method = symmetric9
@@ -201,12 +202,14 @@
     block = '0'
   [../]
   [./stress]
+    implicit = false
     type = ComputeCrystalPlasticityDislocationStress
     crystal_plasticity_models = 'trial_xtalpl'
     tan_mod_type = exact
     block = '0'
   [../]
   [./trial_xtalpl]
+    implicit = false
     type = CrystalPlasticityBussoUpdate
     number_slip_systems = 1
     slip_sys_file_name = input_slip_sys_al.txt
@@ -224,12 +227,14 @@
   [../]
   #new
   [./elasticity_tensor_hard]
+    implicit = false
     type = ComputeIsotropicElasticityTensor
     youngs_modulus = 192.0e3
     poissons_ratio = 0.17
     block = '1'
   [../]
   [./stress_elastic]
+    implicit = false
     type = ComputeFiniteStrainElasticStress
     block = '1'
   [../]
@@ -343,7 +348,7 @@
 
   start_time = 0.0
   end_time = 3.84 #0.01
-  dt = 1.e-6
+  dt = 1.e-5
   dtmin = 1.e-9
 []
 

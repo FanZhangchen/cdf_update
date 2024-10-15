@@ -368,10 +368,10 @@
   type = Transient
 
   [./TimeIntegrator]
-    # type = ImplicitEuler
+    type = ImplicitEuler
     # type = BDF2
     # type = CrankNicolson
-    type = ImplicitMidpoint
+    # type = ImplicitMidpoint
     # type = LStableDirk2
     # type = LStableDirk3
     # type = LStableDirk4

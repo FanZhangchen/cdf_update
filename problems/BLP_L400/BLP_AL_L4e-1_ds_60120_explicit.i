@@ -195,6 +195,7 @@
 
 [Materials]
   [./elasticity_tensor]
+    implicit = false
     type = ComputeElasticityTensorCP
     C_ijkl = '1.129e5 0.664e5 0.664e5 1.129e5 0.664e5 1.129e5 0.279e5 0.279e5 0.279e5'
     fill_method = symmetric9
@@ -203,11 +204,13 @@
     euler_angle_3 = 0.0 
   [../]
   [./stress]
+    implicit = false
     type = ComputeCrystalPlasticityDislocationStress
     crystal_plasticity_models = 'trial_xtalpl'
     tan_mod_type = exact
   [../]
   [./trial_xtalpl]
+    implicit = false
     type = CrystalPlasticityBussoUpdate
     number_slip_systems = 2
     slip_sys_file_name = input_slip_sys_al.txt
@@ -326,9 +329,10 @@
     #
     # Explicit methods
     # type = ExplicitEuler
-    type = ExplicitMidpoint
+    # type = ExplicitMidpoint
     # type = Heun
     # type = Ralston
+    type = ExplicitTVDRK2
   [../]
   solve_type = 'NEWTON'
   petsc_options = '-snes_ksp_ew'

@@ -5,7 +5,7 @@
 [Mesh]
   [read]
     type = FileMeshGenerator
-    file = c1m2_H0002.inp
+    file = c1m1_H0002_remesh.inp
   []
   # [rename]
   #   type = RenameBlockGenerator
@@ -27,11 +27,11 @@
   []
   [rho_edge_pos_1]
     initial_condition = 5.e7
-    block = '0'
+    block = '1'
   []
   [rho_edge_neg_1]
     initial_condition = 5.e7
-    block = '0'
+    block = '1'
   []
 []
 
@@ -39,32 +39,32 @@
   [./pk2]
     order = CONSTANT
     family = MONOMIAL
-    block = '0'
+    block = '1'
   [../]
   [./fp_xy]
     order = CONSTANT
     family = MONOMIAL
-    block = '0'
+    block = '1'
   [../]
   [./exy]
     order = CONSTANT
     family = MONOMIAL
-    block = '0'
+    block = '1'
   [../]
   [./slip_increment]
    order = CONSTANT
    family = MONOMIAL
-   block = '0'
+   block = '1'
   [../]
   [./dislo_velocity]
    order = CONSTANT
    family = MONOMIAL
-   block = '0'
+   block = '1'
   [../]
   [./epeq]
    order = CONSTANT
    family = MONOMIAL
-   block = '0'
+   block = '1'
   [../]
 []
 
@@ -145,7 +145,7 @@
    index_j = 0
    index_i = 0
    execute_on = timestep_end
-   block = '0'
+   block = '1'
   [../]
   [./exy]
     type = RankTwoAux
@@ -154,7 +154,7 @@
     index_j = 0
     index_i = 1
     execute_on = timestep_end
-    block = '0'
+    block = '1'
   [../]
   [./fp_xy]
     type = RankTwoAux
@@ -163,7 +163,7 @@
     index_j = 0
     index_i = 1
     execute_on = timestep_end
-    block = '0'
+    block = '1'
   [../]
   [./slip_inc]
    type = MaterialStdVectorAux
@@ -171,7 +171,7 @@
    property = slip_increment
    index = 0
    execute_on = timestep_end
-   block = '0'
+   block = '1'
   [../]
   [./dislo_vel]
    type = MaterialStdVectorAux
@@ -179,14 +179,14 @@
    property = dislo_velocity
    index = 0
    execute_on = timestep_end
-   block = '0'
+   block = '1'
   [../]
   [./epeq]
    type = MaterialRealAux
    variable = epeq
    property = accumulated_equivalent_plastic_strain
    execute_on = timestep_end
-   block = '0'
+   block = '1'
   [../]
 []
 
@@ -199,14 +199,14 @@
     euler_angle_1 = 0.0
     euler_angle_2 = 0.0 
     euler_angle_3 = 0.0 
-    block = '0'
+    block = '1'
   [../]
   [./stress]
     implicit = false
     type = ComputeCrystalPlasticityDislocationStress
     crystal_plasticity_models = 'trial_xtalpl'
     tan_mod_type = exact
-    block = '0'
+    block = '1'
   [../]
   [./trial_xtalpl]
     implicit = false
@@ -223,7 +223,7 @@
       scaling_Cb = 0.241
     edge_dislo_den_pos_1 = rho_edge_pos_1
     edge_dislo_den_neg_1 = rho_edge_neg_1
-    block = '0'
+    block = '1'
   [../]
   #new
   [./elasticity_tensor_hard]
@@ -231,12 +231,12 @@
     type = ComputeIsotropicElasticityTensor
     youngs_modulus = 192.0e3
     poissons_ratio = 0.17
-    block = '1'
+    block = '0'
   [../]
   [./stress_elastic]
     implicit = false
     type = ComputeFiniteStrainElasticStress
-    block = '1'
+    block = '0'
   [../]
 
 []
@@ -245,55 +245,55 @@
   [bottom_x]
     type = DirichletBC
     variable = disp_x
-    boundary = '2'
+    boundary = '4'
     value = 0.0
   []
   [bottom_y]
     type = DirichletBC
     variable = disp_y
-    boundary = '2'
+    boundary = '4'
     value = 0.0
   []
 
   [top_x]
     type = FunctionDirichletBC
     variable = disp_x
-    boundary = '6'
+    boundary = '5'
     function = disp_load
   []
   [top_y]
     type = DirichletBC
     variable = disp_y
-    boundary = '6'
+    boundary = '5'
     value = 0.0
   []
 
   [./Periodic]
     [./auto_boundary_x]
       variable = disp_x
-      primary = '4'
-    secondary = '5'
+      primary = '0'
+    secondary = '1'
     translation = '0.00346400007 0.0 0.0'
     [../]
 
     [./auto_boundary_y]
       variable = disp_y
-      primary = '4'
-    secondary = '5'
+      primary = '0'
+    secondary = '1'
     translation = '0.00346400007 0.0 0.0'
     [../]
 
     [./auto_rho_edge_pos_boundary_x_1]
       variable = rho_edge_pos_1
-      primary = '4'
-    secondary = '5'
+      primary = '0'
+    secondary = '1'
     translation = '0.00346400007 0.0 0.0'
     [../]
 
     [./auto_rho_edge_neg_boundary_x_1]
       variable = rho_edge_neg_1
-      primary = '4'
-    secondary = '5'
+      primary = '0'
+    secondary = '1'
     translation = '0.00346400007 0.0 0.0'
     [../]
   [../]
@@ -361,27 +361,27 @@
   [./pk2]
    type = ElementAverageValue
    variable = pk2
-   block = '0'
+   block = '1'
   [../]
   [./fp_xy]
     type = ElementAverageValue
     variable = fp_xy
-    block = '0'
+    block = '1'
   [../]
   [./exy]
     type = ElementAverageValue
     variable = exy
-    block = '0'
+    block = '1'
   [../]
   [./slip_increment]
    type = ElementAverageValue
    variable = slip_increment
-   block = '0'
+   block = '1'
   [../]
   [./dislo_velocity]
    type = ElementAverageValue
    variable = dislo_velocity
-   block = '0'
+   block = '1'
   [../]
   [./disp_x]
      type = NodalVariableValue
@@ -396,7 +396,7 @@
   [./epeq]
     type = ElementAverageValue
     variable = epeq
-    block = '0'
+    block = '1'
   [../]
 []
 

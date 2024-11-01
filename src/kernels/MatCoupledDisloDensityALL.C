@@ -115,6 +115,7 @@ MatCoupledDisloDensityALL::computeQpResidual()
 
   for (unsigned int k = 0; k < 3; ++k)
   {
+    // the dislocation density components that same as the variables in the same slip system
     temp_type_dislocation_density += (*_v[k])[_qp];
   }
 

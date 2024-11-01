@@ -113,6 +113,9 @@ MatCoupledDisloDensity::computeQpResidual()
     total_dislocation_density += (*_v[j])[_qp];
   }
 
+  // the temporary dislocation density is to store the total edge or screw dislocation density
+  // need to be noticed here that in this subroutine, only for simplified case
+  // in this case, there are only positive and negative existed in each slip system
   temp_type_dislocation_density = (*_v[0])[_qp];
 
   switch (_dislo_character)

@@ -5,7 +5,7 @@
 [Mesh]
   [read]
     type = FileMeshGenerator
-    file = c1m1_H0002_remesh.inp
+    file = c1m1_H0002.inp
   []
   # [rename]
   #   type = RenameBlockGenerator
@@ -271,29 +271,29 @@
   [./Periodic]
     [./auto_boundary_x]
       variable = disp_x
-      primary = '0'
-    secondary = '1'
+      primary = '2'
+    secondary = '3'
     translation = '0.00346400007 0.0 0.0'
     [../]
 
     [./auto_boundary_y]
       variable = disp_y
-      primary = '0'
-    secondary = '1'
+      primary = '2'
+    secondary = '3'
     translation = '0.00346400007 0.0 0.0'
     [../]
 
     [./auto_rho_edge_pos_boundary_x_1]
       variable = rho_edge_pos_1
-      primary = '0'
-    secondary = '1'
+      primary = '2'
+    secondary = '3'
     translation = '0.00346400007 0.0 0.0'
     [../]
 
     [./auto_rho_edge_neg_boundary_x_1]
       variable = rho_edge_neg_1
-      primary = '0'
-    secondary = '1'
+      primary = '2'
+    secondary = '3'
     translation = '0.00346400007 0.0 0.0'
     [../]
   [../]

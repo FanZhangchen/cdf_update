@@ -271,30 +271,30 @@
   [./Periodic]
     [./auto_boundary_x]
       variable = disp_x
-      primary = '2'
-    secondary = '3'
-    translation = '0.00346400007 0.0 0.0'
+      primary = 'c1m1-1_pb_left'
+    secondary = 'c1m1-1_pb_right'
+    translation = '3.464e-2 0.0 0.0'
     [../]
 
     [./auto_boundary_y]
       variable = disp_y
-      primary = '2'
-    secondary = '3'
-    translation = '0.00346400007 0.0 0.0'
+      primary = 'c1m1-1_pb_left'
+    secondary = 'c1m1-1_pb_right'
+    translation = '3.464e-2 0.0 0.0'
     [../]
 
     [./auto_rho_edge_pos_boundary_x_1]
       variable = rho_edge_pos_1
-      primary = '2'
-    secondary = '3'
-    translation = '0.00346400007 0.0 0.0'
+      primary = 'c1m1-1_pb_left'
+    secondary = 'c1m1-1_pb_right'
+    translation = '3.464e-2 0.0 0.0'
     [../]
 
     [./auto_rho_edge_neg_boundary_x_1]
       variable = rho_edge_neg_1
-      primary = '2'
-    secondary = '3'
-    translation = '0.00346400007 0.0 0.0'
+      primary = 'c1m1-1_pb_left'
+    secondary = 'c1m1-1_pb_right'
+    translation = '3.464e-2 0.0 0.0'
     [../]
   [../]
 

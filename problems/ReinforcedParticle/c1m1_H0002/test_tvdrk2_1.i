@@ -285,15 +285,15 @@
 
     [./auto_rho_edge_pos_boundary_x_1]
       variable = rho_edge_pos_1
-      primary = 'c1m1-1_pb_left'
-    secondary = 'c1m1-1_pb_right'
+      primary = 'dislo_left'
+    secondary = 'dislo_right'
     translation = '0.00346400007 0.0 0.0'
     [../]
 
     [./auto_rho_edge_neg_boundary_x_1]
       variable = rho_edge_neg_1
-      primary = 'c1m1-1_pb_left'
-    secondary = 'c1m1-1_pb_right'
+      primary = 'dislo_left'
+    secondary = 'dislo_right'
     translation = '0.00346400007 0.0 0.0'
     [../]
   [../]

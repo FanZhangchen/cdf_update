@@ -245,41 +245,41 @@
   [bottom_x]
     type = DirichletBC
     variable = disp_x
-    boundary = '4'
+    boundary = 'C1M1-1_bottom'
     value = 0.0
   []
   [bottom_y]
     type = DirichletBC
     variable = disp_y
-    boundary = '4'
+    boundary = 'C1M1-1_bottom'
     value = 0.0
   []
 
   [top_x]
     type = FunctionDirichletBC
     variable = disp_x
-    boundary = '5'
+    boundary = 'C1M1-1_top'
     function = disp_load
   []
   [top_y]
     type = DirichletBC
     variable = disp_y
-    boundary = '5'
+    boundary = 'C1M1-1_top'
     value = 0.0
   []
 
   [./Periodic]
     [./auto_boundary_x]
       variable = disp_x
-      primary = 'c1m1-1_pb_left'
-    secondary = 'c1m1-1_pb_right'
+      primary = 'C1M1-1_PB_left'
+    secondary = 'C1M1-1_PB_right'
     translation = '0.00346400007 0.0 0.0'
     [../]
 
     [./auto_boundary_y]
       variable = disp_y
-      primary = 'c1m1-1_pb_left'
-    secondary = 'c1m1-1_pb_right'
+      primary = 'C1M1-1_PB_left'
+    secondary = 'C1M1-1_PB_right'
     translation = '0.00346400007 0.0 0.0'
     [../]
 

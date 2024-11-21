@@ -245,26 +245,26 @@
   [bottom_x]
     type = DirichletBC
     variable = disp_x
-    boundary = 'c1m1-1_pb_bottom'
+    boundary = 'c1m1-1_bottom'
     value = 0.0
   []
   [bottom_y]
     type = DirichletBC
     variable = disp_y
-    boundary = 'c1m1-1_pb_bottom'
+    boundary = 'c1m1-1_bottom'
     value = 0.0
   []
 
   [top_x]
     type = FunctionDirichletBC
     variable = disp_x
-    boundary = 'c1m1-1_pb_top'
+    boundary = 'c1m1-1_top'
     function = disp_load
   []
   [top_y]
     type = DirichletBC
     variable = disp_y
-    boundary = 'c1m1-1_pb_top'
+    boundary = 'c1m1-1_top'
     value = 0.0
   []
 

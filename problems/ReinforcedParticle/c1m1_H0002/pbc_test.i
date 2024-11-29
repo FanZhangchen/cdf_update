@@ -5,15 +5,40 @@
 [Mesh]
   [read]
     type = FileMeshGenerator
-    file = C1M1_H0002-NP.inp
+    file = c1m1_H0002.inp
   []
-  # [rename]
-  #   type = RenameBlockGenerator
-  #   input = read
-  #   old_block = 'block1_quad4 block2_quad4 block3_quad4 block4_quad4 block5_quad4 block6_quad4'
-  #   new_block = '0 1 1 1 1 1'
+  # [separate]
+  #   type = ParsedSubdomainMeshGenerator
+  #   input = 'read'
+  #   include_subdomains = '1'
+  #   combinatorial_geometry = 'x > 0.002'
+  #   new_subdomain = '2'
+  #   block_id = 2
   # []
+  [remove]
+    type = BoundaryDeletionGenerator
+    input = 'read'
+    boundary_names = 'C1M1-1_BL-Elasticity C1M1-1_BL-Plasticity'
+  []
+  [create_sideset]
+    type = SideSetsFromNodeSetsGenerator
+    input = remove
+  []
+  # displacements = 'disp_x disp_y'
+
 []
+# [Mesh]
+#   [read]
+#     type = FileMeshGenerator
+#     file = C1M1_H0002-NP.inp
+#   []
+#   # [rename]
+#   #   type = RenameBlockGenerator
+#   #   input = read
+#   #   old_block = 'block1_quad4 block2_quad4 block3_quad4 block4_quad4 block5_quad4 block6_quad4'
+#   #   new_block = '0 1 1 1 1 1'
+#   # []
+# []
 
 
 [Variables]
@@ -27,11 +52,11 @@
   []
   [rho_edge_pos_1]
     initial_condition = 5.e7
-    # block = '1'
+    block = '1'
   []
   [rho_edge_neg_1]
     initial_condition = 5.e7
-    # block = '1'
+    block = '1'
   []
 []
 
@@ -39,32 +64,32 @@
   [./pk2]
     order = CONSTANT
     family = MONOMIAL
-    # block = '1'
+    block = '1'
   [../]
   [./fp_xy]
     order = CONSTANT
     family = MONOMIAL
-    # block = '1'
+    block = '1'
   [../]
   [./exy]
     order = CONSTANT
     family = MONOMIAL
-    # block = '1'
+    block = '1'
   [../]
   [./slip_increment]
    order = CONSTANT
    family = MONOMIAL
-  #  block = '1'
+   block = '1'
   [../]
   [./dislo_velocity]
    order = CONSTANT
    family = MONOMIAL
-  #  block = '1'
+   block = '1'
   [../]
   [./epeq]
    order = CONSTANT
    family = MONOMIAL
-  #  block = '1'
+   block = '1'
   [../]
 []
 
@@ -74,6 +99,22 @@
     x = '0.0 2.0  4.0'
     y = '0.0 0.00002 0.0'
   []
+  [./tr_x2]
+    type = ParsedFunction
+    expression = x+0.003464
+  [../]
+  [./tr_y2]
+    type = ParsedFunction
+    expression = y
+  [../]
+  [./itr_x2]
+    type = ParsedFunction
+    expression = x-0.003464
+  [../]
+  [./itr_y2]
+    type = ParsedFunction
+    expression = y
+  [../]
 []
 
 [Physics/SolidMechanics/QuasiStatic/all]
@@ -145,7 +186,7 @@
    index_j = 0
    index_i = 0
    execute_on = timestep_end
-  #  block = '1'
+   block = '1'
   [../]
   [./exy]
     type = RankTwoAux
@@ -154,7 +195,7 @@
     index_j = 0
     index_i = 1
     execute_on = timestep_end
-    # block = '1'
+    block = '1'
   [../]
   [./fp_xy]
     type = RankTwoAux
@@ -163,7 +204,7 @@
     index_j = 0
     index_i = 1
     execute_on = timestep_end
-    # block = '1'
+    block = '1'
   [../]
   [./slip_inc]
    type = MaterialStdVectorAux
@@ -171,7 +212,7 @@
    property = slip_increment
    index = 0
    execute_on = timestep_end
-  #  block = '1'
+   block = '1'
   [../]
   [./dislo_vel]
    type = MaterialStdVectorAux
@@ -179,14 +220,14 @@
    property = dislo_velocity
    index = 0
    execute_on = timestep_end
-  #  block = '1'
+   block = '1'
   [../]
   [./epeq]
    type = MaterialRealAux
    variable = epeq
    property = accumulated_equivalent_plastic_strain
    execute_on = timestep_end
-  #  block = '1'
+   block = '1'
   [../]
 []
 
@@ -199,14 +240,14 @@
     euler_angle_1 = 0.0
     euler_angle_2 = 0.0 
     euler_angle_3 = 0.0 
-    # block = '1'
+    block = '1'
   [../]
   [./stress]
     implicit = false
     type = ComputeCrystalPlasticityDislocationStress
     crystal_plasticity_models = 'trial_xtalpl'
     tan_mod_type = exact
-    # block = '1'
+    block = '1'
   [../]
   [./trial_xtalpl]
     implicit = false
@@ -223,21 +264,21 @@
       scaling_Cb = 0.241
     edge_dislo_den_pos_1 = rho_edge_pos_1
     edge_dislo_den_neg_1 = rho_edge_neg_1
-    # block = '1'
+    block = '1'
   [../]
   #new
-  # [./elasticity_tensor_hard]
-  #   implicit = false
-  #   type = ComputeIsotropicElasticityTensor
-  #   youngs_modulus = 192.0e3
-  #   poissons_ratio = 0.17
-  #   block = '0'
-  # [../]
-  # [./stress_elastic]
-  #   implicit = false
-  #   type = ComputeFiniteStrainElasticStress
-  #   block = '0'
-  # [../]
+  [./elasticity_tensor_hard]
+    implicit = false
+    type = ComputeIsotropicElasticityTensor
+    youngs_modulus = 192.0e3
+    poissons_ratio = 0.17
+    block = '0'
+  [../]
+  [./stress_elastic]
+    implicit = false
+    type = ComputeFiniteStrainElasticStress
+    block = '0'
+  [../]
 
 []
 
@@ -245,56 +286,68 @@
   [bottom_x]
     type = DirichletBC
     variable = disp_x
-    boundary = 'bottom'
+    boundary = 'C1M1-1_bottom'
     value = 0.0
   []
   [bottom_y]
     type = DirichletBC
     variable = disp_y
-    boundary = 'bottom'
+    boundary = 'C1M1-1_bottom'
     value = 0.0
   []
 
   [top_x]
     type = FunctionDirichletBC
     variable = disp_x
-    boundary = 'top'
+    boundary = 'C1M1-1_top'
     function = disp_load
   []
   [top_y]
     type = DirichletBC
     variable = disp_y
-    boundary = 'top '
+    boundary = 'C1M1-1_top'
     value = 0.0
   []
 
   [./Periodic]
     [./auto_boundary_x]
       variable = disp_x
-      primary = 'left'
-    secondary = 'right'
-    translation = '0.00346400007 0.0 0.0'
+      primary = C1M1-1_PB_left
+      secondary = C1M1-1_PB_right
+      # translation = '3.464e-3 0.0 0.0'
+      transform_func = 'tr_x2 tr_y2'
+      inv_transform_func = 'itr_x2 itr_y2'
+      # auto_direction = 'x'
     [../]
 
     [./auto_boundary_y]
       variable = disp_y
-      primary = 'left'
-    secondary = 'right'
-    translation = '0.00346400007 0.0 0.0'
+      primary = C1M1-1_PB_left
+      secondary = C1M1-1_PB_right
+      # translation = '3.464e-3 0.0 0.0'
+      transform_func = 'tr_x2 tr_y2'
+      inv_transform_func = 'itr_x2 itr_y2'
+      # auto_direction = 'x'
     [../]
 
     [./auto_rho_edge_pos_boundary_x_1]
       variable = rho_edge_pos_1
-      primary = 'left'
-    secondary = 'right'
-    translation = '0.00346400007 0.0 0.0'
+      primary = C1M1-1_PB_left
+      secondary = C1M1-1_PB_right
+      # translation = '3.464e-3 0.0 0.0'
+      transform_func = 'tr_x2 tr_y2'
+      inv_transform_func = 'itr_x2 itr_y2'
+      # auto_direction = 'x'
     [../]
 
     [./auto_rho_edge_neg_boundary_x_1]
       variable = rho_edge_neg_1
-      primary = 'left'
-    secondary = 'right'
-    translation = '0.00346400007 0.0 0.0'
+      primary = C1M1-1_PB_left
+      secondary = C1M1-1_PB_right
+      # translation = '3.464e-3 0.0 0.0'
+      transform_func = 'tr_x2 tr_y2'
+      inv_transform_func = 'itr_x2 itr_y2'
+      # auto_direction = 'x'
     [../]
   [../]
 
@@ -356,32 +409,32 @@
   [./stress_xy]
     type = ElementAverageValue
     variable = stress_xy
-    # block = '0 1'
+    block = '0 1'
   [../]
   [./pk2]
    type = ElementAverageValue
    variable = pk2
-  #  block = '1'
+   block = '1'
   [../]
   [./fp_xy]
     type = ElementAverageValue
     variable = fp_xy
-    # block = '1'
+    block = '1'
   [../]
   [./exy]
     type = ElementAverageValue
     variable = exy
-    # block = '1'
+    block = '1'
   [../]
   [./slip_increment]
    type = ElementAverageValue
    variable = slip_increment
-  #  block = '1'
+   block = '1'
   [../]
   [./dislo_velocity]
    type = ElementAverageValue
    variable = dislo_velocity
-  #  block = '1'
+   block = '1'
   [../]
   [./disp_x]
      type = NodalVariableValue
@@ -391,12 +444,12 @@
   [./strain_xy]
     type = ElementAverageValue
     variable = strain_xy
-    # block = '0 1'
+    block = '0 1'
   [../]
   [./epeq]
     type = ElementAverageValue
     variable = epeq
-    # block = '1'
+    block = '1'
   [../]
 []
 

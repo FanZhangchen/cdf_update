@@ -125,6 +125,8 @@ protected:
   const Real _w1;
   const Real _w2;
 
+  const Real _elast_coef;
+
   DenseVector<Real> _backstress;
   ///@}
 

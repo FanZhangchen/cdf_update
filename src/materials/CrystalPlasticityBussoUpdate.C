@@ -31,6 +31,8 @@ CrystalPlasticityBussoUpdate::validParams()
   params.addParam<Real>("w1", 1.5, "cross-hardening constants, adopted from Cheong2004");
   params.addParam<Real>("w2", 1.2, "cross-hardening constants, adopted from Cheong2004");
 
+  params.addParam<Real>("elast_coef", 0.0, "control the slip resistance");
+
   params.addCoupledVar(
       "edge_dislo_den_pos_1", 0.0, "Positive edge dislocation density: slip system 1");
   params.addCoupledVar(
@@ -101,6 +103,8 @@ CrystalPlasticityBussoUpdate::CrystalPlasticityBussoUpdate(const InputParameters
     _dlamb(getParam<Real>("dlamb")),
     _w1(getParam<Real>("w1")),
     _w2(getParam<Real>("w2")),
+
+    _elast_coef(getParam<Real>("elast_coef")),
 
     _backstress(_number_slip_systems),
 
@@ -191,7 +195,7 @@ CrystalPlasticityBussoUpdate::initQpStatefulProperties()
       // hardening
     }
     _slip_resistance[_qp][i] =
-        _dlamb * _shear_modulus * _burgers * std::sqrt(initial_hardening_total_dislocation_density);
+        _elast_coef + _dlamb * _shear_modulus * _burgers * std::sqrt(initial_hardening_total_dislocation_density);
   }
 
   _edge_slip_direction[_qp].resize(LIBMESH_DIM * _number_slip_systems);
@@ -477,7 +481,7 @@ CrystalPlasticityBussoUpdate::calculateSlipResistance()
             _w1 * (rho_edge_pos[j] + rho_edge_neg[j]); // latent hardening
     }
     _slip_resistance[_qp][i] =
-        _dlamb * _shear_modulus * _burgers * std::sqrt(hardening_total_dislocation_density);
+        _elast_coef + _dlamb * _shear_modulus * _burgers * std::sqrt(hardening_total_dislocation_density);
   }
 }
 

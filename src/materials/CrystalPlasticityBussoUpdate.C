@@ -195,7 +195,8 @@ CrystalPlasticityBussoUpdate::initQpStatefulProperties()
       // hardening
     }
     _slip_resistance[_qp][i] =
-        _elast_coef + _dlamb * _shear_modulus * _burgers * std::sqrt(initial_hardening_total_dislocation_density);
+        _elast_coef +
+        _dlamb * _shear_modulus * _burgers * std::sqrt(initial_hardening_total_dislocation_density);
   }
 
   _edge_slip_direction[_qp].resize(LIBMESH_DIM * _number_slip_systems);
@@ -480,8 +481,8 @@ CrystalPlasticityBussoUpdate::calculateSlipResistance()
         hardening_total_dislocation_density +=
             _w1 * (rho_edge_pos[j] + rho_edge_neg[j]); // latent hardening
     }
-    _slip_resistance[_qp][i] =
-        _elast_coef + _dlamb * _shear_modulus * _burgers * std::sqrt(hardening_total_dislocation_density);
+    _slip_resistance[_qp][i] = _elast_coef + _dlamb * _shear_modulus * _burgers *
+                                                 std::sqrt(hardening_total_dislocation_density);
   }
 }
 

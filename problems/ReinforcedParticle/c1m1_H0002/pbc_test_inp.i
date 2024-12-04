@@ -5,7 +5,7 @@
 [Mesh]
   [read]
     type = FileMeshGenerator
-    file = c1m1_H0002_nodislobc.inp
+    file = C1M1_H0002-NP.inp
   []
   # [separate]
   #   type = ParsedSubdomainMeshGenerator
@@ -15,14 +15,14 @@
   #   new_subdomain = '2'
   #   block_id = 2
   # []
-  [remove]
-    type = BoundaryDeletionGenerator
-    input = 'read'
-    boundary_names = 'C1M1-1_BL-Elasticity C1M1-1_BL-Plasticity'
-  []
+  # [remove]
+  #   type = BoundaryDeletionGenerator
+  #   input = 'read'
+  #   boundary_names = 'elasticity plasticity'
+  # []
   [create_sideset]
     type = SideSetsFromNodeSetsGenerator
-    input = remove
+    input = read
   []
   # displacements = 'disp_x disp_y'
 
@@ -294,68 +294,68 @@
   [bottom_x]
     type = DirichletBC
     variable = disp_x
-    boundary = 'C1M1-1_bottom'
+    boundary = 'bottom'
     value = 0.0
   []
   [bottom_y]
     type = DirichletBC
     variable = disp_y
-    boundary = 'C1M1-1_bottom'
+    boundary = 'bottom'
     value = 0.0
   []
 
   [top_x]
     type = FunctionDirichletBC
     variable = disp_x
-    boundary = 'C1M1-1_top'
+    boundary = 'top'
     function = disp_load
   []
   [top_y]
     type = DirichletBC
     variable = disp_y
-    boundary = 'C1M1-1_top'
+    boundary = 'top'
     value = 0.0
   []
 
   [./Periodic]
     [./auto_boundary_x]
       variable = disp_x
-      # primary = C1M1-1_PB_left
-      # secondary = C1M1-1_PB_right
-      # translation = '3.464e-3 0.0 0.0'
+      primary = left
+      secondary = right
+      translation = '3.464e-3 0.0 0.0'
       # transform_func = 'tr_x2 tr_y2'
       # inv_transform_func = 'itr_x2 itr_y2'
-      auto_direction = 'x'
+      # auto_direction = 'x'
     [../]
 
     [./auto_boundary_y]
       variable = disp_y
-      # primary = C1M1-1_PB_left
-      # secondary = C1M1-1_PB_right
-      # translation = '3.464e-3 0.0 0.0'
+      primary = left
+      secondary = right
+      translation = '3.464e-3 0.0 0.0'
       # transform_func = 'tr_x2 tr_y2'
       # inv_transform_func = 'itr_x2 itr_y2'
-      auto_direction = 'x'
+      # auto_direction = 'x'
     [../]
 
     [./auto_rho_edge_pos_boundary_x_1]
       variable = rho_edge_pos_1
-      # primary = C1M1-1_PB_left
-      # secondary = C1M1-1_PB_right
-      # translation = '3.464e-3 0.0 0.0'
+      primary = left
+      secondary = right
+      translation = '3.464e-3 0.0 0.0'
       # transform_func = 'tr_x2 tr_y2'
       # inv_transform_func = 'itr_x2 itr_y2'
-      auto_direction = 'x'
+      # auto_direction = 'x'
     [../]
 
     [./auto_rho_edge_neg_boundary_x_1]
       variable = rho_edge_neg_1
-      # primary = C1M1-1_PB_left
-      # secondary = C1M1-1_PB_right
-      # translation = '3.464e-3 0.0 0.0'
+      primary = left
+      secondary = right
+      translation = '3.464e-3 0.0 0.0'
       # transform_func = 'tr_x2 tr_y2'
       # inv_transform_func = 'itr_x2 itr_y2'
-      auto_direction = 'x'
+      # auto_direction = 'x'
     [../]
   [../]
 

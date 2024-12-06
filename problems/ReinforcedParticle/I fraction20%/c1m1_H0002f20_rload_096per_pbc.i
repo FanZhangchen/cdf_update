@@ -27,11 +27,11 @@
       family = LAGRANGE
   []
   [rho_edge_pos_1]
-    initial_condition = 5.e7
+    initial_condition = 3.06e7
     # block = '1'
   []
   [rho_edge_neg_1]
-    initial_condition = 5.e7
+    initial_condition = 3.06e7
     # block = '1'
   []
 []

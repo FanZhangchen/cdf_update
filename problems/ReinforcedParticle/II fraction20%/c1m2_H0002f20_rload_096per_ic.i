@@ -27,11 +27,11 @@
       family = LAGRANGE
   []
   [rho_edge_pos_1]
-    initial_condition = 2.77e7
+    initial_condition = 5.0e7 #2.77e7
     # block = '1'
   []
   [rho_edge_neg_1]
-    initial_condition = 2.77e7
+    initial_condition = 5.0e7 #2.77e7
     # block = '1'
   []
 []
@@ -93,7 +93,7 @@
   [Edge_Pos_Flux_1]
     type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_pos_1
-    upwinding_type = full
+    upwinding_type = none
       dislo_sign = positive
       slip_sys_index = 0
       dislo_character = edge
@@ -106,7 +106,7 @@
   [Edge_Neg_Flux_1]
     type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_neg_1
-    upwinding_type = full
+    upwinding_type = none
       dislo_sign = negative
       slip_sys_index = 0
       dislo_character = edge

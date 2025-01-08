@@ -22,7 +22,7 @@ CrystalPlasticityBussoUpdate::validParams()
   params.addParam<Real>("f0", 2.77e-19, "thermal activation energy");
   params.addParam<Real>("gdot0", 1.0e6, "initial slip rate");
   params.addParam<Real>("tau_0", 120.0, "initial lattice friction strength of the material");
-  params.addParam<Real>("burgers", 2.54e-7, "magnitude of burgers vector");
+  params.addParam<Real>("burgers", 2.57e-7, "magnitude of burgers vector");
   params.addParam<Real>("shear_modulus", 45000.0, "shear_modulus");
   params.addParam<Real>("boltzmann", 1.38065e-23, "The Boltzmann Constant");
   params.addParam<Real>("scaling_Cb", 1.0, "The scaling parameter for the backstress");

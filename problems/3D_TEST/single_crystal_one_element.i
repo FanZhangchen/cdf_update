@@ -412,7 +412,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_1_Q2_Time]
@@ -448,7 +449,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_1_Q3_Time]
@@ -484,7 +486,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_1_Q4_Time]
@@ -520,7 +523,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_1_Q1_Time]
@@ -556,7 +560,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_1_Q2_Time]
@@ -592,7 +597,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_1_Q3_Time]
@@ -628,7 +634,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_1_Q4_Time]
@@ -664,7 +671,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   # Slip 2
@@ -701,7 +709,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_2_Q2_Time]
@@ -737,7 +746,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_2_Q3_Time]
@@ -773,7 +783,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_2_Q4_Time]
@@ -809,7 +820,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_2_Q1_Time]
@@ -845,7 +857,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_2_Q2_Time]
@@ -881,7 +894,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_2_Q3_Time]
@@ -917,7 +931,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_2_Q4_Time]
@@ -953,7 +968,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
   
   # Slip 3 
@@ -990,7 +1006,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_3_Q2_Time]
@@ -1026,7 +1043,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_3_Q3_Time]
@@ -1062,7 +1080,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_3_Q4_Time]
@@ -1098,7 +1117,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_3_Q1_Time]
@@ -1134,7 +1154,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_3_Q2_Time]
@@ -1170,7 +1191,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_3_Q3_Time]
@@ -1206,7 +1228,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_3_Q4_Time]
@@ -1242,7 +1265,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   # Slip 4
@@ -1279,7 +1303,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_4_Q2_Time]
@@ -1315,7 +1340,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_4_Q3_Time]
@@ -1351,7 +1377,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_4_Q4_Time]
@@ -1387,7 +1414,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_4_Q1_Time]
@@ -1423,7 +1451,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_4_Q2_Time]
@@ -1459,7 +1488,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_4_Q3_Time]
@@ -1495,7 +1525,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_4_Q4_Time]
@@ -1531,7 +1562,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   # Slip 5
@@ -1568,7 +1600,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_5_Q2_Time]
@@ -1604,7 +1637,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_5_Q3_Time]
@@ -1640,7 +1674,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_5_Q4_Time]
@@ -1676,7 +1711,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_5_Q1_Time]
@@ -1712,7 +1748,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_5_Q2_Time]
@@ -1748,7 +1785,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_5_Q3_Time]
@@ -1784,7 +1822,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_5_Q4_Time]
@@ -1820,7 +1859,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   # Slip 6
@@ -1857,7 +1897,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_6_Q2_Time]
@@ -1893,7 +1934,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_6_Q3_Time]
@@ -1929,7 +1971,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_6_Q4_Time]
@@ -1965,7 +2008,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_6_Q1_Time]
@@ -2001,7 +2045,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_6_Q2_Time]
@@ -2037,7 +2082,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_6_Q3_Time]
@@ -2073,7 +2119,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_6_Q4_Time]
@@ -2109,7 +2156,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   # Slip 7 
@@ -2146,7 +2194,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_7_Q2_Time]
@@ -2182,7 +2231,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_7_Q3_Time]
@@ -2218,7 +2268,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_7_Q4_Time]
@@ -2254,7 +2305,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_7_Q1_Time]
@@ -2290,7 +2342,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_7_Q2_Time]
@@ -2326,7 +2379,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_7_Q3_Time]
@@ -2362,7 +2416,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_7_Q4_Time]
@@ -2398,7 +2453,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   # Slip 8
@@ -2435,7 +2491,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_8_Q2_Time]
@@ -2471,7 +2528,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_8_Q3_Time]
@@ -2507,7 +2565,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_8_Q4_Time]
@@ -2543,7 +2602,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_8_Q1_Time]
@@ -2579,7 +2639,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_8_Q2_Time]
@@ -2615,7 +2676,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_8_Q3_Time]
@@ -2651,7 +2713,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_8_Q4_Time]
@@ -2687,7 +2750,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   # Slip 9
@@ -2724,7 +2788,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_9_Q2_Time]
@@ -2760,7 +2825,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_9_Q3_Time]
@@ -2796,7 +2862,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_9_Q4_Time]
@@ -2832,7 +2899,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_9_Q1_Time]
@@ -2868,7 +2936,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_9_Q2_Time]
@@ -2904,7 +2973,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_9_Q3_Time]
@@ -2940,7 +3010,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_9_Q4_Time]
@@ -2976,7 +3047,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   # Slip 10 
@@ -3013,7 +3085,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_10_Q2_Time]
@@ -3049,7 +3122,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_10_Q3_Time]
@@ -3085,7 +3159,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_10_Q4_Time]
@@ -3121,7 +3196,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_10_Q1_Time]
@@ -3157,7 +3233,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_10_Q2_Time]
@@ -3193,7 +3270,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_10_Q3_Time]
@@ -3229,7 +3307,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_10_Q4_Time]
@@ -3265,7 +3344,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   # Slip 11 
@@ -3302,7 +3382,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_11_Q2_Time]
@@ -3338,7 +3419,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_11_Q3_Time]
@@ -3374,7 +3456,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_11_Q4_Time]
@@ -3410,7 +3493,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_11_Q1_Time]
@@ -3446,7 +3530,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_11_Q2_Time]
@@ -3482,7 +3567,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_11_Q3_Time]
@@ -3518,7 +3604,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_11_Q4_Time]
@@ -3554,7 +3641,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   # Slip 12 
@@ -3591,7 +3679,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_12_Q2_Time]
@@ -3627,7 +3716,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_12_Q3_Time]
@@ -3663,7 +3753,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [Edge_Dislo_Den_Slip_12_Q4_Time]
@@ -3699,7 +3790,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_12_Q1_Time]
@@ -3735,7 +3827,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_12_Q2_Time]
@@ -3771,7 +3864,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_12_Q3_Time]
@@ -3807,7 +3901,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 
   [screw_Dislo_Den_Slip_12_Q4_Time]
@@ -3843,7 +3938,8 @@
       ks_b = 104000
       de = 1.9e-6
       ds = 2.8e-6
-    Ce = 0.5
+    Ce = 0.125
+    Cs = 0.125
   []
 []
 

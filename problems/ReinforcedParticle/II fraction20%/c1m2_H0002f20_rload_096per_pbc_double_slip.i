@@ -27,19 +27,19 @@
       family = LAGRANGE
   []
   [rho_edge_pos_1]
-    initial_condition = 5.e7 #2.77e7
+    initial_condition = 2.77e7 #5.e7
     # block = '1'
   []
   [rho_edge_neg_1]
-    initial_condition = 5.e7 #2.77e7
+    initial_condition = 2.77e7
     # block = '1'
   []
   [rho_edge_pos_2]
-    initial_condition = 5.e7 #2.77e7
+    initial_condition = 2.77e7
     # block = '1'
   []
   [rho_edge_neg_2]
-    initial_condition = 5.e7 #2.77e7
+    initial_condition = 2.77e7
     # block = '1'
   []
 []
@@ -334,6 +334,20 @@
 
     [./auto_rho_edge_neg_boundary_x_1]
       variable = rho_edge_neg_1
+      primary = left
+      secondary = right
+      translation = '3.464e-3 0.0 0.0'
+    [../]
+
+    [./auto_rho_edge_pos_boundary_x_2]
+      variable = rho_edge_pos_2
+      primary = left
+      secondary = right
+      translation = '3.464e-3 0.0 0.0'
+    [../]
+
+    [./auto_rho_edge_neg_boundary_x_2]
+      variable = rho_edge_neg_2
       primary = left
       secondary = right
       translation = '3.464e-3 0.0 0.0'

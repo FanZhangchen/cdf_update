@@ -264,8 +264,8 @@
   [../]
   [./stress_elastic_dislo_free]
     type = CrystalPlasticityBussoUpdate
-    number_slip_systems = 1
-    slip_sys_file_name = input_slip_sys_al.txt
+    number_slip_systems = 2
+    slip_sys_file_name = input_2slip_sys_al_45.txt
       w1 = 0.0
       w2 = 0.0
       tau_0 = 8.0
@@ -277,6 +277,8 @@
       elast_coef = 1.e12
     edge_dislo_den_pos_1 = rho_edge_pos_1
     edge_dislo_den_neg_1 = rho_edge_neg_1
+    edge_dislo_den_pos_2 = rho_edge_pos_2
+    edge_dislo_den_neg_2 = rho_edge_neg_2
     block = '0'
   [../]
 []

@@ -411,7 +411,7 @@
 
   start_time = 0.0
   end_time = 3.84 #0.01
-  dt = 5.e-5
+  dt = 2.e-7
   dtmin = 1.e-9
 []
 

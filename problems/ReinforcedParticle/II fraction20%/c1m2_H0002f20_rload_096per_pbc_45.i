@@ -73,7 +73,7 @@
   [disp_load]
     type = PiecewiseLinear
     x = '0.0 2.0  4.0'
-    y = '0.0 0.00002 0.0'
+    y = '0.0 0.0002 0.0'
   []
 []
 
@@ -329,7 +329,7 @@
   l_tol = 1e-5  #1e-5 
 
   start_time = 0.0
-  end_time = 3.84 #0.01
+  end_time = 4.0 #0.01
   dt = 5.e-5
   dtmin = 1.e-9
 []

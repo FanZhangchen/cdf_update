@@ -80,8 +80,8 @@
 [Functions]
   [disp_load]
     type = PiecewiseLinear
-    x = '0.0 2.0'
-    y = '0.0 0.00002'
+    x = '0.0 4.0'
+    y = '0.0 0.00004'
     # x = '0.0 2.0  4.0'
     # y = '0.0 0.00002 0.0'
   []
@@ -156,7 +156,7 @@
    variable = pk2
    rank_two_tensor = second_piola_kirchhoff_stress
    index_j = 0
-   index_i = 0
+   index_i = 1
    execute_on = timestep_end
   #  block = '1'
   [../]
@@ -412,8 +412,8 @@
   l_tol = 1e-5  #1e-5 
 
   start_time = 0.0
-  end_time = 3.84 #0.01
-  dt = 2.e-7
+  end_time = 4.0 #0.01
+  dt = 5.e-5
   dtmin = 1.e-9
 []
 

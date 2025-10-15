@@ -122,7 +122,7 @@
    variable = pk2
    rank_two_tensor = second_piola_kirchhoff_stress
    index_j = 0
-   index_i = 0
+   index_i = 1
    execute_on = timestep_end
   #  block = '1'
   [../]

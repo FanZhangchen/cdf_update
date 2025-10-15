@@ -27,19 +27,19 @@
       family = LAGRANGE
   []
   [rho_edge_pos_1]
-    initial_condition = 5.e7 #2.77e5 
+    initial_condition = 2.5e7 #2.77e5 
     # block = '1'
   []
   [rho_edge_neg_1]
-    initial_condition = 5.e7
+    initial_condition = 2.5e7
     # block = '1'
   []
   [rho_edge_pos_2]
-    initial_condition = 5.e7
+    initial_condition = 2.5e7
     # block = '1'
   []
   [rho_edge_neg_2]
-    initial_condition = 5.e7
+    initial_condition = 2.5e7
     # block = '1'
   []
 []
@@ -80,8 +80,10 @@
 [Functions]
   [disp_load]
     type = PiecewiseLinear
-    x = '0.0 2.0  4.0'
-    y = '0.0 0.00002 0.0'
+    x = '0.0 2.0'
+    y = '0.0 0.00002'
+    # x = '0.0 2.0  4.0'
+    # y = '0.0 0.00002 0.0'
   []
 []
 

@@ -362,32 +362,32 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
 
     RhoTotSlip = rho_edge_pos[i] + rho_edge_neg[i];
 
-    if (_edge_slip_direction[_qp][i * LIBMESH_DIM] < 1.e-10)
+    if (_edge_slip_direction[_qp][i * LIBMESH_DIM] < 1.e-10 && _edge_slip_direction[_qp][i * LIBMESH_DIM] > -1.e-10)
       local_edge_slip_direction[0] = 0.0;
     else
       local_edge_slip_direction[0] = 1.0 / _edge_slip_direction[_qp][i * LIBMESH_DIM];
 
-    if (_edge_slip_direction[_qp][i * LIBMESH_DIM + 1] < 1.e-10)
+    if (_edge_slip_direction[_qp][i * LIBMESH_DIM + 1] < 1.e-10 && _edge_slip_direction[_qp][i * LIBMESH_DIM + 1] > -1.e-10)
       local_edge_slip_direction[1] = 0.0;
     else
       local_edge_slip_direction[1] = 1.0 / _edge_slip_direction[_qp][i * LIBMESH_DIM + 1];
 
-    if (_edge_slip_direction[_qp][i * LIBMESH_DIM + 2] < 1.e-10)
+    if (_edge_slip_direction[_qp][i * LIBMESH_DIM + 2] < 1.e-10 && _edge_slip_direction[_qp][i * LIBMESH_DIM + 2] > -1.e-10)
       local_edge_slip_direction[2] = 0.0;
     else
       local_edge_slip_direction[2] = 1.0 / _edge_slip_direction[_qp][i * LIBMESH_DIM + 2];
 
-    if (_screw_slip_direction[_qp][i * LIBMESH_DIM] < 1.e-10)
+    if (_screw_slip_direction[_qp][i * LIBMESH_DIM] < 1.e-10 && _screw_slip_direction[_qp][i * LIBMESH_DIM] > -1.e-10)
       local_screw_slip_direction[0] = 0.0;
     else
       local_screw_slip_direction[0] = 1.0 / _screw_slip_direction[_qp][i * LIBMESH_DIM];
 
-    if (_screw_slip_direction[_qp][i * LIBMESH_DIM + 1] < 1.e-10)
+    if (_screw_slip_direction[_qp][i * LIBMESH_DIM + 1] < 1.e-10 && _screw_slip_direction[_qp][i * LIBMESH_DIM + 1] > -1.e-10)
       local_screw_slip_direction[1] = 0.0;
     else
       local_screw_slip_direction[1] = 1.0 / _screw_slip_direction[_qp][i * LIBMESH_DIM + 1];
 
-    if (_screw_slip_direction[_qp][i * LIBMESH_DIM + 2] < 1.e-10)
+    if (_screw_slip_direction[_qp][i * LIBMESH_DIM + 2] < 1.e-10 && _screw_slip_direction[_qp][i * LIBMESH_DIM + 2] > -1.e-10)
       local_screw_slip_direction[2] = 0.0;
     else
       local_screw_slip_direction[2] = 1.0 / _screw_slip_direction[_qp][i * LIBMESH_DIM + 2];

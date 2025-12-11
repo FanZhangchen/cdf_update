@@ -14,4 +14,4 @@ plt.title('Stress-Strain Curve')
 # plt.grid(True)
 
 # Show the plot
-plt.show()
+plt.savefig('fig_stress_strain.pdf', format='pdf')

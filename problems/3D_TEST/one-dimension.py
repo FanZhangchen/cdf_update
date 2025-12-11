@@ -126,3 +126,5 @@ plt.savefig(path_output+"oned-ss.png")
 
 data = np.column_stack((strain,stress))
 np.savetxt(path_output+"one-d-data.dat",data,delimiter=',',fmt='%10.5f')
+
+plt.savefig('fig_stress_strain_comp.pdf', format='pdf')

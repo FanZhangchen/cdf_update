@@ -67,10 +67,10 @@
    family = MONOMIAL
   #  block = '1'
   [../]
-  # [./edge_dislocation_increment]
-  #   order = CONSTANT
-  #   family = MONOMIAL
-  # [../]
+  [./edge_dislocation_increment]
+    order = CONSTANT
+    family = MONOMIAL
+  [../]
 []
 
 [Functions]
@@ -95,7 +95,7 @@
     variable = rho_edge_pos_1
   []
   [Edge_Pos_Flux_1]
-    type = ConservativeAdvectionSchmidNoSSD
+    type = ConservativeAdvectionSchmidSSD_12
     variable = rho_edge_pos_1
     upwinding_type = full
       dislo_sign = positive
@@ -108,7 +108,7 @@
     variable = rho_edge_neg_1
   []
   [Edge_Neg_Flux_1]
-    type = ConservativeAdvectionSchmidNoSSD
+    type = ConservativeAdvectionSchmidSSD_12
     variable = rho_edge_neg_1
     upwinding_type = full
       dislo_sign = negative
@@ -169,12 +169,13 @@
    execute_on = timestep_end
   #  block = '1'
   [../]
-  # [./edge_dislocation_increment]
-  #   type = MaterialRealAux
-  #   variable = edge_dislocation_increment
-  #   property = edge_dislocation_increment
-  #   execute_on = timestep_end
-  # [../]
+  [./edge_dislocation_increment]
+    type = MaterialStdVectorAux
+    variable = edge_dislocation_increment
+    property = edge_dislocation_increment
+    index = 0
+    execute_on = timestep_end
+  [../]
 []
 
 [Materials]
@@ -254,19 +255,19 @@
     block = '0'
   [../]
   #ssd
-  # [./ssd]
-  #   type = SSDUpdate_sim
-  #   nss = 1
-  #     ke_b = 52000
-  #     ks_b = 104000
-  #     de = 1.9e-6
-  #     ds = 2.8e-6
-  #     Ce = 0.25
-  #     Cs = 0.25
-  #     dislo_source_edge = 3.06e7
-  #   dislo_den_pos_1 = rho_edge_pos_1
-  #   dislo_den_neg_1 = rho_edge_neg_1
-  # [../]
+  [./ssd]
+    type = SSDUpdate_sim
+    nss = 1
+      ke_b = 52000
+      ks_b = 104000
+      de = 1.9e-6
+      ds = 2.8e-6
+      Ce = 0.25
+      Cs = 0.25
+      dislo_source_edge = 3.06e7
+    dislo_den_pos_1 = rho_edge_pos_1
+    dislo_den_neg_1 = rho_edge_neg_1
+  [../]
 []
 
 [BCs]
@@ -402,6 +403,11 @@
   [./epeq]
     type = ElementAverageValue
     variable = epeq
+    # block = '1'
+  [../]
+  [./edge_dislocation_increment]
+    type = ElementAverageValue
+    variable = edge_dislocation_increment
     # block = '1'
   [../]
 []

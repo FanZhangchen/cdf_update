@@ -50,6 +50,7 @@ private:
 
   // Slip system index to determine slip direction
   const unsigned int _slip_sys_index;
+  const unsigned int _dislo_den_num;
 
   // Character of dislocations (edge or screw)
   const enum class DisloCharacter { edge, screw } _dislo_character;

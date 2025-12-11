@@ -288,6 +288,20 @@
     edge_dislo_den_neg_1 = rho_edge_neg_1
     block = '0'
   [../]
+  #ssd
+  # [./ssd]
+  #   type = SSDUpdate_sim
+  #   nss = 1
+  #     ke_b = 52000
+  #     ks_b = 104000
+  #     de = 1.9e-6
+  #     ds = 2.8e-6
+  #     Ce = 0.25
+  #     Cs = 0.25
+  #     dislo_source_edge = 3.06e7
+  #   dislo_den_pos_1 = rho_edge_pos_1
+  #   dislo_den_neg_1 = rho_edge_neg_1
+  # [../]
 []
 
 [BCs]

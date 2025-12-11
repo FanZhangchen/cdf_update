@@ -34,6 +34,9 @@ MatCoupledDisloDensityALL::validParams()
   MooseEnum dislo_character("edge screw", "edge");
   params.addRequiredParam<MooseEnum>(
       "dislo_character", dislo_character, "Character of dislocations: edge or screw.");
+  params.addRequiredParam<int>("dislo_den_num", 1,
+                                "Numbers of dislocation density for edge or screw_sign"
+                                "activated in a slip system");
   /// The parameters that need to be used in the calculations of source and sink terms
   params.addParam<Real>("burgers", 2.57e-7, "magnitude of burgers vector");
   params.addParam<Real>("ke_b", 55000.0, "edge hardening constants");
@@ -68,6 +71,7 @@ MatCoupledDisloDensityALL::MatCoupledDisloDensityALL(const InputParameters & par
     _slip_sys_index(getParam<int>("slip_sys_index")),
     _dislo_character(getParam<MooseEnum>("dislo_character").getEnum<DisloCharacter>()),
     _check_rho_positive(getParam<bool>("check_rho_positive")),
+    _dislo_den_num(getParam<int>("dislo_den_num")),
     _slip_increment(getMaterialProperty<std::vector<Real>>("slip_increment"))
 {
   for (MooseIndex(_n_coupled) j = 0; j < _n_coupled; ++j)
@@ -113,11 +117,22 @@ MatCoupledDisloDensityALL::computeQpResidual()
     total_dislocation_density += (*_v[j])[_qp];
   }
 
-  for (unsigned int k = 0; k < 3; ++k)
+  if (_dislo_den_num >= 1) 
   {
-    // the dislocation density components that same as the variables in the same slip system
-    temp_type_dislocation_density += (*_v[k])[_qp];
+    for (unsigned int k = 0; k < _dislo_den_num - 1; ++k) 
+    {
+        temp_type_dislocation_density += (*_v[k])[_qp];
+    }
   }
+  else
+  {
+    mooseWarning("The number of dislocation density is less than 1, check the input number.");
+  }
+  // for (unsigned int k = 0; k < _dislo_den_num - 1; ++k)
+  // {
+  //   // the dislocation density components that same as the variables in the same slip system
+  //   temp_type_dislocation_density += (*_v[k])[_qp];
+  // }
 
   switch (_dislo_character)
   {

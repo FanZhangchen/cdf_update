@@ -16,7 +16,8 @@ SSDUpdate_sim::validParams()
   params.addParam<Real>("ds", 5.0e-6, "critical screw annihilation distance");
   params.addParam<Real>("Ce", 0.5, "edge proportional constant");
   params.addParam<Real>("Cs", 0.5, "screw proportional constant");
-  params.addParam<Real>("dislo_source_edge", 0.0, "initial value of SSD component of edge dislocation");
+  params.addParam<Real>(
+      "dislo_source_edge", 0.0, "initial value of SSD component of edge dislocation");
 
   params.addRequiredParam<int>("nss", "Number of slip systems");
   // Coupled Variables of Slip 1
@@ -149,8 +150,8 @@ SSDUpdate_sim::SSDUpdate_sim(const InputParameters & parameters)
     _gssT(_nss),
 
     // Get the coupled value of NDOFs of Slip 1
-    _edge_dislo_den_pos_1(coupledValue("dislo_den_pos_1")),   // Coupled Slip 1 Edge in Q1
-    _edge_dislo_den_neg_1(coupledValue("dislo_den_neg_1")),   // Coupled Slip 1 Edge in Q2
+    _edge_dislo_den_pos_1(coupledValue("dislo_den_pos_1")), // Coupled Slip 1 Edge in Q1
+    _edge_dislo_den_neg_1(coupledValue("dislo_den_neg_1")), // Coupled Slip 1 Edge in Q2
     // _edge_dislo_den_1_Q3(coupledValue("edge_dislo_den_1_Q3")),   // Coupled Slip 1 Edge in Q3
     // _edge_dislo_den_1_Q4(coupledValue("edge_dislo_den_1_Q4")),   // Coupled Slip 1 Edge in Q4
     // _screw_dislo_den_1_Q1(coupledValue("screw_dislo_den_1_Q1")), // Coupled Slip 1 Screw in Q1
@@ -159,8 +160,8 @@ SSDUpdate_sim::SSDUpdate_sim(const InputParameters & parameters)
     // _screw_dislo_den_1_Q4(coupledValue("screw_dislo_den_1_Q4")), // Coupled Slip 1 Screw in Q4
 
     // Get the coupled value of NDOFs of Slip 2
-    _edge_dislo_den_pos_2(coupledValue("dislo_den_pos_2")),   // Coupled Slip 1 Edge in Q1
-    _edge_dislo_den_neg_2(coupledValue("dislo_den_neg_2")),   // Coupled Slip 1 Edge in Q2
+    _edge_dislo_den_pos_2(coupledValue("dislo_den_pos_2")), // Coupled Slip 1 Edge in Q1
+    _edge_dislo_den_neg_2(coupledValue("dislo_den_neg_2")), // Coupled Slip 1 Edge in Q2
     // _edge_dislo_den_2_Q3(coupledValue("edge_dislo_den_2_Q3")),   // Coupled Slip 1 Edge in Q3
     // _edge_dislo_den_2_Q4(coupledValue("edge_dislo_den_2_Q4")),   // Coupled Slip 1 Edge in Q4
     // _screw_dislo_den_2_Q1(coupledValue("screw_dislo_den_2_Q1")), // Coupled Slip 1 Screw in Q1
@@ -274,9 +275,9 @@ SSDUpdate_sim::SSDUpdate_sim(const InputParameters & parameters)
     _edge_dislocation_increment_old(
         getMaterialPropertyOld<std::vector<Real>>("edge_dislocation_increment"))
 
-    // _screw_dislocation_increment(declareProperty<std::vector<Real>>("screw_dislocation_increment")),
-    // _screw_dislocation_increment_old(
-    //     getMaterialPropertyOld<std::vector<Real>>("screw_dislocation_increment"))
+// _screw_dislocation_increment(declareProperty<std::vector<Real>>("screw_dislocation_increment")),
+// _screw_dislocation_increment_old(
+//     getMaterialPropertyOld<std::vector<Real>>("screw_dislocation_increment"))
 
 {
 }
@@ -409,44 +410,43 @@ SSDUpdate_sim::initQpStatefulProperties()
 
   for (const auto i : make_range(_nss))
   {
-    edge_dislocation_density[i] =
-        edge_dislo_den_pos[i] + edge_dislo_den_neg[i];
+    edge_dislocation_density[i] = edge_dislo_den_pos[i] + edge_dislo_den_neg[i];
 
     // screw_dislocation_density[i] = screw_dislo_den_Q1[i] + screw_dislo_den_Q2[i] +
-                                   // screw_dislo_den_Q3[i] + screw_dislo_den_Q4[i];
+    // screw_dislo_den_Q3[i] + screw_dislo_den_Q4[i];
 
     total_dislocation_density[i] = edge_dislocation_density[i];
   }
 
-    TotalDislocationDensity_ALL = 0;
+  TotalDislocationDensity_ALL = 0;
 
-    for (const auto i : make_range(_nss))
+  for (const auto i : make_range(_nss))
+  {
+    const Real abs_slip_increment = std::abs(_slip_increment[_qp][i]);
+
+    for (const auto j : make_range(_nss))
     {
-      const Real abs_slip_increment = std::abs(_slip_increment[_qp][i]);
-
-      for (const auto j : make_range(_nss))
-      {
-        TotalDislocationDensity_ALL += total_dislocation_density[j];
-      }
-
-      if (edge_dislocation_density[i] > 0.0)
-      {
-        _edge_dislocation_increment[_qp][i] =
-            _Ce * _ke_b * std::sqrt(TotalDislocationDensity_ALL) * abs_slip_increment -
-            _Ce / _burgers * 2.0 * _de * _dislo_source_edge * abs_slip_increment;
-      }
-
-      // if (screw_dislocation_density[i] > 0.0)
-      // {
-      //   _screw_dislocation_increment[_qp][i] =
-      //       _Cs * _ks_b * std::sqrt(TotalDislocationDensity_ALL) * abs_slip_increment -
-      //       _Cs / _burgers *
-      //           (M_PI * std::pow(_ds, 2.0) * _ks_b * _burgers *
-      //                std::sqrt(TotalDislocationDensity_ALL) +
-      //            2.0 * _ds) *
-      //           screw_dislocation_density[i] * abs_slip_increment;
-      // }
+      TotalDislocationDensity_ALL += total_dislocation_density[j];
     }
+
+    if (edge_dislocation_density[i] > 0.0)
+    {
+      _edge_dislocation_increment[_qp][i] =
+          _Ce * _ke_b * std::sqrt(TotalDislocationDensity_ALL) * abs_slip_increment -
+          _Ce / _burgers * 2.0 * _de * _dislo_source_edge * abs_slip_increment;
+    }
+
+    // if (screw_dislocation_density[i] > 0.0)
+    // {
+    //   _screw_dislocation_increment[_qp][i] =
+    //       _Cs * _ks_b * std::sqrt(TotalDislocationDensity_ALL) * abs_slip_increment -
+    //       _Cs / _burgers *
+    //           (M_PI * std::pow(_ds, 2.0) * _ks_b * _burgers *
+    //                std::sqrt(TotalDislocationDensity_ALL) +
+    //            2.0 * _ds) *
+    //           screw_dislocation_density[i] * abs_slip_increment;
+    // }
+  }
 }
 
 void
@@ -575,11 +575,10 @@ SSDUpdate_sim::computeQpProperties()
 
   for (const auto i : make_range(_nss))
   {
-    edge_dislocation_density[i] =
-        edge_dislo_den_pos[i] + edge_dislo_den_neg[i];
+    edge_dislocation_density[i] = edge_dislo_den_pos[i] + edge_dislo_den_neg[i];
 
     // screw_dislocation_density[i] = screw_dislo_den_Q1[i] + screw_dislo_den_Q2[i] +
-                                   // screw_dislo_den_Q3[i] + screw_dislo_den_Q4[i];
+    // screw_dislo_den_Q3[i] + screw_dislo_den_Q4[i];
 
     total_dislocation_density[i] = edge_dislocation_density[i];
   }
@@ -603,7 +602,9 @@ SSDUpdate_sim::computeQpProperties()
       _edge_dislocation_increment[_qp][i] =
           _edge_dislocation_increment_old[_qp][i] +
           (_Ce * _ke_b * std::sqrt(TotalDislocationDensity_ALL) * abs_slip_increment -
-           _Ce / _burgers * 2.0 * _de * _edge_dislocation_increment_old[_qp][i] * abs_slip_increment) *_dt;
+           _Ce / _burgers * 2.0 * _de * _edge_dislocation_increment_old[_qp][i] *
+               abs_slip_increment) *
+              _dt;
       // * _dt;
     }
     // mooseWarning("_edge_dislocation_increment: ", _edge_dislocation_increment[_qp][i]);

@@ -34,9 +34,10 @@ MatCoupledDisloDensityALL::validParams()
   MooseEnum dislo_character("edge screw", "edge");
   params.addRequiredParam<MooseEnum>(
       "dislo_character", dislo_character, "Character of dislocations: edge or screw.");
-  params.addRequiredParam<int>("dislo_den_num", 1,
-                                "Numbers of dislocation density for edge or screw_sign"
-                                "activated in a slip system");
+  params.addRequiredParam<int>("dislo_den_num",
+                               1,
+                               "Numbers of dislocation density for edge or screw_sign"
+                               "activated in a slip system");
   /// The parameters that need to be used in the calculations of source and sink terms
   params.addParam<Real>("burgers", 2.57e-7, "magnitude of burgers vector");
   params.addParam<Real>("ke_b", 55000.0, "edge hardening constants");
@@ -117,11 +118,11 @@ MatCoupledDisloDensityALL::computeQpResidual()
     total_dislocation_density += (*_v[j])[_qp];
   }
 
-  if (_dislo_den_num >= 1) 
+  if (_dislo_den_num >= 1)
   {
-    for (unsigned int k = 0; k < _dislo_den_num - 1; ++k) 
+    for (unsigned int k = 0; k < _dislo_den_num - 1; ++k)
     {
-        temp_type_dislocation_density += (*_v[k])[_qp];
+      temp_type_dislocation_density += (*_v[k])[_qp];
     }
   }
   else

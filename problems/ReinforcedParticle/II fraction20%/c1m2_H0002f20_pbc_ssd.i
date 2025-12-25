@@ -264,7 +264,7 @@
       ds = 2.8e-6
       Ce = 0.25
       Cs = 0.25
-      dislo_source_edge = 3.06e7
+      dislo_source_edge = 5.0e7
     dislo_den_pos_1 = rho_edge_pos_1
     dislo_den_neg_1 = rho_edge_neg_1
   [../]

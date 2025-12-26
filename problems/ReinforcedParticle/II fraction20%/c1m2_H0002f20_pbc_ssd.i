@@ -70,6 +70,7 @@
   [./edge_dislocation_increment]
     order = CONSTANT
     family = MONOMIAL
+    block = '1'
   [../]
 []
 
@@ -175,6 +176,7 @@
     property = edge_dislocation_increment
     index = 0
     execute_on = timestep_end
+    block = '1'
   [../]  
 []
 
@@ -409,7 +411,7 @@
   [./edge_dislocation_increment]
     type = ElementAverageValue
     variable = edge_dislocation_increment
-    # block = '1'
+    block = '1'
   [../]
 []
 

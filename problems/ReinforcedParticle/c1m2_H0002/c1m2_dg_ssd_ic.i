@@ -86,7 +86,7 @@
   [./edge_dislocation_increment]
     order = CONSTANT
     family = MONOMIAL
-    block = '1'
+    # block = '1'
   [../]
 []
 
@@ -226,7 +226,7 @@
     property = edge_dislocation_increment
     index = 0
     execute_on = timestep_end
-    block = '1'
+    # block = '1'
   [../] 
 []
 
@@ -314,7 +314,7 @@
       dislo_source_edge = 1.e8 #2.77e7 5.e7 1.e8
     dislo_den_pos_1 = rho_edge_pos_1
     dislo_den_neg_1 = rho_edge_neg_1
-    block = '1'
+    # block = '1'
   [../]
 []
 
@@ -490,7 +490,7 @@
   [./edge_dislocation_increment]
     type = ElementAverageValue
     variable = edge_dislocation_increment
-    block = '1'
+    # block = '1'
   [../]
 []
 

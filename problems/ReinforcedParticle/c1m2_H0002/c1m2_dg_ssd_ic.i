@@ -129,7 +129,7 @@
   []
   [Edge_Pos_Flux_1]
     implicit = false
-    type = ConservativeAdvectionSchmidNoSSD
+    type = ConservativeAdvectionSchmidSSD_12
     variable = rho_edge_pos_1
     upwinding_type = full
       dislo_sign = positive
@@ -143,7 +143,7 @@
   []
   [Edge_Neg_Flux_1]
     implicit = false
-    type = ConservativeAdvectionSchmidNoSSD
+    type = ConservativeAdvectionSchmidSSD_12
     variable = rho_edge_neg_1
     upwinding_type = full
       dislo_sign = negative

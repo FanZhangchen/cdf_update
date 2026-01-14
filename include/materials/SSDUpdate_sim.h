@@ -166,4 +166,6 @@ private:
 
   // MaterialProperty<std::vector<Real>> & _screw_dislocation_increment;
   // const MaterialProperty<std::vector<Real>> & _screw_dislocation_increment_old;
+
+  MaterialProperty<std::vector<Real>> & _d_edge_dislocation_increment_d_rho;
 };

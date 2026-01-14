@@ -43,6 +43,8 @@ ConservativeAdvectionSchmidSSD_12::ConservativeAdvectionSchmidSSD_12(
     _dislo_character(getParam<MooseEnum>("dislo_character").getEnum<DisloCharacter>()),
     _edge_dislocation_increment(
         getMaterialProperty<std::vector<Real>>("edge_dislocation_increment")),
+    _d_edge_dislocation_increment_d_rho(
+        getMaterialProperty<std::vector<Real>>("d_edge_dislocation_increment_d_rho")),
     _u_nodal(_var.dofValues()),
     _upwind_node(0),
     _dtotal_mass_out(0)
@@ -107,7 +109,12 @@ ConservativeAdvectionSchmidSSD_12::computeQpJacobian()
 {
   // This is the no-upwinded version
   // It gets called via Kernel::computeJacobian()
-  return negSpeedQp() * _phi[_j][_qp];
+  
+  // Original Advection Term: negSpeedQp() * _phi[_j][_qp]
+  // New Source Term Derivative: d(Source)/d(rho) * d(rho)/d(u_j)
+  //                           = _d_edge_dislocation_increment_d_rho * _phi[_j][_qp]
+
+  return (negSpeedQp() + _d_edge_dislocation_increment_d_rho[_qp][_slip_sys_index]) * _phi[_j][_qp];
 }
 
 void

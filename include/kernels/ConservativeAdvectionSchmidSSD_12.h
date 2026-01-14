@@ -45,6 +45,9 @@ protected:
   // SSD effect for evolutionary
   const MaterialProperty<std::vector<Real>> & _edge_dislocation_increment;
 
+  // SSD Jacobian
+  const MaterialProperty<std::vector<Real>> & _d_edge_dislocation_increment_d_rho;
+
   /// Type of upwinding
   const enum class UpwindingType { none, full } _upwinding;
 

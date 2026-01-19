@@ -277,7 +277,8 @@ SSDUpdate_sim::SSDUpdate_sim(const InputParameters & parameters)
 
     // Declare the new derivative property for the Jacobian
     // This stores d(SSD_increment) / d(Total_Density)
-    _d_edge_dislocation_increment_d_rho(declareProperty<std::vector<Real>>("d_edge_dislocation_increment_d_rho"))
+    _d_edge_dislocation_increment_d_rho(
+        declareProperty<std::vector<Real>>("d_edge_dislocation_increment_d_rho"))
 
 // _screw_dislocation_increment(declareProperty<std::vector<Real>>("screw_dislocation_increment")),
 // _screw_dislocation_increment_old(
@@ -621,22 +622,22 @@ SSDUpdate_sim::computeQpProperties()
       // * _dt;
       // 2. Compute the Jacobian Derivative (New)
       // d(Increment)/d(rho) = Ce * Ke * |gamma_dot| * dt * 0.5 * (1/sqrt(rho_total))
-      
+
       // Safety check to avoid division by zero
-      if (TotalDislocationDensity_ALL > 1.0e-12) 
+      if (TotalDislocationDensity_ALL > 1.0e-12)
       {
-          _d_edge_dislocation_increment_d_rho[_qp][i] = 
-              _Ce * _ke_b * abs_slip_increment * _dt * (0.5 / std::sqrt(TotalDislocationDensity_ALL));
+        _d_edge_dislocation_increment_d_rho[_qp][i] =
+            _Ce * _ke_b * abs_slip_increment * _dt * (0.5 / std::sqrt(TotalDislocationDensity_ALL));
       }
       else
       {
-          _d_edge_dislocation_increment_d_rho[_qp][i] = 0.0;
+        _d_edge_dislocation_increment_d_rho[_qp][i] = 0.0;
       }
     }
     else
     {
-        _edge_dislocation_increment[_qp][i] = _edge_dislocation_increment_old[_qp][i];
-        _d_edge_dislocation_increment_d_rho[_qp][i] = 0.0;
+      _edge_dislocation_increment[_qp][i] = _edge_dislocation_increment_old[_qp][i];
+      _d_edge_dislocation_increment_d_rho[_qp][i] = 0.0;
     }
     // mooseWarning("_edge_dislocation_increment: ", _edge_dislocation_increment[_qp][i]);
 

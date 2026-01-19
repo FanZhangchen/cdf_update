@@ -101,20 +101,24 @@ ConservativeAdvectionSchmidSSD_12::computeQpResidual()
 {
   // This is the no-upwinded version
   // It gets called via Kernel::computeResidual()
-  return negSpeedQp() * _u[_qp] + _edge_dislocation_increment[_qp][_slip_sys_index];
+  return negSpeedQp() * _u[_qp] + _edge_dislocation_increment[_qp][_slip_sys_index] * _test[_i][_qp];
 }
 
 Real
 ConservativeAdvectionSchmidSSD_12::computeQpJacobian()
 {
-  // This is the no-upwinded version
-  // It gets called via Kernel::computeJacobian()
-  
-  // Original Advection Term: negSpeedQp() * _phi[_j][_qp]
-  // New Source Term Derivative: d(Source)/d(rho) * d(rho)/d(u_j)
-  //                           = _d_edge_dislocation_increment_d_rho * _phi[_j][_qp]
+  // 1. Advection Jacobian
+  // negSpeedQp() contains (-v * grad_test_i)
+  // We multiply by _phi[_j] because d(u)/d(u_j) = phi_j
+  Real advection_jac = negSpeedQp() * _phi[_j][_qp];
 
-  return (negSpeedQp() + _d_edge_dislocation_increment_d_rho[_qp][_slip_sys_index]) * _phi[_j][_qp];
+  // 2. Source Jacobian
+  // Derivative is d(Source)/d(rho) * phi_j
+  // We MUST multiply by _test[_i] because the weak form is Integral(Source * test)
+  Real source_jac = _d_edge_dislocation_increment_d_rho[_qp][_slip_sys_index] * _phi[_j][_qp] * _test[_i][_qp];
+
+  // Return the sum
+  return advection_jac + source_jac;
 }
 
 void

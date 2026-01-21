@@ -413,11 +413,14 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
     }
     else
     {
-      _slip_increment[_qp][i] =
-          _gdot0 *
-          std::exp(-_f0 / _boltzmann / theta *
-                   std::pow((1.0 - std::pow((driving_force / _tau_0), _p)), _q)) *
-          std::copysign(1.0, _tau[_qp][i] - _backstress(i));
+      if (rho_edge_pos[i] + rho_edge_neg[i] < 100)
+        _slip_increment[_qp][i] = 0.0;
+      else
+        _slip_increment[_qp][i] =
+            _gdot0 *
+            std::exp(-_f0 / _boltzmann / theta *
+                     std::pow((1.0 - std::pow((driving_force / _tau_0), _p)), _q)) *
+            std::copysign(1.0, _tau[_qp][i] - _backstress(i));
     }
 
     if (std::abs(_slip_increment[_qp][i]) * _substep_dt > _slip_incr_tol)
@@ -545,7 +548,11 @@ CrystalPlasticityBussoUpdate::calculateDislocationVelocity()
 
     if (driving_force > _zero_tol)
     { // driving force less than 0, the dislocation could not move
-      _dislo_velocity[_qp][i] = _slip_increment[_qp][i] / _burgers / total_dislocation_density;
+
+      if (total_dislocation_density < 100.0)
+        _dislo_velocity[_qp][i] = 0.0;
+      else
+        _dislo_velocity[_qp][i] = _slip_increment[_qp][i] / _burgers / total_dislocation_density;
       // mooseWarning("_dislo_velocity", _dislo_velocity[_qp][i]);
     }
     else
@@ -594,20 +601,66 @@ void
 CrystalPlasticityBussoUpdate::calculateConstitutiveSlipDerivative(std::vector<Real> & dslip_dtau)
 {
   Real theta = _temperature + 273.15;
+
+  std::vector<Real> rho_edge_pos(_number_slip_systems);
+  std::vector<Real> rho_edge_neg(_number_slip_systems);
+
+  Real total_dislocation_density = 0.0;
+
+  rho_edge_pos[0] = _edge_dislo_den_pos_1[_qp];
+  rho_edge_pos[1] = _edge_dislo_den_pos_2[_qp];
+  // rho_edge_pos[2] = _rho_edge_pos_3[_qp];
+  // rho_edge_pos[3] = _rho_edge_pos_4[_qp];
+  // rho_edge_pos[4] = _rho_edge_pos_5[_qp];
+  // rho_edge_pos[5] = _rho_edge_pos_6[_qp];
+  // rho_edge_pos[6] = _rho_edge_pos_7[_qp];
+  // rho_edge_pos[7] = _rho_edge_pos_8[_qp];
+  // rho_edge_pos[8] = _rho_edge_pos_9[_qp];
+  // rho_edge_pos[9] = _edge_dislo_den_pos_10[_qp];
+  // rho_edge_pos[10] = _edge_dislo_den_pos_11[_qp];
+  // rho_edge_pos[11] = _edge_dislo_den_pos_12[_qp];
+
+  rho_edge_neg[0] = _edge_dislo_den_neg_1[_qp];
+  rho_edge_neg[1] = _edge_dislo_den_neg_2[_qp];
+  // rho_edge_neg[2] = _rho_edge_neg_3[_qp];
+  // rho_edge_neg[3] = _rho_edge_neg_4[_qp];
+  // rho_edge_neg[4] = _rho_edge_neg_5[_qp];
+  // rho_edge_neg[5] = _rho_edge_neg_6[_qp];
+  // rho_edge_neg[6] = _rho_edge_neg_7[_qp];
+  // rho_edge_neg[7] = _rho_edge_neg_8[_qp];
+  // rho_edge_neg[8] = _rho_edge_neg_9[_qp];
+  // rho_edge_neg[9] = _edge_dislo_den_neg_10[_qp];
+  // rho_edge_neg[10] = _edge_dislo_den_neg_11[_qp];
+  // rho_edge_neg[11] = _edge_dislo_den_neg_12[_qp];
+
   for (const auto i : make_range(_number_slip_systems))
   {
+    if (rho_edge_pos[i] <= _zero_tol)
+      rho_edge_pos[i] = 0.0;
+
+    if (rho_edge_neg[i] <= _zero_tol)
+      rho_edge_neg[i] = 0.0;
+
+    total_dislocation_density =
+        rho_edge_pos[i] + rho_edge_neg[i]; // + rho_screw_pos[i] + rho_screw_neg[i];
+
     Real driving_force = std::abs(_tau[_qp][i] - _backstress(i)) - _slip_resistance[_qp][i];
     Real u = 0.0, uprime = 0.0, vprime = 0.0;
     if (driving_force < _zero_tol)
       dslip_dtau[i] = 0.0;
     else
     {
-      u = driving_force / _tau_0;
-      uprime = std::pow(u, _p - 1.0) * std::copysign(1.0, (_tau[_qp][i] - _backstress(i)));
-      vprime = std::pow((1.0 - std::pow(u, _p)), _q - 1.0);
-      dslip_dtau[i] = _gdot0 * _p * _q * _f0 / _boltzmann / theta *
-                      std::exp(-_f0 / _boltzmann / theta * std::pow((1.0 - std::pow(u, _p)), _q)) *
-                      uprime * vprime * _substep_dt;
+      if (total_dislocation_density < 100.0)
+        dslip_dtau[i] = 0.0;
+      else
+      {
+        u = driving_force / _tau_0;
+            uprime = std::pow(u, _p - 1.0) * std::copysign(1.0, (_tau[_qp][i] - _backstress(i)));
+            vprime = std::pow((1.0 - std::pow(u, _p)), _q - 1.0);
+            dslip_dtau[i] = _gdot0 * _p * _q * _f0 / _boltzmann / theta *
+                            std::exp(-_f0 / _boltzmann / theta * std::pow((1.0 - std::pow(u, _p)), _q)) *
+                            uprime * vprime * _substep_dt;
+      }
     }
     // mooseWarning("tau=",_tau[_qp][i]);
   }

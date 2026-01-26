@@ -131,7 +131,7 @@
     implicit = false
     type = ConservativeAdvectionSchmidSSD_12
     variable = rho_edge_pos_1
-    upwinding_type = full
+    upwinding_type = none
       dislo_sign = positive
       slip_sys_index = 0
       dislo_character = edge
@@ -145,7 +145,7 @@
     implicit = false
     type = ConservativeAdvectionSchmidSSD_12
     variable = rho_edge_neg_1
-    upwinding_type = full
+    upwinding_type = none
       dislo_sign = negative
       slip_sys_index = 0
       dislo_character = edge

@@ -434,6 +434,14 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
   }
   calculateDislocationVelocity();
 
+  // here a Orawan relation used to calculate slip rate
+  // for (const auto i : make_range(_number_slip_systems))
+  // {
+  //   _slip_increment[_qp][i] = (rho_edge_pos[i] * _dislo_velocity[_qp][i]
+  //     + rho_edge_neg[i] * _dislo_velocity[_qp][i]) * _burgers;
+  // }
+
+
   return true;
 }
 
@@ -655,11 +663,12 @@ CrystalPlasticityBussoUpdate::calculateConstitutiveSlipDerivative(std::vector<Re
       else
       {
         u = driving_force / _tau_0;
-            uprime = std::pow(u, _p - 1.0) * std::copysign(1.0, (_tau[_qp][i] - _backstress(i)));
-            vprime = std::pow((1.0 - std::pow(u, _p)), _q - 1.0);
-            dslip_dtau[i] = _gdot0 * _p * _q * _f0 / _boltzmann / theta *
-                            std::exp(-_f0 / _boltzmann / theta * std::pow((1.0 - std::pow(u, _p)), _q)) *
-                            uprime * vprime * _substep_dt;
+        uprime = std::pow(u, _p - 1.0) * std::copysign(1.0, (_tau[_qp][i] - _backstress(i)));
+        vprime = std::pow((1.0 - std::pow(u, _p)), _q - 1.0);
+        dslip_dtau[i] =
+            _gdot0 * _p * _q * _f0 / _boltzmann / theta *
+            std::exp(-_f0 / _boltzmann / theta * std::pow((1.0 - std::pow(u, _p)), _q)) * uprime *
+            vprime * _substep_dt;
       }
     }
     // mooseWarning("tau=",_tau[_qp][i]);

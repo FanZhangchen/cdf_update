@@ -183,8 +183,9 @@ ConservativeAdvectionSchmidSSD_12::fullUpwind(JacRes res_or_jac)
 
   for (unsigned int n = 0; n < num_nodes; ++n)
   {
-    if (_upwind_node[n])
+    if (_upwind_node[n]) // If node is pushing mass OUT
     {
+      // If computing Jacobian, add diagonal contribution
       if (res_or_jac == JacRes::CALCULATE_JACOBIAN)
       {
         if (_test.size() == _phi.size())
@@ -201,12 +202,15 @@ ConservativeAdvectionSchmidSSD_12::fullUpwind(JacRes res_or_jac)
       _local_re(n) *= _u_nodal[n];
       total_mass_out += _local_re(n);
     }
-    else                        // downwind node
+    else                        // If node is sucking mass IN (Downwind)
       total_in -= _local_re(n); // note the -= means the result is positive
   }
 
   // Conserve mass over all phases by proportioning the total_mass_out mass to the inflow nodes,
   // weighted by their local_re values
+  // 3. Redistribute Mass
+  // Take the mass leaving the Upwind nodes and distribute it to the Downwind nodes
+  // proportional to their "capacity" (local_re).
   for (unsigned int n = 0; n < num_nodes; ++n)
   {
     if (!_upwind_node[n]) // downwind node
@@ -214,11 +218,48 @@ ConservativeAdvectionSchmidSSD_12::fullUpwind(JacRes res_or_jac)
       if (res_or_jac == JacRes::CALCULATE_JACOBIAN)
         for (_j = 0; _j < _phi.size(); _j++)
           _local_ke(n, _j) += _local_re(n) * _dtotal_mass_out[_j] / total_in;
+      // Update residual:
+      // New_Res = Old_Res * (Total_Out / Total_In)
       _local_re(n) *= total_mass_out / total_in;
     }
   }
 
+  // The source term is a volume integral: Integral(Source * TestFunction)
+  // We perform standard Gaussian integration here.
+  
+  for (_i = 0; _i < num_nodes; ++_i)
+  {
+    for (_qp = 0; _qp < _qrule->n_points(); _qp++)
+    {
+       // Calculate Integration Weight (dx * dy * dz)
+       Real JxW = _JxW[_qp] * _coord[_qp];
+
+       // 1. RESIDUAL contribution
+       // Note: Check your sign convention in computeQpResidual. 
+       // If you used: return Advection + Source; 
+       // Then we add it here:
+       Real source_residual = _edge_dislocation_increment[_qp][_slip_sys_index] * _test[_i][_qp];
+       
+       _local_re(_i) += source_residual * JxW;
+
+       // 2. JACOBIAN contribution
+       // Only if we are calculating the Jacobian
+       if (res_or_jac == JacRes::CALCULATE_JACOBIAN)
+       {
+          for (_j = 0; _j < _phi.size(); _j++)
+          {
+             // Derivative: (dSource/dRho) * phi_j * test_i
+             Real source_jac = _d_edge_dislocation_increment_d_rho[_qp][_slip_sys_index] * _phi[_j][_qp] * _test[_i][_qp];
+                               
+             _local_ke(_i, _j) += source_jac * JxW;
+          }
+       }
+    }
+  }
+  
   // Add the result to the residual and jacobian
+  // 4. Add to Global System
+  // Finally, add these redistributed values to the global residual vector
   if (res_or_jac == JacRes::CALCULATE_RESIDUAL)
   {
     accumulateTaggedLocalResidual();

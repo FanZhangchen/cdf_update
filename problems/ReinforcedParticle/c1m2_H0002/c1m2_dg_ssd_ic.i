@@ -128,28 +128,28 @@
 [Kernels]
 
   [Edeg_Pos_Time_Deri_1]
-    type = TimeDerivative
+    type = MassLumpedTimeDerivative
     variable = rho_edge_pos_1
   []
   [Edge_Pos_Flux_1]
     implicit = false
     type = ConservativeAdvectionSchmidSSD_12
     variable = rho_edge_pos_1
-    upwinding_type = none
+    upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 0
       dislo_character = edge
   []
 
   [Edeg_Neg_Time_Deri_1]
-    type = TimeDerivative
+    type = MassLumpedTimeDerivative
     variable = rho_edge_neg_1
   []
   [Edge_Neg_Flux_1]
     implicit = false
     type = ConservativeAdvectionSchmidSSD_12
     variable = rho_edge_neg_1
-    upwinding_type = none
+    upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 0
       dislo_character = edge
@@ -307,7 +307,6 @@
   [../]
   #ssd
   [./ssd]
-    implicit = false
     type = SSDUpdate_sim
     nss = 1
       ke_b = 52000

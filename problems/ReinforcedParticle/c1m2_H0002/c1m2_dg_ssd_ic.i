@@ -51,13 +51,13 @@
       family = LAGRANGE
   []
   [rho_edge_pos_1]
-    order = FIRST
-    family = MONOMIAL
+    # order = FIRST
+    # family = MONOMIAL
     initial_condition = 5.e7
   []
   [rho_edge_neg_1]
-    order = FIRST
-    family = MONOMIAL
+    # order = FIRST
+    # family = MONOMIAL
     initial_condition = 5.e7
   []
 []

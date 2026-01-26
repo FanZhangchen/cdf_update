@@ -441,7 +441,6 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
   //     + rho_edge_neg[i] * _dislo_velocity[_qp][i]) * _burgers;
   // }
 
-
   return true;
 }
 

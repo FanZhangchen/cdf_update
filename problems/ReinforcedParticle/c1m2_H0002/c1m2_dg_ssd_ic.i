@@ -51,9 +51,13 @@
       family = LAGRANGE
   []
   [rho_edge_pos_1]
+    order = FIRST
+    family = MONOMIAL
     initial_condition = 5.e7
   []
   [rho_edge_neg_1]
+    order = FIRST
+    family = MONOMIAL
     initial_condition = 5.e7
   []
 []
@@ -124,7 +128,7 @@
 [Kernels]
 
   [Edeg_Pos_Time_Deri_1]
-    type = MassLumpedTimeDerivative
+    type = TimeDerivative
     variable = rho_edge_pos_1
   []
   [Edge_Pos_Flux_1]
@@ -138,7 +142,7 @@
   []
 
   [Edeg_Neg_Time_Deri_1]
-    type = MassLumpedTimeDerivative
+    type = TimeDerivative
     variable = rho_edge_neg_1
   []
   [Edge_Neg_Flux_1]
@@ -303,6 +307,7 @@
   [../]
   #ssd
   [./ssd]
+    implicit = false
     type = SSDUpdate_sim
     nss = 1
       ke_b = 52000

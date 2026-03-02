@@ -260,10 +260,14 @@
   [./ssd]
     type = SSDUpdate_sim
     nss = 1
-      ke_b = 52000
-      ks_b = 104000
-      de = 1.9e-6
-      ds = 2.8e-6
+      # ke_b = 52000
+      # ks_b = 104000
+      # de = 1.9e-6
+      # ds = 2.8e-6
+      ke_b = 55000
+      ks_b = 110000
+      de = 7.e-6
+      ds = 35.e-6
       Ce = 0.25
       Cs = 0.25
       dislo_source_edge = 1.0e8 #2.77e7 

@@ -83,14 +83,7 @@
    order = CONSTANT
    family = MONOMIAL
   [../]
-  # This is the final memory bank (the running total)
   [accumulated_slip]
-    order = CONSTANT
-    family = MONOMIAL
-  []
-  
-  # This is a temporary variable to hold the math for just the current step
-  [current_step_increment]
     order = CONSTANT
     family = MONOMIAL
   []
@@ -226,22 +219,10 @@
    property = accumulated_equivalent_plastic_strain
    execute_on = timestep_end
   [../]
-  # STEP 1: Calculate the absolute increment for the current time step
-  [calc_step_increment]
-    type = ParsedAux
-    variable = current_step_increment
-    # Couple your slip rate variables here
-    coupled_variables = 'slip_increment' 
-    # Multiply the sum of the absolute rates by the MOOSE built-in 'dt'
-    expression = 'abs(slip_increment) * dt'
-    execute_on = 'TIMESTEP_END'
-  []
-
-  # STEP 2: Add that increment to the running total memory bank
-  [sum_accumulated_slip]
-    type = AccumulateAux
+  [export_accumulated_slip]
+    type = MaterialRealAux
     variable = accumulated_slip
-    accumulate_from_variable = 'current_step_increment'
+    property = accumulated_slip
     execute_on = 'TIMESTEP_END'
   []
 []

@@ -138,8 +138,11 @@ CrystalPlasticityBussoUpdate::CrystalPlasticityBussoUpdate(const InputParameters
     _accumulated_equivalent_plastic_strain(
         declareProperty<Real>(_base_name + "accumulated_equivalent_plastic_strain")),
     _accumulated_equivalent_plastic_strain_old(
-        getMaterialPropertyOld<Real>(_base_name + "accumulated_equivalent_plastic_strain"))
+        getMaterialPropertyOld<Real>(_base_name + "accumulated_equivalent_plastic_strain")),
 
+    // Add these to the initialization list
+    _accumulated_slip_old(getMaterialPropertyOld<Real>("accumulated_slip")),
+    _accumulated_slip(declareProperty<Real>("accumulated_slip"))
 {
 }
 
@@ -290,6 +293,7 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
   local_edge_slip_direction.resize(LIBMESH_DIM);
   local_screw_slip_direction.resize(LIBMESH_DIM);
 
+  _accumulated_slip[_qp] = _accumulated_slip_old[_qp];
   calculateSlipResistance();
 
   std::vector<Real> rho_edge_pos(_number_slip_systems);
@@ -422,6 +426,9 @@ CrystalPlasticityBussoUpdate::calculateSlipRate()
                      std::pow((1.0 - std::pow((driving_force / _tau_0), _p)), _q)) *
             std::copysign(1.0, _tau[_qp][i] - _backstress(i));
     }
+
+    //  Add the absolute increment for THIS slip system to the running total
+    _accumulated_slip[_qp] += std::abs(_slip_increment[_qp][i]) * _substep_dt;
 
     if (std::abs(_slip_increment[_qp][i]) * _substep_dt > _slip_incr_tol)
     {

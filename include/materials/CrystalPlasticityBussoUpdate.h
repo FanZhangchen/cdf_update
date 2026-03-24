@@ -192,4 +192,8 @@ protected:
   MaterialProperty<Real> & _accumulated_equivalent_plastic_strain;
   const MaterialProperty<Real> & _accumulated_equivalent_plastic_strain_old;
 
+  // Add these to your private variables
+  const MaterialProperty<Real> & _accumulated_slip_old;
+  MaterialProperty<Real> & _accumulated_slip;
+
 };

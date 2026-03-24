@@ -231,9 +231,9 @@
     type = ParsedAux
     variable = current_step_increment
     # Couple your slip rate variables here
-    coupled_variables = 'slip_inc' 
+    coupled_variables = 'slip_increment' 
     # Multiply the sum of the absolute rates by the MOOSE built-in 'dt'
-    expression = 'abs(slip_inc) * dt'
+    expression = 'abs(slip_increment) * dt'
     execute_on = 'TIMESTEP_END'
   []
 

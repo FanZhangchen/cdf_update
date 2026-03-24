@@ -469,6 +469,11 @@
     variable = epeq
     # block = '1'
   [../]
+  [./accumulated_slip]
+    type = ElementAverageValue
+    variable = accumulated_slip
+    # block = '1'
+  [../]
 []
 
 [VectorPostprocessors]

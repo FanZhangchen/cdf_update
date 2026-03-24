@@ -195,5 +195,4 @@ protected:
   // Add these to your private variables
   const MaterialProperty<Real> & _accumulated_slip_old;
   MaterialProperty<Real> & _accumulated_slip;
-
 };

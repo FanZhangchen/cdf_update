@@ -71,6 +71,10 @@
   #   order = CONSTANT
   #   family = MONOMIAL
   # [../]
+  [accumulated_slip]
+    order = CONSTANT
+    family = MONOMIAL
+  []
 []
 
 [Functions]
@@ -175,6 +179,12 @@
   #   property = edge_dislocation_increment
   #   execute_on = timestep_end
   # [../]
+  [export_accumulated_slip]
+    type = MaterialRealAux
+    variable = accumulated_slip
+    property = accumulated_slip
+    execute_on = 'TIMESTEP_END'
+  []
 []
 
 [Materials]
@@ -402,6 +412,11 @@
   [./epeq]
     type = ElementAverageValue
     variable = epeq
+    # block = '1'
+  [../]
+  [./accumulated_slip]
+    type = ElementAverageValue
+    variable = accumulated_slip
     # block = '1'
   [../]
 []

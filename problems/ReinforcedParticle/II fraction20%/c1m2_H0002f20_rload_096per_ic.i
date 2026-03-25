@@ -97,7 +97,7 @@
   [Edge_Pos_Flux_1]
     type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_pos_1
-    upwinding_type = none
+    upwinding_type = full
       dislo_sign = positive
       slip_sys_index = 0
       dislo_character = edge
@@ -110,7 +110,7 @@
   [Edge_Neg_Flux_1]
     type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_neg_1
-    upwinding_type = none
+    upwinding_type = full
       dislo_sign = negative
       slip_sys_index = 0
       dislo_character = edge

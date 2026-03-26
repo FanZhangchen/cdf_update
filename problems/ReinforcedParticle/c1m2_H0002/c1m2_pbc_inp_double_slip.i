@@ -93,13 +93,17 @@
    order = CONSTANT
    family = MONOMIAL
   [../]
+  [accumulated_slip]
+    order = CONSTANT
+    family = MONOMIAL
+  []
 []
 
 [Functions]
   [disp_load]
     type = PiecewiseLinear
-    x = '0.0 4.0'
-    y = '0.0 0.00004'
+    x = '0.0 2.0'
+    y = '0.0 0.00002'
   []
   [./tr_x2]
     type = ParsedFunction
@@ -269,6 +273,12 @@
    property = accumulated_equivalent_plastic_strain
    execute_on = timestep_end
   [../]
+  [export_accumulated_slip]
+    type = MaterialRealAux
+    variable = accumulated_slip
+    property = accumulated_slip
+    execute_on = 'TIMESTEP_END'
+  []
 []
 
 [Materials]
@@ -480,7 +490,7 @@
   l_tol = 1e-5  #1e-5 
 
   start_time = 0.0
-  end_time = 4.0 #0.01
+  end_time = 2.0 #0.01
   dt = 1.e-5
   dtmin = 1.e-9
 []
@@ -529,6 +539,11 @@
   [./epeq]
     type = ElementAverageValue
     variable = epeq
+    # block = '1'
+  [../]
+  [./accumulated_slip]
+    type = ElementAverageValue
+    variable = accumulated_slip
     # block = '1'
   [../]
 []

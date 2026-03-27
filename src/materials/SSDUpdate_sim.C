@@ -618,6 +618,11 @@ SSDUpdate_sim::computeQpProperties()
           (_Ce * _ke_b * std::sqrt(TotalDislocationDensity_ALL) * abs_slip_increment -
            _Ce / _burgers * 2.0 * _de * _edge_dislocation_increment_old[_qp][i] *
                abs_slip_increment);
+
+      if (abs_slip_increment < _zero_tol)
+      {
+        _edge_dislocation_increment[_qp][i] = 0.0;
+      }
       // * _dt;
       // 2. Compute the Jacobian Derivative (New)
       // d(Increment)/d(rho) = Ce * Ke * |gamma_dot| * dt * 0.5 * (1/sqrt(rho_total))
@@ -627,6 +632,10 @@ SSDUpdate_sim::computeQpProperties()
       {
         _d_edge_dislocation_increment_d_rho[_qp][i] =
             _Ce * _ke_b * abs_slip_increment * (0.5 / std::sqrt(TotalDislocationDensity_ALL));
+        if (abs_slip_increment < _zero_tol)
+        {
+          _d_edge_dislocation_increment_d_rho[_qp][i] = 0.0;
+        }
       }
       else
       {

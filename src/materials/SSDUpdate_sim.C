@@ -429,11 +429,11 @@ SSDUpdate_sim::initQpStatefulProperties()
     _d_edge_dislocation_increment_d_rho[_qp][i] = 0.0;
   }
 
-  TotalDislocationDensity_ALL = 0;
-
   for (const auto i : make_range(_nss))
   {
     const Real abs_slip_increment = std::abs(_slip_increment[_qp][i]);
+
+    TotalDislocationDensity_ALL = 0;
 
     for (const auto j : make_range(_nss))
     {
@@ -596,12 +596,12 @@ SSDUpdate_sim::computeQpProperties()
     total_dislocation_density[i] = edge_dislocation_density[i];
   }
 
-  TotalDislocationDensity_ALL = 0;
-
   for (const auto i : make_range(_nss))
   {
 
     const Real abs_slip_increment = std::abs(_slip_increment[_qp][i]);
+
+    TotalDislocationDensity_ALL = 0;
 
     // mooseWarning("abs_slip_increment: ", abs_slip_increment);
 

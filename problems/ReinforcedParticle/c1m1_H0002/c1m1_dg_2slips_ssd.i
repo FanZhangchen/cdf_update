@@ -5,7 +5,7 @@
 [Mesh]
   [read]
     type = FileMeshGenerator
-    file = C1M2-H0002-NP.inp
+    file = C1M1_H0002-NP.inp
   []
   # [separate]
   #   type = ParsedSubdomainMeshGenerator
@@ -51,19 +51,19 @@
       family = LAGRANGE
   []
   [rho_edge_pos_1]
-    initial_condition = 2.5e7 #2.77e5 
+    initial_condition = 1.53e7 #3.06e7 
     # block = '1'
   []
   [rho_edge_neg_1]
-    initial_condition = 2.5e7
+    initial_condition = 1.53e7 #3.06e7 
     # block = '1'
   []
   [rho_edge_pos_2]
-    initial_condition = 2.5e7
+    initial_condition = 1.53e7 #3.06e7 
     # block = '1'
   []
   [rho_edge_neg_2]
-    initial_condition = 2.5e7
+    initial_condition = 1.53e7 #3.06e7 
     # block = '1'
   []
 []
@@ -102,8 +102,8 @@
 [Functions]
   [disp_load]
     type = PiecewiseLinear
-    x = '0.0 2.0'
-    y = '0.0 0.00002'
+    x = '0.0 2.0  4.0'
+    y = '0.0 0.00002 0.0'
   []
   [./tr_x2]
     type = ParsedFunction
@@ -138,7 +138,7 @@
   []
   [Edge_Pos_Flux_1]
     implicit = false
-    type = ConservativeAdvectionSchmidSSD_12
+    type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_pos_1
     upwinding_type = full
       dislo_sign = positive
@@ -152,7 +152,7 @@
   []
   [Edge_Neg_Flux_1]
     implicit = false
-    type = ConservativeAdvectionSchmidSSD_12
+    type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_neg_1
     upwinding_type = full
       dislo_sign = negative
@@ -165,7 +165,7 @@
     variable = rho_edge_pos_2
   []
   [Edge_Pos_Flux_2]
-    type = ConservativeAdvectionSchmidSSD_12
+    type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_pos_2
     upwinding_type = full
       dislo_sign = positive
@@ -178,7 +178,7 @@
     variable = rho_edge_neg_2
   []
   [Edge_Neg_Flux_2]
-    type = ConservativeAdvectionSchmidSSD_12
+    type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_neg_2
     upwinding_type = full
       dislo_sign = negative
@@ -234,7 +234,7 @@
    variable = pk2
    rank_two_tensor = second_piola_kirchhoff_stress
    index_j = 0
-   index_i = 1
+   index_i = 0
    execute_on = timestep_end
   [../]
   [./exy]
@@ -283,7 +283,7 @@
 
 [Materials]
   [./elasticity_tensor]
-    implicit = false
+    implicit = true
     type = ComputeElasticityTensorCP
     C_ijkl = '1.129e5 0.664e5 0.664e5 1.129e5 0.664e5 1.129e5 0.279e5 0.279e5 0.279e5'
     fill_method = symmetric9
@@ -293,14 +293,14 @@
     block = '1'
   [../]
   [./stress]
-    implicit = false
+    implicit = true
     type = ComputeCrystalPlasticityDislocationStress
     crystal_plasticity_models = 'trial_xtalpl'
     tan_mod_type = exact
     block = '1'
   [../]
   [./trial_xtalpl]
-    implicit = false
+    implicit = true
     type = CrystalPlasticityBussoUpdate
     number_slip_systems = 2
     slip_sys_file_name = input_2slip_sys_al_60.txt
@@ -311,16 +311,14 @@
       q = 1.1
       f0 = 3.e-19
       gdot0 = 1.73e6
-      scaling_Cb = 1.0
+      scaling_Cb = 0.241
     edge_dislo_den_pos_1 = rho_edge_pos_1
     edge_dislo_den_neg_1 = rho_edge_neg_1
-    edge_dislo_den_pos_2 = rho_edge_pos_2
-    edge_dislo_den_neg_2 = rho_edge_neg_2
     block = '1'
   [../]
   #new
   [./elasticity_tensor_hard]
-    implicit = false
+    implicit = true
     type = ComputeElasticityTensorCP
     C_ijkl = '1.129e5 0.664e5 0.664e5 1.129e5 0.664e5 1.129e5 0.279e5 0.279e5 0.279e5'
     fill_method = symmetric9
@@ -330,14 +328,14 @@
     block = '0'
   [../]
   [./stress_elastic]
-    implicit = false
+    implicit = true
     type = ComputeCrystalPlasticityDislocationStress
     crystal_plasticity_models = 'stress_elastic_dislo_free'
     tan_mod_type = exact
     block = '0'
   [../]
   [./stress_elastic_dislo_free]
-    implicit = false
+    implicit = true
     type = CrystalPlasticityBussoUpdate
     number_slip_systems = 2
     slip_sys_file_name = input_2slip_sys_al_60.txt
@@ -352,11 +350,8 @@
       elast_coef = 1.e12
     edge_dislo_den_pos_1 = rho_edge_pos_1
     edge_dislo_den_neg_1 = rho_edge_neg_1
-    edge_dislo_den_pos_2 = rho_edge_pos_2
-    edge_dislo_den_neg_2 = rho_edge_neg_2
     block = '0'
   [../]
-  #ssd
   [./ssd]
     type = SSDUpdate_sim
     nss = 2
@@ -366,7 +361,7 @@
       ds = 35.e-6
       Ce = 0.25
       Cs = 0.25
-      dislo_source_edge = 1.e8 #2.77e7 5.e7 1.e8
+      dislo_source_edge = 6.12e7 #2.77e7 5.e7 1.e8
     dislo_den_pos_1 = rho_edge_pos_1
     dislo_den_neg_1 = rho_edge_neg_1
     # block = '1'
@@ -440,7 +435,7 @@
       # inv_transform_func = 'itr_x2 itr_y2'
       # auto_direction = 'x'
     [../]
-
+    
     [./auto_rho_edge_pos_boundary_x_2]
       variable = rho_edge_pos_2
       primary = left
@@ -454,6 +449,7 @@
       secondary = right
       translation = '3.464e-3 0.0 0.0'
     [../]
+
   [../]
 
 []
@@ -505,7 +501,7 @@
   l_tol = 1e-5  #1e-5 
 
   start_time = 0.0
-  end_time = 2.0 #0.01
+  end_time = 3.84 #0.01
   dt = 1.e-5
   dtmin = 1.e-9
 []
@@ -571,7 +567,7 @@
   time_step_interval = 500
   [csv]
     type = CSV
-    file_base = dg_rhoe_x_out_c1m2_2slips_ssd
+    file_base = dg_rhoe_x_out_c1m1_2slips
     execute_on = final
   []
 []

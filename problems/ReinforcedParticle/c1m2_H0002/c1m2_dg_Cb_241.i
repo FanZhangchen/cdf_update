@@ -51,13 +51,9 @@
       family = LAGRANGE
   []
   [rho_edge_pos_1]
-    # order = FIRST
-    # family = MONOMIAL
     initial_condition = 5.e7
   []
   [rho_edge_neg_1]
-    # order = FIRST
-    # family = MONOMIAL
     initial_condition = 5.e7
   []
 []
@@ -87,11 +83,10 @@
    order = CONSTANT
    family = MONOMIAL
   [../]
-  [./edge_dislocation_increment]
+  [accumulated_slip]
     order = CONSTANT
     family = MONOMIAL
-    # block = '1'
-  [../]
+  []
 []
 
 [Functions]
@@ -133,7 +128,7 @@
   []
   [Edge_Pos_Flux_1]
     implicit = false
-    type = ConservativeAdvectionSchmidSSD_12
+    type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_pos_1
     upwinding_type = full
       dislo_sign = positive
@@ -147,7 +142,7 @@
   []
   [Edge_Neg_Flux_1]
     implicit = false
-    type = ConservativeAdvectionSchmidSSD_12
+    type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_neg_1
     upwinding_type = full
       dislo_sign = negative
@@ -224,14 +219,12 @@
    property = accumulated_equivalent_plastic_strain
    execute_on = timestep_end
   [../]
-  [./edge_dislocation_increment]
-    type = MaterialStdVectorAux
-    variable = edge_dislocation_increment
-    property = edge_dislocation_increment
-    index = 0
-    execute_on = timestep_end
-    # block = '1'
-  [../] 
+  [export_accumulated_slip]
+    type = MaterialRealAux
+    variable = accumulated_slip
+    property = accumulated_slip
+    execute_on = 'TIMESTEP_END'
+  []
 []
 
 [Materials]
@@ -304,21 +297,6 @@
     edge_dislo_den_pos_1 = rho_edge_pos_1
     edge_dislo_den_neg_1 = rho_edge_neg_1
     block = '0'
-  [../]
-  #ssd
-  [./ssd]
-    type = SSDUpdate_sim
-    nss = 1
-      ke_b = 55000
-      ks_b = 110000
-      de = 2.5e-6
-      ds = 35.e-6
-      Ce = 0.25
-      Cs = 0.25
-      dislo_source_edge = 1.e8 #2.77e7 5.e7 1.e8
-    dislo_den_pos_1 = rho_edge_pos_1
-    dislo_den_neg_1 = rho_edge_neg_1
-    # block = '1'
   [../]
 []
 
@@ -491,9 +469,9 @@
     variable = epeq
     # block = '1'
   [../]
-  [./edge_dislocation_increment]
+  [./accumulated_slip]
     type = ElementAverageValue
-    variable = edge_dislocation_increment
+    variable = accumulated_slip
     # block = '1'
   [../]
 []

@@ -214,7 +214,7 @@
       q = 1.1
       f0 = 3.e-19
       gdot0 = 1.73e6
-      scaling_Cb = 0.241
+      scaling_Cb = 1.0
     edge_dislo_den_pos_1 = rho_edge_pos_1
     edge_dislo_den_neg_1 = rho_edge_neg_1
     block = '1'

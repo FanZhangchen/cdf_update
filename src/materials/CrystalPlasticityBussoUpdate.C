@@ -26,6 +26,7 @@ CrystalPlasticityBussoUpdate::validParams()
   params.addParam<Real>("shear_modulus", 45000.0, "shear_modulus");
   params.addParam<Real>("boltzmann", 1.38065e-23, "The Boltzmann Constant");
   params.addParam<Real>("scaling_Cb", 1.0, "The scaling parameter for the backstress");
+  params.addParam<Real>("scaling_C_sr", 1.0, "The scaling parameter for the slip resistance");
 
   params.addParam<Real>("dlamb", 0.3, "initial slip rate");
   params.addParam<Real>("w1", 1.5, "cross-hardening constants, adopted from Cheong2004");
@@ -99,6 +100,7 @@ CrystalPlasticityBussoUpdate::CrystalPlasticityBussoUpdate(const InputParameters
     _shear_modulus(getParam<Real>("shear_modulus")),
     _boltzmann(getParam<Real>("boltzmann")),
     _scaling_Cb(getParam<Real>("scaling_Cb")),
+    _scaling_C_sr(getParam<Real>("scaling_C_sr")),
 
     _dlamb(getParam<Real>("dlamb")),
     _w1(getParam<Real>("w1")),
@@ -504,7 +506,7 @@ CrystalPlasticityBussoUpdate::calculateSlipResistance()
         hardening_total_dislocation_density +=
             _w1 * (rho_edge_pos[j] + rho_edge_neg[j]); // latent hardening
     }
-    _slip_resistance[_qp][i] = _elast_coef + _dlamb * _shear_modulus * _burgers *
+    _slip_resistance[_qp][i] = _elast_coef + _scaling_C_sr * _dlamb * _shear_modulus * _burgers *
                                                  std::sqrt(hardening_total_dislocation_density);
   }
 }

@@ -120,6 +120,7 @@ protected:
   const Real _shear_modulus;
   const Real _boltzmann;
   const Real _scaling_Cb;
+  const Real _scaling_C_sr;
 
   const Real _dlamb;
   const Real _w1;

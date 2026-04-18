@@ -42,10 +42,10 @@ for method in "${METHODS[@]}"; do
                 Variables/rho_edge_neg_1/initial_condition="$INIT" \
                 Functions/disp_load/y="0.0,$FIX_DISP,0.0" \
                 # 这种写法是 MOOSE 最喜欢的，没有空格，不需要嵌套引号
-                BCs/Periodic/auto_boundary_x/translation=0.3464,0,0 \
-                BCs/Periodic/auto_boundary_y/translation=0.3464,0,0 \
-                BCs/Periodic/auto_rho_edge_pos_boundary_x_1/translation=0.3464,0,0 \
-                BCs/Periodic/auto_rho_edge_neg_boundary_x_1/translation=0.3464,0,0 \
+                BCs/Periodic/auto_boundary_x/translation=0.34640001,0,0 \
+                BCs/Periodic/auto_boundary_y/translation=0.34640001,0,0 \
+                BCs/Periodic/auto_rho_edge_pos_boundary_x_1/translation=0.34640001,0,0 \
+                BCs/Periodic/auto_rho_edge_neg_boundary_x_1/translation=0.34640001,0,0 \
                 Outputs/file_base="${OUT_ROOT}/${BASE_NAME}" \
                 > "$LOG_FILE" 2>&1 &
         fi

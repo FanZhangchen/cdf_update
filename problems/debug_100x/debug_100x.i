@@ -76,7 +76,7 @@
   [disp_load]
     type = PiecewiseLinear
     x = '0.0 2.0  4.0'
-    y = '0.0 0.00002 0.0'
+    y = '0.0 0.002 0.0'
   []
 []
 
@@ -302,33 +302,20 @@
   []
 
   [./Periodic]
-    [./auto_boundary_x]
-      variable = disp_x
-      primary = left
-      secondary = right
-      translation = '3.464e-3 0.0 0.0'
-    [../]
-
-    [./auto_boundary_y]
-      variable = disp_y
-      primary = left
-      secondary = right
-      translation = '3.464e-3 0.0 0.0'
-    [../]
-
-    [./auto_rho_edge_pos_boundary_x_1]
-      variable = rho_edge_pos_1
-      primary = left
-      secondary = right
-      translation = '3.464e-3 0.0 0.0'
-    [../]
-
-    [./auto_rho_edge_neg_boundary_x_1]
-      variable = rho_edge_neg_1
-      primary = left
-      secondary = right
-      translation = '3.464e-3 0.0 0.0'
-    [../]
+    [x_dir]
+      # 包含位移场(u,v)和位错密度场(rho_pos, rho_neg)
+      # 请务必核对你 [Variables] 块里真实的变量名
+      variable = 'disp_x disp_y rho_edge_pos_1 rho_edge_neg_1'
+      primary = 'left'
+      secondary = 'right'
+      
+      # 必须使用这个带 1 的精确值，不要让 MOOSE 去猜
+      translation = '0.34640001 0 0'
+      
+      # 暴力放宽容差到 1e-3 (0.001)
+      # 这对于 0.3464 尺度的模型来说非常安全，但能吞掉所有浮点数噪声
+      # tolerance = 1e-3
+    []
   [../]
 
 []

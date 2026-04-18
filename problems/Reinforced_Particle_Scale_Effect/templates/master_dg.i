@@ -3,18 +3,16 @@
 []
 
 [Mesh]
-  # displacements = 'disp_x disp_y' #Define displacements for deformed mesh
-  # type = FileMesh #Read in mesh from file
-  # file = geo_c1m1_H0002_coarse.e
   [read]
     type = FileMeshGenerator
-    file = C1M2-H0002-NP.inp
+    file = C1M1_H0002-NP.inp
   []
   [create_sideset]
     type = SideSetsFromNodeSetsGenerator
     input = read
   []
 []
+
 
 
 [Variables]
@@ -27,20 +25,14 @@
       family = LAGRANGE
   []
   [rho_edge_pos_1]
-    initial_condition = 2.5e7 #2.77e5 
-    # block = '1'
+    initial_condition = 3.06e7 #5.e7
+    order = FIRST
+    family = MONOMIAL
   []
   [rho_edge_neg_1]
-    initial_condition = 2.5e7
-    # block = '1'
-  []
-  [rho_edge_pos_2]
-    initial_condition = 2.5e7
-    # block = '1'
-  []
-  [rho_edge_neg_2]
-    initial_condition = 2.5e7
-    # block = '1'
+    initial_condition = 3.06e7 #5.e7
+    order = FIRST
+    family = MONOMIAL
   []
 []
 
@@ -48,32 +40,26 @@
   [./pk2]
     order = CONSTANT
     family = MONOMIAL
-    # block = '1'
   [../]
   [./fp_xy]
     order = CONSTANT
     family = MONOMIAL
-    # block = '1'
   [../]
   [./exy]
     order = CONSTANT
     family = MONOMIAL
-    # block = '1'
   [../]
   [./slip_increment]
    order = CONSTANT
    family = MONOMIAL
-  #  block = '1'
   [../]
   [./dislo_velocity]
    order = CONSTANT
    family = MONOMIAL
-  #  block = '1'
   [../]
   [./epeq]
    order = CONSTANT
    family = MONOMIAL
-  #  block = '1'
   [../]
   [accumulated_slip]
     order = CONSTANT
@@ -84,11 +70,25 @@
 [Functions]
   [disp_load]
     type = PiecewiseLinear
-    x = '0.0 2.0'
-    y = '0.0 0.00002'
-    # x = '0.0 2.0  4.0'
-    # y = '0.0 0.00002 0.0'
+    x = '0.0 2.0  4.0'
+    y = '0.0 0.00002 0.0'
   []
+  [./tr_x2]
+    type = ParsedFunction
+    expression = x+0.003464
+  [../]
+  [./tr_y2]
+    type = ParsedFunction
+    expression = y
+  [../]
+  [./itr_x2]
+    type = ParsedFunction
+    expression = x-0.003464
+  [../]
+  [./itr_y2]
+    type = ParsedFunction
+    expression = y
+  [../]
 []
 
 [Physics/SolidMechanics/QuasiStatic/all]
@@ -105,7 +105,8 @@
     variable = rho_edge_pos_1
   []
   [Edge_Pos_Flux_1]
-    type = ConservativeAdvectionSchmidSSD_12
+    implicit = false
+    type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_pos_1
     upwinding_type = full
       dislo_sign = positive
@@ -118,7 +119,8 @@
     variable = rho_edge_neg_1
   []
   [Edge_Neg_Flux_1]
-    type = ConservativeAdvectionSchmidSSD_12
+    implicit = false
+    type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_neg_1
     upwinding_type = full
       dislo_sign = negative
@@ -126,30 +128,26 @@
       dislo_character = edge
   []
 
-  [Edeg_Pos_Time_Deri_2]
-    type = MassLumpedTimeDerivative
-    variable = rho_edge_pos_2
-  []
-  [Edge_Pos_Flux_2]
-    type = ConservativeAdvectionSchmidSSD_12
-    variable = rho_edge_pos_2
-    upwinding_type = full
-      dislo_sign = positive
-      slip_sys_index = 1
+[]
+
+[DGKernels]
+
+  [dg_edge_pos_1]
+    implicit = false
+    type = DGAdvectionCoupled
+    variable = rho_edge_pos_1
       dislo_character = edge
+      dislo_sign = positive
+      slip_sys_index = 0
   []
 
-  [Edeg_Neg_Time_Deri_2]
-    type = MassLumpedTimeDerivative
-    variable = rho_edge_neg_2
-  []
-  [Edge_Neg_Flux_2]
-    type = ConservativeAdvectionSchmidSSD_12
-    variable = rho_edge_neg_2
-    upwinding_type = full
-      dislo_sign = negative
-      slip_sys_index = 1
+  [dg_edge_neg_1]
+    implicit = false
+    type = DGAdvectionCoupled
+    variable = rho_edge_neg_1
       dislo_character = edge
+      dislo_sign = negative
+      slip_sys_index = 0
   []
 
 []
@@ -160,9 +158,8 @@
    variable = pk2
    rank_two_tensor = second_piola_kirchhoff_stress
    index_j = 0
-   index_i = 1
+   index_i = 0
    execute_on = timestep_end
-  #  block = '1'
   [../]
   [./exy]
     type = RankTwoAux
@@ -171,7 +168,6 @@
     index_j = 0
     index_i = 1
     execute_on = timestep_end
-    # block = '1'
   [../]
   [./fp_xy]
     type = RankTwoAux
@@ -180,7 +176,6 @@
     index_j = 0
     index_i = 1
     execute_on = timestep_end
-    # block = '1'
   [../]
   [./slip_inc]
    type = MaterialStdVectorAux
@@ -188,7 +183,6 @@
    property = slip_increment
    index = 0
    execute_on = timestep_end
-  #  block = '1'
   [../]
   [./dislo_vel]
    type = MaterialStdVectorAux
@@ -196,14 +190,12 @@
    property = dislo_velocity
    index = 0
    execute_on = timestep_end
-  #  block = '1'
   [../]
   [./epeq]
    type = MaterialRealAux
    variable = epeq
    property = accumulated_equivalent_plastic_strain
    execute_on = timestep_end
-  #  block = '1'
   [../]
   [export_accumulated_slip]
     type = MaterialRealAux
@@ -215,6 +207,7 @@
 
 [Materials]
   [./elasticity_tensor]
+    implicit = true
     type = ComputeElasticityTensorCP
     C_ijkl = '1.129e5 0.664e5 0.664e5 1.129e5 0.664e5 1.129e5 0.279e5 0.279e5 0.279e5'
     fill_method = symmetric9
@@ -224,15 +217,17 @@
     block = '1'
   [../]
   [./stress]
+    implicit = true
     type = ComputeCrystalPlasticityDislocationStress
     crystal_plasticity_models = 'trial_xtalpl'
     tan_mod_type = exact
     block = '1'
   [../]
   [./trial_xtalpl]
+    implicit = true
     type = CrystalPlasticityBussoUpdate
-    number_slip_systems = 2
-    slip_sys_file_name = input_2slip_sys_al_60.txt
+    number_slip_systems = 1
+    slip_sys_file_name = input_slip_sys_al.txt
       w1 = 0.0
       w2 = 0.0
       tau_0 = 8.0
@@ -243,23 +238,11 @@
       scaling_Cb = 1.0
     edge_dislo_den_pos_1 = rho_edge_pos_1
     edge_dislo_den_neg_1 = rho_edge_neg_1
-    edge_dislo_den_pos_2 = rho_edge_pos_2
-    edge_dislo_den_neg_2 = rho_edge_neg_2
     block = '1'
   [../]
   #new
-  #   [./elasticity_tensor_hard]
-  #   type = ComputeIsotropicElasticityTensor
-  #   youngs_modulus = 192.0e3
-  #   poissons_ratio = 0.17
-  #   block = '2 3 4 5 6'
-  # [../]
-  # [./stress_elastic]
-  #   type = ComputeFiniteStrainElasticStress
-  #   block = '2 3 4 5 6'
-  # [../]
-  #new
   [./elasticity_tensor_hard]
+    implicit = true
     type = ComputeElasticityTensorCP
     C_ijkl = '1.129e5 0.664e5 0.664e5 1.129e5 0.664e5 1.129e5 0.279e5 0.279e5 0.279e5'
     fill_method = symmetric9
@@ -269,15 +252,17 @@
     block = '0'
   [../]
   [./stress_elastic]
+    implicit = true
     type = ComputeCrystalPlasticityDislocationStress
     crystal_plasticity_models = 'stress_elastic_dislo_free'
     tan_mod_type = exact
     block = '0'
   [../]
   [./stress_elastic_dislo_free]
+    implicit = true
     type = CrystalPlasticityBussoUpdate
-    number_slip_systems = 2
-    slip_sys_file_name = input_2slip_sys_al_60.txt
+    number_slip_systems = 1
+    slip_sys_file_name = input_slip_sys_al.txt
       w1 = 0.0
       w2 = 0.0
       tau_0 = 8.0
@@ -289,27 +274,22 @@
       elast_coef = 1.e12
     edge_dislo_den_pos_1 = rho_edge_pos_1
     edge_dislo_den_neg_1 = rho_edge_neg_1
-    edge_dislo_den_pos_2 = rho_edge_pos_2
-    edge_dislo_den_neg_2 = rho_edge_neg_2
     block = '0'
   [../]
   #ssd
-  [./ssd]
-    type = SSDUpdate_sim
-    nss = 2
-      ke_b = 55000
-      ks_b = 110000
-      de = 2.5e-6
-      ds = 35.e-6
-      Ce = 0.25
-      Cs = 0.25
-      dislo_source_edge = 1.e8 #2.77e7 5.e7 1.e8
-    dislo_den_pos_1 = rho_edge_pos_1
-    dislo_den_neg_1 = rho_edge_neg_1
-    dislo_den_pos_2 = rho_edge_pos_2
-    dislo_den_neg_2 = rho_edge_neg_2
-    # block = '1'
-  [../]
+  # [./ssd]
+  #   type = SSDUpdate_sim
+  #   nss = 1
+  #     ke_b = 52000
+  #     ks_b = 104000
+  #     de = 1.9e-6
+  #     ds = 2.8e-6
+  #     Ce = 0.25
+  #     Cs = 0.25
+  #     dislo_source_edge = 3.06e7
+  #   dislo_den_pos_1 = rho_edge_pos_1
+  #   dislo_den_neg_1 = rho_edge_neg_1
+  # [../]
 []
 
 [BCs]
@@ -345,6 +325,9 @@
       primary = left
       secondary = right
       translation = '3.464e-3 0.0 0.0'
+      # transform_func = 'tr_x2 tr_y2'
+      # inv_transform_func = 'itr_x2 itr_y2'
+      # auto_direction = 'x'
     [../]
 
     [./auto_boundary_y]
@@ -352,6 +335,9 @@
       primary = left
       secondary = right
       translation = '3.464e-3 0.0 0.0'
+      # transform_func = 'tr_x2 tr_y2'
+      # inv_transform_func = 'itr_x2 itr_y2'
+      # auto_direction = 'x'
     [../]
 
     [./auto_rho_edge_pos_boundary_x_1]
@@ -359,6 +345,9 @@
       primary = left
       secondary = right
       translation = '3.464e-3 0.0 0.0'
+      # transform_func = 'tr_x2 tr_y2'
+      # inv_transform_func = 'itr_x2 itr_y2'
+      # auto_direction = 'x'
     [../]
 
     [./auto_rho_edge_neg_boundary_x_1]
@@ -366,50 +355,10 @@
       primary = left
       secondary = right
       translation = '3.464e-3 0.0 0.0'
+      # transform_func = 'tr_x2 tr_y2'
+      # inv_transform_func = 'itr_x2 itr_y2'
+      # auto_direction = 'x'
     [../]
-
-    [./auto_rho_edge_pos_boundary_x_2]
-      variable = rho_edge_pos_2
-      primary = left
-      secondary = right
-      translation = '3.464e-3 0.0 0.0'
-    [../]
-
-    [./auto_rho_edge_neg_boundary_x_2]
-      variable = rho_edge_neg_2
-      primary = left
-      secondary = right
-      translation = '3.464e-3 0.0 0.0'
-    [../]
-    
-    # [./auto_rho_edge_pos_boundary_y_1]
-    #   variable = rho_edge_pos_1
-    #   primary = top
-    #   secondary = bottom
-    #   translation = '0.0 2.e-3 0.0'
-    # [../]
-
-    # [./auto_rho_edge_neg_boundary_y_1]
-    #   variable = rho_edge_neg_1
-    #   primary = top
-    #   secondary = bottom
-    #   translation = '0.0 2.e-3 0.0'
-    # [../]
-
-    # [./auto_rho_edge_pos_boundary_y_2]
-    #   variable = rho_edge_pos_2
-    #   primary = top
-    #   secondary = bottom
-    #   translation = '0.0 2.e-3 0.0'
-    # [../]
-
-    # [./auto_rho_edge_neg_boundary_y_2]
-    #   variable = rho_edge_neg_2
-    #   primary = top
-    #   secondary = bottom
-    #   translation = '0.0 2.e-3 0.0'
-    # [../]
-
   [../]
 
 []
@@ -426,11 +375,34 @@
 [Executioner]
 
   type = Transient
+
+  [./TimeIntegrator]
+    # type = ImplicitEuler
+    # type = BDF2
+    # type = CrankNicolson
+    # type = ImplicitMidpoint
+    # type = LStableDirk2
+    # type = LStableDirk3
+    # type = LStableDirk4
+    # type = AStableDirk4
+    #
+    # Explicit methods
+    # type = ExplicitEuler
+    # type = ExplicitMidpoint
+    # type = Heun
+    # type = Ralston
+    type = ExplicitTVDRK2
+  [../]
+  
   solve_type = 'NEWTON'
-  #solve_type = 'crank-nicolson'
   petsc_options = '-snes_ksp_ew'
-  petsc_options_iname = '-pc_type -pc_hypre_type -ksp_gmres_restart'
-  petsc_options_value = 'lu    boomeramg          31'
+  petsc_options_iname = '-pc_type -pc_factor_mat_solver_package'
+  # petsc_options_value = 'lu superlu_dist'
+  petsc_options_value = 'hypre boomeramg'
+  #solve_type = 'crank-nicolson'
+  # petsc_options = '-snes_ksp_ew'
+  # petsc_options_iname = '-pc_type -pc_hypre_type -ksp_gmres_restart'
+  # petsc_options_value = 'lu    boomeramg          31'
   line_search = 'none'
   l_max_its = 50
   nl_max_its = 50
@@ -439,8 +411,8 @@
   l_tol = 1e-5  #1e-5 
 
   start_time = 0.0
-  end_time = 2.0 #0.01
-  dt = 5.e-6
+  end_time = 3.84 #0.01
+  dt = 1.e-5
   dtmin = 1.e-9
 []
 
@@ -448,7 +420,7 @@
   [./stress_xy]
     type = ElementAverageValue
     variable = stress_xy
-    # block = '1 2 3 4 5 6'
+    block = '0 1'
   [../]
   [./pk2]
    type = ElementAverageValue
@@ -483,7 +455,7 @@
   [./strain_xy]
     type = ElementAverageValue
     variable = strain_xy
-    # block = '1 2 3 4 5 6'
+    block = '0 1'
   [../]
   [./epeq]
     type = ElementAverageValue
@@ -505,7 +477,6 @@
   time_step_interval = 500
   [csv]
     type = CSV
-    file_base = upwinding_rhoe_x_out_c1m2_2slips_ssd
     execute_on = final
   []
 []

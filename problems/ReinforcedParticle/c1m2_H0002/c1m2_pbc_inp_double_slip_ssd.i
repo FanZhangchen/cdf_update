@@ -369,6 +369,8 @@
       dislo_source_edge = 1.e8 #2.77e7 5.e7 1.e8
     dislo_den_pos_1 = rho_edge_pos_1
     dislo_den_neg_1 = rho_edge_neg_1
+    dislo_den_pos_2 = rho_edge_pos_2
+    dislo_den_neg_2 = rho_edge_neg_2
     # block = '1'
   [../]
 []

@@ -53,16 +53,17 @@ for method in "${METHODS[@]}"; do
                 Mesh/read/file="$SCRIPT_DIR/$morph/$MESH_FILE" \
                 Variables/rho_edge_pos_1/initial_condition="$CURRENT_INIT" \
                 Variables/rho_edge_neg_1/initial_condition="$CURRENT_INIT" \
-                Functions/disp_load/y="'0.0 $current_disp 0.0'" \
-                BCs/Periodic/auto_boundary_x/translation="'$current_trans_x 0.0 0.0'" \
-                BCs/Periodic/auto_boundary_x/search_tolerance=1e-6 \
-                BCs/Periodic/auto_boundary_y/translation="'$current_trans_x 0.0 0.0'" \
-                BCs/Periodic/auto_boundary_y/search_tolerance=1e-6 \
-                BCs/Periodic/auto_rho_edge_pos_boundary_x_1/translation="'$current_trans_x 0.0 0.0'" \
-                BCs/Periodic/auto_rho_edge_pos_boundary_x_1/search_tolerance=1e-6 \
-                BCs/Periodic/auto_rho_edge_neg_boundary_x_1/translation="'$current_trans_x 0.0 0.0'" \
-                BCs/Periodic/auto_rho_edge_neg_boundary_x_1/search_tolerance=1e-6 \
+                Functions/disp_load/y="0.0 $current_disp 0.0" \
+                BCs/Periodic/auto_boundary_x/translation="$current_trans_x 0.0 0.0" \
+                BCs/Periodic/auto_boundary_x/search_tolerance=1e-4 \
+                BCs/Periodic/auto_boundary_y/translation="$current_trans_x 0.0 0.0" \
+                BCs/Periodic/auto_boundary_y/search_tolerance=1e-4 \
+                BCs/Periodic/auto_rho_edge_pos_boundary_x_1/translation="$current_trans_x 0.0 0.0" \
+                BCs/Periodic/auto_rho_edge_pos_boundary_x_1/search_tolerance=1e-4 \
+                BCs/Periodic/auto_rho_edge_neg_boundary_x_1/translation="$current_trans_x 0.0 0.0" \
+                BCs/Periodic/auto_rho_edge_neg_boundary_x_1/search_tolerance=1e-4 \
                 Outputs/file_base="${RESULT_ROOT}/${BASE_NAME}" \
+                --print-mesh-info \
                 > "$LOG_FILE" 2>&1 &
         fi
         cd "$SCRIPT_DIR"

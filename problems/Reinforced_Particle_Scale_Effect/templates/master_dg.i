@@ -26,12 +26,12 @@
   []
   [rho_edge_pos_1]
     initial_condition = 3.06e7 #5.e7
-    order = FIRST
+    order = CONSTANT
     family = MONOMIAL
   []
   [rho_edge_neg_1]
     initial_condition = 3.06e7 #5.e7
-    order = FIRST
+    order = CONSTANT
     family = MONOMIAL
   []
 []

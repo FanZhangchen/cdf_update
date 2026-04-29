@@ -48,7 +48,7 @@ for method in "${METHODS[@]}"; do
         CURRENT_SOURCE=$([ "$morph" == "morphology_I" ] && echo "$INIT_I" || echo "$INIT_II")
         
         # 结果输出根目录
-        RESULT_ROOT="$SCRIPT_DIR/results/${method}/${morph}"
+        RESULT_ROOT="$SCRIPT_DIR/results_with_source/${method}/${morph}"
         mkdir -p "$RESULT_ROOT"
 
         # 进入形态文件夹

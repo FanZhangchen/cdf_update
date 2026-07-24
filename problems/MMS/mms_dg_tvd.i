@@ -95,10 +95,6 @@
       variable = rho
       auto_direction = 'x'
     []
-    [y]
-      variable = rho
-      auto_direction = 'y'
-    []
   []
 []
 
@@ -136,8 +132,10 @@
 []
 
 [Outputs]
-  exodus = true
-  interval = 100
+  [exodus]
+    type = Exodus
+    interval = 100
+  []
   [csv]
     type = CSV
   []

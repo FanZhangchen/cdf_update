@@ -93,64 +93,21 @@ DGAdvectionCoupled::computeQpResidual(Moose::DGResidualType type)
 
   getDislocationVelocity();
 
-  Real vdotn = _velocity * _normals[_qp];
-  Real u_vdotn = vdotn * _u[_qp];
-  Real neigh_u_vdotn = vdotn * _u_neighbor[_qp];
+  const Real vdotn = _velocity * _normals[_qp];
+
+  // Pure upwind: direction determined solely by velocity·normal.
+  // _velocity already accounts for dislocation sign/character in
+  // getDislocationVelocity(), so no _dislo_sign switch needed here.
+  const Real u_upwind = (vdotn >= 0.0) ? _u[_qp] : _u_neighbor[_qp];
 
   switch (type)
   {
     case Moose::Element:
-
-      switch (_dislo_sign)
-      {
-        case DisloSign::positive:
-
-          if (u_vdotn >= 0)
-            r += u_vdotn * _test[_i][_qp];
-
-          if (neigh_u_vdotn < 0)
-            r += neigh_u_vdotn * _test[_i][_qp];
-
-          break;
-
-        case DisloSign::negative:
-
-          if (u_vdotn <= 0)
-            r += u_vdotn * _test[_i][_qp];
-
-          if (neigh_u_vdotn > 0)
-            r += neigh_u_vdotn * _test[_i][_qp];
-
-          break;
-      }
-
+      r += vdotn * u_upwind * _test[_i][_qp];
       break;
 
     case Moose::Neighbor:
-
-      switch (_dislo_sign)
-      {
-        case DisloSign::positive:
-
-          if (u_vdotn >= 0)
-            r -= u_vdotn * _test_neighbor[_i][_qp];
-
-          if (neigh_u_vdotn < 0)
-            r -= neigh_u_vdotn * _test_neighbor[_i][_qp];
-
-          break;
-
-        case DisloSign::negative:
-
-          if (u_vdotn <= 0)
-            r -= u_vdotn * _test_neighbor[_i][_qp];
-
-          if (neigh_u_vdotn > 0)
-            r -= neigh_u_vdotn * _test_neighbor[_i][_qp];
-
-          break;
-      }
-
+      r -= vdotn * u_upwind * _test_neighbor[_i][_qp];
       break;
   }
 
@@ -160,102 +117,32 @@ DGAdvectionCoupled::computeQpResidual(Moose::DGResidualType type)
 Real
 DGAdvectionCoupled::computeQpJacobian(Moose::DGJacobianType type)
 {
-
   Real r = 0;
-  Real vdotn;
-  Real u_vdotn;
-  // Real neigh_u_vdotn;
 
   getDislocationVelocity();
 
-  vdotn = _velocity * _normals[_qp];
-  u_vdotn = vdotn * _u[_qp];
-  // neigh_u_vdotn = vdotn * _u_neighbor[_qp];
+  const Real vdotn = _velocity * _normals[_qp];
 
   switch (type)
   {
     case Moose::ElementElement:
-
-      switch (_dislo_sign)
-      {
-        case DisloSign::positive:
-
-          if (u_vdotn >= 0)
-            r += vdotn * _phi[_j][_qp] * _test[_i][_qp];
-
-          break;
-
-        case DisloSign::negative:
-
-          if (u_vdotn <= 0)
-            r += vdotn * _phi[_j][_qp] * _test[_i][_qp];
-
-          break;
-      }
-
+      if (vdotn >= 0.0)
+        r += vdotn * _phi[_j][_qp] * _test[_i][_qp];
       break;
 
     case Moose::ElementNeighbor:
-
-      switch (_dislo_sign)
-      {
-        case DisloSign::positive:
-
-          if (u_vdotn < 0)
-            r += vdotn * _phi_neighbor[_j][_qp] * _test[_i][_qp];
-
-          break;
-
-        case DisloSign::negative:
-
-          if (u_vdotn > 0)
-            r += vdotn * _phi_neighbor[_j][_qp] * _test[_i][_qp];
-
-          break;
-      }
-
+      if (vdotn < 0.0)
+        r += vdotn * _phi_neighbor[_j][_qp] * _test[_i][_qp];
       break;
 
     case Moose::NeighborElement:
-
-      switch (_dislo_sign)
-      {
-        case DisloSign::positive:
-
-          if (u_vdotn >= 0)
-            r -= vdotn * _phi[_j][_qp] * _test_neighbor[_i][_qp];
-
-          break;
-
-        case DisloSign::negative:
-
-          if (u_vdotn <= 0)
-            r -= vdotn * _phi[_j][_qp] * _test_neighbor[_i][_qp];
-
-          break;
-      }
-
+      if (vdotn >= 0.0)
+        r -= vdotn * _phi[_j][_qp] * _test_neighbor[_i][_qp];
       break;
 
     case Moose::NeighborNeighbor:
-
-      switch (_dislo_sign)
-      {
-        case DisloSign::positive:
-
-          if (u_vdotn < 0)
-            r -= vdotn * _phi_neighbor[_j][_qp] * _test_neighbor[_i][_qp];
-
-          break;
-
-        case DisloSign::negative:
-
-          if (u_vdotn > 0)
-            r -= vdotn * _phi_neighbor[_j][_qp] * _test_neighbor[_i][_qp];
-
-          break;
-      }
-
+      if (vdotn < 0.0)
+        r -= vdotn * _phi_neighbor[_j][_qp] * _test_neighbor[_i][_qp];
       break;
   }
 

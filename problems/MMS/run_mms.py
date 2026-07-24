@@ -18,6 +18,7 @@ from pathlib import Path
 # ── Configuration ──────────────────────────────────────────────────────────
 APP = "cdf_update-opt"
 INPUT_FILE = "mms_dg_tvd.i"
+INPUT_FILE_CLEAN = "mms_dg_clean.i"
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
 
@@ -44,15 +45,16 @@ def find_app():
     return APP
 
 
-def run_case(nx, dt, label, app_path):
+def run_case(nx, dt, label, app_path, input_file=None, csv_prefix="mms_out"):
     """Run a single mesh case.  Returns the (h, L2_error) tuple."""
-    output_base = SCRIPT_DIR / f"mms_out_n{nx}"
+    infile = input_file or INPUT_FILE
+    csv_base = f"{csv_prefix}_n{nx}"
     cmd = [
         app_path,
-        "-i", str(SCRIPT_DIR / INPUT_FILE),
+        "-i", str(SCRIPT_DIR / infile),
         f"Mesh/gen/nx={nx}",
         f"Executioner/dt={dt}",
-        f"Outputs/csv/file_base=mms_out_n{nx}",
+        f"Outputs/csv/file_base={csv_base}",
         "--no-trap-fpe",
     ]
     print(f"\n{'='*60}")
@@ -66,7 +68,7 @@ def run_case(nx, dt, label, app_path):
         return None
 
     # Parse CSV to extract final L2 error
-    csv_path = SCRIPT_DIR / f"mms_out_n{nx}.csv"
+    csv_path = SCRIPT_DIR / f"{csv_prefix}_n{nx}.csv"
     return extract_error(csv_path, label, nx)
 
 
@@ -104,9 +106,14 @@ def main():
     parser = argparse.ArgumentParser(description="MMS convergence test runner")
     parser.add_argument("--nx", type=int, default=0,
                         help="Run a single case with given nx (skip others)")
+    parser.add_argument("--clean", action="store_true",
+                        help="Use mms_dg_clean.i (MOOSE built-in kernels, no BCs)")
     parser.add_argument("--plot-only", action="store_true",
                         help="Skip runs, only collect and print errors from existing CSVs")
     args = parser.parse_args()
+
+    input_file = INPUT_FILE_CLEAN if args.clean else INPUT_FILE
+    csv_prefix = "mms_clean" if args.clean else "mms_out"
 
     app_path = find_app()
 
@@ -117,19 +124,21 @@ def main():
                   f"{[c['nx'] for c in CASES]}")
             sys.exit(1)
         if not args.plot_only:
-            run_case(case["nx"], case["dt"], case["label"], app_path)
+            run_case(case["nx"], case["dt"], case["label"], app_path,
+                     input_file=input_file, csv_prefix=csv_prefix)
         else:
-            csv_path = SCRIPT_DIR / f"mms_out_n{args.nx}.csv"
+            csv_path = SCRIPT_DIR / f"{csv_prefix}_n{args.nx}.csv"
             extract_error(csv_path, case["label"], case["nx"])
         return
 
     results = []
     for case in CASES:
         if args.plot_only:
-            csv_path = SCRIPT_DIR / f"mms_out_n{case['nx']}.csv"
+            csv_path = SCRIPT_DIR / f"{csv_prefix}_n{case['nx']}.csv"
             r = extract_error(csv_path, case["label"], case["nx"])
         else:
-            r = run_case(case["nx"], case["dt"], case["label"], app_path)
+            r = run_case(case["nx"], case["dt"], case["label"], app_path,
+                         input_file=input_file, csv_prefix=csv_prefix)
         if r:
             results.append({"nx": case["nx"], "h": r[0], "l2_error": r[1], "label": case["label"]})
 

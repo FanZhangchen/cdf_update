@@ -64,7 +64,7 @@
   [advection_vol]
     type = ConservativeAdvection
     variable = rho
-    velocity = '1.0 0.0'
+    velocity = '1.0 0.0 0.0'
     implicit = false
   []
   [source]
@@ -79,7 +79,7 @@
   [advection_face]
     type = DGConvection
     variable = rho
-    velocity = '1.0 0.0'
+    velocity = '1.0 0.0 0.0'
     implicit = false
   []
 []

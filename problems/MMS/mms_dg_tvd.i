@@ -120,7 +120,7 @@
   petsc_options_iname = '-pc_type'
   petsc_options_value = 'jacobi'
 
-  [TimeStepper]
+  [TimeIntegrator]
     type = ExplicitTVDRK2
   []
 

@@ -61,6 +61,16 @@
     variable = rho
     implicit = true
   []
+  # Volume advection: -∫ vρ · ∇φ dx  (no upwinding — DG handles it at interfaces)
+  [advection_vol]
+    type = ConservativeAdvectionSchmidNoSSD
+    variable = rho
+    upwinding_type = none
+    dislo_sign = positive
+    slip_sys_index = 0
+    dislo_character = edge
+    implicit = false
+  []
   # Manufactured source term S(x,t)
   [source]
     type = BodyForce

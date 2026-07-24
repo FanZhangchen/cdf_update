@@ -123,8 +123,7 @@
 
 [Executioner]
   type = Transient
-  solve_type = 'PJFNK'
-  petsc_options = '-snes_ksp_ew'
+  solve_type = 'LINEAR'
   petsc_options_iname = '-pc_type -pc_factor_mat_solver_package'
   petsc_options_value = 'lu superlu_dist'
 
@@ -136,11 +135,6 @@
   dtmin = 1.0e-12
   start_time = 0.0
   end_time = 0.5
-
-  l_max_its = 50
-  nl_max_its = 10
-  nl_rel_tol = 1e-10
-  nl_abs_tol = 1e-10
 []
 
 [Outputs]

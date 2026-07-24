@@ -1,27 +1,20 @@
 # ============================================================================
-# MMS Convergence Test for DG Advection + ExplicitTVDRK2
+# MMS Convergence Test — Custom DG Kernels  (after DGAdvectionCoupled fix)
 #
 # PDE:  ∂ρ/∂t + v·∂ρ/∂x = S(x,t)    with v = 1.0
 #
-# Exact solution:  ρ(x,t) = exp(-t) * (sin(2πx) + 2)
-#                   ↑ shifted positive to avoid dislocation density sign guards
-# Manufactured source: S = ∂ρ/∂t + v·∂ρ/∂x
-#   S(x,t) = exp(-t) * (2π·cos(2πx) - sin(2πx) - 2)
+# Exact:  ρ(x,t) = exp(-t) * x^2 * (1-x)^2
+# Source: S(x,t) = exp(-t) * (-x^4 + 6x^3 - 7x^2 + 2x)
 #
-# Domain: x ∈ [0, 1], pseudo-1D (nx elements, ny=1)
-# BCs:   Periodic in x
-#
-# Usage:
-#   N=50:  ./cdf_update-opt -i mms_dg_tvd.i Mesh/gen/nx=50  Executioner/dt=0.001
-#   N=100: ./cdf_update-opt -i mms_dg_tvd.i Mesh/gen/nx=100 Executioner/dt=0.0005
-#   N=200: ./cdf_update-opt -i mms_dg_tvd.i Mesh/gen/nx=200 Executioner/dt=0.00025
+# Exact solution vanishes at boundaries → no BCs needed (avoids DG
+# periodic-BC compatibility issues).  Apples-to-apples with mms_dg_clean.i.
 # ============================================================================
 
 [Mesh]
   [gen]
     type = GeneratedMeshGenerator
     dim = 2
-    nx = 50                       # override via CLI for convergence study
+    nx = 50
     ny = 1
     xmin = 0.0
     xmax = 1.0
@@ -33,7 +26,7 @@
 [Variables]
   [rho]
     family = MONOMIAL
-    order = FIRST                 # piecewise linear → second-order spatial accuracy
+    order = FIRST
   []
 []
 
@@ -48,11 +41,11 @@
 [Functions]
   [rho_exact]
     type = ParsedFunction
-    expression = 'exp(-t) * (sin(2*pi*x) + 2.0)'
+    expression = 'exp(-t) * (x^4 - 2*x^3 + x^2)'
   []
   [src_func]
     type = ParsedFunction
-    expression = 'exp(-t) * (2*pi*cos(2*pi*x) - sin(2*pi*x) - 2.0)'
+    expression = 'exp(-t) * (-x^4 + 6*x^3 - 7*x^2 + 2*x)'
   []
 []
 
@@ -103,16 +96,7 @@
   []
 []
 
-[BCs]
-  [Periodic]
-    [x]
-      variable = rho
-      primary = 'left'
-      secondary = 'right'
-      translation = '1.0 0.0 0.0'
-    []
-  []
-[]
+# No BCs — exact solution vanishes at boundaries, zero flux
 
 [Postprocessors]
   [l2_error]

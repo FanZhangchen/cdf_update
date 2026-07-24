@@ -3,8 +3,10 @@
 #
 # PDE:  ∂ρ/∂t + v·∂ρ/∂x = S(x,t)    with v = 1.0
 #
-# Exact solution:  ρ(x,t) = exp(-t) * sin(2πx)
-# Manufactured source: S(x,t) = exp(-t) * (2π·cos(2πx) - sin(2πx))
+# Exact solution:  ρ(x,t) = exp(-t) * (sin(2πx) + 2)
+#                   ↑ shifted positive to avoid dislocation density sign guards
+# Manufactured source: S = ∂ρ/∂t + v·∂ρ/∂x
+#   S(x,t) = exp(-t) * (2π·cos(2πx) - sin(2πx) - 2)
 #
 # Domain: x ∈ [0, 1], pseudo-1D (nx elements, ny=1)
 # BCs:   Periodic in x
@@ -46,11 +48,11 @@
 [Functions]
   [rho_exact]
     type = ParsedFunction
-    expression = 'exp(-t) * sin(2*pi*x)'
+    expression = 'exp(-t) * (sin(2*pi*x) + 2.0)'
   []
   [src_func]
     type = ParsedFunction
-    expression = 'exp(-t) * (2*pi*cos(2*pi*x) - sin(2*pi*x))'
+    expression = 'exp(-t) * (2*pi*cos(2*pi*x) - sin(2*pi*x) - 2.0)'
   []
 []
 

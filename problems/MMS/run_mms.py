@@ -23,9 +23,10 @@ PROJECT_ROOT = SCRIPT_DIR.parent.parent
 
 # Mesh sizes and corresponding time steps (dt ∝ h, CFL-safe for explicit DG)
 CASES = [
-    {"nx": 50,  "dt": 0.001,  "label": "N=50"},
-    {"nx": 100, "dt": 0.0005, "label": "N=100"},
-    {"nx": 200, "dt": 0.00025,"label": "N=200"},
+    {"nx": 50,  "dt": 0.001,   "label": "N=50"},
+    {"nx": 100, "dt": 0.0005,  "label": "N=100"},
+    {"nx": 200, "dt": 0.00025, "label": "N=200"},
+    {"nx": 400, "dt": 0.000125,"label": "N=400"},
 ]
 
 # ── Helpers ────────────────────────────────────────────────────────────────

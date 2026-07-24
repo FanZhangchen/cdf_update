@@ -93,7 +93,9 @@
   [Periodic]
     [x]
       variable = rho
-      auto_direction = 'x'
+      primary = 'left'
+      secondary = 'right'
+      translation = '1.0 0.0 0.0'
     []
   []
 []
@@ -132,10 +134,6 @@
 []
 
 [Outputs]
-  [exodus]
-    type = Exodus
-    interval = 100
-  []
   [csv]
     type = CSV
   []

@@ -1,5 +1,5 @@
 # ============================================================================
-# MMS Convergence Test for DG Advection + TVDRK2
+# MMS Convergence Test for DG Advection + ExplicitTVDRK2
 #
 # PDE:  ∂ρ/∂t + v·∂ρ/∂x = S(x,t)    with v = 1.0
 #
@@ -7,7 +7,7 @@
 # Manufactured source: S(x,t) = exp(-t) * (2π·cos(2πx) - sin(2πx))
 #
 # Domain: x ∈ [0, 1], pseudo-1D (nx elements, ny=1)
-# BCs:   Periodic in both x and y
+# BCs:   Periodic in x
 #
 # Usage:
 #   N=50:  ./cdf_update-opt -i mms_dg_tvd.i Mesh/gen/nx=50  Executioner/dt=0.001
@@ -55,10 +55,11 @@
 []
 
 [Kernels]
-  # Mass term: ∂ρ/∂t
+  # Mass term: ∂ρ/∂t  — must stay implicit for explicit time integrators
   [time]
     type = TimeDerivative
     variable = rho
+    implicit = true
   []
   # Manufactured source term S(x,t)
   [source]
@@ -70,13 +71,14 @@
 []
 
 [DGKernels]
-  # DG advection: v·∇ρ, with upwind flux (dislo_sign=positive, so velocity > 0 → upwind)
+  # DG advection: v·∇ρ, upwind flux — implicit = false for explicit RK
   [advection]
     type = DGAdvectionCoupled
     variable = rho
     dislo_sign = positive
     slip_sys_index = 0
     dislo_character = edge
+    implicit = false
   []
 []
 
@@ -107,16 +109,14 @@
     function = rho_exact
     execute_on = 'TIMESTEP_END'
   []
-  [h]
-    type = AverageElementSize
-  []
 []
 
 [Executioner]
   type = Transient
   solve_type = 'PJFNK'
-  petsc_options_iname = '-pc_type'
-  petsc_options_value = 'jacobi'
+  petsc_options = '-snes_ksp_ew'
+  petsc_options_iname = '-pc_type -pc_factor_mat_solver_package'
+  petsc_options_value = 'lu superlu_dist'
 
   [TimeIntegrator]
     type = ExplicitTVDRK2
@@ -127,10 +127,10 @@
   start_time = 0.0
   end_time = 0.5
 
-  l_max_its = 10
+  l_max_its = 50
   nl_max_its = 10
-  nl_rel_tol = 1e-12
-  nl_abs_tol = 1e-12
+  nl_rel_tol = 1e-10
+  nl_abs_tol = 1e-10
 []
 
 [Outputs]

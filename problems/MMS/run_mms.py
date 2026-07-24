@@ -21,7 +21,7 @@ INPUT_FILE = "mms_dg_tvd.i"
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
 
-# Mesh sizes and corresponding time steps (dt ~ h to keep CFL ∝ constant)
+# Mesh sizes and corresponding time steps (dt ∝ h, CFL-safe for explicit DG)
 CASES = [
     {"nx": 50,  "dt": 0.001,  "label": "N=50"},
     {"nx": 100, "dt": 0.0005, "label": "N=100"},
@@ -66,11 +66,11 @@ def run_case(nx, dt, label, app_path):
 
     # Parse CSV to extract final L2 error
     csv_path = SCRIPT_DIR / f"mms_out_n{nx}.csv"
-    return extract_error(csv_path, label)
+    return extract_error(csv_path, label, nx)
 
 
-def extract_error(csv_path, label):
-    """Read the final L2 error and element size from the CSV output."""
+def extract_error(csv_path, label, nx):
+    """Read the final L2 error from the CSV output.  h = 1/nx for pseudo-1D."""
     if not csv_path.exists():
         print(f"  WARNING: CSV not found at {csv_path}")
         return None
@@ -85,7 +85,6 @@ def extract_error(csv_path, label):
 
     last = rows[-1]
     try:
-        h = float(last.get("h", last.get("average_element_size", "nan")))
         l2 = float(last["l2_error"])
         t = float(last["time"])
     except (KeyError, ValueError) as e:
@@ -93,7 +92,8 @@ def extract_error(csv_path, label):
         print(f"  Available columns: {list(last.keys())}")
         return None
 
-    print(f"  {label}: t={t:.4f}, h={h:.6f}, L2_error={l2:.6e}")
+    h = 1.0 / nx                    # true dx for pseudo-1D mesh
+    print(f"  {label}: t={t:.4f}, h=1/{nx}={h:.6f}, L2_error={l2:.6e}")
     return (h, l2)
 
 
@@ -119,14 +119,14 @@ def main():
             run_case(case["nx"], case["dt"], case["label"], app_path)
         else:
             csv_path = SCRIPT_DIR / f"mms_out_n{args.nx}.csv"
-            extract_error(csv_path, case["label"])
+            extract_error(csv_path, case["label"], case["nx"])
         return
 
     results = []
     for case in CASES:
         if args.plot_only:
             csv_path = SCRIPT_DIR / f"mms_out_n{case['nx']}.csv"
-            r = extract_error(csv_path, case["label"])
+            r = extract_error(csv_path, case["label"], case["nx"])
         else:
             r = run_case(case["nx"], case["dt"], case["label"], app_path)
         if r:

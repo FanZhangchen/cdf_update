@@ -36,10 +36,7 @@ def load_from_csvs(nx_list=(50, 100, 200)):
         if not rows:
             continue
         last = rows[-1]
-        h = float(last.get("h", last.get("average_element_size", 1.0 / nx)))
-        # If h wasn't written, estimate it
-        if h <= 0 or h > 1:
-            h = 1.0 / nx
+        h = 1.0 / nx              # true dx for pseudo-1D mesh
         err = float(last["l2_error"])
         h_vals.append(h)
         err_vals.append(err)

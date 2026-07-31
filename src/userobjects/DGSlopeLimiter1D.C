@@ -47,7 +47,7 @@ DGSlopeLimiter1D::DGSlopeLimiter1D(const InputParameters & parameters)
     _var_name(getParam<VariableName>("variable")),
     _var_num(libMesh::invalid_uint),
     _var_num_resolved(false),
-    _nl_sys(_fe_problem.getNonlinearSystemBase()),
+    _nl_sys(_fe_problem.getNonlinearSystemBase(0)),
     _sys_num(_nl_sys.number()),
     _direction(getParam<MooseEnum>("direction")),
     _bnd_left(getParam<Real>("bnd_left")),
@@ -171,8 +171,8 @@ DGSlopeLimiter1D::limitSlope(unsigned int dof_idx,
   // Centroid distances for unit–consistent gradient comparison
   const unsigned int dim = (side_minus == 0 || side_minus == 2) ? 1 : 0; // y=dim 1, x=dim 0
 
-  const Real dx_plus  = neigh_plus  ? std::abs(neigh_plus->centroid()(dim)  - elem->centroid()(dim)) : 1.0;
-  const Real dx_minus = neigh_minus ? std::abs(elem->centroid()(dim) - neigh_minus->centroid()(dim)) : 1.0;
+  const Real dx_plus  = neigh_plus  ? std::abs(neigh_plus->vertex_average()(dim)  - elem->vertex_average()(dim)) : 1.0;
+  const Real dx_minus = neigh_minus ? std::abs(elem->vertex_average()(dim) - neigh_minus->vertex_average()(dim)) : 1.0;
 
   // Finite-difference gradients (units match the slope DOF: gradient * h/2)
   // For uniform mesh: dx_plus = dx_minus = h, so grad ≈ (Δu/h) * (h/2) = Δu/2
@@ -196,8 +196,7 @@ DGSlopeLimiter1D::initialize()
 {
   if (!_var_num_resolved)
   {
-    const Variable & var = _fe_problem.getVariable(_tid, _var_name);
-    _var_num = var.number();
+    _var_num = _fe_problem.getVariable(_tid, _var_name).number();
     _var_num_resolved = true;
   }
 }

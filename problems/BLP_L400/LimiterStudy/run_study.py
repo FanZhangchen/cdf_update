@@ -91,4 +91,4 @@ if __name__ == "__main__":
     with open(logfile, "a") as f:
         f.write(f"\n=== Done: {passed}/{len(CASES)} passed  ({datetime.now()}) ===\n")
 
-    print(f"\n{paused}/{len(CASES)} cases passed.  Log: {logfile}")
+    print(f"\n{passed}/{len(CASES)} cases passed.  Log: {logfile}")

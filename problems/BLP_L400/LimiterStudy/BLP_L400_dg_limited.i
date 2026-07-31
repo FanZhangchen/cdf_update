@@ -1,8 +1,9 @@
 # ============================================================================
-# BLP Case Study 1 — DG + Slope Limiter
+# BLP Case Study 1 — DG + Slope Limiter (ExplicitTVDRK2)
 #
-# Identical to BLP_L400_dg.i but with DGSlopeLimiter1D (minmod) applied
-# to all four dislocation density variables at each timestep end.
+# Identical to BLP_L400_dg.i plus DGSlopeLimiter1D on all four dislocation
+# density variables.  Limits y-slope (transport direction) using minmod.
+# Must run with --n-threads=1.
 # ============================================================================
 
 [GlobalParams]
@@ -58,7 +59,7 @@
     order = CONSTANT
     family = MONOMIAL
   [../]
-  [./fp_xy]
+  [./fp_xx]
     order = CONSTANT
     family = MONOMIAL
   [../]
@@ -95,12 +96,12 @@
 []
 
 [Kernels]
-  # Slip system 1, positive edge
   [Edeg_Pos_Time_Deri_1]
     type = TimeDerivative
     variable = rho_edge_pos_1
   []
   [Edge_Pos_Flux_1]
+    implicit = false
     type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_pos_1
     upwinding_type = none
@@ -109,12 +110,12 @@
     dislo_character = edge
   []
 
-  # Slip system 1, negative edge
   [Edeg_Neg_Time_Deri_1]
     type = TimeDerivative
     variable = rho_edge_neg_1
   []
   [Edge_Neg_Flux_1]
+    implicit = false
     type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_neg_1
     upwinding_type = none
@@ -123,12 +124,12 @@
     dislo_character = edge
   []
 
-  # Slip system 2, positive edge
   [Edeg_Pos_Time_Deri_2]
     type = TimeDerivative
     variable = rho_edge_pos_2
   []
   [Edge_Pos_Flux_2]
+    implicit = false
     type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_pos_2
     upwinding_type = none
@@ -137,12 +138,12 @@
     dislo_character = edge
   []
 
-  # Slip system 2, negative edge
   [Edeg_Neg_Time_Deri_2]
     type = TimeDerivative
     variable = rho_edge_neg_2
   []
   [Edge_Neg_Flux_2]
+    implicit = false
     type = ConservativeAdvectionSchmidNoSSD
     variable = rho_edge_neg_2
     upwinding_type = none
@@ -154,6 +155,7 @@
 
 [DGKernels]
   [dg_edge_pos_1]
+    implicit = false
     type = DGAdvectionCoupled
     variable = rho_edge_pos_1
     dislo_sign = positive
@@ -161,6 +163,7 @@
     dislo_character = edge
   []
   [dg_edge_neg_1]
+    implicit = false
     type = DGAdvectionCoupled
     variable = rho_edge_neg_1
     dislo_sign = negative
@@ -168,6 +171,7 @@
     dislo_character = edge
   []
   [dg_edge_pos_2]
+    implicit = false
     type = DGAdvectionCoupled
     variable = rho_edge_pos_2
     dislo_sign = positive
@@ -175,6 +179,7 @@
     dislo_character = edge
   []
   [dg_edge_neg_2]
+    implicit = false
     type = DGAdvectionCoupled
     variable = rho_edge_neg_2
     dislo_sign = negative
@@ -183,38 +188,42 @@
   []
 []
 
-# ── Slope limiters (one per dislocation variable) ──────────────────────
+# ── Slope limiters — one per dislocation variable, transport along y ──
 [UserObjects]
   [limiter_pos_1]
     type = DGSlopeLimiter1D
     variable = rho_edge_pos_1
     limiter_type = minmod
-    left_boundary_value = 1.e6
-    right_boundary_value = 1.e6
+    direction = y
+    bnd_bottom = 1.e6
+    bnd_top    = 1.e6
     execute_on = 'TIMESTEP_END'
   []
   [limiter_neg_1]
     type = DGSlopeLimiter1D
     variable = rho_edge_neg_1
     limiter_type = minmod
-    left_boundary_value = 1.e6
-    right_boundary_value = 1.e6
+    direction = y
+    bnd_bottom = 1.e6
+    bnd_top    = 1.e6
     execute_on = 'TIMESTEP_END'
   []
   [limiter_pos_2]
     type = DGSlopeLimiter1D
     variable = rho_edge_pos_2
     limiter_type = minmod
-    left_boundary_value = 1.e6
-    right_boundary_value = 1.e6
+    direction = y
+    bnd_bottom = 1.e6
+    bnd_top    = 1.e6
     execute_on = 'TIMESTEP_END'
   []
   [limiter_neg_2]
     type = DGSlopeLimiter1D
     variable = rho_edge_neg_2
     limiter_type = minmod
-    left_boundary_value = 1.e6
-    right_boundary_value = 1.e6
+    direction = y
+    bnd_bottom = 1.e6
+    bnd_top    = 1.e6
     execute_on = 'TIMESTEP_END'
   []
 []
@@ -236,12 +245,12 @@
     index_i = 1
     execute_on = timestep_end
   [../]
-  [./fp_xy]
+  [./fp_xx]
     type = RankTwoAux
-    variable = fp_xy
+    variable = fp_xx
     rank_two_tensor = plastic_deformation_gradient
     index_j = 0
-    index_i = 1
+    index_i = 0
     execute_on = timestep_end
   [../]
   [./slip_inc]
@@ -291,7 +300,6 @@
     q = 1.1
     f0 = 3.e-19
     gdot0 = 1.73e6
-    scaling_Cb = 0.241
     edge_dislo_den_pos_1 = rho_edge_pos_1
     edge_dislo_den_neg_1 = rho_edge_neg_1
     edge_dislo_den_pos_2 = rho_edge_pos_2
@@ -328,39 +336,27 @@
   [./Periodic]
     [./auto_boundary_x]
       variable = disp_x
-      primary = 'left'
-      secondary = 'right'
-      translation = '0.04 0.0 0.0'
+      auto_direction = 'x'
     [../]
     [./auto_boundary_y]
       variable = disp_y
-      primary = 'left'
-      secondary = 'right'
-      translation = '0.04 0.0 0.0'
+      auto_direction = 'x'
     [../]
-    [./auto_rho_edge_pos_boundary_x_1]
+    [./auto_rho_edge_pos_1_boundary_x]
       variable = rho_edge_pos_1
-      primary = 'left'
-      secondary = 'right'
-      translation = '0.04 0.0 0.0'
+      auto_direction = 'x'
     [../]
-    [./auto_rho_edge_neg_boundary_x_1]
+    [./auto_rho_edge_neg_1_boundary_x]
       variable = rho_edge_neg_1
-      primary = 'left'
-      secondary = 'right'
-      translation = '0.04 0.0 0.0'
+      auto_direction = 'x'
     [../]
-    [./auto_rho_edge_pos_boundary_x_2]
+    [./auto_rho_edge_pos_2_boundary_x]
       variable = rho_edge_pos_2
-      primary = 'left'
-      secondary = 'right'
-      translation = '0.04 0.0 0.0'
+      auto_direction = 'x'
     [../]
-    [./auto_rho_edge_neg_boundary_x_2]
+    [./auto_rho_edge_neg_2_boundary_x]
       variable = rho_edge_neg_2
-      primary = 'left'
-      secondary = 'right'
-      translation = '0.04 0.0 0.0'
+      auto_direction = 'x'
     [../]
   [../]
 []
@@ -375,21 +371,27 @@
 
 [Executioner]
   type = Transient
-  solve_type = 'NEWTON'
+
+  [./TimeIntegrator]
+    type = ExplicitTVDRK2
+  [../]
+
+  solve_type = 'PJFNK'
   petsc_options = '-snes_ksp_ew'
-  petsc_options_iname = '-pc_type -pc_hypre_type -ksp_gmres_restart'
-  petsc_options_value = 'lu    boomeramg          31'
+  petsc_options_iname = '-pc_type -pc_factor_mat_solver_package'
+  petsc_options_value = 'lu superlu_dist'
   line_search = 'none'
+  automatic_scaling = true
+
   l_max_its = 50
   nl_max_its = 50
   nl_rel_tol = 1e-5
   nl_abs_tol = 1e-3
-  l_tol = 1e-5
 
   start_time = 0.0
   end_time = 0.5
-  dt = 5.e-6
-  dtmin = 1.e-9
+  dt = 2.e-6
+  dtmin = 1.e-10
 []
 
 [Postprocessors]
@@ -401,9 +403,9 @@
    type = ElementAverageValue
    variable = pk2
   [../]
-  [./fp_xy]
+  [./fp_xx]
     type = ElementAverageValue
-    variable = fp_xy
+    variable = fp_xx
   [../]
   [./exy]
     type = ElementAverageValue
@@ -420,7 +422,7 @@
   [./disp_x]
      type = NodalVariableValue
      variable = disp_x
-     nodeid = 101
+     nodeid = 1
   [../]
   [./strain_xy]
     type = ElementAverageValue
@@ -436,16 +438,16 @@
   [rhoep]
     type = LineValueSampler
     variable = rho_edge_pos_1
-    start_point = '0.005 0 0'
-    end_point = '0.005 0.4 0'
+    start_point = '0.02 0 0'
+    end_point = '0.02 0.4 0'
     num_points = 51
     sort_by = y
   []
   [rhoen]
     type = LineValueSampler
     variable = rho_edge_neg_1
-    start_point = '0.005 0 0'
-    end_point = '0.005 0.4 0'
+    start_point = '0.02 0 0'
+    end_point = '0.02 0.4 0'
     num_points = 51
     sort_by = y
   []
@@ -453,7 +455,7 @@
 
 [Outputs]
   exodus = true
-  interval = 20
+  time_step_interval = 50
   [csv]
     type = CSV
     file_base = BLP_L400_dg_limited_out

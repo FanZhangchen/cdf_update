@@ -1,4 +1,4 @@
-//* DG slope limiter for pseudo-1D MONOMIAL FIRST elements
+//* DG hierarchical slope limiter for MONOMIAL FIRST variables
 //* Zhangchen Fan
 //* Harbin Institute of Technology, Shenzhen
 //* Centre for Micro-mechanics Modelling and Characterisation
@@ -9,16 +9,18 @@
 #include "MooseEnum.h"
 
 /**
- * DGSlopeLimiter1D applies a hierarchical slope limiter (Cockburn-Shu style)
- * to a MONOMIAL FIRST variable on a pseudo-1D mesh (dim=2, ny=1).
+ * DGSlopeLimiter1D applies a Cockburn-Shu hierarchical slope limiter to
+ * MONOMIAL FIRST variables on structured QUAD4 meshes.
  *
- * For each element, the x-slope DOF is compared with the forward and backward
- * differences of element means.  If the slope creates a new extremum, it is
- * limited using the minmod function.  This is a post-processing step executed
- * at TIMESTEP_END — it does not feed back into the residual assembly of the
- * current time step.
+ * For each element, the slope DOF (in the transport direction) is compared
+ * with forward/backward finite-difference gradients computed from neighbouring
+ * element means.  If the slope would create a new extremum (overshoot /
+ * undershoot), it is limited via minmod (or vanleer / mc / superbee).
  *
- * Supported limiter types: minmod, vanleer, mc, superbee.
+ * Executed at TIMESTEP_END; does not feed back into the current-step assembly.
+ *
+ * IMPORTANT: Run with --n-threads=1 (the limiter directly modifies the
+ * global solution vector, which is not thread-safe).
  */
 class DGSlopeLimiter1D : public ElementUserObject
 {
@@ -33,44 +35,53 @@ public:
   virtual void threadJoin(const UserObject & uo) override;
 
 protected:
-  /// Minmod of two arguments
+  /// Minmod of two scalars (zero if signs differ)
   Real minmod(Real a, Real b) const;
 
-  /// Minmod of three arguments (standard hierarchical limiter)
+  /// Hierarchical minmod of three scalars
   Real minmod3(Real a, Real b, Real c) const;
 
   /// Van Leer limiter
   Real vanleer(Real a, Real b) const;
 
-  /// MC (monotonized central) limiter
+  /// MC (monotonized central-difference) limiter
   Real mcLimiter(Real a, Real b, Real c) const;
 
-  /// Get the mean value (DOF 0) of the solution on a given element.
-  /// Returns 0 if elem is nullptr (boundary).
-  Real getElementMean(const Elem * elem) const;
+  /// Return the mean value (DOF 0) of the variable on element @p elem.
+  /// Returns @p fallback if elem is nullptr (boundary).
+  Real getElementMean(const Elem * elem, Real fallback) const;
+
+  /// Apply the selected limiter: minmod3(slope, grad_plus, grad_minus)
+  Real applyLimiter(Real slope, Real grad_plus, Real grad_minus) const;
+
+  /// Limit one slope component (DOF index @p dof_idx) using neighbours on
+  /// sides @p side_minus and @p side_plus, with boundary fallback values.
+  void limitSlope(unsigned int dof_idx,
+                  int side_minus, int side_plus,
+                  Real bnd_minus, Real bnd_plus);
 
   /// Limiter type
   const MooseEnum _limiter_type;
 
-  /// Name of the variable to limit
+  /// Variable name to limit
   const VariableName _var_name;
 
-  /// Variable number (resolved on first call to initialize())
+  /// Variable number (resolved on first call)
   unsigned int _var_num;
 
-  /// Flag: has _var_num been resolved yet?
+  /// Whether _var_num has been resolved
   bool _var_num_resolved;
 
-  /// Reference to the nonlinear system (for accessing/modifying the solution)
+  /// Reference to the nonlinear system
   NonlinearSystemBase & _nl_sys;
 
   /// System number
   const unsigned int _sys_num;
 
-  /// Whether to also limit the y-slope (default: false for pseudo-1D)
-  const bool _limit_y;
+  /// Transport direction to limit: x, y, or both
+  const MooseEnum _direction;
 
-  /// Boundary values for elements without neighbours
-  const Real _left_boundary_value;
-  const Real _right_boundary_value;
+  /// Boundary fallback values
+  const Real _bnd_left, _bnd_right;
+  const Real _bnd_bottom, _bnd_top;
 };

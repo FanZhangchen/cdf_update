@@ -20,6 +20,7 @@ APP = "cdf_update-opt"
 INPUT_FILE = "mms_dg_tvd.i"
 INPUT_FILE_CLEAN = "mms_dg_clean.i"
 INPUT_FILE_HYBRID = "mms_dg_hybrid.i"
+INPUT_FILE_LIMITED = "mms_dg_limited.i"
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
 
@@ -111,6 +112,8 @@ def main():
                         help="Use mms_dg_clean.i (MOOSE built-in kernels, no BCs)")
     parser.add_argument("--hybrid", action="store_true",
                         help="Use mms_dg_hybrid.i (built-in volume + custom DG kernel)")
+    parser.add_argument("--limited", action="store_true",
+                        help="Use mms_dg_limited.i (custom kernels + slope limiter)")
     parser.add_argument("--plot-only", action="store_true",
                         help="Skip runs, only collect and print errors from existing CSVs")
     args = parser.parse_args()
@@ -121,6 +124,9 @@ def main():
     elif args.hybrid:
         input_file = INPUT_FILE_HYBRID
         csv_prefix = "mms_hybrid"
+    elif args.limited:
+        input_file = INPUT_FILE_LIMITED
+        csv_prefix = "mms_limited"
     else:
         input_file = INPUT_FILE
         csv_prefix = "mms_out"

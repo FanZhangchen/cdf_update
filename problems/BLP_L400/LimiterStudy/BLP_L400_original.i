@@ -379,11 +379,13 @@
 []
 
 [Outputs]
-  exodus = true
-  interval = 20
+  [exodus]
+    type = Exodus
+    time_step_interval = 50
+  []
   [csv]
     type = CSV
-    file_base = rhoe_x_out_l4e-1_BLP_rho0_double_60120
+    file_base = BLP_L400_original_out
     execute_on = final
   []
 []

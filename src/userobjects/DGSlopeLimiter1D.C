@@ -161,12 +161,15 @@ DGSlopeLimiter1D::limitSlope(unsigned int dof_idx,
   const Real u_mean  = solution(dof_indices[0]);
   const Real sigma   = solution(dof_indices[dof_idx]);
 
-  // Neighbours
+  // Neighbours — only read DOFs from local elements (ghost access → segfault)
   const Elem * neigh_minus = elem->neighbor_ptr(side_minus);
   const Elem * neigh_plus  = elem->neighbor_ptr(side_plus);
 
-  const Real u_minus = neigh_minus ? getElementMean(neigh_minus, bnd_minus) : bnd_minus;
-  const Real u_plus  = neigh_plus  ? getElementMean(neigh_plus,  bnd_plus)  : bnd_plus;
+  const bool minus_local = neigh_minus && (neigh_minus->processor_id() == processor_id());
+  const bool plus_local  = neigh_plus  && (neigh_plus->processor_id()  == processor_id());
+
+  const Real u_minus = minus_local ? getElementMean(neigh_minus, bnd_minus) : bnd_minus;
+  const Real u_plus  = plus_local  ? getElementMean(neigh_plus,  bnd_plus)  : bnd_plus;
 
   // Centroid distances for unit–consistent gradient comparison
   const unsigned int dim = (side_minus == 0 || side_minus == 2) ? 1 : 0; // y=dim 1, x=dim 0

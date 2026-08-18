@@ -63,6 +63,18 @@
     order = CONSTANT
     family = MONOMIAL
   [../]
+  [./fp_xy]
+    order = CONSTANT
+    family = MONOMIAL
+  [../]
+  [./fp_yx]
+    order = CONSTANT
+    family = MONOMIAL
+  [../]
+  [./fp_yy]
+    order = CONSTANT
+    family = MONOMIAL
+  [../]
   [./exy]
     order = CONSTANT
     family = MONOMIAL
@@ -211,6 +223,30 @@
     rank_two_tensor = plastic_deformation_gradient
     index_j = 0
     index_i = 0
+    execute_on = timestep_end
+  [../]
+  [./fp_xy]
+    type = RankTwoAux
+    variable = fp_xy
+    rank_two_tensor = plastic_deformation_gradient
+    index_j = 1
+    index_i = 0
+    execute_on = timestep_end
+  [../]
+  [./fp_yx]
+    type = RankTwoAux
+    variable = fp_yx
+    rank_two_tensor = plastic_deformation_gradient
+    index_j = 0
+    index_i = 1
+    execute_on = timestep_end
+  [../]
+  [./fp_yy]
+    type = RankTwoAux
+    variable = fp_yy
+    rank_two_tensor = plastic_deformation_gradient
+    index_j = 1
+    index_i = 1
     execute_on = timestep_end
   [../]
   [./slip_inc]
@@ -406,6 +442,54 @@
   [rhoen]
     type = LineValueSampler
     variable = rho_edge_neg_1
+    start_point = '0.02 0 0'
+    end_point = '0.02 0.4 0'
+    num_points = 51
+    sort_by = y
+  []
+  [rhop2]
+    type = LineValueSampler
+    variable = rho_edge_pos_2
+    start_point = '0.02 0 0'
+    end_point = '0.02 0.4 0'
+    num_points = 51
+    sort_by = y
+  []
+  [rhon2]
+    type = LineValueSampler
+    variable = rho_edge_neg_2
+    start_point = '0.02 0 0'
+    end_point = '0.02 0.4 0'
+    num_points = 51
+    sort_by = y
+  []
+  [fp_xx_line]
+    type = LineValueSampler
+    variable = fp_xx
+    start_point = '0.02 0 0'
+    end_point = '0.02 0.4 0'
+    num_points = 51
+    sort_by = y
+  []
+  [fp_xy_line]
+    type = LineValueSampler
+    variable = fp_xy
+    start_point = '0.02 0 0'
+    end_point = '0.02 0.4 0'
+    num_points = 51
+    sort_by = y
+  []
+  [fp_yx_line]
+    type = LineValueSampler
+    variable = fp_yx
+    start_point = '0.02 0 0'
+    end_point = '0.02 0.4 0'
+    num_points = 51
+    sort_by = y
+  []
+  [fp_yy_line]
+    type = LineValueSampler
+    variable = fp_yy
     start_point = '0.02 0 0'
     end_point = '0.02 0.4 0'
     num_points = 51

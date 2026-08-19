@@ -399,6 +399,10 @@
 []
 
 [Outputs]
+  [./console]
+    type = Console
+    time_step_interval = 50
+  [../]
   [exodus]
     type = Exodus
     time_step_interval = 50

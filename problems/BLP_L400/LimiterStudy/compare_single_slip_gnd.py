@@ -2,16 +2,16 @@
 """
 Single-slip GND diagnostic: transported GND vs geometric (curl Fp) GND.
 
-Setup (BLP_L400_single_slip.i) uses two IDENTICAL slip systems, so it is
-physically a single slip system with total slip  gamma = gamma1 + gamma2.
-For a single slip system the plastic deformation gradient is EXACTLY
+Setup (BLP_L400_single_slip.i) is a genuine single slip system
+(number_slip_systems = 1).  For a single slip system the plastic deformation
+gradient is EXACTLY
         Fp = I + gamma (m (x) n)                     (since (m (x) n)^2 = 0)
 so the geometric edge GND (curl Fp projected on the edge line direction
 l = m x n = -zhat) is
         rho_G,geom = n_x * d_y(gamma) / b  =  d_y(Fp_yx) / (b * m_y)
 (since Fp_yx = gamma m_y n_x).  We compare this against the transported net
 density
-        rho_G,trans = (rho_pos_1 - rho_neg_1) + (rho_pos_2 - rho_neg_2).
+        rho_G,trans = rho_pos_1 - rho_neg_1.
 
 No 2x2 projection, no small-strain approximation, no finite-strain
 approximation (the Fp = I + gamma (m (x) n) identity is exact for single slip).
@@ -30,8 +30,6 @@ import matplotlib.pyplot as plt
 VPP_VARS = {
     "rhoep": "rho_edge_pos_1",
     "rhoen": "rho_edge_neg_1",
-    "rhop2": "rho_edge_pos_2",
-    "rhon2": "rho_edge_neg_2",
     "fp_yx_line": "fp_yx",
     "fp_xy_line": "fp_xy",
     "fp_xx_line": "fp_xx",
@@ -144,10 +142,9 @@ def main():
     print(f"  n = {np.array2string(n, precision=4)}")
     print(f"  l = {np.array2string(l, precision=4)}  (l_z = {l[:, 2]})")
 
-    # sanity: the two systems must be identical for this to be single slip
-    if not (np.allclose(m[0], m[1]) and np.allclose(n[0], n[1])):
-        raise RuntimeError("The two slip systems are NOT identical; this is not a "
-                           "single-slip setup.")
+    if nss != 1:
+        raise RuntimeError("This diagnostic requires a single slip system "
+                           "(number_slip_systems = 1).")
 
     b = args.burgers
     m_y = m[0, 1]           # y-component of slip direction
@@ -156,8 +153,7 @@ def main():
     # ── Load densities and Fp ────────────────────────────────────────────────
     y_ref = None
     rho = {}
-    for sign, vpp in (("pos", "rhoep"), ("neg", "rhoen"),
-                      ("pos2", "rhop2"), ("neg2", "rhon2")):
+    for sign, vpp in (("pos", "rhoep"), ("neg", "rhoen")):
         var = VPP_VARS[vpp]
         path = find_vpp_csv(args.base, vpp, args.dir)
         y, val = read_line_csv(path, var)
@@ -175,7 +171,7 @@ def main():
         fp[comp] = np.interp(y_ref, y, val)
 
     # ── Transported vs geometric GND ─────────────────────────────────────────
-    rho_G_trans = (rho["pos"] - rho["neg"]) + (rho["pos2"] - rho["neg2"])
+    rho_G_trans = rho["pos"] - rho["neg"]
     rho_G_geom = central_diff(y_ref, fp["yx"]) / (b * m_y)
 
     # ── diagnostics ──────────────────────────────────────────────────────────

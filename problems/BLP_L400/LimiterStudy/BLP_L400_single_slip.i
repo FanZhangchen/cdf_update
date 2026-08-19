@@ -1,7 +1,9 @@
 # ============================================================================
-# Single-slip GND diagnostic — two IDENTICAL slip systems (physically one slip
-# system), so Fp = I + (gamma1+gamma2) (m x n) and the transported GND is
-#        rho_G,trans = (rho_pos_1 - rho_neg_1) + (rho_pos_2 - rho_neg_2).
+# Single-slip GND diagnostic — a genuine single slip system
+# (number_slip_systems = 1, one line in single_slip_sys.txt), so
+#        Fp = I + gamma (m x n)                       (exact: (m x n)^2 = 0)
+# and the transported GND is
+#        rho_G,trans = rho_pos_1 - rho_neg_1.
 # Compare against the geometric GND  rho_G,geom = d_y(Fp_yx) / (b * m_y).
 #
 # Based on BLP_L400_original.i (LAGRANGE + full upwinding, stable), with the
@@ -38,12 +40,6 @@
     initial_condition = 1.e6
   []
   [rho_edge_neg_1]
-    initial_condition = 1.e6
-  []
-  [rho_edge_pos_2]
-    initial_condition = 1.e6
-  []
-  [rho_edge_neg_2]
     initial_condition = 1.e6
   []
 []
@@ -125,32 +121,6 @@
     upwinding_type = full
     dislo_sign = negative
     slip_sys_index = 0
-    dislo_character = edge
-  []
-
-  [Edeg_Pos_Time_Deri_2]
-    type = MassLumpedTimeDerivative
-    variable = rho_edge_pos_2
-  []
-  [Edge_Pos_Flux_2]
-    type = ConservativeAdvectionSchmidNoSSD
-    variable = rho_edge_pos_2
-    upwinding_type = full
-    dislo_sign = positive
-    slip_sys_index = 1
-    dislo_character = edge
-  []
-
-  [Edeg_Neg_Time_Deri_2]
-    type = MassLumpedTimeDerivative
-    variable = rho_edge_neg_2
-  []
-  [Edge_Neg_Flux_2]
-    type = ConservativeAdvectionSchmidNoSSD
-    variable = rho_edge_neg_2
-    upwinding_type = full
-    dislo_sign = negative
-    slip_sys_index = 1
     dislo_character = edge
   []
 []
@@ -242,7 +212,7 @@
   [../]
   [./trial_xtalpl]
     type = CrystalPlasticityBussoUpdate
-    number_slip_systems = 2
+    number_slip_systems = 1
     slip_sys_file_name = single_slip_sys.txt
     w1 = 0.0
     w2 = 0.0
@@ -253,8 +223,6 @@
     gdot0 = 1.73e6
     edge_dislo_den_pos_1 = rho_edge_pos_1
     edge_dislo_den_neg_1 = rho_edge_neg_1
-    edge_dislo_den_pos_2 = rho_edge_pos_2
-    edge_dislo_den_neg_2 = rho_edge_neg_2
   [../]
 []
 
@@ -305,18 +273,6 @@
     [../]
     [./auto_rho_edge_neg_boundary_x_1]
       variable = rho_edge_neg_1
-      primary = 'left'
-      secondary = 'right'
-      translation = '0.04 0.0 0.0'
-    [../]
-    [./auto_rho_edge_pos_boundary_x_2]
-      variable = rho_edge_pos_2
-      primary = 'left'
-      secondary = 'right'
-      translation = '0.04 0.0 0.0'
-    [../]
-    [./auto_rho_edge_neg_boundary_x_2]
-      variable = rho_edge_neg_2
       primary = 'left'
       secondary = 'right'
       translation = '0.04 0.0 0.0'
@@ -403,22 +359,6 @@
   [rhoen]
     type = LineValueSampler
     variable = rho_edge_neg_1
-    start_point = '0.02 0 0'
-    end_point = '0.02 0.4 0'
-    num_points = 101
-    sort_by = y
-  []
-  [rhop2]
-    type = LineValueSampler
-    variable = rho_edge_pos_2
-    start_point = '0.02 0 0'
-    end_point = '0.02 0.4 0'
-    num_points = 101
-    sort_by = y
-  []
-  [rhon2]
-    type = LineValueSampler
-    variable = rho_edge_neg_2
     start_point = '0.02 0 0'
     end_point = '0.02 0.4 0'
     num_points = 101

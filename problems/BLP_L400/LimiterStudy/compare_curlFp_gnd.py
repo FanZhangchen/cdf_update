@@ -196,6 +196,19 @@ def main():
         alpha_trans_xz += b * rho_G[a] * m[a, 0] * l[a, 2]
         alpha_trans_yz += b * rho_G[a] * m[a, 1] * l[a, 2]
 
+    # ── diagnostics ──────────────────────────────────────────────────────────
+    print("\n--- diagnostics ---")
+    for comp in ("xx", "xy", "yx", "yy"):
+        print(f"  fp_{comp}: min={fp[comp].min():.5e} max={fp[comp].max():.5e} "
+              f"range={fp[comp].max() - fp[comp].min():.5e}")
+    for a in range(nss):
+        print(f"  rho_G_{a+1}: min={rho_G[a].min():.4e} max={rho_G[a].max():.4e} "
+              f"std={rho_G[a].std():.4e}   (rho_pos max={rho[('pos', a)].max():.4e})")
+    print(f"  alpha_kin_xz  std={alpha_kin_xz.std():.5e}   alpha_trans_xz  std={alpha_trans_xz.std():.5e}")
+    print(f"  alpha_kin_yz  std={alpha_kin_yz.std():.5e}   alpha_trans_yz  std={alpha_trans_yz.std():.5e}")
+    print(f"  corr (no sign flip)  xz={np.corrcoef(alpha_kin_xz, alpha_trans_xz)[0,1]:+.3f}"
+          f"   yz={np.corrcoef(alpha_kin_yz, alpha_trans_yz)[0,1]:+.3f}")
+
     # ── Global sign of curl Fp is a convention; pick the sign that best ────
     # ── matches the transported reconstruction, and report it.            ───
     lhs = np.concatenate([alpha_kin_xz, alpha_kin_yz])

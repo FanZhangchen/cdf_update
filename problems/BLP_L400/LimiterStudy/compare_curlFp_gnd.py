@@ -143,6 +143,34 @@ def central_diff(y, f):
     return df
 
 
+def rel_l2(a, b):
+    return np.linalg.norm(a - b) / max(np.linalg.norm(b), 1e-30)
+
+
+def bulk_sweep(y, alpha_kin_yz, alpha_trans_yz, alpha_kin_xz, alpha_trans_xz,
+               trim_max):
+    """Trim `t` samples from each end of the line and report correlation / rel
+    L2 error / scale ratio, to localise any mismatch to the boundary pile-up
+    layers vs. the interior."""
+    n = len(y)
+    if trim_max is None:
+        trim_max = n // 4
+    print("\n=== bulk-vs-boundary sweep  (trim t samples from each end) ===")
+    print(f"{'trim':>5} {'n_kept':>6} {'yz corr':>9} {'yz relL2':>9} "
+          f"{'yz std(kin/trans)':>17} {'xz corr':>9}")
+    for t in range(0, trim_max + 1):
+        sl = slice(None) if t == 0 else slice(t, n - t)
+        a = alpha_kin_yz[sl]
+        b = alpha_trans_yz[sl]
+        c = alpha_kin_xz[sl]
+        d = alpha_trans_xz[sl]
+        corr_yz = np.corrcoef(a, b)[0, 1] if (a.std() > 0 and b.std() > 0) else np.nan
+        corr_xz = np.corrcoef(c, d)[0, 1] if (c.std() > 0 and d.std() > 0) else np.nan
+        ratio = a.std() / b.std() if b.std() > 0 else np.nan
+        print(f"{t:5d} {len(a):6d} {corr_yz:+9.3f} {rel_l2(a, b):9.3e} "
+              f"{ratio:17.3f} {corr_xz:+9.3f}")
+
+
 def main():
     ap = argparse.ArgumentParser(description="curl Fp vs transported GND comparison")
     ap.add_argument("--base", default="BLP_L400_dg_out")
@@ -150,6 +178,9 @@ def main():
     ap.add_argument("--burgers", type=float, default=BURGERS)
     ap.add_argument("--slip", default=SLIP_FILE)
     ap.add_argument("--out", default="curlFp_vs_gnd.png")
+    ap.add_argument("--trim-max", type=int, default=None,
+                    help="max boundary points to trim from each end in bulk sweep "
+                         "(default: n//4)")
     args = ap.parse_args()
 
     m, n, l = read_slip_systems(args.slip)
@@ -217,9 +248,6 @@ def main():
     alpha_kin_xz *= sign
     alpha_kin_yz *= sign
 
-    def rel_l2(a, b):
-        return np.linalg.norm(a - b) / max(np.linalg.norm(b), 1e-30)
-
     err_xz = rel_l2(alpha_kin_xz, alpha_trans_xz)
     err_yz = rel_l2(alpha_kin_yz, alpha_trans_yz)
 
@@ -243,6 +271,9 @@ def main():
         err = rel_l2(rho_G_kin[a], rho_G[a])
         corr = np.corrcoef(rho_G_kin[a], rho_G[a])[0, 1]
         print(f"slip {a+1}:  rho_G,kin vs rho_G,trans  relL2={err:.3e}  corr={corr:.3f}")
+
+    bulk_sweep(y_ref, alpha_kin_yz, alpha_trans_yz, alpha_kin_xz, alpha_trans_xz,
+               args.trim_max)
 
     # ── Plots ────────────────────────────────────────────────────────────────
     fig, ax = plt.subplots(1, 3, figsize=(15, 4.2))

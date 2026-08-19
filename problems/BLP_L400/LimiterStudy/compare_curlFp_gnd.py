@@ -216,7 +216,7 @@ def main():
     for a in range(nss):
         for c in range(nss):
             M[a, c] = np.dot(m[a], m[c]) * np.dot(l[a], l[c])
-    c = np.zeros(nss)          # c_a = alpha_kin : B^a  (only xz,yz nonzero)
+    c = np.zeros((nss, len(y_ref)))          # c_a(y) = alpha_kin : B^a  (only xz,yz nonzero)
     for a in range(nss):
         c[a] = (alpha_kin_xz * m[a, 0] * l[a, 2] +
                 alpha_kin_yz * m[a, 1] * l[a, 2])

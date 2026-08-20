@@ -199,6 +199,24 @@ def main():
     print(f"rel L2 err  : {err:.3e}")
     print(f"std ratio geom/trans : {rho_G_geom.std()/rho_G_trans.std():.4f}")
 
+    # ── Integral (total GND content) comparison ──────────────────────────────
+    # ∫ rho_G,geom dy = (Fp_yx(top) - Fp_yx(bottom)) / (b m_y)  — exact by the
+    # fundamental theorem of calculus, so it does NOT suffer from the
+    # boundary-layer central-difference under-resolution that the pointwise
+    # curl Fp does.  If this matches the transported total, the model is
+    # kinematically consistent at the continuum level and the 30x pointwise
+    # gap is a boundary-resolution artifact.
+    _trapz = getattr(np, "trapezoid", getattr(np, "trapz"))
+    total_trans = _trapz(rho_G_trans, y_ref)
+    total_geom_raw = (fp["yx"][-1] - fp["yx"][0]) / (b * m_y)
+    total_geom = sign * total_geom_raw
+    print("\n=== integral (total GND content, resolution-independent) ===")
+    print(f"∫ rho_G_trans dy = {total_trans:+.4e}  (1/mm)")
+    print(f"∫ rho_G_geom  dy = {total_geom:+.4e}  (1/mm)   [raw {total_geom_raw:+.4e}]")
+    print(f"ratio trans/geom = {total_trans/total_geom:+.4f}")
+    print(f"rel err (|.|)    = "
+          f"{abs(total_trans - total_geom)/max(abs(total_geom), 1e-30):.3e}")
+
     # ── bulk-vs-boundary sweep (localise any mismatch) ───────────────────────
     n = len(y_ref)
     print("\n=== bulk-vs-boundary sweep (trim t samples from each end) ===")

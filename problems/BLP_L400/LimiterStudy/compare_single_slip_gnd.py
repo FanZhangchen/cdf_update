@@ -217,6 +217,16 @@ def main():
     print(f"rel err (|.|)    = "
           f"{abs(total_trans - total_geom)/max(abs(total_geom), 1e-30):.3e}")
 
+    # Signed total is ~0 for this antisymmetric (top/bottom) pile-up problem, so
+    # the ratio above is degenerate.  The L1 (absolute) GND content is the
+    # nonzero quantity that actually tests how much GND each field carries.
+    l1_trans = _trapz(np.abs(rho_G_trans), y_ref)
+    l1_geom = _trapz(np.abs(rho_G_geom), y_ref)
+    print(f"∫|rho_G_trans| dy = {l1_trans:+.4e}    ∫|rho_G_geom| dy = {l1_geom:+.4e}")
+    print(f"ratio L1 trans/geom = {l1_trans/l1_geom:+.3f}")
+    print(f"peak |rho_G_trans| = {np.abs(rho_G_trans).max():.4e}   "
+          f"peak |rho_G_geom| = {np.abs(rho_G_geom).max():.4e}")
+
     # ── bulk-vs-boundary sweep (localise any mismatch) ───────────────────────
     n = len(y_ref)
     print("\n=== bulk-vs-boundary sweep (trim t samples from each end) ===")

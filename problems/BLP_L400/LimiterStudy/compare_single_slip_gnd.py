@@ -64,15 +64,17 @@ def read_slip_systems(path):
 
 
 def find_vpp_csv(base, vpp, directory):
-    pats = [os.path.join(directory, f"{base}_{vpp}*.csv"),
-            os.path.join(directory, f"*{vpp}*.csv")]
-    hits = []
-    for p in pats:
-        hits += glob.glob(p)
-    hits = sorted(set(hits))
-    if not hits:
-        raise FileNotFoundError(f"No CSV found for VPP '{vpp}' (base='{base}') in {directory}")
-    return hits[-1]
+    # Exact base match FIRST.  The loose `*{vpp}*` fallback must not pollute the
+    # result: with n200/n400 in the same directory it also matches the older
+    # "..._out_..." files, and since "n200_out" < "out" lexically, sorted()[-1]
+    # silently returns the wrong run (see the identical n100/n200 output bug).
+    exact = sorted(glob.glob(os.path.join(directory, f"{base}_{vpp}*.csv")))
+    if exact:
+        return exact[-1]
+    fallback = sorted(glob.glob(os.path.join(directory, f"*{vpp}*.csv")))
+    if fallback:
+        return fallback[-1]
+    raise FileNotFoundError(f"No CSV found for VPP '{vpp}' (base='{base}') in {directory}")
 
 
 def read_line_csv(path, var_name):

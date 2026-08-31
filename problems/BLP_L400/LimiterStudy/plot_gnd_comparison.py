@@ -4,14 +4,19 @@
 Each column is one resolution (ny = 100/200/400).  Every panel overlays
         rho_G,trans = rho_pos_1 - rho_neg_1                      (transported)
         rho_G,geom  = d_y(Fp_yx) / (b * m_y)                     (curl Fp)
-sign-aligned, against y.
+sign-aligned, normalised by the initial total density
+        rho_T,init = rho_pos(0) + rho_neg(0) = 2e6,
+so the ordinate matches the dimensionless GND scale used in the paper.
 
 Top row: full domain — the residual mismatch localises to the top/bottom pile-up
 boundary layers.  Bottom row: interior zoom (boundary layers excluded), where
 the two fields are seen to converge as ny increases.
 
+Also writes gnd_comparison.csv (long format) with the raw and normalised fields
+for downstream processing.
+
 Reuses the same loaders and the same central-difference geometric reconstruction
-as compare_single_slip_gnd.py, so the numbers in the panel titles match that
+as compare_single_slip_gnd.py, so the r_L1/corr in the panel titles match that
 script and convergence_gnd.py exactly.
 
 Usage (run from the LimiterStudy directory so the import resolves):
@@ -32,10 +37,11 @@ CASES = [
     (400, "BLP_L400_single_slip_n400_out"),
 ]
 INTERIOR_Y = (0.05, 0.35)   # zoom window excluding the top/bottom boundary layers
+RHO_T_INIT = 2.0e6          # rho_pos(0)+rho_neg(0) = 1e6+1e6 (initial_condition in .i)
 
 
 def load_case(base, directory, burgers, slip):
-    """Return (y, rho_G_trans, rho_G_geom, l1_ratio, corr) for one run."""
+    """Return (y, rho_G_trans, rho_G_geom, l1_ratio, corr) for one run (raw)."""
     m, n, l = cg.read_slip_systems(slip)
     if len(m) != 1:
         raise RuntimeError("single slip required")
@@ -75,10 +81,13 @@ def main():
     ap.add_argument("--dir", default=".")
     ap.add_argument("--burgers", type=float, default=cg.BURGERS)
     ap.add_argument("--slip", default=cg.SLIP_FILE)
+    ap.add_argument("--rho-t-init", type=float, default=RHO_T_INIT,
+                    help="initial total density for normalisation (default 2e6)")
     ap.add_argument("--out", default="gnd_comparison.png")
     args = ap.parse_args()
 
     fig, axes = plt.subplots(2, len(CASES), figsize=(4.6 * len(CASES), 8.0))
+    csv_rows = []
 
     for j, (ny, base) in enumerate(CASES):
         try:
@@ -90,25 +99,32 @@ def main():
                 axes[row, j].set_visible(False)
             continue
 
+        trans_n = trans / args.rho_t_init
+        geom_n = geom / args.rho_t_init
+
         # top row: full domain
         ax = axes[0, j]
-        ax.plot(y, geom, "k-", lw=2, label="geometric (curl Fp)")
-        ax.plot(y, trans, "g--", lw=2, label="transported")
+        ax.plot(y, geom_n, "k-", lw=2, label="geometric (curl Fp)")
+        ax.plot(y, trans_n, "g--", lw=2, label="transported")
         ax.set_title(f"ny = {ny}\n"
                      r"$r_{L1}$=" + f"{l1:.1f},  corr={corr:+.2f}", fontsize=9)
         ax.set_xlim(0.0, 0.4)
-        ax.tick_params(labelbottom=False)
+        ax.set_xlabel("y (mm)")
         if j == 0:
-            ax.set_ylabel(r"$\rho_G$ (1/mm$^2$)")
+            ax.set_ylabel(r"$\rho_G\,/\,\rho_{T,\mathrm{init}}$")
 
         # bottom row: interior zoom
         ax = axes[1, j]
-        ax.plot(y, geom, "k-", lw=2)
-        ax.plot(y, trans, "g--", lw=2)
+        ax.plot(y, geom_n, "k-", lw=2)
+        ax.plot(y, trans_n, "g--", lw=2)
         ax.set_xlim(*INTERIOR_Y)
         ax.set_xlabel("y (mm)")
         if j == 0:
-            ax.set_ylabel(r"$\rho_G$ (1/mm$^2$)")
+            ax.set_ylabel(r"$\rho_G\,/\,\rho_{T,\mathrm{init}}$")
+
+        # collect for CSV (raw + normalised, long format)
+        for yi, gi, ti, gin, tin in zip(y, geom, trans, geom_n, trans_n):
+            csv_rows.append((ny, yi, gi, ti, gin, tin))
 
     axes[0, 0].legend(fontsize=8, loc="upper right")
     fig.suptitle("transported vs geometric GND under mesh refinement\n"
@@ -117,6 +133,14 @@ def main():
     fig.tight_layout(rect=[0, 0, 1, 0.94])
     fig.savefig(args.out, dpi=150)
     print(f"figure -> {args.out}")
+
+    out_csv = args.out.replace(".png", ".csv")
+    header = ("ny,y,"
+              "rho_G_geom,rho_G_trans,"
+              "rho_G_geom_norm,rho_G_trans_norm")
+    np.savetxt(out_csv, np.asarray(csv_rows), delimiter=",",
+               header=header, comments="", fmt="%d,%.8g,%.8g,%.8g,%.8g,%.8g")
+    print(f"table  -> {out_csv}")
 
 
 if __name__ == "__main__":

@@ -5,7 +5,7 @@ Each column is one resolution (ny = 100/200/400).  Every panel overlays
         rho_G,trans = rho_pos_1 - rho_neg_1                      (transported)
         rho_G,geom  = d_y(Fp_yx) / (b * m_y)                     (curl Fp)
 sign-aligned, normalised by the initial total density
-        rho_T,init = rho_pos(0) + rho_neg(0) = 2e6,
+        rho_0 = rho_pos(0) + rho_neg(0) = 2e6,
 so the ordinate matches the dimensionless GND scale used in the paper.
 
 Top row: full domain — the residual mismatch localises to the top/bottom pile-up
@@ -37,7 +37,7 @@ CASES = [
     (400, "BLP_L400_single_slip_n400_out"),
 ]
 INTERIOR_Y = (0.05, 0.35)   # zoom window excluding the top/bottom boundary layers
-RHO_T_INIT = 2.0e6          # rho_pos(0)+rho_neg(0) = 1e6+1e6 (initial_condition in .i)
+RHO_0 = 2.0e6               # rho_0 = rho_pos(0)+rho_neg(0) = 1e6+1e6 (initial_condition in .i)
 
 
 def load_case(base, directory, burgers, slip):
@@ -81,8 +81,8 @@ def main():
     ap.add_argument("--dir", default=".")
     ap.add_argument("--burgers", type=float, default=cg.BURGERS)
     ap.add_argument("--slip", default=cg.SLIP_FILE)
-    ap.add_argument("--rho-t-init", type=float, default=RHO_T_INIT,
-                    help="initial total density for normalisation (default 2e6)")
+    ap.add_argument("--rho-0", type=float, default=RHO_0,
+                    help="initial total density rho_0 for normalisation (default 2e6)")
     ap.add_argument("--out", default="gnd_comparison.png")
     args = ap.parse_args()
 
@@ -99,8 +99,8 @@ def main():
                 axes[row, j].set_visible(False)
             continue
 
-        trans_n = trans / args.rho_t_init
-        geom_n = geom / args.rho_t_init
+        trans_n = trans / args.rho_0
+        geom_n = geom / args.rho_0
 
         # top row: full domain
         ax = axes[0, j]
@@ -111,7 +111,7 @@ def main():
         ax.set_xlim(0.0, 0.4)
         ax.set_xlabel("y (mm)")
         if j == 0:
-            ax.set_ylabel(r"$\rho_G\,/\,\rho_{T,\mathrm{init}}$")
+            ax.set_ylabel(r"$\rho_G\,/\,\rho_0$")
 
         # bottom row: interior zoom
         ax = axes[1, j]
@@ -120,7 +120,7 @@ def main():
         ax.set_xlim(*INTERIOR_Y)
         ax.set_xlabel("y (mm)")
         if j == 0:
-            ax.set_ylabel(r"$\rho_G\,/\,\rho_{T,\mathrm{init}}$")
+            ax.set_ylabel(r"$\rho_G\,/\,\rho_0$")
 
         # collect for CSV (raw + normalised, long format)
         for yi, gi, ti, gin, tin in zip(y, geom, trans, geom_n, trans_n):

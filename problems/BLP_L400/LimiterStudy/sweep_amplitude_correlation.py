@@ -174,8 +174,16 @@ def run_mesh(args):
         hs.append(YM / ny)
         R_full.append(T_full / G_full)
         R_int.append(T_int / G_int)
+        m = (y >= INTERIOR_Y[0]) & (y <= INTERIOR_Y[1])
+        S_int_trans = _trapz()(trans[m], y[m])   # signed interior content (no abs)
+        S_int_geom = _trapz()(geom[m], y[m])
+        osc_t = abs(S_int_trans) / T_int         # ~0 => sign-oscillating, ~1 => single-signed
+        osc_g = abs(S_int_geom) / G_int
         print(f"ny={ny:4d}  h={hs[-1]:.6f}  R_full={R_full[-1]:5.2f}  "
               f"R_int={R_int[-1]:5.2f}")
+        print(f"      interior L1: trans={T_int:.3e}  geom={G_int:.3e}  | "
+              f"osc trans={osc_t:.2f}  geom={osc_g:.2f}  "
+              f"(signed trans={S_int_trans:+.3e}  geom={S_int_geom:+.3e})")
 
     if len(nys) < 2:
         print("\nneed >= 2 resolutions to assess interior convergence.")

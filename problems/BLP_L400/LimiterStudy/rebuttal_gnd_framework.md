@@ -122,16 +122,31 @@ p 略低于 1 的原因：偏差集中在 top/bottom 堆积层（近奇异梯度
 - **内部区**：R² = **0.9995**（斜率 0.4865），相关性近乎完美；R_int 跌到 ~2.1–2.6（比
   全域低一个量级），随幅值基本平坦（±13%，远小于全域 ±18%）。
 
-**判读（离散误差的两次定位）**：
+**判读（离散误差的定位）**：
 1. **全域单调漂移**：幅值越大 → top/bottom 堆积层越陡 → CONSTANT-MONOMIAL 的 Fp 对
    ∂_y Fp 的欠分辨越严重 → curl Fp 的 L1 含量越被低估。误差随**载荷**单调，与 §2 根因、
-   §3 的 h 收敛一致。
-2. **内部区近乎完美共变**（R² = 0.9995）是干净的**物理相关信号**：一旦抠掉欠分辨的边界
-   层，两场随载荷的变化几乎完全重合，坐实「同一物理场」。
-3. 内部区残留 R_int ≈ 2（而非 1）是内部区**较弱但仍存在的**离散偏差——∂_y Fp 由单元
-   常数 Fp 中心差分重建，在 ny=100 上仍系统性低估平滑梯度；它同样随网格加密收敛（§3
-   全域 R 18.8→10.1→5.9 已含内部分量下降）。这不是反证，而是同一 O(h) 误差在内部区的
-   温和残影。
+   §3 的 h 收敛一致。G_geom 与 G_trans 落在过原点直线上（R² = 0.99），坐实「同一物理场」。
+2. 内部区 R² = 0.9995 更干净，但要正确理解：内部区（bulk）本身**几乎没有 GND**（见下），
+   这里的共变是边界堆积层尾部随载荷的缩放，不是「bulk 的干净相关」。
+
+**内部区为何不是收敛判据（mesh 模式，`--mode mesh`）**：
+
+| ny | 内部区 ∫\|ρ_G\|（trans / geom） | 符号振荡 \|signed\|/L1（trans / geom） |
+|---|---|---|
+| 100 | 1.2e-1 / 4.6e-2 | 0.00 / 0.76 |
+| 200 | 1.6e-4 / 1.5e-4 | 0.00 / 0.49 |
+| 400 | 2.2e-6 / 7.4e-6 | 0.01 / 0.01 |
+
+- 内部区 L1 含量随加密**塌缩 ~1000×/档**（1.2e-1 → 2.2e-6），而全域只降 18.8→5.9。这
+  说明 **GND 几乎全部集中在边界堆积层，bulk 内部是 GND 空区**；堆积层随加密变锐、向
+  边界退缩，内部区迅速清空。
+- trans 的 osc 恒 ≈ 0：内部区传输场是 ρ_pos − ρ_neg ≈ 1e6 − 1e6 的**符号振荡舍入噪声**，
+  不是物理信号。geom 的 osc 也随加密 0.76 → 0.01，趋于纯噪声。
+- 因此 R_int 在 n400 冲到 0.31 是**两个噪声小量的比值，无物理意义**，不是「几何场反超」。
+  正确的收敛判据是**全域** R（含 GND 富集的边界层），它在 §3 里 18.8→10.1→5.9 单调收敛。
+
+**结论**：误差确属**边界层局部化**——内部区被清空，边界层承载全部 GND 与全部误差。这
+反而**加固** §3：全域 R 的收敛正是边界层 O(h) 误差在收敛，而非模型不自洽。
 
 ---
 
@@ -191,12 +206,13 @@ discrepancy is purely numerical and vanishes under mesh refinement.
 **(iv) Physical correlation under loading.** Holding the mesh fixed, we swept the
 applied shear amplitude (×0.5–1.5) and compared the total GND content ∫|ρ_G|dy of
 the transported and geometric fields. The two lie on a straight line through the
-origin over the full domain (R² = 0.99); excluding the boundary pile-up layers the
-correlation becomes essentially exact (R² = 0.9995, interior ratio ≈ 2.1–2.6). The
-full-domain ratio drifts monotonically with amplitude (14.8→21.5) because a larger
-shear sharpens the boundary pile-up and so worsens the piecewise-constant
-reconstruction of curl Fp — the same discretisation error, now shown to scale with
-loading as well as with mesh size.
+origin (R² = 0.99), confirming they are the same physical field; the GND-poor
+interior co-varies even more cleanly (R² = 0.9995), so the full-domain scatter
+originates in the boundary pile-up layers. The full-domain ratio drifts
+monotonically with amplitude (14.8→21.5) because a larger shear sharpens the
+boundary pile-up and so worsens the piecewise-constant reconstruction of curl Fp —
+the same discretisation error, now shown to scale with loading as well as with mesh
+size.
 
 The present model follows the transport branch of Cheong & Busso (2004); the
 curl-Fp reconstruction of the strain-gradient branch (Cheong, Busso & Arsenlis
@@ -219,4 +235,6 @@ the two are equivalent in the continuum limit.
   （全域 + 内部区，各含相关图与 R-幅值图）。
 - [x] 幅值扫掠 5 点 + 内部区 R_int —— 已补齐（见 §4 表格；CSV 在工作站上，本地
   LimiterStudy 未同步不影响）。
+- [x] mesh 模式（`--mode mesh`）—— 已加；发现内部区是 GND 空区（误差边界层局部化，见
+  §4），内部 R 不作收敛判据，全域 R 才是。
 - [x] C:/Temp 盘满 —— 已清（6 GB 空闲）。

@@ -1,25 +1,33 @@
 #!/usr/bin/env python3
-"""Applied-shear sweep: physical correlation between curl Fp and transported GND.
+"""Physical correlation between curl Fp and transported GND, in two sweeps.
 
-For a set of single-slip runs at different applied shear amplitudes (same mesh,
-same material, same boundaries), extract the L1 GND content of the geometric
-field  rho_G,geom = d_y(Fp_yx)/(b m_y)  (i.e. curl Fp / b)  and of the transported
-field  rho_G,trans = rho_pos_1 - rho_neg_1, and show they move proportionally.
+Both modes compare the L1 GND content of the geometric field
+        rho_G,geom = d_y(Fp_yx)/(b m_y)   (= curl Fp / b)
+against the transported field
+        rho_G,trans = rho_pos_1 - rho_neg_1,
+over the FULL domain and over an INTERIOR window (boundary pile-up layers
+excluded).  The interior content is the clean physical-correlation signal: the
+large full-domain ratio R ~ 15-21 is dominated by the under-resolved boundary
+layers, whereas the interior R is much closer to 1.
 
-Both the FULL domain and an INTERIOR window (boundary pile-up layers excluded)
-are reported.  The interior content is the clean physical-correlation signal:
-the large full-domain ratio R ~ 15-21 is dominated by the under-resolved
-boundary layers, whereas the interior R is much closer to 1 and flatter in
-amplitude.
+Two modes (--mode):
 
-Layout (2x2):
-  top-left : full-domain    G_geom vs G_trans  (line through origin)
-  top-right: full-domain    R vs amplitude
-  bot-left : interior       G_geom vs G_trans  (line through origin)
-  bot-right: interior       R vs amplitude
+  amplitude (default)  Sweep the applied shear amplitude (x0.50 ... x1.50) on a
+                       fixed mesh.  Shows G_geom and G_trans co-vary on a line
+                       through the origin -> same physical field; the residual
+                       full-domain ratio drifts with amplitude -> the discretisation
+                       error also scales with loading.
+                       2x2 figure: full-domain & interior, each (correlation, R vs
+                       amplitude).
+
+  mesh                 Sweep the mesh resolution (ny = 100/200/400) at the fixed
+                       baseline amplitude.  Shows the interior ratio R_int -> 1 as
+                       h -> 0, directly confirming the interior residual is also a
+                       first-order discretisation artefact (not a model error).
 
 Usage (run from the LimiterStudy directory so the imports resolve):
-    python sweep_amplitude_correlation.py
+    python sweep_amplitude_correlation.py               # amplitude sweep
+    python sweep_amplitude_correlation.py --mode mesh   # mesh sweep
 """
 
 import argparse
@@ -39,7 +47,14 @@ SWEEP = [
     ("1.25x", "BLP_L400_single_slip_amp125_out", 1.25),
     ("1.50x", "BLP_L400_single_slip_amp150_out", 1.50),
 ]
+# (ny, base) — mesh refinement at the fixed baseline amplitude
+MESH_CASES = [
+    (100, "BLP_L400_single_slip_out"),
+    (200, "BLP_L400_single_slip_n200_out"),
+    (400, "BLP_L400_single_slip_n400_out"),
+]
 INTERIOR_Y = (0.05, 0.35)   # excludes the top/bottom pile-up boundary layers
+YM = 0.4                    # ymax (mm) from the input file
 
 
 def _trapz():
@@ -61,14 +76,7 @@ def fit_slope(G_trans, G_geom):
     return float(np.dot(G_trans, G_geom) / np.dot(G_trans, G_trans))
 
 
-def main():
-    ap = argparse.ArgumentParser(description="shear-amplitude curl Fp vs GND correlation")
-    ap.add_argument("--dir", default=".")
-    ap.add_argument("--burgers", type=float, default=cg.BURGERS)
-    ap.add_argument("--slip", default=cg.SLIP_FILE)
-    ap.add_argument("--out", default="amplitude_correlation.png")
-    args = ap.parse_args()
-
+def run_amplitude(args):
     labels, mults = [], []
     T_full, G_full, T_int, G_int = [], [], [], []   # transported / geometric contents
     for label, base, mult in SWEEP:
@@ -148,6 +156,93 @@ def main():
                       "G_trans_int,G_geom_int,R_int",
                comments="")
     print(f"table  -> {out_csv}")
+
+
+def run_mesh(args):
+    nys, hs, R_full, R_int = [], [], [], []
+    for ny, base in MESH_CASES:
+        try:
+            y, trans, geom, l1, corr = load_case(base, args.dir, args.burgers, args.slip)
+        except FileNotFoundError as e:
+            print(f"[skip] ny={ny:4d}  no CSV yet: {e}")
+            continue
+        T_full = content(y, trans)
+        G_full = content(y, geom)
+        T_int = content(y, trans, *INTERIOR_Y)
+        G_int = content(y, geom, *INTERIOR_Y)
+        nys.append(ny)
+        hs.append(YM / ny)
+        R_full.append(T_full / G_full)
+        R_int.append(T_int / G_int)
+        print(f"ny={ny:4d}  h={hs[-1]:.6f}  R_full={R_full[-1]:5.2f}  "
+              f"R_int={R_int[-1]:5.2f}")
+
+    if len(nys) < 2:
+        print("\nneed >= 2 resolutions to assess interior convergence.")
+        return
+
+    nys = np.array(nys, dtype=float)
+    hs = np.array(hs)
+    R_full = np.array(R_full)
+    R_int = np.array(R_int)
+
+    # fit interior excess -> 0:  R_int - 1 = C_int * h^p  (log-log, cf. convergence_gnd)
+    exc_int = R_int - 1.0
+    if np.all(exc_int > 0):
+        A = np.vstack([np.log(hs), np.ones_like(hs)]).T
+        (p, logC), *_ = np.linalg.lstsq(A, np.log(exc_int), rcond=None)
+        C = np.exp(logC)
+        print("\n=== interior convergence fit  R_int - 1 = C h^p ===")
+        print(f"  p = {p:+.3f}   (1 = first-order, CONSTANT-MONOMIAL Fp)")
+        print(f"  C = {C:.4e}")
+        for ny, h, r in zip(nys, hs, R_int):
+            print(f"  ny={int(ny):4d}  h={h:.6f}  R_int={r:6.2f}  "
+                  f"R_int_fit={1.0 + C * h ** p:6.2f}")
+    else:
+        p = C = None
+        print("\n(interior R_int <= 1 at some resolution; no log-log fit)")
+
+    fig, ax = plt.subplots(figsize=(6.6, 4.6))
+    ax.semilogx(nys, R_full, "ko-", ms=7, label=r"$R_{\mathrm{full}}$")
+    ax.semilogx(nys, R_int, "bs-", ms=7, label=r"$R_{\mathrm{int}}$ (interior)")
+    ax.axhline(1.0, color="r", ls="--", lw=1, label="R = 1 (continuum)")
+    for ny, rf, ri in zip(nys, R_full, R_int):
+        ax.annotate(f"ny={int(ny)}", (ny, rf), textcoords="offset points",
+                    xytext=(6, 4), fontsize=8)
+    ax.set_xlabel("ny (elements)")
+    ax.set_ylabel(r"$R = \int|\rho_G^{trans}|\,/\,\int|\rho_G^{geom}|$")
+    ax.set_title("mesh refinement: full vs interior R (fixed baseline amplitude)")
+    ax.grid(True, which="both", ls="--", alpha=0.4)
+    ax.legend(fontsize=9)
+    fig.tight_layout()
+    fig.savefig(args.out, dpi=150)
+    print(f"\nfigure -> {args.out}")
+
+    out_csv = args.out.replace(".png", ".csv")
+    np.savetxt(out_csv, np.column_stack([nys, hs, R_full, R_int]),
+               delimiter=",", header="ny,h,R_full,R_int", comments="")
+    print(f"table  -> {out_csv}")
+
+
+def main():
+    ap = argparse.ArgumentParser(description="curl Fp vs transported GND correlation")
+    ap.add_argument("--mode", choices=["amplitude", "mesh"], default="amplitude",
+                    help="amplitude sweep (fixed mesh) or mesh sweep (fixed amplitude)")
+    ap.add_argument("--dir", default=".")
+    ap.add_argument("--burgers", type=float, default=cg.BURGERS)
+    ap.add_argument("--slip", default=cg.SLIP_FILE)
+    ap.add_argument("--out", default=None,
+                    help="output figure (default: amplitude_correlation.png / mesh_correlation.png)")
+    args = ap.parse_args()
+
+    if args.out is None:
+        args.out = ("amplitude_correlation.png" if args.mode == "amplitude"
+                    else "mesh_correlation.png")
+
+    if args.mode == "amplitude":
+        run_amplitude(args)
+    else:
+        run_mesh(args)
 
 
 if __name__ == "__main__":
